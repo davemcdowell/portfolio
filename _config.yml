@@ -1,0 +1,12 @@
+# basic options
+title: Dave McDowell | Portfolio
+author: Dave McDowell
+email: davecmcdowell@gmail.com
+description: The portfolio of Dave McDowell - Designer and Developer based in Seattle
+#twitter_username: 
+#github_username:
+
+
+# build settings
+markdown: kramdown
+theme: minima
