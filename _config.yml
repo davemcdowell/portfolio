@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Site settings
 title: Dave McDowell | Designer + Developer
 email: dcmcdowell@gmail.com
@@ -36,17 +35,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-=======
-# basic options
-title: Dave McDowell | Portfolio
-author: Dave McDowell
-email: davecmcdowell@gmail.com
-description: The portfolio of Dave McDowell - Designer and Developer based in Seattle
-#twitter_username: 
-#github_username:
-
-
-# build settings
-markdown: kramdown
-theme: minima
->>>>>>> fc31e758afc0e9e414a9179b77efca3b7ed81d17
