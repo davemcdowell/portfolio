@@ -249,7 +249,7 @@ form button:active {
 
 /* global footer */
 footer {
-    background-color: var(--bg-color-darkest);
+    background-color: var(--bg-color-dark);
 }
 
 footer p {
