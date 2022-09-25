@@ -79,6 +79,10 @@ hr {
 }
 
 /* Typography */
+.icon-2x {
+    font-size: 2rem;
+}
+
 .block-label {
     display: inline-block;
     background-color: var(--default-type-color);
