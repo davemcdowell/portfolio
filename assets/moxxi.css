@@ -80,7 +80,7 @@ hr {
 
 /* Typography */
 .icon-2x {
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 .block-label {
@@ -200,10 +200,13 @@ footer textarea {
     min-height: 2.3rem;
 }
 
+input {
+    color: var(--white-type-color);
+}
+
 form input[type="text"],
 form input[type="email"],
 form textarea {
-    color: var(--white-type-color);
     outline: none;
     border: none !important;
     width: 100%;
