@@ -215,7 +215,8 @@ input:active,
 textarea,
 textarea:focus,
 textarea:hover,
-textarea:active {
+textarea:active,
+.form-control {
     color: var(--white-type-color) !important;
 }
 
