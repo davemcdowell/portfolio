@@ -48,7 +48,7 @@ let moxxi = function() {
         darkModeToggleBtn.querySelector('i').classList.add('bi-sun');
 
         darkModeToggleBtn.data.bsOriginalTitle = 'Dark Mode';
-        darkModeToggleBtn.setAttribute('data-bs-original-title', 'Dark Mode');
+        darkModeToggleBtn.setAttribute('title', 'Dark Mode');
         darkModeToggleBtn.setAttribute('aria-label', 'Dark Mode');
     }
 }();
