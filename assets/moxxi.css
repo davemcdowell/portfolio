@@ -166,7 +166,7 @@ hr {
 }
 
 .jumbotron a:hover {
-    color: white;
+    color: var(--white-type-color);
 }
 
 /* contact section */
@@ -202,7 +202,7 @@ hr {
     font-weight: lighter;
     text-decoration: none;
     color: var(--lighter-type-color);
-    transition: all 0.35s ease-in-out;
+    transition: color 0.35s ease-in-out;
 }
 
 .contact-list li a:hover { color: var(--default-type-color); }
@@ -259,6 +259,9 @@ footer p {
     user-select: none;
     color: var(--lighter-type-color);
 }
+
+footer a { color: var(--lighter-type-color); transition: color 0.35s ease-in-out; }
+footer a:hover, footer a:active, footer a:focus { color: var(--default-type-color); }
 
 footer h4 {
     -webkit-user-select: none;
