@@ -260,7 +260,7 @@ footer p {
     color: var(--lighter-type-color);
 }
 
-footer a { color: var(--lighter-type-color); transition: color 0.35s ease-in-out; }
+footer a, footer a { color: var(--lighter-type-color); transition: color 0.35s ease-in-out; }
 footer a:hover, footer a:active, footer a:focus { color: var(--default-type-color); }
 
 footer h4 {
