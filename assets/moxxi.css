@@ -79,8 +79,16 @@ hr {
 }
 
 /* Typography */
+.icon-1x {
+    font-size: 1em;
+}
+
 .icon-2x {
     font-size: 2em;
+}
+
+.icon-3x {
+    font-size: 3em;
 }
 
 .block-label {
@@ -208,7 +216,7 @@ textarea,
 textarea:focus,
 textarea:hover,
 textarea:active {
-    color: var(--white-type-color);
+    color: var(--white-type-color) !important;
 }
 
 form input[type="text"],
