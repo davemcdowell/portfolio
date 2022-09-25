@@ -1,98 +1,8 @@
-<div class="footer-top"></div>
-<div>
-    <section id="contact">
-        <div class="container py-5">
-            <div class="row justify-content-md-center">
-                <div class="col-md-5">
-                    <h4>Let's talk</h4>
-                    <p>Looking to get in touch? Below are a few options to contact me along with my resume for download or viewing directly.</p>
-                    <hr>
-                    <ul class="contact-list list-unstyled">
-                        <li>
-                            <a href="{{ site.mailto_url }}" rel="noopener">
-                                <i class="bi bi-envelope" aria-hidden="true"></i><small> dave&#64;dcmcdowell&#46;com</small>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ site.twitter_url }}" target="_blank" rel="noopener">
-                                <i class="bi bi-twitter" aria-hidden="true"></i><small> {{ site.twitter_username }}</small>
-                            </a>
-                        </li>
-                        <li>
-                            <h6 class="block-label"><i class="bi bi-file-text" aria-hidden="true"></i> Resume</h6>
-                            <hr class="block-label-hr">
-                            <a href="..." rel="noopener" download="...">
-                                <small><i class="bi bi-download" aria-hidden="true"></i> Download</small>
-                            </a>
-                            <span class="user-select-none"> | </span>
-                            <a href="..." rel="noopener">
-                                <small><i class="bi bi-eye" aria-hidden="true"></i> View</small>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-7">
-                    <h4>Contact</h4>
-                    <form id="contact-form" class="form-horizontal needs-validation" role="form" method="post" action="https://formspree.io/f/xyyvwpkn" novalidate>
-                        <input type="hidden" name="subject" value="Portfolio Contact">
-                        <input type="text" name="_gotcha" style="display:none">
-                        <div class="row g-2">
-                            <div class="col-sm-6 mb-2">
-                                <div class="form-floating">
-                                    <input id="form-name" class="form-control" type="text" name="name" placeholder="Name" value="" required>
-                                    <label for="form-name" class="text-muted">Name</label>
-                                    <div class="valid-feedback">Looks good!</div>
-                                    <div class="invalid-feedback">Please provide a name</div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 mb-2">
-                                <div class="form-floating">
-                                    <input id="form-email" class="form-control" type="email" name="email" placeholder="Email" value="" required>
-                                    <label for="form-email" class="text-muted">Email</label>
-                                    <div class="valid-feedback">Looks good!</div>
-                                    <div class="invalid-feedback">Please provide a valid email</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12 mb-2">
-                                <div class="form-floating">
-                                    <textarea id="form-msg" class="form-control" name="message" placeholder="Message" style="min-height: 77px" required></textarea>
-                                    <label for="form-msg" class="text-muted">Message</label>
-                                    <div class="valid-feedback">Looks good!</div>
-                                    <div class="invalid-feedback">Please provide a message</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row g-2">
-                            <div class="col-sm-6 mb-2">
-                                <div class="form-floating">
-                                    <input id="form-human" class="form-control" name="human" type="text" placeholder="2 + 3 =" required>
-                                    <label for="form-human" class="text-muted">2 + 5 = ?</label>
-                                    <div class="valid-feedback">Close enough!</div>
-                                    <div class="invalid-feedback">You're totally not a robot, right?</div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 mb-2">
-                                <button id="form-submit" class="btn btn-outline-light w-100 h-100" name="submit" disabled>Send</button>
-                            </div>
-                            <div id="form-response" class="col-sm-12"></div>
-                        </div>
-                    </form>
-                </div>           
-            </div>
-        </div>
-    </section>
-</div>
-<div class="back-to-top text-center">
-    <a href="#top">Back to top</a>
-</div>
-
 <footer class="py-5">
     <div class="container">
         <div class="row">
         <div class="col-6 col-md-2 mb-3">
-            <h5>Section</h5>
+            <h5>Portfolio</h5>
             <ul class="nav flex-column">
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
@@ -103,7 +13,7 @@
         </div>
 
         <div class="col-6 col-md-2 mb-3">
-            <h5>Section</h5>
+            <h5>Stuff</h5>
             <ul class="nav flex-column">
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
@@ -114,7 +24,7 @@
         </div>
 
         <div class="col-6 col-md-2 mb-3">
-            <h5>Section</h5>
+            <h5>More Stuff</h5>
             <ul class="nav flex-column">
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
@@ -138,11 +48,11 @@
         </div>
 
         <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-        <p>&copy; 2022 Company, Inc. All rights reserved.</p>
+        <p>&copy; 2022 Dave McDowell. All rights reserved.</p>
         <ul class="list-unstyled d-flex">
-            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+            <li class="ms-3"><a href="#"></a></li>
+            <li class="ms-3"><a href="#"></a></li>
+            <li class="ms-3"><a href="#"></a></li>
         </ul>
         </div>
     </div>
