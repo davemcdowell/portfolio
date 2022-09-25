@@ -199,6 +199,7 @@ footer textarea {
 form input[type="text"],
 form input[type="email"],
 form textarea {
+    color: var(--white-type-color);
     outline: none;
     border: none !important;
     width: 100%;
