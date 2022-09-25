@@ -1,14 +1,19 @@
 # Site settings
 title: Dave McDowell | Designer + Developer
-email: dcmcdowell@gmail.com
+email: davecmcdowell@gmail.com
 description: >-
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/portfolio"
 url: "https://www.dcmcdowell.com"
-twitter_username: func_dave
-github_username:  jekyll
+twitter_username: "@func_dave"
+github_username:  davecmcdowell
+mailto_url: mailto:dave@dcmcdowell.com
+github_url: https://github.com/davemcdowell
+steam_url: https://steamcommunity.com/id/cptyossarian/
+linkedin_url: https://www.linkedin.com/in/davecmcdowell/
+twitter_url: https://twitter.com/func_dave
 
 # Build settings
 #theme: moxxi

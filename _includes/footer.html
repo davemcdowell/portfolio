@@ -9,13 +9,13 @@
                     <hr>
                     <ul class="contact-list list-unstyled">
                         <li>
-                            <a href="mailto:dave@dcmcdowell.com" rel="noopener">
+                            <a href="{{ site.mailto_url }}" rel="noopener">
                                 <i class="bi bi-envelope" aria-hidden="true"></i><small> dave&#64;dcmcdowell&#46;com</small>
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/func_dave" target="_blank" rel="noopener">
-                                <i class="bi bi-twitter" aria-hidden="true"></i><small> @func_dave</small>
+                            <a href="{{ site.twitter_url }}" target="_blank" rel="noopener">
+                                <i class="bi bi-twitter" aria-hidden="true"></i><small> {{ site.twitter_username }}</small>
                             </a>
                         </li>
                         <li>
@@ -35,26 +35,26 @@
                     <h4>Contact</h4>
                     <form id="contact-form" class="form-horizontal needs-validation" role="form" method="post" action="" novalidate>
                         <div class="row">
-                            <div id="form-name" class="col-sm-6 mb-2">
+                            <div id="form-name" class="form-floating col-sm-6 mb-2">
                                 <input  class="form-control" type="text" name="name" placeholder="Name" value="" required>
                                 <div class="valid-feedback">Looks good!</div>
                                 <div class="invalid-feedback">Please provide a name</div>
                             </div>
-                            <div id="form-email" class="col-sm-6 mb-2">
+                            <div id="form-email" class="form-floating col-sm-6 mb-2">
                                 <input class="form-control" type="email" name="email" placeholder="Email" value="" required>
                                 <div class="valid-feedback">Looks good!</div>
                                 <div class="invalid-feedback">Please provide a valid email</div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-12 mb-2">
+                            <div class="form-floating col-sm-12 mb-2">
                                 <textarea id="form-msg" class="form-control" rows="4" name="message" placeholder="Message" required></textarea>
                                 <div class="valid-feedback">Looks good!</div>
                                 <div class="invalid-feedback">Please provide a message</div>
                             </div>
                         </div>
                         <div class="row">
-                            <div id="form-human" class="col-sm-6 mb-2">
+                            <div id="form-human" class="form-floating col-sm-6 mb-2">
                                 <input class="form-control" name="human" type="text" placeholder="2 + 3 =" required>
                                 <div class="valid-feedback">Close enough!</div>
                                 <div class="invalid-feedback">You're totally not a robot, right?</div>
