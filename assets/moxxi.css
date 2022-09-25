@@ -200,7 +200,14 @@ footer textarea {
     min-height: 2.3rem;
 }
 
-input {
+input,
+input:focus,
+input:hover,
+input:active,
+textarea,
+textarea:focus,
+textarea:hover,
+textarea:active {
     color: var(--white-type-color);
 }
 
