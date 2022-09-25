@@ -90,8 +90,6 @@ hr {
 }
 
 /* utils */
-.bg-darkest { color: var(--bg-color-darkest); }
-
 .angle-top-left {
     display: block;
     width: 100%;
@@ -170,15 +168,10 @@ hr {
 .jumbotron a:hover {
     color: white;
 }
+/* contact section */
+.contact { background-color: var(--bg-color-darkest); }
 
-/* social list */
-
-/* footer */
-footer {
-    background-color: var(--bg-color-darkest);
-}
-
-footer p {
+.contact p {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -186,7 +179,7 @@ footer p {
     color: var(--lighter-type-color);
 }
 
-footer h4 {
+.contact h4 {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -194,19 +187,15 @@ footer h4 {
     color: var(--default-type-color);
 }
 
-/* contact */
+/* contact form */
 .contact-list {
     font-size: 1.2rem;
     vertical-align: middle;
 }
 
-.contact-list li {
-    padding-bottom: 1rem;
-}
+.contact-list li { padding-bottom: 1rem; }
 
-.contact-list li span {
-    color: var(--lighter-type-color);
-}
+.contact-list li span { color: var(--lighter-type-color); }
 
 .contact-list li a {
     font-weight: lighter;
@@ -215,14 +204,7 @@ footer h4 {
     transition: all 0.35s ease-in-out;
 }
 
-.contact-list li a:hover {
-    color: var(--default-type-color);
-}
-
-footer textarea {
-    resize: vertical;
-    min-height: 2.3rem;
-}
+.contact-list li a:hover { color: var(--default-type-color); }
 
 input,
 input:focus,
@@ -262,6 +244,31 @@ form button:active {
 
 #form-response .error {
     border: 1px dashed var(--lighter-type-color);
+}
+
+/* global footer */
+footer {
+    background-color: var(--bg-color-darkest);
+}
+
+footer p {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: var(--lighter-type-color);
+}
+
+footer h4 {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: var(--default-type-color);
+}
+
+footer textarea {
+    resize: vertical;
 }
 
 /* back to top */
