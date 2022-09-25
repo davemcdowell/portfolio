@@ -25,6 +25,7 @@ let moxxi = function() {
         isDarkMode = !isDarkMode;
 
         if(isDarkMode) {
+            document.querySelector('html').classList.remove('light-theme');
             document.querySelector('html').classList.add('dark-theme');
         } else {
             document.querySelector('html').classList.add('light-theme');
