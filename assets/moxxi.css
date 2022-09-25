@@ -57,7 +57,8 @@ hr {
 
 /* Hero image */
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("");
+    background-image: linear-gradient(rgba(0, 0, 0, 0),
+     rgba(0, 0, 0, 0.5)), url("");
     height: 520px;
     background-position: center;
     background-repeat: no-repeat;
@@ -75,6 +76,64 @@ hr {
     background-color: var(--bg-color-dark);
     -webkit-clip-path: polygon(0% 95%, 100% 0%, 100% 100%, 0% 100%);
     clip-path: polygon(0% 95%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* Typography */
+.block-label {
+    display: inline-block;
+    background-color: var(--default-type-color);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--bg-color-dark);
+    padding: 6px 8px 6px 8px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: 24px;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+.block-label-hr {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Jumbotron */
+.jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    margin-bottom: 0;
+    background-color: var(--bg-color-dark);
+}
+
+.jumbotron h1 {
+    font-weight: 300;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.jumbotron p {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.jumbotron .container {
+    max-width: 40rem;
+}
+
+.jumbotron a {
+    color: var(--default-type-color);
+    margin-bottom: 0;
+}
+
+.jumbotron a:hover {
+    color: white;
 }
 
 /* Footer */
