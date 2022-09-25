@@ -34,7 +34,7 @@ let moxxi = function() {
         darkModeToggleBtn.querySelector('i').classList.remove('bi-sun');
         darkModeToggleBtn.querySelector('i').classList.add('bi-moon');
 
-        darkModeToggleBtn.setAttribute('title', 'Light Mode');
+        darkModeToggleBtn.setAttribute('data-bs-original-title', 'Light Mode');
         darkModeToggleBtn.setAttribute('aria-label', 'Light Mode');
     }
 
@@ -44,7 +44,7 @@ let moxxi = function() {
         darkModeToggleBtn.querySelector('i').classList.remove('bi-moon');
         darkModeToggleBtn.querySelector('i').classList.add('bi-sun');
 
-        darkModeToggleBtn.setAttribute('title', 'Dark Mode');
+        darkModeToggleBtn.setAttribute('data-bs-original-title', 'Dark Mode');
         darkModeToggleBtn.setAttribute('aria-label', 'Dark Mode');
     }
 }();
