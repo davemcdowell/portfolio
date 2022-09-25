@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" class="dark-theme">
   {%- include head.html -%}
   <body>
     {%- include navbar.html -%}
@@ -11,12 +11,6 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.2/dist/js/splide.min.js" 
     integrity="sha256-qrjk0UKCPtzZGVo2KWmsEMOAi17/JtNVBl8B7EMTWIM=" crossorigin="anonymous"></script>
-    <script>
-      let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-
-      let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-    </script>
+    <script type="text/javascript" src="{{ '/js/app.js' | relative_url }}"></script>
   </body>
 </html>
