@@ -66,33 +66,43 @@ let moxxi = function() {
 
         nameInput.addEventListener('change', () => {
             let name = nameInput.value;
+            let validFeedback = humanInput.querySelector('.valid-feedback');
+            let invalidFeedback = humanInput.querySelector('.invalid-feedback');
 
             if(validateName(name)) {
-                let validFeedback = nameGroup.querySelector('.valid-feedback');
+                invalidFeedback.style.display = "none";
+                validFeedback.style.display = "block";
             } else {
-                let invalidFeedback = nameGroup.querySelector('.invalid-feedback');
+                validFeedback.style.display = "none";
+                invalidFeedback.style.display = "block";
             }
         });
 
         emailInput.addEventListener('change', () => {
             let email = emailInput.value;
+            let validFeedback = emailGroup.querySelector('.valid-feedback');
+            let invalidFeedback = emailGroup.querySelector('.invalid-feedback');
 
             if(validateEmail(email)) {
-                let validFeedback = emailGroup.querySelector('.valid-feedback');
+                invalidFeedback.style.display = "none";
                 validFeedback.style.display = "block";
             } else {
-                let invalidFeedback = emailGroup.querySelector('.invalid-feedback');
+                validFeedback.style.display = "none";
                 invalidFeedback.style.display = "block";
             }            
         });
 
         humanInput.addEventListener('change', () => {
             let human = humanInput.value;
+            let validFeedback = humanInput.querySelector('.valid-feedback');
+            let invalidFeedback = humanInput.querySelector('.invalid-feedback');
 
             if(validateHuman(human)) {
-                let validFeedback = humanInput.querySelector('.valid-feedback');
+                invalidFeedback.style.display = "none";
+                validFeedback.style.display = "block";
             } else {
-                let invalidFeedback = humanInput.querySelector('.invalid-feedback');
+                validFeedback.style.display = "none";
+                invalidFeedback.style.display = "block";
             }            
         });
 
