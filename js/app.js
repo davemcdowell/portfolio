@@ -56,6 +56,7 @@ let app = function() {
         let nameGroup = form.querySelector('#form-name-group');
         let emailGroup = form.querySelector('#form-email-group');
         let humanGroup = form.querySelector('#form-human-group');
+        let fGroups = [nameGroup, emailGroup, humanGroup];
 
         let nameInput = nameGroup.querySelector('input[type="text"]');
         let emailInput = emailGroup.querySelector('input[type="email"]');
@@ -83,8 +84,9 @@ let app = function() {
                 nameGroup.dataset.isValid = true;
             }
 
-            if(isFormValid()) {
-                
+            if(isFormValid(fGroups)) {
+                console.log('Form is valid');
+                submitBtn.disabled = false;
             }
         });
 
@@ -107,8 +109,9 @@ let app = function() {
                 emailGroup.dataset.isValid = false;
             }      
             
-            if(isFormValid()) {
-                
+            if(isFormValid(fGroups)) {
+                console.log('Form is valid');
+                submitBtn.disabled = false;
             }
         });
 
@@ -132,8 +135,9 @@ let app = function() {
 
             }      
 
-            if(isFormValid()) {
-
+            if(isFormValid(fGroups)) {
+                console.log('Form is valid');
+                submitBtn.disabled = false;
             }
         });
 
@@ -155,18 +159,17 @@ let app = function() {
         return (parseInt(human) === 7) ? true : false;
     }
 
-    function isFormValid(form) {
-        let fGroups = [nameGroup, emailGroup, humanGroup];
-        let btnWrap = submitBtn.parentElement;
-        let allValid = false;
+    function isFormValid(groupArray) {
+        let checkCount = 0;
+        let gLength = parseInt(groupArray.length - 1);
 
-        for(let i = 0; i < fGroups.length; i++) {
-            if(i <= parseInt(fGroups.length - 1) && fGroups[i].dataset.isValid === true) {
-                allValid = true;
-            }
+        for(let i = 0; i < groupArray.length; i++) {
+            if(checkCount < gLength && groupArray[i].dataset.isValid === true) {
+                checkCount++;
+            } 
         }
 
-        return allValid;
+        return (checkCount === gLength) ? true : false;
     }
 
     function getRandomInteger(min, max) {
