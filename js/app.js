@@ -7,6 +7,7 @@ let moxxi = function() {
 
     function init() {
         bindDarkModeToggle();
+        setContactForm();
         setToolTips();
     }
 
@@ -52,9 +53,9 @@ let moxxi = function() {
     function setContactForm() {
         let form = document.querySelector('#contact-form');
 
-        let nameGroup = form.querySelector('#form-name');
-        let emailGroup = form.querySelector('#form-email');
-        let humanGroup = form.querySelector('#form-human');
+        let nameGroup = form.querySelector('#form-name-group');
+        let emailGroup = form.querySelector('#form-email-group');
+        let humanGroup = form.querySelector('#form-human-group');
 
         let nameInput = nameGroup.querySelector('input[type="text"]');
         let emailInput = emailGroup.querySelector('input[type="email"]');
@@ -63,28 +64,38 @@ let moxxi = function() {
         let submitBtn = form.querySelector('#form-submit');
         let responseDiv = form.querySelector('#form-response');
 
-        submitBtn.addEventListener('click', () => {
+        nameInput.addEventListener('change', () => {
             let name = nameInput.value;
-            let email = emailInput.value;
-            let human = humanInput.value;
 
             if(validateName(name)) {
                 let validFeedback = nameGroup.querySelector('.valid-feedback');
             } else {
                 let invalidFeedback = nameGroup.querySelector('.invalid-feedback');
             }
+        });
+
+        emailInput.addEventListener('change', () => {
+            let email = emailInput.value;
 
             if(validateEmail(email)) {
                 let validFeedback = emailGroup.querySelector('.valid-feedback');
             } else {
                 let invalidFeedback = emailGroup.querySelector('.invalid-feedback');
-            }
+            }            
+        });
+
+        humanInput.addEventListener('change', () => {
+            let human = humanInput.value;
 
             if(validateHuman(human)) {
                 let validFeedback = humanInput.querySelector('.valid-feedback');
             } else {
                 let invalidFeedback = humanInput.querySelector('.invalid-feedback');
-            }       
+            }            
+        });
+
+        submitBtn.addEventListener('click', () => {
+
         });
     }
 
@@ -103,6 +114,6 @@ let moxxi = function() {
     }
 
     function getRandomInteger(min, max) {
-    return Math.floor(Math.random() * (max - min) ) + min;
+        return Math.floor(Math.random() * (max - min) ) + min;
     }
 }();

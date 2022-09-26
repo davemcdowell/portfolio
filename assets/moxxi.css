@@ -190,7 +190,7 @@ hr {
     color: var(--default-type-color);
 }
 
-.contact hr { color: var(--default-type-color); }
+.contact hr { border-color: var(--default-type-color); }
 
 /* contact form */
 .contact-list {
