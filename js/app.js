@@ -66,8 +66,8 @@ let moxxi = function() {
 
         nameInput.addEventListener('change', () => {
             let name = nameInput.value;
-            let validFeedback = humanInput.querySelector('.valid-feedback');
-            let invalidFeedback = humanInput.querySelector('.invalid-feedback');
+            let validFeedback = nameGroup.querySelector('.valid-feedback');
+            let invalidFeedback = nameGroup.querySelector('.invalid-feedback');
 
             if(validateName(name)) {
                 invalidFeedback.style.display = "none";
