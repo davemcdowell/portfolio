@@ -94,8 +94,8 @@ let moxxi = function() {
 
         humanInput.addEventListener('change', () => {
             let human = humanInput.value;
-            let validFeedback = humanInput.querySelector('.valid-feedback');
-            let invalidFeedback = humanInput.querySelector('.invalid-feedback');
+            let validFeedback = humanGroup.querySelector('.valid-feedback');
+            let invalidFeedback = humanGroup.querySelector('.invalid-feedback');
 
             if(validateHuman(human)) {
                 invalidFeedback.style.display = "none";
