@@ -121,7 +121,7 @@ let moxxi = function() {
     }
 
     function validateHuman(human) {
-        let parsedInt = parseInt(human, 2);
+        let parsedInt = parseInt(human);
         return (parsedInt === 7) ? true : false;
     }
 
