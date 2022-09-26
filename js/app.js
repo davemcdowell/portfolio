@@ -6,7 +6,6 @@ let moxxi = function() {
     window.addEventListener('DOMContentLoaded', init);
 
     function init() {
-        console.log('Moxxi here!');
         bindDarkModeToggle();
         setToolTips();
     }
@@ -14,9 +13,7 @@ let moxxi = function() {
     function setToolTips() {
         let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
         let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-            return new bootstrap.Tooltip(tooltipTriggerEl, {
-                trigger : 'hover'
-            });
+            return new bootstrap.Tooltip(tooltipTriggerEl);
         });
     }
 
@@ -30,8 +27,8 @@ let moxxi = function() {
     }
 
     function setDarkMode() {
-        document.querySelector('html').classList.remove('light-theme');
-        document.querySelector('html').classList.add('dark-theme');
+        document.documentElement.classList.remove('light-theme');
+        document.documentElement.classList.add('dark-theme');
 
         darkModeToggleBtn.querySelector('i').classList.remove('bi-sun');
         darkModeToggleBtn.querySelector('i').classList.add('bi-moon');
@@ -42,7 +39,7 @@ let moxxi = function() {
     }
 
     function setLightMode() {
-        document.querySelector('html').classList.add('light-theme'); 
+        document.documentElement.classList.add('light-theme'); 
 
         darkModeToggleBtn.querySelector('i').classList.remove('bi-moon');
         darkModeToggleBtn.querySelector('i').classList.add('bi-sun');
@@ -50,5 +47,62 @@ let moxxi = function() {
         darkModeToggleBtn.data.bsOriginalTitle = 'Dark Mode';
         darkModeToggleBtn.setAttribute('title', 'Dark Mode');
         darkModeToggleBtn.setAttribute('aria-label', 'Dark Mode');
+    }
+
+    function setContactForm() {
+        let form = document.querySelector('#contact-form');
+
+        let nameGroup = form.querySelector('#form-name');
+        let emailGroup = form.querySelector('#form-email');
+        let humanGroup = form.querySelector('#form-human');
+
+        let nameInput = nameGroup.querySelector('input[type="text"]');
+        let emailInput = emailGroup.querySelector('input[type="email"]');
+        let humanInput = humanGroup.querySelector('input[type="text"]');
+
+        let submitBtn = form.querySelector('#form-submit');
+        let responseDiv = form.querySelector('#form-response');
+
+        submitBtn.addEventListener('click', () => {
+            let name = nameInput.value;
+            let email = emailInput.value;
+            let human = humanInput.value;
+
+            if(validateName(name)) {
+                let validFeedback = nameGroup.querySelector('.valid-feedback');
+            } else {
+                let invalidFeedback = nameGroup.querySelector('.invalid-feedback');
+            }
+
+            if(validateEmail(email)) {
+                let validFeedback = emailGroup.querySelector('.valid-feedback');
+            } else {
+                let invalidFeedback = emailGroup.querySelector('.invalid-feedback');
+            }
+
+            if(validateHuman(human)) {
+                let validFeedback = humanInput.querySelector('.valid-feedback');
+            } else {
+                let invalidFeedback = humanInput.querySelector('.invalid-feedback');
+            }       
+        });
+    }
+
+    function validateEmail(email) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    function validateName(name) {
+        return (name !== "") ? true : false;
+    }
+
+    function validateHuman(human) {
+        let parsedInt = parseInt(human, 2);
+        return (parsedInt === 7) ? true : false;
+    }
+
+    function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
     }
 }();
