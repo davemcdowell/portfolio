@@ -13,7 +13,7 @@ let app = function() {
 
     function setToolTips() {
         let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-        let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        let tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl);
         });
     }
@@ -72,13 +72,19 @@ let app = function() {
             if(isNameValid(name)) {
                 invalidFeedback.style.display = "none";
                 validFeedback.style.display = "block";
-
                 nameInput.style.borderColor = "#198754";
+                
+                nameGroup.dataset.isValid = true;
             } else {
                 validFeedback.style.display = "none";
                 invalidFeedback.style.display = "block";
-
                 nameInput.style.borderColor = "#dc3545;";
+
+                nameGroup.dataset.isValid = true;
+            }
+
+            if(isFormValid()) {
+                
             }
         });
 
@@ -90,14 +96,20 @@ let app = function() {
             if(isEmailValid(email)) {
                 invalidFeedback.style.display = "none";
                 validFeedback.style.display = "block";
-
                 emailInput.style.borderColor = "#198754";
+
+                emailGroup.dataset.isValid = true;
             } else {
                 validFeedback.style.display = "none";
                 invalidFeedback.style.display = "block";
-
                 emailInput.style.borderColor = "#dc3545;";
-            }            
+
+                emailGroup.dataset.isValid = false;
+            }      
+            
+            if(isFormValid()) {
+                
+            }
         });
 
         humanInput.addEventListener('change', () => {
@@ -108,14 +120,21 @@ let app = function() {
             if(isHumanValid(human)) {
                 invalidFeedback.style.display = "none";
                 validFeedback.style.display = "block";
-
                 humanInput.style.borderColor = "#198754";
+
+                humanGroup.dataset.isValid = true;
             } else {
                 validFeedback.style.display = "none";
                 invalidFeedback.style.display = "block";
-
                 humanInput.style.borderColor = "#dc3545;";
+
+                humanGroup.dataset.isValid = false;
+
             }      
+
+            if(isFormValid()) {
+
+            }
         });
 
         submitBtn.addEventListener('click', () => {
@@ -137,10 +156,17 @@ let app = function() {
     }
 
     function isFormValid(form) {
+        let fGroups = [nameGroup, emailGroup, humanGroup];
         let btnWrap = submitBtn.parentElement;
-        console.log(btnWrap);
+        let allValid = false;
 
-        submitBtn.disabled = "false";
+        for(let i = 0; i < fGroups.length; i++) {
+            if(i <= parseInt(fGroups.length - 1) && fGroups[i].dataset.isValid === true) {
+                allValid = true;
+            }
+        }
+
+        return allValid;
     }
 
     function getRandomInteger(min, max) {
