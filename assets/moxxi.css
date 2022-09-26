@@ -188,6 +188,8 @@ hr {
     color: var(--default-type-color);
 }
 
+.contact hr { color: var(---default-type-color); }
+
 /* contact form */
 .contact-list {
     font-size: 1.2rem;
