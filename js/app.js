@@ -79,8 +79,10 @@ let moxxi = function() {
 
             if(validateEmail(email)) {
                 let validFeedback = emailGroup.querySelector('.valid-feedback');
+                validFeedback.style.display = "block";
             } else {
                 let invalidFeedback = emailGroup.querySelector('.invalid-feedback');
+                invalidFeedback.style.display = "block";
             }            
         });
 
