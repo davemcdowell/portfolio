@@ -1,4 +1,4 @@
-let moxxi = function() {
+let app = function() {
     let isDarkMode = true;
 
     let darkModeToggleBtn = document.querySelector('#toggle-darkmode');
@@ -69,12 +69,16 @@ let moxxi = function() {
             let validFeedback = nameGroup.querySelector('.valid-feedback');
             let invalidFeedback = nameGroup.querySelector('.invalid-feedback');
 
-            if(validateName(name)) {
+            if(isNameValid(name)) {
                 invalidFeedback.style.display = "none";
                 validFeedback.style.display = "block";
+
+                nameInput.style.borderColor = "#198754";
             } else {
                 validFeedback.style.display = "none";
                 invalidFeedback.style.display = "block";
+
+                nameInput.style.borderColor = "#dc3545;";
             }
         });
 
@@ -83,12 +87,16 @@ let moxxi = function() {
             let validFeedback = emailGroup.querySelector('.valid-feedback');
             let invalidFeedback = emailGroup.querySelector('.invalid-feedback');
 
-            if(validateEmail(email)) {
+            if(isEmailValid(email)) {
                 invalidFeedback.style.display = "none";
                 validFeedback.style.display = "block";
+
+                emailInput.style.borderColor = "#198754";
             } else {
                 validFeedback.style.display = "none";
                 invalidFeedback.style.display = "block";
+
+                emailInput.style.borderColor = "#dc3545;";
             }            
         });
 
@@ -97,13 +105,17 @@ let moxxi = function() {
             let validFeedback = humanGroup.querySelector('.valid-feedback');
             let invalidFeedback = humanGroup.querySelector('.invalid-feedback');
 
-            if(validateHuman(human)) {
+            if(isHumanValid(human)) {
                 invalidFeedback.style.display = "none";
                 validFeedback.style.display = "block";
+
+                humanInput.style.borderColor = "#198754";
             } else {
                 validFeedback.style.display = "none";
                 invalidFeedback.style.display = "block";
-            }            
+
+                humanInput.style.borderColor = "#dc3545;";
+            }      
         });
 
         submitBtn.addEventListener('click', () => {
@@ -111,18 +123,24 @@ let moxxi = function() {
         });
     }
 
-    function validateEmail(email) {
+    function isEmailValid(email) {
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
     }
 
-    function validateName(name) {
+    function isNameValid(name) {
         return (name !== "") ? true : false;
     }
 
-    function validateHuman(human) {
-        let parsedInt = parseInt(human);
-        return (parsedInt === 7) ? true : false;
+    function isHumanValid(human) {
+        return (parseInt(human) === 7) ? true : false;
+    }
+
+    function isFormValid(form) {
+        let btnWrap = submitBtn.parentElement;
+        console.log(btnWrap);
+
+        submitBtn.disabled = "false";
     }
 
     function getRandomInteger(min, max) {
