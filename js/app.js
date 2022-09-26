@@ -86,7 +86,7 @@ let app = function() {
 
             if(isFormValid(fGroups)) {
                 console.log('Form is valid');
-                submitBtn.disabled = false;
+                submitBtn.removeAttribute('disabled');
             }
         });
 
@@ -111,7 +111,7 @@ let app = function() {
             
             if(isFormValid(fGroups)) {
                 console.log('Form is valid');
-                submitBtn.disabled = false;
+                submitBtn.removeAttribute('disabled');
             }
         });
 
@@ -132,17 +132,12 @@ let app = function() {
                 humanInput.style.borderColor = "#dc3545;";
 
                 humanGroup.dataset.isValid = false;
-
             }      
 
             if(isFormValid(fGroups)) {
                 console.log('Form is valid');
-                submitBtn.disabled = false;
+                submitBtn.removeAttribute('disabled');
             }
-        });
-
-        submitBtn.addEventListener('click', () => {
-
         });
     }
 
@@ -160,11 +155,13 @@ let app = function() {
     }
 
     function isFormValid(groupArray) {
+        console.log("isFormValid");
         let checkCount = 0;
         let gLength = parseInt(groupArray.length - 1);
 
         for(let i = 0; i < groupArray.length; i++) {
-            if(checkCount < gLength && groupArray[i].dataset.isValid === true) {
+            if(groupArray[i].dataset.isValid === true) {
+                console.log(i);
                 checkCount++;
             } 
         }
