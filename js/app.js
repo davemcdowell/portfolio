@@ -166,9 +166,9 @@ let app = function() {
     function isFormValid(groupArray) {
         console.log("isFormValid?");
         let checkCount = 0;
-        let gLength = parseInt(groupArray.length - 1);
+        let gLength = groupArray.length;
 
-        for(let i = 0; i < groupArray.length; i++) {
+        for(let i = 0; i < gLength; i++) {
             if(groupArray[i].hasAttribute('is-valid')) {
                 checkCount++;
                 console.log(`${i}: ${groupArray[i].id} is valid: checkCount: ${checkCount}`);
