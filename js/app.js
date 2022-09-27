@@ -157,12 +157,12 @@ let app = function() {
     function isFormValid(groupArray) {
         console.log("isFormValid");
         let checkCount = 0;
-        let gLength = parseInt(groupArray.length - 1);
+        let gLength = groupArray.length;
 
         for(let i = 0; i < groupArray.length; i++) {
             if(groupArray[i].dataset.isValid === true || groupArray[i].dataset.isValid === "true") {
-                console.log(i);
                 checkCount++;
+                console.log(`${i}: ${groupArray[i]} is valid: checkCount: ${checkCount}`);
             } 
         }
 
