@@ -63,7 +63,6 @@ let app = function() {
         let humanInput = humanGroup.querySelector('input[type="text"]');
 
         let submitBtn = form.querySelector('#form-submit');
-        let submitWrap = submitBtn.parentNode;
         let responseDiv = form.querySelector('#form-response');
 
         nameInput.addEventListener('change', () => {
@@ -87,10 +86,10 @@ let app = function() {
 
             if(isFormValid(fGroups)) {
                 submitBtn.removeAttribute('disabled');
-                submitWrap.style.display = "none";
+                submitBtn.innerText = 'Send';
             } else {
                 submitBtn.setAttribute('disabled', '');
-                submitWrap.style.display = "inline-block";
+                submitBtn.innerText = 'Write Me';
             }
         });
 
@@ -115,10 +114,10 @@ let app = function() {
             
             if(isFormValid(fGroups)) {
                 submitBtn.removeAttribute('disabled');
-                submitWrap.style.display = "none";
+                submitBtn.innerText = 'Send';
             } else {
                 submitBtn.setAttribute('disabled', '');
-                submitWrap.style.display = "inline-block";              
+                submitBtn.innerText = 'Write Me';
             }
         });
 
@@ -143,10 +142,10 @@ let app = function() {
 
             if(isFormValid(fGroups)) {
                 submitBtn.removeAttribute('disabled');
-                submitWrap.style.display = "none";
+                submitBtn.innerText = 'Send';
             } else {
                 submitBtn.setAttribute('disabled', '');
-                submitWrap.style.display = "inline-block";              
+                submitBtn.innerText = 'Write Me';
             }
         });
     }
