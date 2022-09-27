@@ -63,6 +63,7 @@ let app = function() {
         let humanInput = humanGroup.querySelector('input[type="text"]');
 
         let submitBtn = form.querySelector('#form-submit');
+        let submitWrap = submitBtn.parentNode;
         let responseDiv = form.querySelector('#form-response');
 
         nameInput.addEventListener('change', () => {
@@ -85,11 +86,11 @@ let app = function() {
             }
 
             if(isFormValid(fGroups)) {
-                console.log('Form is valid');
                 submitBtn.removeAttribute('disabled');
+                submitWrap.style.display = "none";
             } else {
-                console.log('Form is invalid');
-                submitBtn.setAttribute('disabled', '');               
+                submitBtn.setAttribute('disabled', '');
+                submitWrap.style.display = "inline-block";
             }
         });
 
@@ -113,11 +114,11 @@ let app = function() {
             }      
             
             if(isFormValid(fGroups)) {
-                console.log('Form is valid');
                 submitBtn.removeAttribute('disabled');
+                submitWrap.style.display = "none";
             } else {
-                console.log('Form is invalid');
-                submitBtn.setAttribute('disabled', '');                   
+                submitBtn.setAttribute('disabled', '');
+                submitWrap.style.display = "inline-block";              
             }
         });
 
@@ -141,11 +142,11 @@ let app = function() {
             }      
 
             if(isFormValid(fGroups)) {
-                console.log('Form is valid');
                 submitBtn.removeAttribute('disabled');
+                submitWrap.style.display = "none";
             } else {
-                console.log('Form is invalid');
-                submitBtn.setAttribute('disabled', '');   
+                submitBtn.setAttribute('disabled', '');
+                submitWrap.style.display = "inline-block";              
             }
         });
     }
@@ -164,18 +165,15 @@ let app = function() {
     }
 
     function isFormValid(groupArray) {
-        console.log("isFormValid?");
         let checkCount = 0;
         let gLength = groupArray.length;
 
         for(let i = 0; i < gLength; i++) {
             if(groupArray[i].hasAttribute('is-valid')) {
                 checkCount++;
-                console.log(`${i}: ${groupArray[i].id} is valid: checkCount: ${checkCount}`);
             } 
         }
-        console.log(checkCount);
-        console.log(Boolean(checkCount === gLength));
+        
         return Boolean(checkCount === gLength);
     }
 
