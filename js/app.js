@@ -87,6 +87,9 @@ let app = function() {
             if(isFormValid(fGroups)) {
                 console.log('Form is valid');
                 submitBtn.removeAttribute('disabled');
+            } else {
+                console.log('Form is invalid');
+                submitBtn.setAttribute('disabled', '');               
             }
         });
 
@@ -112,6 +115,9 @@ let app = function() {
             if(isFormValid(fGroups)) {
                 console.log('Form is valid');
                 submitBtn.removeAttribute('disabled');
+            } else {
+                console.log('Form is invalid');
+                submitBtn.setAttribute('disabled', '');                   
             }
         });
 
@@ -137,6 +143,9 @@ let app = function() {
             if(isFormValid(fGroups)) {
                 console.log('Form is valid');
                 submitBtn.removeAttribute('disabled');
+            } else {
+                console.log('Form is invalid');
+                submitBtn.setAttribute('disabled', '');   
             }
         });
     }
