@@ -165,6 +165,7 @@ let app = function() {
                 console.log(`${i}: ${groupArray[i]} is valid: checkCount: ${checkCount}`);
             } 
         }
+        console.log(checkCount);
         console.log(Boolean(checkCount === gLength));
         return Boolean(checkCount === gLength);
     }
