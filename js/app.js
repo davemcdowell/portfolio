@@ -155,9 +155,9 @@ let app = function() {
     }
 
     function isFormValid(groupArray) {
-        console.log("isFormValid");
+        console.log("isFormValid?");
         let checkCount = 0;
-        let gLength = groupArray.length;
+        let gLength = parseInt(groupArray.length - 1);
 
         for(let i = 0; i < groupArray.length; i++) {
             if(groupArray[i].dataset.isValid !== undefined) {
@@ -165,7 +165,7 @@ let app = function() {
                 console.log(`${i}: ${groupArray[i]} is valid: checkCount: ${checkCount}`);
             } 
         }
-
+        console.log(Boolean(checkCount === gLength));
         return Boolean(checkCount === gLength);
     }
 
