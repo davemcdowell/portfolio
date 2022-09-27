@@ -160,13 +160,13 @@ let app = function() {
         let gLength = groupArray.length;
 
         for(let i = 0; i < groupArray.length; i++) {
-            if(groupArray[i].dataset.isValid === true || groupArray[i].dataset.isValid === "true") {
+            if(groupArray[i].dataset.isValid !== undefined) {
                 checkCount++;
                 console.log(`${i}: ${groupArray[i]} is valid: checkCount: ${checkCount}`);
             } 
         }
 
-        return (checkCount === gLength) ? true : false;
+        return Boolean(checkCount === gLength);
     }
 
     function getRandomInteger(min, max) {
