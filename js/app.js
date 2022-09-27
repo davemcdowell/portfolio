@@ -81,7 +81,7 @@ let app = function() {
                 invalidFeedback.style.display = "block";
                 nameInput.style.borderColor = "#dc3545;";
 
-                nameGroup.removeAttribute('isValid');
+                nameGroup.removeAttribute('isValid', "");
             }
 
             if(isFormValid(fGroups)) {
@@ -100,7 +100,7 @@ let app = function() {
                 validFeedback.style.display = "block";
                 emailInput.style.borderColor = "#198754";
 
-                emailGroup.setAttribute('isValid');
+                emailGroup.setAttribute('isValid', "");
             } else {
                 validFeedback.style.display = "none";
                 invalidFeedback.style.display = "block";
@@ -125,7 +125,7 @@ let app = function() {
                 validFeedback.style.display = "block";
                 humanInput.style.borderColor = "#198754";
 
-                humanGroup.setAttribute('isValid');
+                humanGroup.setAttribute('isValid', "");
             } else {
                 validFeedback.style.display = "none";
                 invalidFeedback.style.display = "block";
