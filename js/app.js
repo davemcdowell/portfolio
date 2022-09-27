@@ -86,10 +86,10 @@ let app = function() {
 
             if(isFormValid(fGroups)) {
                 submitBtn.removeAttribute('disabled');
-                submitBtn.innerText = 'Send';
+                submitBtn.textContent = 'Send';
             } else {
                 submitBtn.setAttribute('disabled', '');
-                submitBtn.innerText = 'Write Me';
+                submitBtn.textContent = 'Write Me';
             }
         });
 
@@ -114,10 +114,10 @@ let app = function() {
             
             if(isFormValid(fGroups)) {
                 submitBtn.removeAttribute('disabled');
-                submitBtn.innerText = 'Send';
+                submitBtn.textContent = 'Send';
             } else {
                 submitBtn.setAttribute('disabled', '');
-                submitBtn.innerText = 'Write Me';
+                submitBtn.textContent = 'Write Me';
             }
         });
 
@@ -142,10 +142,10 @@ let app = function() {
 
             if(isFormValid(fGroups)) {
                 submitBtn.removeAttribute('disabled');
-                submitBtn.innerText = 'Send';
+                submitBtn.textContent = 'Send';
             } else {
                 submitBtn.setAttribute('disabled', '');
-                submitBtn.innerText = 'Write Me';
+                submitBtn.textContent = 'Write Me';
             }
         });
     }
