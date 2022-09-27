@@ -171,7 +171,7 @@ let app = function() {
         for(let i = 0; i < groupArray.length; i++) {
             if(groupArray[i].hasAttribute('is-valid')) {
                 checkCount++;
-                console.log(`${i}: ${groupArray[i]} is valid: checkCount: ${checkCount}`);
+                console.log(`${i}: ${groupArray[i].id} is valid: checkCount: ${checkCount}`);
             } 
         }
         console.log(checkCount);
