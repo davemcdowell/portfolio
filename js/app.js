@@ -75,13 +75,13 @@ let app = function() {
                 validFeedback.style.display = "block";
                 nameInput.style.borderColor = "#198754";
                 
-                nameGroup.dataset.isValid = true;
+                nameGroup.setAttribute('isValid');
             } else {
                 validFeedback.style.display = "none";
                 invalidFeedback.style.display = "block";
                 nameInput.style.borderColor = "#dc3545;";
 
-                nameGroup.dataset.isValid = true;
+                nameGroup.removeAttribute('isValid');
             }
 
             if(isFormValid(fGroups)) {
@@ -100,13 +100,13 @@ let app = function() {
                 validFeedback.style.display = "block";
                 emailInput.style.borderColor = "#198754";
 
-                emailGroup.dataset.isValid = true;
+                emailGroup.setAttribute('isValid');
             } else {
                 validFeedback.style.display = "none";
                 invalidFeedback.style.display = "block";
                 emailInput.style.borderColor = "#dc3545;";
 
-                emailGroup.dataset.isValid = false;
+                emailGroup.removeAttribute('isValid');
             }      
             
             if(isFormValid(fGroups)) {
@@ -125,13 +125,13 @@ let app = function() {
                 validFeedback.style.display = "block";
                 humanInput.style.borderColor = "#198754";
 
-                humanGroup.dataset.isValid = true;
+                humanGroup.setAttribute('isValid');
             } else {
                 validFeedback.style.display = "none";
                 invalidFeedback.style.display = "block";
                 humanInput.style.borderColor = "#dc3545;";
 
-                humanGroup.dataset.isValid = false;
+                humanGroup.removeAttribute('isValid');
             }      
 
             if(isFormValid(fGroups)) {
