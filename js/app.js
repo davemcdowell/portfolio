@@ -75,7 +75,7 @@ let app = function() {
                 validFeedback.style.display = "block";
                 nameInput.style.borderColor = "#198754";
                 
-                nameGroup.setAttribute('isValid');
+                nameGroup.setAttribute('isValid', "");
             } else {
                 validFeedback.style.display = "none";
                 invalidFeedback.style.display = "block";
