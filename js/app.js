@@ -160,7 +160,7 @@ let app = function() {
         let gLength = parseInt(groupArray.length - 1);
 
         for(let i = 0; i < groupArray.length; i++) {
-            if(groupArray[i].dataset.isValid === true) {
+            if(groupArray[i].dataset.isValid === true || groupArray[i].dataset.isValid === "true") {
                 console.log(i);
                 checkCount++;
             } 
