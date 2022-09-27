@@ -75,13 +75,13 @@ let app = function() {
                 validFeedback.style.display = "block";
                 nameInput.style.borderColor = "#198754";
                 
-                nameGroup.setAttribute('isValid', "");
+                nameGroup.setAttribute('is-valid', "");
             } else {
                 validFeedback.style.display = "none";
                 invalidFeedback.style.display = "block";
                 nameInput.style.borderColor = "#dc3545;";
 
-                nameGroup.removeAttribute('isValid', "");
+                nameGroup.removeAttribute('is-valid', "");
             }
 
             if(isFormValid(fGroups)) {
@@ -100,13 +100,13 @@ let app = function() {
                 validFeedback.style.display = "block";
                 emailInput.style.borderColor = "#198754";
 
-                emailGroup.setAttribute('isValid', "");
+                emailGroup.setAttribute('is-valid', "");
             } else {
                 validFeedback.style.display = "none";
                 invalidFeedback.style.display = "block";
                 emailInput.style.borderColor = "#dc3545;";
 
-                emailGroup.removeAttribute('isValid');
+                emailGroup.removeAttribute('is-valid');
             }      
             
             if(isFormValid(fGroups)) {
@@ -125,13 +125,13 @@ let app = function() {
                 validFeedback.style.display = "block";
                 humanInput.style.borderColor = "#198754";
 
-                humanGroup.setAttribute('isValid', "");
+                humanGroup.setAttribute('is-valid', "");
             } else {
                 validFeedback.style.display = "none";
                 invalidFeedback.style.display = "block";
                 humanInput.style.borderColor = "#dc3545;";
 
-                humanGroup.removeAttribute('isValid');
+                humanGroup.removeAttribute('is-valid');
             }      
 
             if(isFormValid(fGroups)) {
@@ -160,7 +160,7 @@ let app = function() {
         let gLength = parseInt(groupArray.length - 1);
 
         for(let i = 0; i < groupArray.length; i++) {
-            if(groupArray[i].dataset.isValid !== undefined) {
+            if(groupArray[i].hasAttribute('is-valid')) {
                 checkCount++;
                 console.log(`${i}: ${groupArray[i]} is valid: checkCount: ${checkCount}`);
             } 
