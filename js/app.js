@@ -63,14 +63,12 @@ let app = function() {
         let msgInput = msgGroup.querySelector('textarea');
         let humanInput = humanGroup.querySelector('input[type="text"]');
 
-        form.addEventListener('beforeunload', (event) => {
-            let fields = form.querySelectorAll('input, textarea');
+        form.addEventListener('load', () => {
+            console.log('resetting form');
             let groups = form.querySelectorAll('[data-check-validation]');
             let submitBtn = form.querySelector('#form-submit, input[type="submit"]');
 
-            fields.map(function(field){
-                field.value = '';
-            });
+            form.reset();
 
             groups.map(function(group){
                 group.removeAttribute('is-valid');
