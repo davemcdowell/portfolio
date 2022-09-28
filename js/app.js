@@ -2,9 +2,14 @@ let app = function() {
     let isDarkMode = true;
 
     let slideShowOptions = {
-        type   : 'loop',
-        perPage: 3,
-        perMove: 1,
+        type       : 'loop',
+        height     : '9rem',
+        perPage    : 2,
+        breakpoints: {
+          640: {
+            height: '6rem',
+          },
+        },
     };
 
     window.addEventListener('DOMContentLoaded', init);
@@ -14,18 +19,7 @@ let app = function() {
         setContactForm();
         setToolTips();
 
-        new Splide( '.splide', {
-            type       : 'loop',
-            height     : '9rem',
-            perPage    : 2,
-            breakpoints: {
-              640: {
-                height: '6rem',
-              },
-            },
-        });
-
-        console.log(Splide);
+        let splide = new Splide( '.splide', slideShowOptions).mount();
     }
 
     function setToolTips() {
