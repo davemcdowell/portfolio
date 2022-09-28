@@ -1,10 +1,10 @@
 <h4>Contact</h4>
 <form id="contact-form" class="form-horizontal needs-validation" role="form" method="post" action="https://formspree.io/f/xyyvwpkn" novalidate>
     <input type="hidden" name="subject" value="Portfolio Contact">
-    <input type="text" name="_gotcha" style="display:none;">
+    <input type="text" name="_gotcha" class="d-none">
     <div class="row g-2">
         <div class="col-sm-6 mb-2">
-            <div id="form-name-group" class="form-floating">
+            <div id="form-name-group" class="form-floating" data-check-validation>
                 <input id="form-name" class="form-control" type="text" name="name" placeholder="Name" value="" required>
                 <label for="form-name" class="text-muted">Name</label>
                 <div class="valid-feedback">Looks good!</div>
@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="col-sm-6 mb-2">
-            <div id="form-email-group" class="form-floating">
+            <div id="form-email-group" class="form-floating" data-check-validation>
                 <input id="form-email" class="form-control" type="email" name="email" placeholder="Email" value="" required>
                 <label for="form-email" class="text-muted">Email</label>
                 <div class="valid-feedback">Looks good!</div>
@@ -22,7 +22,7 @@
     </div>
     <div class="row">
         <div class="col-sm-12 mb-2">
-            <div id="form-msg-group" class="form-floating">
+            <div id="form-msg-group" class="form-floating" data-check-validation>
                 <textarea id="form-msg" class="form-control" name="message" placeholder="Message" style="min-height: 77px" required></textarea>
                 <label for="form-msg" class="text-muted">Message</label>
                 <div class="valid-feedback">Looks good!</div>
@@ -32,7 +32,7 @@
     </div>
     <div class="row g-2">
         <div class="col-sm-6 mb-2">
-            <div id="form-human-group" class="form-floating">
+            <div id="form-human-group" class="form-floating" data-check-validation>
                 <input id="form-human" class="form-control" type="text" pattern="[0-9]+" placeholder="2 + 5 =" required>
                 <label for="form-human" class="text-muted">2 + 5 = ?</label>
                 <div class="valid-feedback">Close enough!</div>

@@ -57,8 +57,7 @@ let app = function() {
         let emailGroup = form.querySelector('#form-email-group');
         let msgGroup = form.querySelector('#form-msg-group');
         let humanGroup = form.querySelector('#form-human-group');
-        let fGroups = [nameGroup, emailGroup, humanGroup];
-
+        
         let nameInput = nameGroup.querySelector('input[type="text"]');
         let emailInput = emailGroup.querySelector('input[type="email"]');
         let msgInput = msgGroup.querySelector('textarea');
@@ -68,28 +67,10 @@ let app = function() {
         let responseDiv = form.querySelector('#form-response');
 
         nameInput.addEventListener('change', () => {
-            /*
-            let name = nameInput.value;
-            let validFeedback = nameGroup.querySelector('.valid-feedback');
-            let invalidFeedback = nameGroup.querySelector('.invalid-feedback');
-
-            if(isStringValid(name)) {
-                invalidFeedback.style.display = "none";
-                validFeedback.style.display = "block";
-                nameInput.style.borderColor = "#198754";
-                
-                nameGroup.setAttribute('is-valid', "");
-            } else {
-                validFeedback.style.display = "none";
-                invalidFeedback.style.display = "block";
-                nameInput.style.borderColor = "#dc3545;";
-
-                nameGroup.removeAttribute('is-valid', "");
-            }
-            */
             setFormGroupValidation(nameGroup, nameInput, isStringValid2);
+            checkFormValidation(form);
 
-            if(isFormValid(fGroups)) {
+            if(isFormValid(form)) {
                 submitBtn.removeAttribute('disabled');
                 submitBtn.textContent = 'Send';
             } else {
@@ -99,87 +80,18 @@ let app = function() {
         });
 
         msgInput.addEventListener('change', () => {
-            let msg = msgInput.value;
-            let validFeedback = msgGroup.querySelector('.valid-feedback');
-            let invalidFeedback = msgGroup.querySelector('.invalid-feedback');
-
-            if(isStringValid(msg)) {
-                invalidFeedback.style.display = "none";
-                validFeedback.style.display = "block";
-                msgInput.style.borderColor = "#198754";
-                
-                msgGroup.setAttribute('is-valid', "");
-            } else {
-                validFeedback.style.display = "none";
-                invalidFeedback.style.display = "block";
-                msgInput.style.borderColor = "#dc3545;";
-
-                msgGroup.removeAttribute('is-valid', "");
-            }
-
-            if(isFormValid(fGroups)) {
-                submitBtn.removeAttribute('disabled');
-                submitBtn.textContent = 'Send';
-            } else {
-                submitBtn.setAttribute('disabled', '');
-                submitBtn.textContent = 'Write Me';
-            }
+            setFormGroupValidation(msgGroup, msgInput, isStringValid2);
+            checkFormValidation(form);
         });
 
         emailInput.addEventListener('change', () => {
-            let email = emailInput.value;
-            let validFeedback = emailGroup.querySelector('.valid-feedback');
-            let invalidFeedback = emailGroup.querySelector('.invalid-feedback');
-
-            if(isEmailValid(email)) {
-                invalidFeedback.style.display = "none";
-                validFeedback.style.display = "block";
-                emailInput.style.borderColor = "#198754";
-
-                emailGroup.setAttribute('is-valid', "");
-            } else {
-                validFeedback.style.display = "none";
-                invalidFeedback.style.display = "block";
-                emailInput.style.borderColor = "#dc3545;";
-
-                emailGroup.removeAttribute('is-valid');
-            }      
-            
-            if(isFormValid(fGroups)) {
-                submitBtn.removeAttribute('disabled');
-                submitBtn.textContent = 'Send';
-            } else {
-                submitBtn.setAttribute('disabled', '');
-                submitBtn.textContent = 'Write Me';
-            }
+            setFormGroupValidation(emailGroup, emailInput, isEmailValid);
+            checkFormValidation(form);
         });
 
         humanInput.addEventListener('change', () => {
-            let human = humanInput.value;
-            let validFeedback = humanGroup.querySelector('.valid-feedback');
-            let invalidFeedback = humanGroup.querySelector('.invalid-feedback');
-
-            if(isHumanValid(human)) {
-                invalidFeedback.style.display = "none";
-                validFeedback.style.display = "block";
-                humanInput.style.borderColor = "#198754";
-
-                humanGroup.setAttribute('is-valid', "");
-            } else {
-                validFeedback.style.display = "none";
-                invalidFeedback.style.display = "block";
-                humanInput.style.borderColor = "#dc3545;";
-
-                humanGroup.removeAttribute('is-valid');
-            }      
-
-            if(isFormValid(fGroups)) {
-                submitBtn.removeAttribute('disabled');
-                submitBtn.textContent = 'Send';
-            } else {
-                submitBtn.setAttribute('disabled', '');
-                submitBtn.textContent = 'Write Me';
-            }
+            setFormGroupValidation(humanGroup, humanInput, isHumanValid2);
+            checkFormValidation(form);
         });
     }
 
@@ -200,7 +112,18 @@ let app = function() {
             input.style.borderColor = "#dc3545;";
 
             group.removeAttribute('is-valid');
-        }         
+        }
+    }
+
+    function checkFormValidation(form) {
+        let submitBtn = form.querySelector('#form-submit, input[type="submit"]');
+        if(isFormValid(form)) {
+            submitBtn.removeAttribute('disabled');
+            submitBtn.textContent = 'Send';
+        } else {
+            submitBtn.setAttribute('disabled', '');
+            submitBtn.textContent = 'Write Me';
+        }
     }
 
     function isEmailValid(email) {
@@ -212,15 +135,18 @@ let app = function() {
         return (name !== "") ? true : false;
     }
 
-    const isStringValid2 = (string) => { return Boolean(string !== ""); }
+    const isStringValid2 = (string) => { return Boolean(string !== ""); };
 
     function isHumanValid(human) {
         return (parseInt(human) === 7) ? true : false;
     }
 
-    function isFormValid(groupArray) {
-        let checkCount = 0;
+    const isHumanValid2 = (answer) => { return Boolean(parseInt(human) === 7); };
+
+    function isFormValid(form) {
+        let groupArray = form.querySelectorAll('[data-check-validation');
         let gLength = groupArray.length;
+        let checkCount = 0;
 
         for(let i = 0; i < gLength; i++) {
             if(groupArray[i].hasAttribute('is-valid')) {
