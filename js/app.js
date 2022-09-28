@@ -106,7 +106,8 @@ let app = function() {
             groups[i].removeAttribute('is-valid');
         }
 
-        submitBtn.setAttribute('disabled', '');
+        submitBtn.classList.add('disabled');
+        //submitBtn.setAttribute('disabled', '');
     }
 
     function setFormGroupValidation(group, input, validationCheck) {
@@ -133,10 +134,12 @@ let app = function() {
         let submitBtn = form.querySelector('#form-submit, input[type="submit"]');
 
         if(isFormValid(form)) {
-            submitBtn.removeAttribute('disabled');
+            //submitBtn.removeAttribute('disabled');
+            submitBtn.classList.remove('disabled');
             submitBtn.textContent = 'Send';
         } else {
-            submitBtn.setAttribute('disabled', '');
+            ///submitBtn.setAttribute('disabled', '');
+            submitBtn.classList.add('disabled');
             submitBtn.textContent = 'Write Me';
         }
     }
