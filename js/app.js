@@ -1,8 +1,6 @@
 let app = function() {
     let isDarkMode = true;
 
-    let darkModeToggleBtn = document.querySelector('#toggle-darkmode');
-
     window.addEventListener('DOMContentLoaded', init);
 
     function init() {
@@ -107,7 +105,6 @@ let app = function() {
         }
 
         submitBtn.classList.add('disabled');
-        //submitBtn.setAttribute('disabled', '');
     }
 
     function setFormGroupValidation(group, input, validationCheck) {
@@ -134,12 +131,12 @@ let app = function() {
         let submitBtn = form.querySelector('#form-submit, input[type="submit"]');
 
         if(isFormValid(form)) {
-            //submitBtn.removeAttribute('disabled');
             submitBtn.classList.remove('disabled');
+            submitBtn.setAttribute('aria-disabled', false);
             submitBtn.textContent = 'Send';
         } else {
-            ///submitBtn.setAttribute('disabled', '');
             submitBtn.classList.add('disabled');
+            submitBtn.setAttribute('aria-disabled', true);
             submitBtn.textContent = 'Write Me';
         }
     }
