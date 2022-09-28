@@ -14,15 +14,15 @@ let app = function() {
         setContactForm();
         setToolTips();
 
-        document.addEventListener( 'DOMContentLoaded', function () {
-            new Splide( '#card-carousel', {
-                  perPage    : 2,
-                  breakpoints: {
-                      640: {
-                          perPage: 1,
-                      },
-                  },
-            } ).mount();
+        new Splide( '.splide', {
+            type       : 'loop',
+            height     : '9rem',
+            perPage    : 2,
+            breakpoints: {
+              640: {
+                height: '6rem',
+              },
+            },
           } );
     }
 
