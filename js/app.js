@@ -117,13 +117,13 @@ let app = function() {
         if(validationCheck(inputValue)) {
             invalidFeedback.style.display = 'none';
             validFeedback.style.display = 'block';
-            input.style.borderColor = '#198754 !important';
+            input.setAttribute('style', 'border-color: #198754 !important;');
 
             group.setAttribute('is-valid', '');
         } else {
             validFeedback.style.display = 'none';
             invalidFeedback.style.display = 'block';
-            input.style.borderColor = '#dc3545 !important;';
+            input.setAttribute('style', 'border-color: #dc3545 !important;');
 
             group.removeAttribute('is-valid');
         }
@@ -147,7 +147,6 @@ let app = function() {
     }
 
     const isStringValid = (string) => { return Boolean(string !== ''); };
-
     const isHumanValid = (answer) => { return Boolean(parseInt(answer) === 7); };
 
     function isFormValid(form) {
