@@ -63,7 +63,7 @@ let app = function() {
         let msgInput = msgGroup.querySelector('textarea');
         let humanInput = humanGroup.querySelector('input[type="text"]');
 
-        form.addEventListener('DOMContentLoaded', () => {
+        form.addEventListener('load', () => {
             console.log('resetting form');
             let inputs = form.querySelectorAll('input, textarea');
             let groups = form.querySelectorAll('[data-check-validation]');
