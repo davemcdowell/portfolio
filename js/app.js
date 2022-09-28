@@ -1,6 +1,12 @@
 let app = function() {
     let isDarkMode = true;
 
+    let slideShowOptions = {
+        type   : 'loop',
+        perPage: 3,
+        perMove: 1,
+    };
+
     window.addEventListener('DOMContentLoaded', init);
 
     function init() {
@@ -53,6 +59,16 @@ let app = function() {
         darkModeToggleBtn.setAttribute('aria-label', 'Dark Mode');
     }
 
+    function createSlideShow() {
+        let splide = new Splide( '.splide', {
+            type   : 'loop',
+            perPage: 3,
+            perMove: 1,
+          } );
+          
+          splide.mount();
+    }
+    
     function setContactForm() {
         let form = document.querySelector('#contact-form');
 
