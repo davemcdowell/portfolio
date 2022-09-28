@@ -23,7 +23,9 @@ let app = function() {
                 height: '6rem',
               },
             },
-          } );
+        });
+
+        console.log(Splide);
     }
 
     function setToolTips() {
@@ -71,13 +73,7 @@ let app = function() {
     }
 
     function createSlideShow() {
-        let splide = new Splide( '.splide', {
-            type   : 'loop',
-            perPage: 3,
-            perMove: 1,
-          } );
-          
-          splide.mount();
+
     }
     
     function setContactForm() {
