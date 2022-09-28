@@ -63,20 +63,25 @@ let app = function() {
         let msgInput = msgGroup.querySelector('textarea');
         let humanInput = humanGroup.querySelector('input[type="text"]');
 
-        let submitBtn = form.querySelector('#form-submit');
-        let responseDiv = form.querySelector('#form-response');
+        form.addEventListener('beforeunload', (event) => {
+            let fields = form.querySelectorAll('input, textarea');
+            let groups = form.querySelectorAll('[data-check-validation]');
+            let submitBtn = form.querySelector('#form-submit, input[type="submit"]');
+
+            fields.map(function(field){
+                field.value = '';
+            });
+
+            groups.map(function(group){
+                group.removeAttribute('is-valid');
+            });
+
+            submitBtn.setAttribute('disabled', '');
+        });
 
         nameInput.addEventListener('change', () => {
             setFormGroupValidation(nameGroup, nameInput, isStringValid);
             checkFormValidation(form);
-
-            if(isFormValid(form)) {
-                submitBtn.removeAttribute('disabled');
-                submitBtn.textContent = 'Send';
-            } else {
-                submitBtn.setAttribute('disabled', '');
-                submitBtn.textContent = 'Write Me';
-            }
         });
 
         msgInput.addEventListener('change', () => {
@@ -101,15 +106,15 @@ let app = function() {
         let invalidFeedback = group.querySelector('.invalid-feedback');
 
         if(validationCheck(inputValue)) {
-            invalidFeedback.style.display = "none";
-            validFeedback.style.display = "block";
-            input.style.borderColor = "#198754";
+            invalidFeedback.style.display = 'none';
+            validFeedback.style.display = 'block';
+            input.style.borderColor = '#198754';
 
-            group.setAttribute('is-valid', "");
+            group.setAttribute('is-valid', '');
         } else {
-            validFeedback.style.display = "none";
-            invalidFeedback.style.display = "block";
-            input.style.borderColor = "#dc3545;";
+            validFeedback.style.display = 'none';
+            invalidFeedback.style.display = 'block';
+            input.style.borderColor = '#dc3545;';
 
             group.removeAttribute('is-valid');
         }
@@ -117,6 +122,7 @@ let app = function() {
 
     function checkFormValidation(form) {
         let submitBtn = form.querySelector('#form-submit, input[type="submit"]');
+
         if(isFormValid(form)) {
             submitBtn.removeAttribute('disabled');
             submitBtn.textContent = 'Send';
@@ -131,12 +137,12 @@ let app = function() {
         return re.test(String(email).toLowerCase());
     }
 
-    const isStringValid = (string) => { return Boolean(string !== ""); };
+    const isStringValid = (string) => { return Boolean(string !== ''); };
 
     const isHumanValid = (answer) => { return Boolean(parseInt(answer) === 7); };
 
     function isFormValid(form) {
-        let groupArray = form.querySelectorAll('[data-check-validation');
+        let groupArray = form.querySelectorAll('[data-check-validation]');
         let gLength = groupArray.length;
         let checkCount = 0;
 
