@@ -65,14 +65,19 @@ let app = function() {
 
         form.addEventListener('DOMContentLoaded', () => {
             console.log('resetting form');
+            let inputs = form.querySelectorAll('input, textarea');
             let groups = form.querySelectorAll('[data-check-validation]');
             let submitBtn = form.querySelector('#form-submit, input[type="submit"]');
 
-            form.reset();
+            this.reset();
 
-            groups.map(function(group) {
-                group.removeAttribute('is-valid');
-            });
+            for(let i = 0; i < inputs.length; i++) {
+                inputs[i].value = '';
+            }
+
+            for(let i = 0; i < groups.length; i++) {
+                groups[i].removeAttribute('is-valid');
+            }
 
             submitBtn.setAttribute('disabled', '');
         });
