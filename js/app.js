@@ -4,7 +4,6 @@ let app = function() {
     let slideShowOptions = {
         type       : 'loop',
         height     : '9rem',
-        perPage    : 2,
         breakpoints: {
           640: {
             height: '6rem',
