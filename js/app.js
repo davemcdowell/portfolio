@@ -62,6 +62,7 @@ let app = function() {
         let emailInput = emailGroup.querySelector('input[type="email"]');
         let humanInput = humanGroup.querySelector('input[type="text"]');
 
+        let submitBtn = form.querySelector('#form-submit');
         let responseDiv = form.querySelector('#form-response');
 
         nameInput.addEventListener('change', () => {
@@ -83,7 +84,13 @@ let app = function() {
                 nameGroup.removeAttribute('is-valid', "");
             }
 
-            checkFormValidity(submitBtn, fGroups);
+            if(isFormValid(fGroups)) {
+                submitBtn.removeAttribute('disabled');
+                submitBtn.textContent = 'Send';
+            } else {
+                submitBtn.setAttribute('disabled', '');
+                submitBtn.textContent = 'Write Me';
+            }
         });
 
         emailInput.addEventListener('change', () => {
@@ -103,9 +110,15 @@ let app = function() {
                 emailInput.style.borderColor = "#dc3545;";
 
                 emailGroup.removeAttribute('is-valid');
-            }
+            }      
             
-            checkFormValidity(submitBtn, fGroups);
+            if(isFormValid(fGroups)) {
+                submitBtn.removeAttribute('disabled');
+                submitBtn.textContent = 'Send';
+            } else {
+                submitBtn.setAttribute('disabled', '');
+                submitBtn.textContent = 'Write Me';
+            }
         });
 
         humanInput.addEventListener('change', () => {
@@ -125,20 +138,16 @@ let app = function() {
                 humanInput.style.borderColor = "#dc3545;";
 
                 humanGroup.removeAttribute('is-valid');
+            }      
+
+            if(isFormValid(fGroups)) {
+                submitBtn.removeAttribute('disabled');
+                submitBtn.textContent = 'Send';
+            } else {
+                submitBtn.setAttribute('disabled', '');
+                submitBtn.textContent = 'Write Me';
             }
-
-            checkFormValidity(submitBtn, fGroups);
         });
-    }
-
-    function checkFormValidity(submitBtn, fGroups) {
-        if(isFormValid(fGroups)) {
-            submitBtn.removeAttribute('disabled');
-            submitBtn.textContent = 'Send';
-        } else {
-            submitBtn.setAttribute('disabled', '');
-            submitBtn.textContent = 'Write Me';
-        }     
     }
 
     function isEmailValid(email) {
