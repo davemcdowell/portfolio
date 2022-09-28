@@ -40,7 +40,7 @@ let app = function() {
     }
 
     function setLightMode() {
-        document.documentElement.classList.add('light-theme'); 
+        document.documentElement.classList.add('light-theme');
 
         darkModeToggleBtn.querySelector('i').classList.remove('bi-moon');
         darkModeToggleBtn.querySelector('i').classList.add('bi-sun');
@@ -63,25 +63,6 @@ let app = function() {
         let msgInput = msgGroup.querySelector('textarea');
         let humanInput = humanGroup.querySelector('input[type="text"]');
 
-        form.addEventListener('load', () => {
-            console.log('resetting form');
-            let inputs = form.querySelectorAll('input, textarea');
-            let groups = form.querySelectorAll('[data-check-validation]');
-            let submitBtn = form.querySelector('#form-submit, input[type="submit"]');
-
-            form.reset();
-
-            for(let i = 0; i < inputs.length; i++) {
-                inputs[i].value = '';
-            }
-
-            for(let i = 0; i < groups.length; i++) {
-                groups[i].removeAttribute('is-valid');
-            }
-
-            submitBtn.setAttribute('disabled', '');
-        });
-
         nameInput.addEventListener('change', () => {
             setFormGroupValidation(nameGroup, nameInput, isStringValid);
             checkFormValidation(form);
@@ -101,6 +82,27 @@ let app = function() {
             setFormGroupValidation(humanGroup, humanInput, isHumanValid);
             checkFormValidation(form);
         });
+
+        resetContactForm(form);
+    }
+
+    function resetContactForm(form) {
+        console.log('resetting form');
+        let inputs = form.querySelectorAll('input, textarea');
+        let groups = form.querySelectorAll('[data-check-validation]');
+        let submitBtn = form.querySelector('#form-submit, input[type="submit"]');
+
+        form.reset();
+
+        for(let i = 0; i < inputs.length; i++) {
+            inputs[i].value = '';
+        }
+
+        for(let i = 0; i < groups.length; i++) {
+            groups[i].removeAttribute('is-valid');
+        }
+
+        submitBtn.setAttribute('disabled', '');
     }
 
     function setFormGroupValidation(group, input, validationCheck) {
