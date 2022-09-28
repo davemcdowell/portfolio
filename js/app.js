@@ -67,7 +67,7 @@ let app = function() {
         let responseDiv = form.querySelector('#form-response');
 
         nameInput.addEventListener('change', () => {
-            setFormGroupValidation(nameGroup, nameInput, isStringValid2);
+            setFormGroupValidation(nameGroup, nameInput, isStringValid);
             checkFormValidation(form);
 
             if(isFormValid(form)) {
@@ -80,7 +80,7 @@ let app = function() {
         });
 
         msgInput.addEventListener('change', () => {
-            setFormGroupValidation(msgGroup, msgInput, isStringValid2);
+            setFormGroupValidation(msgGroup, msgInput, isStringValid);
             checkFormValidation(form);
         });
 
@@ -90,7 +90,7 @@ let app = function() {
         });
 
         humanInput.addEventListener('change', () => {
-            setFormGroupValidation(humanGroup, humanInput, isHumanValid2);
+            setFormGroupValidation(humanGroup, humanInput, isHumanValid);
             checkFormValidation(form);
         });
     }
@@ -131,17 +131,9 @@ let app = function() {
         return re.test(String(email).toLowerCase());
     }
 
-    function isStringValid(name) {
-        return (name !== "") ? true : false;
-    }
+    const isStringValid = (string) => { return Boolean(string !== ""); };
 
-    const isStringValid2 = (string) => { return Boolean(string !== ""); };
-
-    function isHumanValid(human) {
-        return (parseInt(human) === 7) ? true : false;
-    }
-
-    const isHumanValid2 = (answer) => { return Boolean(parseInt(human) === 7); };
+    const isHumanValid = (answer) => { return Boolean(parseInt(answer) === 7); };
 
     function isFormValid(form) {
         let groupArray = form.querySelectorAll('[data-check-validation');
