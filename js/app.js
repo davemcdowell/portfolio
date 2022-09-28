@@ -69,7 +69,7 @@ let app = function() {
             let groups = form.querySelectorAll('[data-check-validation]');
             let submitBtn = form.querySelector('#form-submit, input[type="submit"]');
 
-            this.reset();
+            form.reset();
 
             for(let i = 0; i < inputs.length; i++) {
                 inputs[i].value = '';
@@ -82,22 +82,22 @@ let app = function() {
             submitBtn.setAttribute('disabled', '');
         });
 
-        nameInput.addEventListener('keyup', () => {
+        nameInput.addEventListener('change', () => {
             setFormGroupValidation(nameGroup, nameInput, isStringValid);
             checkFormValidation(form);
         });
 
-        msgInput.addEventListener('keyup', () => {
+        msgInput.addEventListener('change', () => {
             setFormGroupValidation(msgGroup, msgInput, isStringValid);
             checkFormValidation(form);
         });
 
-        emailInput.addEventListener('keyup', () => {
+        emailInput.addEventListener('change', () => {
             setFormGroupValidation(emailGroup, emailInput, isEmailValid);
             checkFormValidation(form);
         });
 
-        humanInput.addEventListener('keyup', () => {
+        humanInput.addEventListener('change', () => {
             setFormGroupValidation(humanGroup, humanInput, isHumanValid);
             checkFormValidation(form);
         });
