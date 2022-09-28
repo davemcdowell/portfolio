@@ -77,22 +77,22 @@ let app = function() {
             submitBtn.setAttribute('disabled', '');
         });
 
-        nameInput.addEventListener('change', () => {
+        nameInput.addEventListener('keyup', () => {
             setFormGroupValidation(nameGroup, nameInput, isStringValid);
             checkFormValidation(form);
         });
 
-        msgInput.addEventListener('change', () => {
+        msgInput.addEventListener('keyup', () => {
             setFormGroupValidation(msgGroup, msgInput, isStringValid);
             checkFormValidation(form);
         });
 
-        emailInput.addEventListener('change', () => {
+        emailInput.addEventListener('keyup', () => {
             setFormGroupValidation(emailGroup, emailInput, isEmailValid);
             checkFormValidation(form);
         });
 
-        humanInput.addEventListener('change', () => {
+        humanInput.addEventListener('keyup', () => {
             setFormGroupValidation(humanGroup, humanInput, isHumanValid);
             checkFormValidation(form);
         });
