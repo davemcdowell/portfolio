@@ -19,6 +19,7 @@ let app = function() {
     }
 
     function bindDarkModeToggle() {
+        let darkModeToggleBtn = document.querySelector('#toggle-darkmode');
         darkModeToggleBtn.addEventListener('click', toggleDarkMode, true);
     }
     
@@ -28,6 +29,8 @@ let app = function() {
     }
 
     function setDarkMode() {
+        let darkModeToggleBtn = document.querySelector('#toggle-darkmode');
+
         document.documentElement.classList.remove('light-theme');
         document.documentElement.classList.add('dark-theme');
 
@@ -40,6 +43,8 @@ let app = function() {
     }
 
     function setLightMode() {
+        let darkModeToggleBtn = document.querySelector('#toggle-darkmode');
+
         document.documentElement.classList.add('light-theme');
 
         darkModeToggleBtn.querySelector('i').classList.remove('bi-moon');
@@ -87,7 +92,6 @@ let app = function() {
     }
 
     function resetContactForm(form) {
-        console.log('resetting form');
         let inputs = form.querySelectorAll('input, textarea');
         let groups = form.querySelectorAll('[data-check-validation]');
         let submitBtn = form.querySelector('#form-submit, input[type="submit"]');
@@ -113,13 +117,13 @@ let app = function() {
         if(validationCheck(inputValue)) {
             invalidFeedback.style.display = 'none';
             validFeedback.style.display = 'block';
-            input.style.borderColor = '#198754';
+            input.style.borderColor = '#198754 !important';
 
             group.setAttribute('is-valid', '');
         } else {
             validFeedback.style.display = 'none';
             invalidFeedback.style.display = 'block';
-            input.style.borderColor = '#dc3545;';
+            input.style.borderColor = '#dc3545 !important;';
 
             group.removeAttribute('is-valid');
         }
