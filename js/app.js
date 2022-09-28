@@ -19,7 +19,8 @@ let app = function() {
         setContactForm();
         setToolTips();
 
-        let splide = new Splide( '.splide', slideShowOptions).mount();
+        let splide = new Splide( '.splide', slideShowOptions);
+        splide.mount();
     }
 
     function setToolTips() {
