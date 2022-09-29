@@ -6,7 +6,8 @@ let app = function() {
         gap        : '2rem',
         pagination : false,
         fixedWidth : '445px',
-        perPage    : 2
+        perPage    : 2,
+        padding    : '2rem'
     };
 
     window.addEventListener('DOMContentLoaded', init);
