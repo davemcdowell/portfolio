@@ -8,14 +8,14 @@ let app = function() {
         setContactForm();
         setToolTips();
 
-        new Splide( '.splide', {
+        new Splide('.splide', {
             type        : 'loop',
             height      : '9rem',
             perPage     : 2,
             gap         : '2rem',
             pagination  : false,
             breakpoints : {
-                640: { height: '6rem' },
+                640: { height: '6rem', },
             },
         }).mount();
     }
