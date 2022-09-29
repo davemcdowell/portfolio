@@ -3,10 +3,15 @@ let app = function() {
 
     let slideShowOptions = {
         type       : 'loop',
-        //fixedWidth : '445px',
-        perSlide   : '2',
         gap        : '2rem',
-        pagination : false
+        pagination : false,
+        height     : '445px',
+        perPage    : 2,
+        breakpoints: {
+          640: {
+            height: '225px',
+          },
+        },
     };
 
     window.addEventListener('DOMContentLoaded', init);
