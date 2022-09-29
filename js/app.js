@@ -10,13 +10,13 @@ let app = function() {
 
         new Splide('.splide', {
             type        : 'loop',
-            height      : '9rem',
+            width      : '445px',
             perPage     : 2,
-            gap         : '2em',
+            gap         : '2rem',
             pagination  : false,
-            breakpoints : {
-                640: { height: '6rem', },
-            },
+            //breakpoints : {
+                //640: { height: '6rem', },
+            //},
         }).mount();
     }
 
