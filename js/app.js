@@ -13,6 +13,7 @@ let app = function() {
             height      : '9rem',
             perPage     : 2,
             padding     : '20%',
+            pagination  : false,
             isNavigation: true,
             breakpoints : {
               640: {
