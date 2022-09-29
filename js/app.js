@@ -3,7 +3,8 @@ let app = function() {
 
     let slideShowOptions = {
         type       : 'loop',
-        fixedWidth : '445px',
+        //fixedWidth : '445px',
+        perSlide   : '2',
         gap        : '2rem',
         pagination : false
     };
