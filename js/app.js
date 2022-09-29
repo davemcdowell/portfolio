@@ -2,14 +2,11 @@ let app = function() {
     let isDarkMode = true;
 
     let slideShowOptions = {
-        type       : 'loop',
-        padding    : '1rem',
-        fixedWidth : '445px',
-        gap        : '2rem',
-        breakpoints: {
-          640: {
-
-          },
+            type       : 'loop',
+            padding    : '1rem',
+            fixedWidth : '445px',
+            gap        : '2rem',
+            pagination : false,
         },
     };
 
