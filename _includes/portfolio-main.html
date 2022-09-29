@@ -1,3 +1,53 @@
+<styles>
+    .splide__arrow {
+        -ms-flex-align: center;
+        align-items: center;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        cursor: pointer;
+        display: -ms-flexbox;
+        display: flex;
+        height: 2.5em;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2.5em;
+        z-index: 1;
+      }
+      .splide__arrow svg {
+        fill: #20b2aa;
+        height: 2.5em;
+        transition: fill 0.2s linear;
+        width: 2.5em;
+      }
+      .splide__arrow:hover:not(:disabled) svg {
+        fill: #57e1d9;
+      }
+      .splide__arrow:disabled {
+        opacity: 0.3;
+      }
+      .splide__arrow:focus-visible {
+        outline: 3px solid #20b2aa;
+        outline-offset: 3px;
+      }
+      .splide__arrow--prev {
+        left: 1em;
+      }
+      .splide__arrow--prev svg {
+        transform: scaleX(-1);
+      }
+      .splide__arrow--next {
+        right: 1em;
+      }
+      .splide.is-focus-in .splide__arrow:focus {
+        outline: 3px solid #20b2aa;
+        outline-offset: 3px;
+      }
+</styles>
 <section id="portfolio-main" class="portfolio">
     <div class="container">
         <div class="row justify-content-center">
