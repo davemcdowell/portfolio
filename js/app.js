@@ -3,12 +3,12 @@ let app = function() {
 
     let slideShowOptions = {
         type       : 'loop',
-        width     : '445',
+        width      : '445px',
         gap        : '1rem',
         perPage    : 2,
         breakpoints: {
           640: {
-            height: '6rem',
+            perPage    : 1,
           },
         },
     };
