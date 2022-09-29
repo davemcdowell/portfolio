@@ -5,10 +5,8 @@ let app = function() {
         type       : 'loop',
         fixedWidth : '445px',
         gap        : '1rem',
-        perPage    : 2,
         breakpoints: {
           640: {
-            perPage    : 1,
           },
         },
     };
