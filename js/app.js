@@ -11,6 +11,9 @@ let app = function() {
           640: {
             fixedWidth: '225px',
           },
+          410: {
+            perPage    : 1,
+          },
         },
     };
 
