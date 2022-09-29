@@ -3,7 +3,7 @@ let app = function() {
 
     let slideShowOptions = {
         type       : 'loop',
-        width      : '445px',
+        fixedWidth : '445px',
         gap        : '1rem',
         perPage    : 2,
         breakpoints: {
