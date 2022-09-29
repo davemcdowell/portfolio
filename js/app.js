@@ -12,7 +12,7 @@ let app = function() {
             type        : 'loop',
             height      : '9rem',
             perPage     : 2,
-            gap         : '2rem',
+            gap         : '2em',
             pagination  : false,
             breakpoints : {
                 640: { height: '6rem', },
