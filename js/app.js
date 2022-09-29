@@ -12,6 +12,7 @@ let app = function() {
             type        : 'loop',
             height      : '9rem',
             perPage     : 2,
+            padding     : '20%',
             isNavigation: true,
             breakpoints : {
               640: {
