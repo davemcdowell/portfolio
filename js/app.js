@@ -4,9 +4,10 @@ let app = function() {
     let slideShowOptions = {
         type       : 'loop',
         fixedWidth : '445px',
-        gap        : '1rem',
+        gap        : '2rem',
         breakpoints: {
           640: {
+            
           },
         },
     };
