@@ -8,7 +8,7 @@ let app = function() {
         setContactForm();
         setToolTips();
 
-        let splide = new Splide( '.splide', {
+        new Splide( '.splide', {
             type        : 'loop',
             height      : '9rem',
             perPage     : 2,
@@ -16,11 +16,9 @@ let app = function() {
             padding     : '20%',
             pagination  : false,
             breakpoints : {
-              640: {
-                height: '6rem',
-              },
+                640: { height: '6rem' },
             },
-          }).mount();
+        }).mount();
     }
 
     function setToolTips() {
