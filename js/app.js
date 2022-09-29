@@ -5,11 +5,11 @@ let app = function() {
         type       : 'loop',
         gap        : '2rem',
         pagination : false,
-        fixedHeight     : '445px',
+        fixedWidth : '445px',
         perPage    : 2,
         breakpoints: {
           640: {
-            height: '225px',
+            fixedWidth: '225px',
           },
         },
     };
