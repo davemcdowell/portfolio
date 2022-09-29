@@ -5,6 +5,7 @@ let app = function() {
         type       : 'loop',
         height     : '9rem',
         padding    : '1rem',
+        gap        : '1rem',
         perPage    : 3,
         breakpoints: {
           640: {
@@ -68,7 +69,7 @@ let app = function() {
         darkModeToggleBtn.setAttribute('aria-label', 'Dark Mode');
     }
 
-    function createSlideShow() {
+    function createSlideShow(slideSelector) {
 
     }
     
