@@ -3,11 +3,9 @@ let app = function() {
 
     let slideShowOptions = {
         type       : 'loop',
-        gap        : '2rem',
-        pagination : false,
         fixedWidth : '445px',
-        perPage    : 2,
-        padding    : '2rem'
+        gap        : '2rem',
+        pagination : false
     };
 
     window.addEventListener('DOMContentLoaded', init);
