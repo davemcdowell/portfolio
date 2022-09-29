@@ -1,13 +1,6 @@
 let app = function() {
     let isDarkMode = true;
 
-    let slideShowOptions = {
-        type       : 'loop',
-        fixedWidth : '445px',
-        gap        : '2rem',
-        pagination : false
-    };
-
     window.addEventListener('DOMContentLoaded', init);
 
     function init() {
@@ -15,8 +8,16 @@ let app = function() {
         setContactForm();
         setToolTips();
 
-        let splide = new Splide( '.splide', slideShowOptions);
-        splide.mount();
+        let splide = new Splide( '.splide', {
+            type       : 'loop',
+            height     : '9rem',
+            perPage    : 2,
+            breakpoints: {
+              640: {
+                height: '6rem',
+              },
+            },
+          }).mount();
     }
 
     function setToolTips() {
