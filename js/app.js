@@ -10,7 +10,7 @@ let app = function() {
 
         new Splide('.splide', {
             type        : 'loop',
-            width      : '445px',
+            fixedWidth  : '445px',
             perPage     : 2,
             gap         : '2rem',
             pagination  : false,
