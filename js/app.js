@@ -5,7 +5,7 @@ let app = function() {
         type       : 'loop',
         gap        : '2rem',
         pagination : false,
-        height     : '445px',
+        fixedHeight     : '445px',
         perPage    : 2,
         breakpoints: {
           640: {
