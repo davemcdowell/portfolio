@@ -10,10 +10,11 @@ let app = function() {
 
         new Splide('.splide', {
             type        : 'loop',
-            fixedWidth  : '445px',
             perPage     : 2,
             gap         : '2rem',
             pagination  : false,
+            focus       : 'center',
+            trimSpace   : false,
             //breakpoints : {
                 //640: { height: '6rem', },
             //},
