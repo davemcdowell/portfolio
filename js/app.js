@@ -6,12 +6,7 @@ let app = function() {
         gap        : '2rem',
         pagination : false,
         fixedWidth : '445px',
-        perPage    : 2,
-        breakpoints: {
-          640: {
-            fixedWidth: '225px',
-          }
-        }
+        perPage    : 2
     };
 
     window.addEventListener('DOMContentLoaded', init);
