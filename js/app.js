@@ -8,6 +8,7 @@ let app = function() {
         width       : '950px',
         pagination  : false,
         lazyLoad    : 'nearby',
+        preloadPages: 1,
         breakpoints : {
             576: { height: '6rem', },
         },
