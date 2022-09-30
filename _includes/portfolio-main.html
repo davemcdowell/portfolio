@@ -56,7 +56,22 @@
       }
       .splide__slide .splide__slide__container img { width: 100%; height: auto; }
 
-      .project-data .title { display: block; font-weight: 600; color: white; }
+      .project-data .title { 
+        font-family: "Roboto","Arial",sans-serif;
+        color: white; 
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        font-weight: 500;
+        max-height: 4.4rem;
+        overflow: hidden;
+        display: block;
+        -webkit-line-clamp: 2;
+        display: box;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        white-space: normal;
+      }
       .project-data span:not(:last-of-type):not(.title)::after { content: '•'; margin: 0 4px; }
 </style>
 <section id="portfolio-main" class="portfolio">
