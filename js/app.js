@@ -11,7 +11,6 @@ let app = function() {
         new Splide('.splide', {
             type        : 'loop',
             perPage     : 2,
-            gap         : '2rem',
             width       : '950px',
             pagination  : false,
             //breakpoints : {
