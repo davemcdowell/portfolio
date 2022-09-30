@@ -1,5 +1,17 @@
 let app = function() {
     let isDarkMode = true;
+    let topLevelSliderOptions = {
+        type        : 'loop',
+        perPage     : 2,
+        gap         : '2rem',
+        padding     : { left: '1.5rem' },
+        width       : '950px',
+        pagination  : false,
+        lazyLoad    : 'nearby',
+        breakpoints : {
+            576: { height: '6rem', },
+        },
+    };
 
     window.addEventListener('DOMContentLoaded', init);
 
@@ -8,16 +20,7 @@ let app = function() {
         setContactForm();
         setToolTips();
 
-        new Splide('.splide', {
-            type        : 'loop',
-            perPage     : 2,
-            gap         : '2rem',
-            width       : '950px',
-            pagination  : false,
-            //breakpoints : {
-                //640: { height: '6rem', },
-            //},
-        }).mount();
+        new Splide('.splide', topLevelSliderOptions).mount();
     }
 
     function setToolTips() {
