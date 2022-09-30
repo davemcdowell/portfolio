@@ -1,82 +1,3 @@
-<style>
-    .double-slider .splide__arrow {
-        -ms-flex-align: center;
-        align-items: center;
-        background: transparent;
-        border: 0;
-        border-radius: 0;
-        cursor: pointer;
-        display: -ms-flexbox;
-        display: flex;
-        height: 2.5em;
-        -ms-flex-pack: center;
-        justify-content: center;
-        padding: 0;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 2.5em;
-        z-index: 1;
-      }
-      .double-slider .splide__arrow i {
-        color: ghostwhite;
-        height: 2.5em;
-        transition: color 0.2s linear;
-        width: 2.5em;
-      }
-      .double-slider .splide__arrow:hover:not(:disabled) i {
-        color: gainsboro;
-      }
-      .double-slider .splide__arrow:disabled {
-        opacity: 0.3;
-      }
-      .double-slider .splide__arrow:focus-visible {
-        outline: 3px solid ghostwhite;
-        outline-offset: 3px;
-      }
-      .double-slider .splide__arrow--prev {
-        left: 1em;
-      }
-      .double-slider .splide__arrow--next {
-        right: 1em;
-      }
-      .double-slider .splide.is-focus-in .splide__arrow:focus {
-        outline: 3px solid ghostwhite;
-        outline-offset: 3px;
-      }
-      .double-slider .splide__track {
-        justify-content: center !important;
-        margin: 0 !important;
-      }
-      .double-slider .splide:not( .is-overflow ) .splide__list {
-        justify-content: center;
-      }
-      .double-slider .splide .splide__slide:last-child {
-        margin: 0 !important;
-      }
-      .double-slider .splide__slide .splide__slide__container img { width: 100%; height: auto; }
-
-      .project-data .title { 
-        color: white;
-        font-size: 1.6rem;
-        line-height: 2.2rem;
-        font-weight: 500;
-        max-height: 4.4rem;
-        overflow: hidden;
-        display: block;
-        -webkit-line-clamp: 2;
-        display: box;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-        white-space: normal;
-      }
-
-      .project-data span:not(:last-of-type):not(.title)::after { 
-        content: '•'; 
-        margin: 0 4px; 
-      }
-</style>
 <section id="portfolio-main" class="portfolio">
     <div class="container">
         <div class="row justify-content-center">
@@ -108,25 +29,30 @@
                               <div class="splide__slide__container">
                                 <img data-splide-lazy="https://picsum.photos/445/296?random=2" width="445" height="296">
                               </div>
-                              <div class="splide__slide__content">
-                                Nibh veri dolor in eam. At homero volumus eos, ea vix quas omnes temporibus.
-
+                              <div class="project-data splide__slide__content">
+                                <span class="title">Nibh veri dolor</span>
+                                <span class="project">Temporibus: Source</span>
+                                <span class="year">2015</span>
                               </div>
                             </li>
                             <li class="splide__slide">
                               <div class="splide__slide__container">
                                 <img data-splide-lazy="https://picsum.photos/445/296?random=3" width="445" height="296">
                               </div>
-                              <div class="splide__slide__content">
-                                Nibh veri dolor in eam. At homero volumus eos, ea vix quas omnes temporibus.
+                              <div class="project-data splide__slide__content">
+                                <span class="title">Nibh veri dolor</span>
+                                <span class="project">Temporibus: Source</span>
+                                <span class="year">2015</span>
                               </div>
                             </li>
                             <li class="splide__slide">
                               <div class="splide__slide__container">
                                 <img data-splide-lazy="https://picsum.photos/445/296?random=4" width="445" height="296">
                               </div>
-                              <div class="splide__slide__content">
-                                Nibh veri dolor in eam. At homero volumus eos, ea vix quas omnes temporibus.
+                              <div class="project-data splide__slide__content">
+                                <span class="title">Nibh veri dolor</span>
+                                <span class="project">Temporibus: Source</span>
+                                <span class="year">2015</span>
                               </div>
                             </li>                        
                           </ul>
