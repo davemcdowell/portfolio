@@ -15,7 +15,7 @@ let app = function() {
             width       : '950px',
             padding     : { left: '1rem', right: '1rem'  },
             pagination  : false,
-            trimSpace   : false,
+            trimSpace   : true,
             //breakpoints : {
                 //640: { height: '6rem', },
             //},
