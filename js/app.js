@@ -4,12 +4,13 @@ let app = function() {
         type        : 'loop',
         perPage     : 2,
         gap         : 'auto',
+        cover       : true,
         width       : '950px',
         pagination  : false,
         lazyLoad    : 'nearby',
         preloadPages: 1,
         breakpoints : {
-            576: { perPage: 1, },
+            640: { perPage: 1, },
         }
     };
 
