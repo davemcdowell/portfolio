@@ -10,8 +10,8 @@ let app = function() {
         lazyLoad    : 'nearby',
         preloadPages: 1,
         breakpoints : {
-            576: { height: '6rem', },
-        },
+            576: { perPage: 1, },
+        }
     };
 
     window.addEventListener('DOMContentLoaded', init);
