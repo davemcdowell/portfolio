@@ -21,6 +21,7 @@ let app = function() {
         setToolTips();
 
         new Splide('.splide', topLevelSliderOptions).mount();
+        console.log(topLevelSliderOptions);
     }
 
     function setToolTips() {
