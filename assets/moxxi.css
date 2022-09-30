@@ -1,5 +1,6 @@
 /* globals */
 :root {
+    font-size: 16px;
     --bg-color-dark: #212121;
     --bg-color-darkest: #141414;
     --bg-color-offset: #2e2e2e;
