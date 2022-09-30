@@ -4,7 +4,6 @@ let app = function() {
         type        : 'loop',
         perPage     : 2,
         perMove     : 1,
-        arrows      : 'slider',
         gap         : '2rem',
         width       : '950px',
         pagination  : false,
