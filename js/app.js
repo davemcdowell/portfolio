@@ -3,8 +3,7 @@ let app = function() {
     let topLevelSliderOptions = {
         type        : 'loop',
         perPage     : 2,
-        gap         : '2rem',
-        padding     : { left: '1.5rem' },
+        gap         : '2.5rem',
         width       : '950px',
         pagination  : false,
         lazyLoad    : 'nearby',
