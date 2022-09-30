@@ -48,6 +48,9 @@
         justify-content: center !important;
         margin: 0 !important;
       }
+      .splide:not( .is-overflow ) .splide__list {
+        justify-content: center;
+      }
       .splide .splide__slide:last-child {
         margin: 0 !important;
       }
@@ -64,7 +67,7 @@
                         <button class="splide__arrow splide__arrow--prev"><i class="bi bi-chevron-left icon-2x"></i></button>
                         <button class="splide__arrow splide__arrow--next"><i class="bi bi-chevron-right icon-2x"></i></button>
                       </div>
-                      <div class="splide__slider">
+                      <div class="splide__slider position-relative">
                         <div class="splide__track">
                           <ul class="splide__list mx-auto">
                             <li class="splide__slide">
