@@ -6,7 +6,6 @@ let app = function() {
         gap         : '2rem',
         width       : '950px',
         pagination  : false,
-        updateOnMove: true,
         lazyLoad    : 'nearby',
         preloadPages: 1,
         breakpoints : {
