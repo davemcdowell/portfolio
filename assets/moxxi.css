@@ -263,7 +263,7 @@ hr {
 /* project data */
 .project-data span {
     color: var(--lighter-type-color);
-    font-size: 0.65rem;
+    font-size: 0.85rem;
 }
 
 .project-data .title {
