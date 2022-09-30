@@ -12,6 +12,7 @@ let app = function() {
             type        : 'loop',
             perPage     : 2,
             gap         : '2rem',
+            padding     : { left: '1rem' },
             width       : '950px',
             pagination  : false,
             //breakpoints : {
