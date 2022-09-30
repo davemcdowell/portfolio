@@ -5,7 +5,6 @@ let app = function() {
         perPage     : 2,
         perMove     : 1,
         gap         : '2rem',
-        padding     : { left: '13px', },
         width       : '950px',
         pagination  : false,
         lazyLoad    : 'nearby',
