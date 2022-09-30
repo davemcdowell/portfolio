@@ -4,7 +4,7 @@ let app = function() {
         type        : 'loop',
         perPage     : 2,
         perMove     : 1,
-        gap         : '2rem',
+        gap         : '2.1825rem',
         width       : '950px',
         pagination  : false,
         lazyLoad    : 'nearby',
