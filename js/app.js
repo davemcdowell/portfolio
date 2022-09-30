@@ -13,6 +13,7 @@ let app = function() {
             perPage     : 2,
             gap         : '2rem',
             width       : '950px',
+            padding     : { left: '1rem', right: '1rem'  },
             pagination  : false,
             trimSpace   : false,
             //breakpoints : {
