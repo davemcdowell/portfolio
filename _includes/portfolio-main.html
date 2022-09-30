@@ -1,5 +1,5 @@
 <style>
-    .splide__arrow {
+    .double-slider .splide__arrow {
         -ms-flex-align: center;
         align-items: center;
         background: transparent;
@@ -18,43 +18,43 @@
         width: 2.5em;
         z-index: 1;
       }
-      .splide__arrow i {
+      .double-slider .splide__arrow i {
         color: ghostwhite;
         height: 2.5em;
         transition: color 0.2s linear;
         width: 2.5em;
       }
-      .splide__arrow:hover:not(:disabled) i {
+      .double-slider .splide__arrow:hover:not(:disabled) i {
         color: gainsboro;
       }
-      .splide__arrow:disabled {
+      .double-slider .splide__arrow:disabled {
         opacity: 0.3;
       }
-      .splide__arrow:focus-visible {
+      .double-slider .splide__arrow:focus-visible {
         outline: 3px solid ghostwhite;
         outline-offset: 3px;
       }
-      .splide__arrow--prev {
+      .double-slider .splide__arrow--prev {
         left: 1em;
       }
-      .splide__arrow--next {
+      .double-slider .splide__arrow--next {
         right: 1em;
       }
-      .splide.is-focus-in .splide__arrow:focus {
+      .double-slider .splide.is-focus-in .splide__arrow:focus {
         outline: 3px solid ghostwhite;
         outline-offset: 3px;
       }
-      .splide__track {
+      .double-slider .splide__track {
         justify-content: center !important;
         margin: 0 !important;
       }
-      .splide:not( .is-overflow ) .splide__list {
+      .double-slider .splide:not( .is-overflow ) .splide__list {
         justify-content: center;
       }
-      .splide .splide__slide:last-child {
+      .double-slider .splide .splide__slide:last-child {
         margin: 0 !important;
       }
-      .splide__slide .splide__slide__container img { width: 100%; height: auto; }
+      .double-slider .splide__slide .splide__slide__container img { width: 100%; height: auto; }
 
       .project-data .title { 
         font-family: "Roboto","Arial",sans-serif;
@@ -72,14 +72,26 @@
         text-overflow: ellipsis;
         white-space: normal;
       }
-      .project-data span:not(:last-of-type):not(.title)::after { content: '•'; margin: 0 4px; }
+
+      .project-data span {
+        font-family: "Roboto","Arial",sans-serif;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        font-weight: 400;
+        white-space: normal;
+      }
+
+      .project-data span:not(:last-of-type):not(.title)::after { 
+        content: '•'; 
+        margin: 0 4px; 
+        }
 </style>
 <section id="portfolio-main" class="portfolio">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10 col-lg-offset-1">
                 <div id="portfolio-container">
-                    <section class="splide mx-auto" aria-labelledby="carousel-heading">
+                    <section class="splide double-slider mx-auto" aria-labelledby="carousel-heading">
                       <h2 id="carousel-heading" class="block-label">Level Design</h2>
                       <hr class="block-label-hr">
                       <div class="splide__arrows">
