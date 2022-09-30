@@ -1,6 +1,5 @@
 /* globals */
 :root {
-    font-size: 16px;
     --bg-color-dark: #212121;
     --bg-color-darkest: #141414;
     --bg-color-offset: #2e2e2e;
@@ -12,6 +11,8 @@
 }
 
 html {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 10px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
