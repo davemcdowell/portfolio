@@ -55,6 +55,8 @@
         margin: 0 !important;
       }
       .splide__slide .splide__slide__container img { width: 100%; height: auto; }
+
+      .project-data span:not(:last-of-type)::after { content: '•'; margin: 0 4x;}
 </style>
 <section id="portfolio-main" class="portfolio">
     <div class="container">
@@ -71,18 +73,18 @@
                       <div class="splide__slider position-relative">
                         <div class="splide__track">
                           <ul class="splide__list">
+
                             <li class="splide__slide">
                               <div class="splide__slide__container">
                                 <img data-splide-lazy="https://picsum.photos/445/296?random=1" width="445" height="296">
                               </div>
-                              <div class="splide__slide__content">
-                                <span class="title font-weight-bold">Nibh veri dolor</span>
-                                <span class="divider"> | </span>
+                              <div class="project-data splide__slide__content">
+                                <span class="title">Nibh veri dolor</span>
                                 <span class="project">Temporibus: Source</span>
-                                <span class="divider"> | </span>
                                 <span class="year">2015</span>
                               </div>
                             </li>
+                            
                             <li class="splide__slide">
                               <div class="splide__slide__container">
                                 <img data-splide-lazy="https://picsum.photos/445/296?random=2" width="445" height="296">
