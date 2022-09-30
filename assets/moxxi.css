@@ -188,6 +188,7 @@ hr {
   color: var(--white-type-color);
 }
 
+/* double-slider */
 .double-slider .splide__arrow {
   -ms-flex-align: center;
   align-items: center;
@@ -260,8 +261,13 @@ hr {
 }
 
 /* project data */
+.project-data span {
+    color: var(--lighter-type-color);
+    font-size: 0.65rem;
+}
+
 .project-data .title {
-  color: white;
+  color: var(--white-type-color);
   font-size: 1.6rem;
   line-height: 2.2rem;
   font-weight: 500;
