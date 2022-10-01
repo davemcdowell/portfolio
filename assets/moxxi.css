@@ -280,7 +280,7 @@ hr {
 
 .crossfade-wrap a img { transition: opacity 0.35s ease-in-out; }
 .crossfade-wrap a:first-child img { position: absolute; left: 0; }
-.crossfade-wrap a:last-child img:hover { opacity: 0; }
+.crossfade-wrap a:last-child:hover img { opacity: 0; }
 
 /* project data */
 .project-data span {
