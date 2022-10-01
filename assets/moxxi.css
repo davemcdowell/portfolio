@@ -271,7 +271,7 @@ hr {
 
 .project-card:active,
 .project-card:focus {
-    border: 1px solid var(--white-type-color);
+    border: 1px solid var(--default-type-color);
     background-color: var(--card-highlight-color);
 }
 
