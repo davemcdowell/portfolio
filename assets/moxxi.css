@@ -191,6 +191,9 @@ hr {
   color: var(--white-type-color);
 }
 
+/* callout */
+
+
 /* portfolio-slider */
 .portfolio-slider .splide__arrow {
   -ms-flex-align: center;
