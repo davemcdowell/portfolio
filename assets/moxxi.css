@@ -281,6 +281,7 @@ hr {
 
 .project-data .title a {
   color: var(--white-type-color);
+  text-decoration: none;
   font-size: 1.6rem;
   line-height: 2.2rem;
   font-weight: 500;
