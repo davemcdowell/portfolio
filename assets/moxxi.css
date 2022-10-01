@@ -279,8 +279,8 @@ hr {
 .crossfade-wrap { position: relative; }
 
 .crossfade-wrap a img { transition: opacity 0.35s ease-in-out; }
-.crossfade-wrap:first-child a img { position: absolute; left: 0; }
-.crossfade-wrap:last-child a:hover img { opacity: 0; }
+.crossfade-wrap a:first-child img { position: absolute; left: 0; }
+.crossfade-wrap:hover a:last-child img { opacity: 0; }
 
 /* project data */
 .project-data span {
