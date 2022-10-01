@@ -270,6 +270,10 @@ hr {
     transition: all 0.35s ease-in-out;
 }
 
+.project-card:hover {
+  background-color: var(--card-highlight-color);
+}
+
 .project-card:active,
 .project-card:focus {
     border: 1px solid var(--default-type-color);
