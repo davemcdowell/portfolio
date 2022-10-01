@@ -275,6 +275,11 @@ hr {
     background-color: var(--card-highlight-color);
 }
 
+.crossfade-wrap { position:relative; }
+
+.crossfade-wrap img { transition: opacity 1s ease-in-out; }
+.crossfade-wrap img:last-of-type:hover { opacity:0; }
+
 /* project data */
 .project-data span {
     color: var(--lighter-type-color);
