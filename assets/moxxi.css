@@ -298,7 +298,7 @@ hr {
   white-space: normal;
 }
 
-.project-data span:not(.title) { display: flex; }
+.project-data span:not(.title) { display: inline; }
 .project-data span:not(:last-of-type):not(.title)::after {
   content: "•";
   margin: 0 4px;
