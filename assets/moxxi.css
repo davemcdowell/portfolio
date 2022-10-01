@@ -277,9 +277,9 @@ hr {
 
 .crossfade-wrap { position: relative; }
 
-.crossfade-wrap img { transition: opacity 0.35s ease-in-out; }
-.crossfade-wrap:first-child img { position: absolute; left: 0; }
-.crossfade-wrap:last-child img:hover { opacity: 0; }
+.double-slider .splide__slide .splide__slide__container img { transition: opacity 0.35s ease-in-out; }
+.double-slider .splide__slide .splide__slide__container:first-child img { position: absolute; left: 0; }
+.double-slider .splide__slide .splide__slide__container:last-child img:hover { opacity: 0; }
 
 /* project data */
 .project-data span {
