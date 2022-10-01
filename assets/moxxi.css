@@ -8,6 +8,8 @@
   --white-type-color: #ffffff;
   --default-type-color: #f8f8ff;
   --lighter-type-color: #6c757d;
+
+  --card-highlight-color: #383838;
 }
 
 html {
@@ -270,7 +272,7 @@ hr {
 .project-card:active,
 .project-card:focus {
     border: 1px solid var(--white-type-color);
-    background-color: var(--lighter-type-color);
+    background-color: var(--card-highlight-color);
 }
 
 /* project data */
