@@ -279,7 +279,7 @@ hr {
     font-size: 1rem;
 }
 
-.project-data .title {
+.project-data .title a {
   color: var(--white-type-color);
   font-size: 1.6rem;
   line-height: 2.2rem;
