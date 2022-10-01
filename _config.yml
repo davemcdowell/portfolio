@@ -3,18 +3,20 @@ title: "Dave McDowell | Designer + Developer"
 name: Dave McDowell
 email: davecmcdowell@gmail.com
 description: >-
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  The portfolio of Dave McDowell, you've arrived.
 baseurl: "/portfolio"
 url: "https://www.dcmcdowell.com"
+
 twitter_username: "@func_dave"
 github_username:  davemcdowell 
+
 mailto_url: mailto:dave@dcmcdowell.com
 github_url: https://github.com/davemcdowell
 steam_url: https://steamcommunity.com/id/cptyossarian/
 linkedin_url: https://www.linkedin.com/in/davecmcdowell/
 twitter_url: https://twitter.com/func_dave
+
+google_analytics: "G-FW1FS38ZN7"
 
 # Build settings
 #theme: moxxi
