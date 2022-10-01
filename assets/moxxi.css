@@ -278,9 +278,9 @@ hr {
 
 .crossfade-wrap { position: relative; }
 
-.crossfade-wrap .cf-top { transition: opacity 0.35s ease-in-out; }
-.crossfade-wrap .cf-btm { position: absolute; left: 0; }
-.crossfade-wrap .cf-top:hover { opacity: 0; }
+.crossfade-wrap .cf-top img { transition: opacity 0.35s ease-in-out; }
+.crossfade-wrap .cf-btm img { position: absolute; left: 0; }
+.crossfade-wrap .cf-top:hover img { opacity: 0; }
 
 /* project data */
 .project-data span {
