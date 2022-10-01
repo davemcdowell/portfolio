@@ -277,7 +277,7 @@ hr {
 }
 
 .crossfade-wrap { position: relative; }
-.crossfade-wrap .cf-link-top img { z-index: 5; position: relative; transition: opacity 0.35s ease-in-out; transition-delay: 1s; }
+.crossfade-wrap .cf-link-top img { z-index: 5; position: relative; transition: opacity 0.35s ease-in-out; transition-delay: 0.5s; }
 .crossfade-wrap .cf-link-btm img { z-index: 0; position: absolute; left: 0; }
 .crossfade-wrap .cf-link-top:hover img { opacity: 0; }
 
