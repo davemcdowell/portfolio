@@ -260,6 +260,19 @@ hr {
   height: auto;
 }
 
+/* project-card */
+.project-card {
+    border: 1px solid var(--bg-color-dark);
+    background-color: solid var(--bg-color-dark);
+    transition: all 0.35s ease-in-out;
+}
+
+.project-card:active,
+.project-card:focus {
+    border: 1px solid var(--white-type-color);
+    background-color: var(--lighter-type-color);
+}
+
 /* project data */
 .project-data span {
     color: var(--lighter-type-color);
