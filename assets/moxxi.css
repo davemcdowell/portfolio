@@ -277,7 +277,7 @@ hr {
 
 .crossfade-wrap { position:relative; }
 
-.crossfade-wrap img { transition: opacity 0.35s ease-in-out; }
+.crossfade-wrap img { transition-delay: 3s; transition: opacity 0.35s ease-in-out; }
 .crossfade-wrap:first-child img { position: absolute; left: 0; }
 .crossfade-wrap:last-child img:hover { opacity: 0; }
 
