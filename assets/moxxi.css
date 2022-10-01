@@ -301,7 +301,7 @@ hr {
   font-weight: 500;
   max-height: 4.4rem;
   overflow: hidden;
-  display: block;
+  display: inline-block;
   -webkit-line-clamp: 2;
   display: box;
   display: -webkit-box;
