@@ -10,6 +10,7 @@
   --lighter-type-color: #6c757d;
 
   --card-highlight-color: #383838;
+  --card-border-hover-color: #666666;
 }
 
 html {
@@ -271,7 +272,7 @@ hr {
 }
 
 .project-card:hover {
-  border: 1px solid var(--default-type-color);
+  border: 1px solid var(--card-border-hover-color);
   background-color: var(--card-highlight-color);
 }
 
