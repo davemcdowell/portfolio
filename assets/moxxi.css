@@ -271,6 +271,7 @@ hr {
 }
 
 .project-card:hover {
+  border: 1px solid var(--default-type-color);
   background-color: var(--card-highlight-color);
 }
 
