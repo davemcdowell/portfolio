@@ -280,6 +280,7 @@ hr {
 
 .crossfade-wrap .cf-top { transition: opacity 0.35s ease-in-out; }
 .crossfade-wrap .cf-btm { position: absolute; left: 0; }
+.crossfade-wrap a:hover .cf-top,
 .crossfade-wrap .cf-top:hover { opacity: 0; }
 
 /* project data */
