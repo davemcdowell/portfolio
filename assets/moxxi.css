@@ -211,8 +211,8 @@ hr {
 
 /* callout */
 .callout {
-  border: 1px solid var(--bg-color-dark);
-  background-color: solid var(--bg-color-dark);
+  border: 1px solid var(--card-border-hover-color);
+  background-color: var(--card-highlight-color);
   transition: all 0.35s ease-in-out;
 }
 
