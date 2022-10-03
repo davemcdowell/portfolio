@@ -134,6 +134,10 @@ hr {
   font-size: 3em;
 }
 
+.btn-icon {
+
+}
+
 .block-label {
   display: inline-block;
   background-color: var(--default-type-color);

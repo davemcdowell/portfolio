@@ -17,5 +17,9 @@
     <link rel="stylesheet" href="{{ '/assets/moxxi.css' | relative_url }}">
     <link rel="icon" href="favIcon.ico">
 
+    {% if jekyll.environment == 'production' and site.google_analytics %}
+    {% include analytics.html %}
+    {% endif %}
+
     <title>Dave McDowell | Designer & Developer</title>
 </head>
