@@ -222,6 +222,19 @@ hr {
 .callout h3 { color: var(--white-type-color); }
 .callout i { color: var(--default-type-color); }
 
+.callout-btn {
+  position: absolute;
+  bottom: 50%;
+  right: 5%;
+  display: inline-block;
+  background-color: var(--default-type-color);
+  color: var(--bg-color-dark);
+  padding: 6px 8px 6px 8px;
+  user-select: none;
+  line-height: 24px;
+  vertical-align: middle;
+}
+
 /* portfolio-slider */
 .portfolio-slider .splide__arrow {
   -ms-flex-align: center;
