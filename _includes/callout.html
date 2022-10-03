@@ -1,17 +1,15 @@
 <section id="callout-{{ include.title | slugify }}">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
                 <div class="row g-0 position-relative">
-                    <div class="callout rounded">
-                        <div class="col-md-6 mb-md-0 p-md-4">
-                            <img src="https://picsum.photos/400/200?random=1" class="w-100" alt="...">
-                        </div>
-                        <div class="col-md-6 p-4 ps-md-0">
-                            <h5 class="mt-0">{{ include.title }}</h5>
-                            <p>{{ include.content }}</p>
-                            <a href="{{ include.link }}" class="stretched-link">{{ include.link-label }}</a>
-                        </div>
+                    <div class="col-md-6 mb-md-0 p-md-4">
+                        <img src="https://picsum.photos/400/200?random=1" class="w-100" alt="...">
+                    </div>
+                    <div class="col-md-6 p-4 ps-md-0">
+                        <h5 class="mt-0">{{ include.title }}</h5>
+                        <p>{{ include.content }}</p>
+                        <a href="{{ include.link }}" class="stretched-link">{{ include.link-label }}</a>
                     </div>
                 </div>
             </div>
