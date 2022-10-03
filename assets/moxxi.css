@@ -220,7 +220,7 @@ hr {
 }
 
 .callout h3 { color: var(--white-type-color); }
-.callout i { color: var(--lighter-type-color); }
+.callout i { color: var(--white-type-color); }
 
 /* portfolio-slider */
 .portfolio-slider .splide__arrow {
