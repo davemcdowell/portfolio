@@ -68,7 +68,7 @@ let app = function() {
         darkModeToggleBtn.setAttribute('aria-label', 'Dark Mode');
     }
 
-    function createSlideShow(slideSelector) {
+    function initiateSlideShows(slideSelector, options) {
 
     }
     

@@ -135,7 +135,11 @@ hr {
 }
 
 .btn-icon {
-
+  color: var(--lighter-type-color);
+  transition: color 0.35s ease-in-out;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .block-label {
