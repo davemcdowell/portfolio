@@ -136,6 +136,9 @@ hr {
 
 .btn-icon {
   color: var(--lighter-type-color);
+  background-color: transparent;
+  border: none;
+  outline: none;
   transition: color 0.35s ease-in-out;
   font-size: 1rem;
   font-weight: 400;
