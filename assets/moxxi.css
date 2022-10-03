@@ -210,7 +210,11 @@ hr {
 }
 
 /* callout */
-
+.callout {
+  border: 1px solid var(--bg-color-dark);
+  background-color: solid var(--bg-color-dark);
+  transition: all 0.35s ease-in-out;
+}
 
 /* portfolio-slider */
 .portfolio-slider .splide__arrow {
