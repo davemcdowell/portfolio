@@ -227,6 +227,10 @@ hr {
   bottom: 50%;
   right: 5%;
   display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--bg-color-dark);
+  text-decoration: none;
   background-color: var(--default-type-color);
   color: var(--bg-color-dark);
   padding: 6px 8px 6px 8px;
