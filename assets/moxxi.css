@@ -224,7 +224,7 @@ hr {
 
 .callout-btn {
   position: absolute;
-  bottom: 50%;
+  bottom: 0;
   right: 5%;
   display: inline-block;
   font-size: 0.75rem;
