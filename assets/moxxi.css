@@ -331,11 +331,12 @@ hr {
 
 .slider-progress {
   background: #ccc;
+  margin-bottom: 2rem;
 }
 
 .slider-progress-bar {
-  background: greenyellow;
-  height: 2px;
+  background: var(--default-type-color);
+  height: 1px;
   transition: width 400ms ease;
   width: 0;
 }
