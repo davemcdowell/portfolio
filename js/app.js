@@ -58,7 +58,8 @@ let app = function() {
         let darkModeToggleBtn = document.querySelector('#toggle-darkmode');
 
         document.documentElement.classList.add('light-theme');
-
+        
+        darkModeToggleBtn.classList.toggle('rotate');
 
         darkModeToggleBtn.dataset.bsOriginalTitle = 'Dark Mode';
         darkModeToggleBtn.setAttribute('title', 'Dark Mode');
