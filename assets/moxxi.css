@@ -329,11 +329,22 @@ hr {
   height: auto;
 }
 
+.slider-progress {
+  background: #ccc;
+}
+
+.slider-progress-bar {
+  background: greenyellow;
+  height: 2px;
+  transition: width 400ms ease;
+  width: 0;
+}
+
 /* project-card */
 .project-card {
-    border: 1px solid var(--bg-color-dark);
-    background-color: solid var(--bg-color-dark);
-    transition: all 0.35s ease-in-out;
+  border: 1px solid var(--bg-color-dark);
+  background-color: solid var(--bg-color-dark);
+  transition: all 0.35s ease-in-out;
 }
 
 .project-card:hover {

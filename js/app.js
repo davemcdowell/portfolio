@@ -21,7 +21,17 @@ let app = function() {
         setContactForm();
         setToolTips();
 
-        new Splide('.splide', topLevelSliderOptions).mount();
+        let pSlider = new Splide('.splide', topLevelSliderOptions);
+        let sliderBar = pSlider.root.querySelector( '.slider-progress' );
+
+        // Updates the bar width whenever the carousel moves
+        pSlider.on( 'mounted move', function () {
+            let end  = pSlider.Components.Controller.getEnd() + 1;
+            let rate = Math.min( ( pSlider.index + 1 ) / end, 1 );
+            sliderBar.style.width = String( 100 * rate ) + '%';
+        } );
+
+        pSlider.mount();
     }
 
     function setToolTips() {
