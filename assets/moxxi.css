@@ -571,10 +571,10 @@ footer textarea {
 /* animations */
 .rotate {
   transform: rotate(0deg);
-  transition: transform 0.15s linear;
+  transition: transform 0.25s linear;
 }
 
 .rotate.r180 {
   transform: rotate(180deg);
-  transition: transform 0.15s linear;
+  transition: transform 0.25s linear;
 }
