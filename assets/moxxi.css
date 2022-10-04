@@ -282,26 +282,16 @@ hr {
   width: 2.5em;
 }
 
-.portfolio-slider .splide__arrow:hover:not(:disabled) i {
-  color: gainsboro;
-}
-
-.portfolio-slider .splide__arrow:disabled {
-  opacity: 0.3;
-}
+.portfolio-slider .splide__arrow:hover:not(:disabled) i { color: gainsboro; }
+.portfolio-slider .splide__arrow:disabled { opacity: 0.3;}
 
 .portfolio-slider .splide__arrow:focus-visible {
   outline: 3px solid ghostwhite;
   outline-offset: 3px;
 }
 
-.portfolio-slider .splide__arrow--prev {
-  left: 1em;
-}
-
-.portfolio-slider .splide__arrow--next {
-  right: 1em;
-}
+.portfolio-slider .splide__arrow--prev { left: 1em; }
+.portfolio-slider .splide__arrow--next { right: 1em; }
 
 .portfolio-slider .splide.is-focus-in .splide__arrow:focus {
   outline: 3px solid ghostwhite;
