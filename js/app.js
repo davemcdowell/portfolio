@@ -43,12 +43,11 @@ let app = function() {
 
     function setDarkMode() {
         let darkModeToggleBtn = document.querySelector('#toggle-darkmode');
-        let icon = darkModeToggleBtn.querySelector('i');
 
         document.documentElement.classList.remove('light-theme');
         document.documentElement.classList.add('dark-theme');
 
-        icon.classList.remove('r90');
+        darkModeToggleBtn.classList.remove('r90');
 
         darkModeToggleBtn.dataset.bsOriginalTitle = 'Light Mode';
         darkModeToggleBtn.setAttribute('title', 'Light Mode');
@@ -57,11 +56,10 @@ let app = function() {
 
     function setLightMode() {
         let darkModeToggleBtn = document.querySelector('#toggle-darkmode');
-        let icon = darkModeToggleBtn.querySelector('i');
 
         document.documentElement.classList.add('light-theme');
 
-        icon.classList.add('r90');
+        darkModeToggleBtn.classList.add('r90');
 
         darkModeToggleBtn.dataset.bsOriginalTitle = 'Dark Mode';
         darkModeToggleBtn.setAttribute('title', 'Dark Mode');
