@@ -574,7 +574,7 @@ footer textarea {
   transition: transform 1s linear;
 }
 
-.rotate .r180 {
+.rotate.r180 {
   transform: rotate(180deg);
 }
 
