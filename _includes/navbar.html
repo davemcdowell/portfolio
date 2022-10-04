@@ -3,7 +3,7 @@
         <div id="glb-nav" class="collapse navbar-collapse w-50 order-1 order-md-0">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="navbar-brand nav-link d-none d-lg-block" href="{{ site.url }}" rel="noopener">
+                    <a class="navbar-brand nav-link d-none d-lg-block" href="{{ '/' | relative_url }}" rel="noopener">
                         <img class="hvr-bounce-in" loading="lazy" src="{{ '/assets/icons/dcm-icon.png' | relative_url }}" width="32px" height="32px" alt="logo">
                     </a>
                 </li>
@@ -18,7 +18,7 @@
                 </li>
             </ul>
         </div>
-        <a href="{{ site.url }}" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 user-select-none"><strong>{{ site.name }}</strong></a>
+        <a href="{{ '/' | relative_url }}" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 user-select-none"><strong>{{ site.name }}</strong></a>
         <div class="collapse navbar-collapse w-50 order-2">
             <ul class="nav navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link hvr-bounce-in" href="{{ site.linkedin_url }}" data-bs-trigger="hover" data-bs-toggle="tooltip" data-bs-placement="bottom" title="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a></li>
