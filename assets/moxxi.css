@@ -567,3 +567,14 @@ footer textarea {
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
 }
+
+/* animations */
+.rotate {
+  transform: rotate(0deg);
+  transition: transform 1s linear;
+}
+
+.rotate.r180 {
+  transform: rotate(180deg);
+}
+
