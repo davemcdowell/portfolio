@@ -240,6 +240,14 @@ hr {
   vertical-align: middle;
 }
 
+.callout-btn:hover,
+.callout-btn:active,
+.callout-btn:focus {
+  color: var(--bg-color-dark);
+}
+
+
+
 /* portfolio-slider */
 .portfolio-slider .splide__arrow {
   -ms-flex-align: center;
