@@ -254,6 +254,18 @@ hr {
   border: 1px solid var(--default-type-color);
 }
 
+.hvr-icon-forward:before {
+  content: "\F138";
+  position: absolute;
+  right: 1em;
+  padding: 0 1px;
+  font-family: inherit;
+  transform: translateZ(0);
+  transition-duration: 0.1s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+}
+
 /* portfolio-slider */
 .portfolio-slider .splide__arrow {
   -ms-flex-align: center;
