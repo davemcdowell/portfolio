@@ -240,6 +240,10 @@ hr {
   vertical-align: middle;
 }
 
+.callout-bt i {
+  color: var(--bg-color-dark);
+}
+
 .callout-btn:hover,
 .callout-btn:active,
 .callout-btn:focus {
