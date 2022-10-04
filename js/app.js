@@ -47,7 +47,7 @@ let app = function() {
         document.documentElement.classList.remove('light-theme');
         document.documentElement.classList.add('dark-theme');
 
-        darkModeToggleBtn.classList.toggle('rotate');
+        darkModeToggleBtn.classList.remove('r180');
 
         darkModeToggleBtn.dataset.bsOriginalTitle = 'Light Mode';
         darkModeToggleBtn.setAttribute('title', 'Light Mode');
@@ -58,8 +58,8 @@ let app = function() {
         let darkModeToggleBtn = document.querySelector('#toggle-darkmode');
 
         document.documentElement.classList.add('light-theme');
-        
-        darkModeToggleBtn.classList.toggle('rotate');
+
+        darkModeToggleBtn.classList.add('r180');
 
         darkModeToggleBtn.dataset.bsOriginalTitle = 'Dark Mode';
         darkModeToggleBtn.setAttribute('title', 'Dark Mode');
