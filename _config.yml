@@ -10,11 +10,28 @@ url: "https://www.dcmcdowell.com"
 twitter_username: "@func_dave"
 github_username:  davemcdowell 
 
+#custome defines
 mailto_url: mailto:dave@dcmcdowell.com
 github_url: https://github.com/davemcdowell
 steam_url: https://steamcommunity.com/id/cptyossarian/
 linkedin_url: https://www.linkedin.com/in/davecmcdowell/
 twitter_url: https://twitter.com/func_dave
+# end customs
+
+author:
+  name: Dave McDowell
+  twitter: "@func_dave"
+  image: "..."
+twitter:
+  username: "@func_dave"
+  card: summary_large_image
+social:
+  name: Dave McDowell
+  links:
+    - https://twitter.com/func_dave
+    - https://steamcommunity.com/id/cptyossarian/
+    - https://www.linkedin.com/in/davecmcdowell/
+    - https://github.com/davemcdowell
 
 google_analytics: "G-FW1FS38ZN7"
 
