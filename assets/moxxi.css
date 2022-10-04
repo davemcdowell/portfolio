@@ -250,6 +250,10 @@ hr {
   color: var(--bg-color-dark);
 }
 
+.callout-btn:hover .callout {
+  border: 1px solid var(--default-type-color);
+}
+
 /* portfolio-slider */
 .portfolio-slider .splide__arrow {
   -ms-flex-align: center;
