@@ -11,7 +11,7 @@
             {%- for post in posts -%}
             <li>
                 <div class="d-flex position-relative">
-                    <img src="https://picsum.photos/445/296?random=1" class="flex-shrink-0 me-3" alt="...">
+                    <img src="https://picsum.photos/445/296?random=1" class="flex-shrink-0 img-fluid me-3" alt="...">
                     <div>
                         <a href="{{ post.url | relative_url }}"><h5 class="mt-0">{{ post.title | escape }}</h5></a>
                         <span class="post-meta">{{ post.date | date: date_format }}</span>
