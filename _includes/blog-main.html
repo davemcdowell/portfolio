@@ -5,7 +5,7 @@
 {%- endif -%}
 {%- if posts.size > 0 -%}
 <section id="blog-main">
-    <div id="blog-container" style="max-width: 950px;">
+    <div id="blog-container" class="mx-auto" style="max-width: 950px;">
             {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
             {%- for post in posts -%}
                 <div class="d-flex position-relative">
