@@ -6,10 +6,10 @@
 {%- if posts.size > 0 -%}
 <section id="blog-main">
     <div id="blog-container">
-        <ul>
+        <ul class="list-group list-group-flush">
             {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
             {%- for post in posts -%}
-            <li>
+            <li class="list-group-item">
                 <div class="d-flex position-relative">
                     <img src="https://picsum.photos/222/148?random=1" class="img-fluid rounded me-3" alt="...">
                     <div>
