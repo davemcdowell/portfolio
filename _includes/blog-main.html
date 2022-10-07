@@ -9,7 +9,7 @@
             {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
             {%- for post in posts -%}
                 <div class="d-flex position-relative">
-                    <img src="https://picsum.photos/222/148?random=1" width="222" height="148" class="img-fluid img-thumbnail rounded me-3" alt="...">
+                    <img src="https://picsum.photos/222/148?random=1" width="222" height="148" class="rounded me-3" alt="...">
                     <div>
                         <a href="{{ post.url | relative_url }}"><h5 class="mt-0">{{ post.title | escape }}</h5></a>
                         <span class="post-meta">{{ post.date | date: date_format }}</span>
