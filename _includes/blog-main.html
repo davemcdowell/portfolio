@@ -5,7 +5,7 @@
 {%- endif -%}
 {%- if posts.size > 0 -%}
 <section id="blog-main">
-    <div id="blog-container">
+    <div id="blog-container" style="max-width: 950px;">
         <ul class="list-group list-group-flush">
             {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
             {%- for post in posts -%}
