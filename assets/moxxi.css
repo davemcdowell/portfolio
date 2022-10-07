@@ -337,7 +337,7 @@ hr {
 .slider-progress-bar {
   background: var(--default-type-color);
   height: 1px;
-  transition: width 400ms ease;
+  transition: width 0.15s ease;
   width: 0;
 }
 
