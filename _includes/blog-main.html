@@ -1,0 +1,43 @@
+{%- if site.paginate -%}
+{% assign posts = paginator.posts %}
+{%- else -%}
+{% assign posts = site.posts %}
+{%- endif -%}
+{%- if posts.size > 0 -%}
+<section id="blog-main">
+    <div id="blog-container">
+        <ul>
+            {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+            {%- for post in posts -%}
+            <li>
+                <div class="d-flex position-relative">
+                    <img src="https://picsum.photos/445/296?random=1" class="flex-shrink-0 me-3" alt="...">
+                    <div>
+                        <a href="{{ post.url | relative_url }}"><h5 class="mt-0">{{ post.title | escape }}</h5></a>
+                        <p>{{ post.excerpt }}</p>
+                        <a href="{{ post.url | relative_url }}">Go somewhere</a>
+                    </div>
+                </div>
+            </li>
+            {%- endfor -%}
+        </ul>
+        {% if site.paginate %}
+        <div class="pager">
+            <ul class="pagination">
+            {%- if paginator.previous_page %}
+            <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
+            {%- else %}
+            <li><div class="pager-edge">•</div></li>
+            {%- endif %}
+            <li><div class="current-page">{{ paginator.page }}</div></li>
+            {%- if paginator.next_page %}
+            <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
+            {%- else %}
+            <li><div class="pager-edge">•</div></li>
+            {%- endif %}
+            </ul>
+        </div>
+        {%- endif %}
+    </div>
+</section>
+{%- endif -%}
