@@ -11,11 +11,11 @@
             <div class="d-flex position-relative">
                 <img src="https://picsum.photos/222/148?random=1" width="222" height="148" class="rounded me-3" alt="...">
                 <div>
-                    <a href="{{ post.url | relative_url }}"><h5 class="mt-0">{{ post.title | escape }}</h5></a>
-                    <span class="post-meta">{{ post.date | date: date_format }}</span>
+                    <a class="link-title" href="{{ post.url | relative_url }}"><h5 class="mt-0">{{ post.title | escape }}</h5></a>
+                    <span class="meta-data">{{ post.date | date: date_format }}</span>
                     <hr class="block-label-hr">
                     <p>{{ post.excerpt }}</p>
-                    <a href="{{ post.url | relative_url }}">Go somewhere</a>
+                    <a class="link-title" href="{{ post.url | relative_url }}">Go somewhere</a>
                 </div>
             </div>
         {%- endfor -%}

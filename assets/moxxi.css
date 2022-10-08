@@ -173,6 +173,28 @@ hr {
   padding-top: 0;
 }
 
+.link-title {
+  color: var(--white-type-color);
+  text-decoration: none;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  max-height: 4.4rem;
+  overflow: hidden;
+  display: inline-block;
+  -webkit-line-clamp: 2;
+  display: box;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.meta-data {
+  color: var(--lighter-type-color);
+  font-size: 1rem;
+}
+
 /* jumbotron */
 .jumbotron {
   padding-top: 6rem;
