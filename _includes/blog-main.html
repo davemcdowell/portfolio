@@ -20,6 +20,7 @@
                         <hr class="block-label-hr">
                         <p class="card-text">{{ post.excerpt }}</p>
                         <a class="no-underline" href="{{ post.url | relative_url }}">Read more...</a>
+                        <hr>
                         <input type="hidden" value="{{ post.date }}">
                         <p class="card-text"><small class="text-muted">Last updated: {{ post.last_modified_at }}</small></p>
                     </div>
