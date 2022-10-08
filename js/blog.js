@@ -7,7 +7,7 @@ let blog = function() {
 
     function setLastModifiedDates() {
         let dates = document.querySelectorAll('[get-time-since]');
-        let timeSince = new Date();
+        let timeSince = 0;
 
         for(let i = 0; i < dates.length; i++) {
             let dateString = document.getElementById(dates[i].getAttribute('get-time-since')).value;
@@ -26,7 +26,7 @@ let blog = function() {
             }
                 
             console.log(timeSince.getHours() + ' hours ago');
-            return `Last modified: ${timeSince.getHours()} hours ago `;
+            dates[i].innerText = timeSince.getHours() + ' hours ago';
         }
     }
 }();
