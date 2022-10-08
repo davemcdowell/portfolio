@@ -36,7 +36,7 @@ social:
 google_analytics: "G-FW1FS38ZN7"
 
 # timezone
-timezone: America/Los_Angeles
+#timezone: America/Los_Angeles
 
 # paginate: defines
 paginate: 5
