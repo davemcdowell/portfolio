@@ -34,6 +34,16 @@ hr {
   border-color: var(--default-type-color);
 }
 
+a {
+  font-size: inherit;
+  color: var(--default-type-color);
+  margin-bottom: 0;
+}
+
+a:hover, a:focus, a:active { color: var(--white-type-color); }
+
+a:visited { color: var(--white-type-color); }
+
 /* navbar */
 .navbar {
   background-color: var(--nav-bg-color) !important;
