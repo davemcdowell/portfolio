@@ -8,14 +8,19 @@
     <div id="blog-container" class="mx-auto" style="max-width: 950px;">
         {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
         {%- for post in posts -%}
-            <div class="d-flex position-relative">
-                <a href="{{ post.url | relative_url }}"><img src="https://picsum.photos/222/148?random=1" width="222" height="148" class="rounded me-3" alt="..."></a>
-                <div>
-                    <a class="link-title" href="{{ post.url | relative_url }}"><h5 class="mt-0">{{ post.title | escape }}</h5></a>
-                    <span class="meta-data">{{ post.date | date: date_format }}</span>
-                    <hr class="block-label-hr">
-                    <p>{{ post.excerpt }}</p>
-                    <a href="{{ post.url | relative_url }}">Read more</a>
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <a href="{{ post.url | relative_url }}"><img src="https://picsum.photos/222/148?random=1" width="222" height="148" class="rounded" alt="..."></a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <a class="link-title" href="{{ post.url | relative_url }}"><h5 class="card-title">{{ post.title | escape }}</h5></a>
+                            <p class="card-text">{{ post.excerpt }}</p>
+                            <a href="{{ post.url | relative_url }}">Read more...</a>
+                            <p class="card-text"><small class="text-muted">Last updated: 3 mins ago</small></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         {%- endfor -%}
