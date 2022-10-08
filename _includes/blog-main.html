@@ -10,7 +10,7 @@
         {%- for post in posts -%}
             <div class="card text-white bg-default border-0 mb-3">
                 <div class="row g-0">
-                    <div class="col-md-4">
+                    <div class="col-md-4 p-3">
                         <a href="{{ post.url | relative_url }}"><img src="https://picsum.photos/512/512?random=1" class="img-fluid rounded" alt="..."></a>
                     </div>
                     <div class="col-md-8">
@@ -42,6 +42,24 @@
                 {%- endif %}
             </ul>
         </div>
+
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="{{ paginator.next_page_path | relative_url }}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+          </nav>
         {%- endif %}
     </div>
 </section>
