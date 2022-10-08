@@ -51,7 +51,6 @@ last-modified-at:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-paginate
   - jekyll-last-modified-at
 
 # Exclude from processing.
