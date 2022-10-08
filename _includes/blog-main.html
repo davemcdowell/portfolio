@@ -27,7 +27,7 @@
             </div>
         </div>
         {%- endfor -%}
-        {% if site.paginate %}
+        {%- if site.paginate -%}
         <nav aria-label="Page navigation">
             <ul class="pagination">
                 {%- if paginator.previous_page -%}
@@ -55,7 +55,7 @@
                 {%- endif -%}
             </ul>
         </nav>
-        {%- endif %}
+        {%- endif -%}
     </div>
 </section>
 {%- endif -%}
