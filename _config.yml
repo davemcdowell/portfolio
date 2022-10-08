@@ -43,8 +43,8 @@ timezone: America/Los_Angeles
 #paginate_path: "/blog/page:num/"
 
 # last-modified-at: defines
-#last-modified-at:
-#    date-format: '%d-%b-%y'
+last-modified-at:
+    date-format: '%d-%b-%y'
 
 # Build settings
 #theme: moxxi
