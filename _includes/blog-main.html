@@ -8,58 +8,54 @@
     <div id="blog-container" class="mx-auto" style="max-width: 950px;">
         {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
         {%- for post in posts -%}
-            <div class="card text-white bg-default border-0 mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4 p-3">
-                        <a href="{{ post.url | relative_url }}"><img src="https://picsum.photos/512/512?random=1" class="img-fluid rounded" alt="..."></a>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <a class="link-title" href="{{ post.url | relative_url }}"><h5 class="card-title">{{ post.title | escape }}</h5></a>
-                            <p class="card-text mb-0 pb-0"><small class="text-muted">{{ post.date | date: date_format }}</small></p>
-                            <hr class="block-label-hr">
-                            <p class="card-text">{{ post.excerpt }}</p>
-                            <a class="no-underline" href="{{ post.url | relative_url }}">Read more...</a>
-                            <p class="card-text"><small class="text-muted">Last updated: {{ page.last_modified_at }}</small></p>
-                        </div>
+        <div class="card text-white bg-default border-0 mb-3">
+            <div class="row g-0">
+                <div class="col-md-4 p-3">
+                    <a href="{{ post.url | relative_url }}"><img src="https://picsum.photos/512/512?random=1" class="img-fluid rounded" alt="..."></a>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <a class="link-title" href="{{ post.url | relative_url }}"><h5 class="card-title">{{ post.title | escape }}</h5></a>
+                        <p class="card-text mb-0 pb-0"><small class="text-muted">{{ post.date | date: date_format }}</small></p>
+                        <hr class="block-label-hr">
+                        <p class="card-text">{{ post.excerpt }}</p>
+                        <a class="no-underline" href="{{ post.url | relative_url }}">Read more...</a>
+                        {% assign postedDate = {{ page.date }} %}
+                        <input type="hidden" value="{{ postedDate }}">
+                        <p class="card-text"><small class="text-muted">Last updated: {{ post.last_modified_at }}</small></p>
                     </div>
                 </div>
             </div>
+        </div>
         {%- endfor -%}
         {% if site.paginate %}
-        <div class="pager">
-            <ul class="pagination">
-                {%- if paginator.previous_page %}
-                <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-                {%- else %}
-                <li><div class="pager-edge">•</div></li>
-                {%- endif %}
-                <li><div class="current-page">{{ paginator.page }}</div></li>
-                {%- if paginator.next_page %}
-                <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-                {%- else %}
-                <li><div class="pager-edge">•</div></li>
-                {%- endif %}
-            </ul>
-        </div>
-
         <nav aria-label="Page navigation">
             <ul class="pagination">
+                {%- if paginator.previous_page -%}
                 <li class="page-item">
                     <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
+                        <span aria-hidden="true"><i class="bi bi-caret-left"></i></span>
                     </a>
                 </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                {%- else -%}
+                <li class="page-item disabled">
+                    <span aria-hidden="true"><i class="bi bi-caret-left"></i></span>
+                </li>
+                {%- endif -%}
+                <li class="page-item">{{ paginator.page }} of {{ paginator.total_pages }}</li>
+                {%- if paginator.next_page -%}
                 <li class="page-item">
                     <a class="page-link" href="{{ paginator.next_page_path | relative_url }}" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
+                        <span aria-hidden="true"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
+                {%- else -%}
+                <li class="page-item disabled">
+                    <span aria-hidden="true"><i class="bi bi-caret-right"></i></span>
+                </li>
+                {%- endif -%}
             </ul>
-          </nav>
+        </nav>
         {%- endif %}
     </div>
 </section>
