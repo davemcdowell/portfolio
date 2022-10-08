@@ -14,13 +14,18 @@ let blog = function() {
             let dateFromString = new Date(dateString);
 
             if(dateFromString > Date.now()) {
+                if(dates[i].getAttribute('get-time-since-fallback')) {
+                    console.log(dates[i].getAttribute('get-time-since') + ' : given date is greater than current date, using fallback');
+
+                    timeSince = dates[i].getAttribute('get-time-since');
+                }
                 console.log(dates[i].getAttribute('get-time-since') + ' : given date is greater than current date.');
-                return;
             } else {
                 timeSince = new Date(Date.now() - dateFromString);
             }
                 
             console.log(timeSince.getHours() + ' hours ago');
+            return `Last modified: ${timeSince.getHours()} hours ago `;
         }
     }
 }();
