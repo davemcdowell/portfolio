@@ -6,7 +6,7 @@
 {%- if posts.size > 0 -%}
 <section id="blog-main">
     <div id="blog-container" class="mx-auto" style="max-width: 950px;">
-        {%- assign date_format = site.date_format | default: "%D, %B %e, %Y" -%}
+        {%- assign date_format = site.date_format | default: "%A, %B %e, %Y" -%}
         {%- for post in posts -%}
         <div class="card text-white bg-default border-0 mb-3">
             <div class="row g-0">
