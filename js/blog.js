@@ -16,10 +16,11 @@ let blog = function() {
             if(dateFromString > Date.now()) {
                 if(dates[i].getAttribute('get-time-since-fallback')) {
                     console.log(dates[i].getAttribute('get-time-since') + ' : given date is greater than current date, using fallback');
-
-                    timeSince = dates[i].getAttribute('get-time-since');
+                    timeSince = dates[i].getAttribute('get-time-since-feedback');
+                } else {
+                    console.log(dates[i].getAttribute('get-time-since') + ' : given date is greater than current date, no fallback provided');
+                    return;
                 }
-                console.log(dates[i].getAttribute('get-time-since') + ' : given date is greater than current date.');
             } else {
                 timeSince = new Date(Date.now() - dateFromString);
             }
