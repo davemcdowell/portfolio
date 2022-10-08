@@ -15,7 +15,7 @@
                     <span class="meta-data">{{ post.date | date: date_format }}</span>
                     <hr class="block-label-hr">
                     <p>{{ post.excerpt }}</p>
-                    <a class="link-title" href="{{ post.url | relative_url }}">Go somewhere</a>
+                    <a href="{{ post.url | relative_url }}">Go somewhere</a>
                 </div>
             </div>
         {%- endfor -%}
