@@ -7,13 +7,20 @@ let blog = function() {
 
     function setLastModifiedDates() {
         let dates = document.querySelectorAll('[get-time-since]');
-        
+        let timeSince = 0;
+
         for(let i = 0; i < dates.length; i++) {
             let dateString = document.getElementById(dates[i].getAttribute('get-time-since')).value;
             let dateFromString = new Date(dateString);
-            console.log(dateFromString);
-            let timeSince = new Date(Date.now() - dateFromString);
-            console.log(timeSince.getHours());
+
+            if(dateFromString > Date.now()) {
+                console.log(dates[i].getAttribute('get-time-since') + ' : given date is greater than current date.');
+                return;
+            } else {
+                timeSince = new Date(Date.now() - dateFromString);
+            }
+                
+            console.log(timeSince.getHours() + ' hours ago');
         }
     }
 }();
