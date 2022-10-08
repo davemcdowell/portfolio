@@ -204,6 +204,8 @@ a:visited { color: var(--card-border-hover-color); }
   white-space: normal;
 }
 
+.no-underline { text-decoration: none; }
+
 .meta-data {
   color: var(--lighter-type-color);
   font-size: 1rem;

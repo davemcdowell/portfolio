@@ -19,7 +19,7 @@
                             <p class="card-text mb-0 pb-0"><small class="text-muted">{{ post.date | date: date_format }}</small></p>
                             <hr class="block-label-hr">
                             <p class="card-text">{{ post.excerpt }}</p>
-                            <a href="{{ post.url | relative_url }}">Read more...</a>
+                            <a class="no-underline" href="{{ post.url | relative_url }}">Read more...</a>
                             <p class="card-text"><small class="text-muted">Last updated: {{ page.last_modified_at }}</small></p>
                         </div>
                     </div>
