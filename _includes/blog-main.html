@@ -8,7 +8,7 @@
     <div id="blog-container" class="mx-auto" style="max-width: 950px;">
         {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
         {%- for post in posts -%}
-            <div class="card text-white bg-default border-none mb-3">
+            <div class="card text-white bg-default border-0 mb-3">
                 <div class="row g-0">
                     <div class="col-md-4">
                         <a href="{{ post.url | relative_url }}"><img src="https://picsum.photos/512/512?random=1" class="img-fluid rounded" alt="..."></a>
