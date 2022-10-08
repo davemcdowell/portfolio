@@ -7,7 +7,7 @@ let blog = function() {
 
     function setLastModifiedDates() {
         let dates = document.querySelectorAll('[get-time-since]');
-        let timeSince = 0;
+        let timeSince = new Date();
 
         for(let i = 0; i < dates.length; i++) {
             let dateString = document.getElementById(dates[i].getAttribute('get-time-since')).value;
