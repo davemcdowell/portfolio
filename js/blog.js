@@ -11,6 +11,7 @@ let blog = function() {
         for(let i = 0; i < dates.length; i++) {
             let dateString = document.getElementById(dates[i].getAttribute('get-time-since')).value;
             let dateFromString = new Date(dateString);
+            console.log(dateFromString);
             let timeSince = new Date(Date.now() - dateFromString);
             console.log(timeSince.getHours());
         }
