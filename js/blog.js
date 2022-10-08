@@ -10,8 +10,9 @@ let blog = function() {
         
         for(let i = 0; i < dates.length; i++) {
             let dateString = document.getElementById(dates[i].getAttribute('get-time-since')).value;
-            
-            console.log(dateString);
+            let dateFromString = new Date(dateString);
+            let timeSince = new Date(Date.now() - dateFromString);
+            console.log(timeSince.getHours());
         }
     }
 }();
