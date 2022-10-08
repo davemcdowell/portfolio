@@ -7,6 +7,10 @@ let blog = function() {
 
     function setLastModifiedDates() {
         let dates = document.querySelectorAll('[get-time-since]');
-        console.log(dates.length);
+        
+        for(let i = 0; i < dates.length; i++) {
+            let modDate = dates[i].dataset.getTimeSince;
+            console.log(modDate);
+        }
     }
 }();
