@@ -130,6 +130,11 @@ a:visited { color: var(--card-border-hover-color); }
   clip-path: polygon(0 0, 100% 92%, 100% 100%, 0% 100%);
 }
 
+/* graphical */
+.bg-default {
+  background-color: var(--bg-color-dark);
+}
+
 /* typography */
 .icon-1x {
   font-size: 1em;

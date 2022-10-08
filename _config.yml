@@ -40,6 +40,7 @@ google_analytics: "G-FW1FS38ZN7"
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-last-modified-at
 
 # Exclude from processing.
 # The following items will not be processed, by default.
