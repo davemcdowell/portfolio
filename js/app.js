@@ -22,13 +22,13 @@ let app = function() {
         setToolTips();
 
         let pSlider = new Splide('.splide', topLevelSliderOptions);
-        let sliderBar = pSlider.root.querySelector( '.slider-progress' );
+        let sliderBar = pSlider.root.querySelector('.slider-progress');
 
-        pSlider.on( 'mounted move', function () {
+        pSlider.on('mounted move', function () {
             let end  = pSlider.Components.Controller.getEnd() + 1;
-            let rate = Math.min( ( pSlider.index + 1 ) / end, 1 );
-            sliderBar.style.width = String( 100 * rate ) + '%';
-        } );
+            let rate = Math.min(( pSlider.index + 1 ) / end, 1);
+            sliderBar.style.width = String(100 * rate) + '%';
+        });
 
         pSlider.mount();
     }
@@ -189,6 +189,7 @@ let app = function() {
         return Boolean(checkCount === gLength);
     }
 
+    /* utils */
     function getRandomInteger(min, max) {
         return Math.floor(Math.random() * (max - min) ) + min;
     }
