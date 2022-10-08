@@ -9,8 +9,10 @@ let blog = function() {
         let dates = document.querySelectorAll('[get-time-since]');
         
         for(let i = 0; i < dates.length; i++) {
-            let modDate = dates[i].getAttribute('get-time-since');
-            console.log(modDate);
+            let dateString = document.getElementById(dates[i].getAttribute('get-time-since')).value;
+
+            
+            console.log(dateString);
         }
     }
 }();
