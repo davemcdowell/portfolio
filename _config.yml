@@ -36,22 +36,22 @@ social:
 google_analytics: "G-FW1FS38ZN7"
 
 # timezone
-#timezone: America/Los_Angeles
+# timezone: America/Los_Angeles
 
 # paginate: defines
-paginate: 5
-paginate_path: "/blog/page:num/"
+#paginate: 5
+#paginate_path: "/blog/page:num/"
 
 # last-modified-at: defines
-last-modified-at:
-    date-format: '%d-%b-%y'
+#last-modified-at:
+#    date-format: '%d-%b-%y'
 
 # Build settings
 #theme: moxxi
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-last-modified-at
+#  - jekyll-last-modified-at
 
 # Exclude from processing.
 # The following items will not be processed, by default.
