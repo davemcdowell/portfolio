@@ -41,8 +41,7 @@ a {
 }
 
 a:hover, a:focus, a:active { color: var(--white-type-color); }
-
-a:visited { color: var(--white-type-color); }
+a:visited { color: var(--card-border-hover-color); }
 
 /* navbar */
 .navbar {
