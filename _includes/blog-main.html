@@ -17,6 +17,7 @@
                         <div class="card-body">
                             <a class="link-title" href="{{ post.url | relative_url }}"><h5 class="card-title">{{ post.title | escape }}</h5></a>
                             <p class="card-text"><small class="text-muted">{{ post.date | date: date_format }}</small></p>
+                            <hr class="block-label-hr">
                             <p class="card-text">{{ post.excerpt }}</p>
                             <a href="{{ post.url | relative_url }}">Read more...</a>
                             <p class="card-text"><small class="text-muted">Last updated: {{ post.last_modified_at }}</small></p>
