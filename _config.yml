@@ -35,6 +35,10 @@ social:
 
 google_analytics: "G-FW1FS38ZN7"
 
+# last-modified-at defines
+last-modified-at:
+    date-format: '%d-%b-%y'
+    
 # Build settings
 #theme: moxxi
 plugins:
