@@ -26,7 +26,7 @@ let blog = function() {
             }
                 
             console.log(timeSince.getHours() + ' hours ago');
-            dates[i].innerText = timeSince.getHours() + ' hours ago';
+            dates[i].innerText = 'Last modified: ' + timeSince.getHours() + ' hours ago';
         }
     }
 }();
