@@ -17,28 +17,40 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.2/dist/css/splide-core.min.css" 
     integrity="sha256-ZAXImCY06SjVuIrJfWUETkyCctX5aGdL1AVEBX5CxZA=" crossorigin="anonymous">
     
+    {%- if page.js-pre-load -%}
+      {%- for js_file in page.js-pre-load -%}
+      <script src="{{ '/assets/js/{{ js_file }}' | relative_url }}" type="text/javascript"></script>
+      {%- endfor -%}
+    {%- endif -%}
+
+    {%- if page.css -%}
+      {%- for css_file in page.css -%}
+      <link rel="stylesheet" src="{{ '/assets/css/{{ css_file }}' | relative_url }}" type="text/css">
+      {%- endfor -%}
+    {%- endif -%}
+
     <link rel="stylesheet" href="{{ '/assets/moxxi.css' | relative_url }}">
     <link rel="icon" href="favIcon.ico">
     
     <title>
-        {% if page.tag or page.title %}
-          {% if page.tag %}
+        {%- if page.tag or page.title -%}
+          {%- if page.tag -%}
             {{ page.tag | escape }}
-          {% else %}
+          {%- else -%}
             {{ page.title | escape }}
-          {% endif %}
+          {%- endif -%}
           -
-        {% endif %}
-        {% if paginator and paginator.page and paginator.total_pages > 1 and paginator.page > 1 %}
+        {%- endif -%}
+        {%- if paginator and paginator.page and paginator.total_pages > 1 and paginator.page > 1 -%}
           Page {{ paginator.page }} of {{ paginator.total_pages }} -
-        {% endif %}
+        {%- endif -%}
         {{ site.name | escape }}
-        {% unless page.tag or page.title %}
+        {%- unless page.tag or page.title -%}
           - {{ site.description | escape }}
-        {% endunless %}
+        {%- endunless -%}
     </title>
       
-    {% if jekyll.environment == 'production' and site.google_analytics %}
+    {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {% include analytics.html %}
-    {% endif %}
+    {%- endif -%}
 </head>

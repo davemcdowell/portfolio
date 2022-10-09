@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Blog
-tagline: Building Cubemaps...
 permalink: /blog/
+js-post-load: blog.js
 ---
-{%- include header.html title="Blog" content="Some random bits and bobs, news and updates about work, life and other things." -%}
+{%- include header.html title="Blog" content="Some random bits and bobs, news and updates about work, life and other things." link="#blog-main" use-logo="false" -%}
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-10 col-lg-offset-1">
@@ -14,4 +14,4 @@ permalink: /blog/
 </div>
 {%- include ender.html title="Other Work" content="Some more galleries below if you're still looking, otherwise you can also find me and my work at..." -%}
 {%- include contact.html -%}
-<script type="text/javascript" src="{{ '/js/blog.js' | relative_url }}"></script>
+<!--<script type="text/javascript" src="{{ '/js/blog.js' | relative_url }}"></script>-->
