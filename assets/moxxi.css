@@ -136,8 +136,8 @@ a:visited { color: var(--card-border-hover-color); }
   width: 200px;
   height: 200px;
   position: absolute;
-  left: calc(50% - 200px);
-  top: -52%;
+  left: calc(50% - 100px);
+  top: -28%;
   transform: translate(50%, 50%);
 }
 
