@@ -133,9 +133,11 @@ a:visited { color: var(--card-border-hover-color); }
 
 /* home logo */
 .logo-main {
+  width: 200px;
+  height: 200px;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: calc(50% - width);
+  top: -52%;
   transform: translate(50%, 50%);
 }
 
