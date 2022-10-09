@@ -5,7 +5,7 @@
   --bg-color-offset: #2e2e2e;
   --bg-color-nav: #171a21;
   --bg-light-color: #949494;
-  
+
   --white-type-color: #ffffff;
   --default-type-color: #f8f8ff;
   --lighter-type-color: #6c757d;
@@ -129,6 +129,14 @@ a:visited { color: var(--card-border-hover-color); }
   background-color: var(--bg-color-darkest);
   -webkit-clip-path: polygon(0 0, 100% 92%, 100% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 92%, 100% 100%, 0% 100%);
+}
+
+/* home logo */
+.logo-main {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(50%, 50%);
 }
 
 /* graphical */
