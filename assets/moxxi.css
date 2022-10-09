@@ -135,6 +135,9 @@ a:visited { color: var(--card-border-hover-color); }
 .logo-main {
   width: 200px;
   height: 200px;
+}
+
+.logo-main::before {
   position: absolute;
   left: calc(50% - 200px);
   top: -52%;
