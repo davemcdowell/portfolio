@@ -28,9 +28,6 @@ html {
 body {
   background-color: var(--bg-color-dark);
   color: var(--default-type-color);
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
 }
 
 hr {
