@@ -19,15 +19,13 @@
     
     {%- if page.js-files-preload -%}
       {%- for js_file in page.js-files-preload -%}
-      {% assign filePath = '/assets/js/{{ js_file }}' %}
-      <script src="{{ filePath }}" type="text/javascript"></script>
+      <script src="{{ site.baseurl }}/assets/js/{{ js_file }}" type="text/javascript"></script>
       {%- endfor -%}
     {%- endif -%}
 
     {%- if page.css-files -%}
       {%- for css_file in page.css-files -%}
-      {% assign filePath = '/assets/css/{{ css_file }}' %}
-      <link rel="stylesheet" src="{{ filePath }}' | relative_url }}" type="text/css">
+      <link rel="stylesheet" src="{{ site.baseurl }}/assets/css/{{ css_file }}" type="text/css">
       {%- endfor -%}
     {%- endif -%}
 
