@@ -13,6 +13,10 @@
   --card-border-hover-color: #666666;
 }
 
+* {
+  border: 1px solid red;
+}
+
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
