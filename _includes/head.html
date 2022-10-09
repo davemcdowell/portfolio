@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.2/dist/css/splide-core.min.css" 
     integrity="sha256-ZAXImCY06SjVuIrJfWUETkyCctX5aGdL1AVEBX5CxZA=" crossorigin="anonymous">
     
-    {%- if page.js-files-preload -%}
-      {%- for js_file in page.js-files-preload -%}
+    {%- if page.js-preload-files -%}
+      {%- for js_file in page.js-preload-files -%}
       <script src="{{ site.baseurl }}/assets/js/{{ js_file }}" type="text/javascript"></script>
       {%- endfor -%}
     {%- endif -%}
