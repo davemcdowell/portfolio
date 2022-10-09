@@ -19,13 +19,13 @@
     
     {%- if page.js-preload-files -%}
       {%- for js_file in page.js-preload-files -%}
-      <script src="{{ site.baseurl }}/assets/js/{{ js_file }}" type="text/javascript"></script>
+      <script src="{{ js_file }}" type="text/javascript"></script>
       {%- endfor -%}
     {%- endif -%}
 
     {%- if page.css-files -%}
       {%- for css_file in page.css-files -%}
-      <link rel="stylesheet" src="{{ site.baseurl }}/assets/css/{{ css_file }}" type="text/css">
+      <link rel="stylesheet" src="{{ css_file }}" type="text/css">
       {%- endfor -%}
     {%- endif -%}
 
