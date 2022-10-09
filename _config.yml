@@ -1,7 +1,8 @@
 # Site settings
 title: "Dave McDowell | Designer & Developer"
-name: Dave McDowell
-email: davecmcdowell@gmail.com
+author:
+  name: Dave McDowell
+  email: dave@dcmcdowell.com
 description: >
 Level design, web design and game programming
 baseurl: "/portfolio"
@@ -10,7 +11,7 @@ url: "https://www.dcmcdowell.com"
 twitter_username: "@func_dave"
 github_username:  davemcdowell 
 
-# :custom defines:
+# custom defines
 mailto_url: mailto:dave@dcmcdowell.com
 github_url: https://github.com/davemcdowell
 steam_url: https://steamcommunity.com/id/cptyossarian/
@@ -18,7 +19,7 @@ linkedin_url: https://www.linkedin.com/in/davecmcdowell/
 twitter_url: https://twitter.com/func_dave
 # end customs
 
-# :seo defines:
+# seo defines
 author:
   name: Dave McDowell
   twitter: "@func_dave"
@@ -34,16 +35,17 @@ social:
     - https://www.linkedin.com/in/davecmcdowell/
     - https://github.com/davemcdowell
 
+# google analytics
 google_analytics: "G-FW1FS38ZN7"
 
-# :timezone:
+# timezone
 timezone: America/Los_Angeles
 
-# :paginate defines:
+# paginate defines
 #paginate: 5
 #paginate_path: "/blog/page:num/"
 
-# :Build settings:
+# Build settings
 #theme: moxxi
 plugins:
   - jekyll-feed
