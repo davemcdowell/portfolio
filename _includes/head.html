@@ -17,15 +17,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.2/dist/css/splide-core.min.css" 
     integrity="sha256-ZAXImCY06SjVuIrJfWUETkyCctX5aGdL1AVEBX5CxZA=" crossorigin="anonymous">
     
-    {%- if page.js-pre-load -%}
-      {%- for js_file in page.js-pre-load -%}
-      <script src="{{ '/assets/js/{{ js_file }}' | relative_url }}" type="text/javascript"></script>
+    {%- if page.js-files-preload -%}
+      {%- for js_file in page.js-files-preload -%}
+      {% assign filePath = '/assets/js/{{ js_file }}' %}
+      <script src="{{ filePath }}" type="text/javascript"></script>
       {%- endfor -%}
     {%- endif -%}
 
-    {%- if page.css -%}
-      {%- for css_file in page.css -%}
-      <link rel="stylesheet" src="{{ '/assets/css/{{ css_file }}' | relative_url }}" type="text/css">
+    {%- if page.css-files -%}
+      {%- for css_file in page.css-files -%}
+      {% assign filePath = '/assets/css/{{ css_file }}' %}
+      <link rel="stylesheet" src="{{ filePath }}' | relative_url }}" type="text/css">
       {%- endfor -%}
     {%- endif -%}
 
