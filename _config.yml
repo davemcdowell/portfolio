@@ -1,11 +1,10 @@
 # Site settings
 title: "Dave McDowell | Designer & Developer"
-author:
-  name: Dave McDowell
-  email: dave@dcmcdowell.com
-description: Level design, web design and game programming
+name: Dave McDowell
+email: davecmcdowell@gmail.com
+description: designer & developer of things
 baseurl: "/portfolio"
-url: "https://www.dcmcdowell.com"
+url: https://davemcdowell.github.io
 
 twitter_username: "@func_dave"
 github_username:  davemcdowell 
