@@ -1,4 +1,4 @@
-# Site settings
+# site settings
 title: "Dave McDowell | Designer & Developer"
 name: Dave McDowell
 email: davecmcdowell@gmail.com
@@ -9,15 +9,14 @@ url: https://davemcdowell.github.io
 twitter_username: "@func_dave"
 github_username:  davemcdowell 
 
-# custom defines
+# custom
 mailto_url: mailto:dave@dcmcdowell.com
 github_url: https://github.com/davemcdowell
 steam_url: https://steamcommunity.com/id/cptyossarian/
 linkedin_url: https://www.linkedin.com/in/davecmcdowell/
 twitter_url: https://twitter.com/func_dave
-# end customs
 
-# seo defines
+# seo
 author:
   name: Dave McDowell
   twitter: "@func_dave"
@@ -39,11 +38,11 @@ google_analytics: "G-FW1FS38ZN7"
 # timezone
 timezone: America/Los_Angeles
 
-# paginate defines
+# paginate
 #paginate: 5
 #paginate_path: "/blog/page:num/"
 
-# Build settings
+# build settings
 #theme: moxxi
 plugins:
   - jekyll-feed
