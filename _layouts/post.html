@@ -1,24 +1,16 @@
 ---
 layout: default
 ---
+{%- assign date_format = site.date_format | default: "%A, %B %e, %Y" -%}
 <section id="post-main">
     <div id="post-container" class="mx-auto" style="max-width: 950px;">
         <div class="row g-5">
             <div class="col-md-8">
-              <h3 class="pb-4 mb-4 border-bottom">
-                Perfunctory Blog
-              </h3>
               <article class="blog-post">
                 <h2 class="blog-post-title">{{ post.title }}</h2>
-                <p class="blog-post-meta">{{ post.date }} by <a href="#">Mark</a></p>
+                <p class="blog-post-meta">{{ post.date | date: date_format }} by <a href="#">Mark</a></p>
                 {{ post.content }}
               </article>
-
-              <nav class="blog-pagination" aria-label="Pagination">
-                <a class="btn btn-outline-primary" href="#">Older</a>
-                <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
-              </nav>
-
             </div>
             <div class="col-md-4">
               <div class="position-sticky" style="top: 2rem;">
