@@ -18,7 +18,7 @@
                         <a class="link-title" href="{{ post.url | relative_url }}"><h5 class="card-title">{{ post.title | escape }}</h5></a>
                         <p class="card-text mb-0 pb-0"><small class="text-muted">{{ post.date | date: date_format }}</small></p>
                         <hr class="block-label-hr">
-                        <p class="card-text">{{ post.excerpt }}</p>
+                        <p class="card-text">{{ post.excerpt | truncate: 150, "<a class="no-underline" href="{{ post.url | relative_url }}">...</a>" }}</p>
                         <a class="no-underline" href="{{ post.url | relative_url }}">Read more...</a>
                         <hr class="w-50">
                         <input id="post-{{ forloop.index }}-lmt" type="hidden" value="{{ post.last-modified | date_to_xmlschema }}">
