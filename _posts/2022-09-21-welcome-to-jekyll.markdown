@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
+author: Dave McDowell
 date:   2022-09-21 14:55:41 -0700
 categories: jekyll update
 last-modified: "2022-10-08 14:00:00"
