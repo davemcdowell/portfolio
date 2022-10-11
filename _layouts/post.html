@@ -7,16 +7,16 @@ layout: default
         <div class="row g-5">
             <div class="col-md-8">
               <article class="blog-post">
-                <h2 class="blog-post-title">{{ post.title }}</h2>
-                <p class="blog-post-meta">{{ post.date | date: date_format }} by <a href="#">Mark</a></p>
-                {{ post.content }}
+                <h2 class="blog-post-title">{{ page.title }}</h2>
+                <p class="blog-post-meta">{{ page.date | date: date_format }} by <a href="#">{{ page.author }}</a></p>
+                {{ page.content }}
               </article>
             </div>
             <div class="col-md-4">
               <div class="position-sticky" style="top: 2rem;">
                 <div class="p-4 mb-3 bg-light rounded">
                   <h4 class="fst-italic">About</h4>
-                  <p class="mb-0">{{ post.excerpt }}</p>
+                  <p class="mb-0">{{ page.excerpt }}</p>
                 </div>
                 <div class="p-4">
                   <h4>Archives</h4>
