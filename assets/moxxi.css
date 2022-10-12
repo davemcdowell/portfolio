@@ -32,7 +32,10 @@ body {
 }
 
 hr {
-  border-color: var(--default-type-color);
+  border: none;
+  height: 1px;
+  color: var(--default-type-color);
+  background-color: var(--default-type-color);
 }
 
 a {
