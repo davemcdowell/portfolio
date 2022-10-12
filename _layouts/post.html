@@ -11,7 +11,6 @@ layout: default
                     <h2 class="blog-post-title">{{ page.title }}</h2>
                     <p class="blog-post-meta mb-0"><small class="text-muted">{{ page.date | date: date_format }} by <a class="no-underline" href="#">{{ page.author }}</a></small></p>
                     <hr class="block-label-hr">
-                    <hr>
                     {{ page.content }}
                     <hr>
                     <input id="{{ page.title | slugify }}-lmt" type="hidden" value="{{ page.last-modified | date_to_xmlschema }}">
