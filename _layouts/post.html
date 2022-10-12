@@ -22,12 +22,17 @@ js-postload-files:
                     </div>
                     <hr class="block-label-hr">
                     {{ page.content }}
-                    <div class="d-flex align-items-center justify-content-between mt-3">
+                    <div class="d-flex align-items-center justify-content-between mt-5">
                         {%- if page.previous.url -%}
-                        <a class="btn btn-outline-light py-1 px-2 me-auto" href="{{ site.baseurl }}{{ page.previous.url }}"><i class="bi bi-caret-left"></i> Previous Post</a>
+                        <a class="btn btn-outline-light py-1 px-2 me-auto" href="{{ site.baseurl }}{{ page.previous.url }}">
+                            <p class="p-0 m-0"><i class="bi bi-caret-left"></i> Previous Post</p>
+                            <p class="p-0 m-0 text-muted"><small>{{ page.previous.title | truncatewords: 4 }}</small></p>
+                        </a>
                         {%- endif -%}
                         {%- if page.next.url -%}
-                        <a class="btn btn-outline-light py-1 px-2 ms-auto" href="{{ site.baseurl }}{{ page.next.url }}">Next Post <i class="bi bi-caret-right"></i></a>
+                        <a class="btn btn-outline-light py-1 px-2 ms-auto" href="{{ site.baseurl }}{{ page.next.url }}">
+                            <p class="p-0 m-0">Next Post <i class="bi bi-caret-right"></i></a></p>
+                            <p class="p-0 m-0 text-muted"><small>{{ page.next.title | truncatewords: 4 }}</small></p>
                         {%- endif -%}
                     </div>
                     <hr class="mb-0">
