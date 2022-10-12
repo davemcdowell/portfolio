@@ -20,7 +20,7 @@
                         <hr class="block-label-hr">
                         <p class="card-text">{{ post.excerpt | truncatewords: 150 }}</p>
                         <a class="no-underline" href="{{ post.url | relative_url }}">Read more...</a>
-                        <hr class="w-50">
+                        <hr class="w-50 mb-0">
                         <input id="post-{{ forloop.index }}-lmt" type="hidden" value="{{ post.last-modified | date_to_xmlschema }}">
                         <p class="card-text"><small class="text-muted" get-time-since="post-{{ forloop.index }}-lmt" get-time-since-fallback="{{ post.date | date: date_format }}"></small></p>
                     </div>
