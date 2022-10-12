@@ -1,5 +1,7 @@
 ---
 layout: default
+js-postload-files: 
+  - /portfolio/assets/js/blog.js
 ---
 {%- assign date_format = site.date_format | default: "%A, %B %e, %Y" -%}
 {% include hero-image.html img-src="https://picsum.photos/1600/500?random=1" %}
@@ -20,10 +22,6 @@ layout: default
             </div>
             <div class="col-md-4">
                 <div class="position-sticky" style="top: 62px;">
-                    <div class="p-4">
-                        <h4>Summary</h4>
-                        <p class="blog-post-meta mb-0"><small class="text-muted">{% include reading-time.html %}</small></p>
-                    </div>
                     {%- if page.tags.size > 0 -%}
                     <div class="p-4">
                         <h6 class="block-label"><i class="bi bi-tags"></i> Tags</h6>
