@@ -12,7 +12,7 @@ layout: default
                     <p class="blog-post-meta mb-0"><small class="text-muted">{{ page.date | date: date_format }} by <a class="no-underline" href="#">{{ page.author }}</a></small></p>
                     <hr class="block-label-hr">
                     <div class="d-flex">
-                        
+                        <p class="blog-post-meta"><small class="text-muted">{% include reading-time.html %}</small></p>
                     </div>
                     <hr>
                     {{ page.content }}
@@ -32,7 +32,7 @@ layout: default
                         <h4>Tags</h4>
                         <ol class="list-unstyled mb-0">
                             {%- for tag in page.tags -%}
-                            <li><a class="btn btn-outline-light p-1 me-2" href="{{ tag.url }}">{{ tag | capitalize }}</a></li>
+                            <li><a class="btn btn-outline-light p-2 me-2" href="{{ tag.url }}">{{ tag | capitalize }}</a></li>
                             {%- endfor -%}
                         </ol>
                     </div>
