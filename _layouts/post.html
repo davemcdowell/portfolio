@@ -23,15 +23,16 @@ layout: default
             </div>
             <div class="col-md-4">
                 <div class="position-sticky" style="top: 62px;">
-                    <div class="p-4 mb-3 rounded">
-                        <h4>About</h4>
-                        <p class="mb-0">{{ page.excerpt }}</p>
+                    <div class="p-4">
+                        <h6 class="block-label"><i class="bi bi-tags"></i> About</h6>
+                        <hr class="block-label-hr">
+
                     </div>
                     {%- if page.tags.size > 0 -%}
                     <div class="p-4">
                         <h6 class="block-label"><i class="bi bi-tags"></i> Tags</h6>
                         <hr class="block-label-hr">
-                        <ol class="list-unstyled mb-0">
+                        <ol class="list-unstyled">
                             {%- for tag in page.tags -%}
                             <li><a class="btn btn-outline-light py-1 px-2 me-2" href="{{ tag.url }}">{{ tag | capitalize }}</a></li>
                             {%- endfor -%}
