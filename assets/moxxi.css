@@ -269,7 +269,7 @@ a:visited { color: var(--card-border-hover-color); }
 }
 
 /* modal */
-.modal-backdrop {
+.modal-dialog {
   background-color: var(--bg-color-dark);
   color: var(--default-type-color);
 }
