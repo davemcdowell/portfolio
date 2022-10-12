@@ -23,8 +23,12 @@ js-postload-files:
                     <hr class="block-label-hr">
                     {{ page.content }}
                     <div class="d-flex align-items-center justify-content-between mt-2">
-                        <a class="btn btn-outline-light py-1 px-2">Previous Post</a>
-                        <a class="btn btn-outline-light py-1 px-2">Next Post</a>
+                        {%- if page.previous.url -%}
+                        <a class="btn btn-outline-light py-1 px-2" href="{{ page.previous.url }}">Previous Post</a>
+                        {%- endif -%}
+                        {%- if page.previous.url -%}
+                        <a class="btn btn-outline-light py-1 px-2" href="{{ page.next.url }}">Next Post</a>
+                        {%- endif -%}
                     </div>
                     <hr class="mb-0">
                     <div class="d-flex flex-wrap align-items-center justify-content-between">
