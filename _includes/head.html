@@ -23,8 +23,20 @@
       {%- endfor -%}
     {%- endif -%}
 
+    {%- if layout.js-preload-files -%}
+      {%- for js_file in layout.js-preload-files -%}
+      <script src="{{ js_file }}" type="text/javascript"></script>
+      {%- endfor -%}
+    {%- endif -%}
+
     {%- if page.css-files -%}
       {%- for css_file in page.css-files -%}
+      <link rel="stylesheet" src="{{ css_file }}" type="text/css">
+      {%- endfor -%}
+    {%- endif -%}
+
+    {%- if layout.css-files -%}
+      {%- for css_file in layout.css-files -%}
       <link rel="stylesheet" src="{{ css_file }}" type="text/css">
       {%- endfor -%}
     {%- endif -%}
