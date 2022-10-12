@@ -34,7 +34,7 @@ js-postload-files:
                     <div class="d-flex flex-wrap align-items-center justify-content-between">
                         <div>
                             <input id="{{ page.title | slugify }}-lmt" type="hidden" value="{{ page.last-modified | date_to_xmlschema }}">
-                            <p><small class="text-muted" get-time-since="{{ page.title | slugify }}-lmt" get-time-since-fallback="{{ page.date | date: date_format }}"></small></p>
+                            <p><small class="text-muted" get-time-since="{{ page.title | slugify }}-lmt" get-time-since-fallback="{{ page.date | date_to_xmlschema }}"></small></p>
                         </div>
                         <div>
                             {%- include like-button.html -%}
