@@ -13,6 +13,9 @@ layout: default
                     <p class="blog-post-meta mb-0"><small class="text-muted">{{ page.date | date: date_format }} by <a class="no-underline" href="#">{{ page.author }}</a></small></p>
                     <hr class="block-label-hr">
                     {{ page.content }}
+                    <hr class="w-50">
+                    <input id="{{ page.title | slugify }}-lmt" type="hidden" value="{{ post.last-modified | date_to_xmlschema }}">
+                    <p><small class="text-muted" get-time-since="{{ page.title | slugify }}-lmt" get-time-since-fallback="{{ post.date | date: date_format }}"></small></p>
                 </article>
             </div>
             <div class="col-md-4">
