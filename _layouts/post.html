@@ -31,30 +31,30 @@ js-postload-files:
                 <div class="position-sticky" style="top: 62px;">
                     {%- if page.categories.size > 0 -%}
                     <div class="p-4">
-                        <h6 class="block-label"><i class="bi bi-tags"></i> Categories</h6>
+                        <h6 class="block-label"><i class="bi bi-folder"></i> Categories</h6>
                         <hr class="block-label-hr">
-                        <ol class="list-unstyled mb-0">
+                        <ul class="list-inline">
                             {%- for category in page.categories -%}
-                            <li><a class="btn btn-outline-light py-1 px-2 me-2" href="{{ tag.url }}">{{ category | capitalize }}</a></li>
+                            <li class="list-inline-item"><a class="btn btn-outline-light py-1 px-2 me-2" href="{{ category.url }}">{{ category | capitalize }}</a></li>
                             {%- endfor -%}
-                        </ol>
+                        </ul>
                     </div>
                     {%- endif -%}
                     {%- if page.tags.size > 0 -%}
                     <div class="p-4">
                         <h6 class="block-label"><i class="bi bi-tags"></i> Tags</h6>
                         <hr class="block-label-hr">
-                        <ol class="list-unstyled mb-0">
+                        <ul class="list-inline">
                             {%- for tag in page.tags -%}
-                            <li><a class="btn btn-outline-light py-1 px-2 me-2" href="{{ tag.url }}">{{ tag | capitalize }}</a></li>
+                            <li class="list-inline-item"><a class="btn btn-outline-light py-1 px-2 me-2" href="{{ tag.url }}">{{ tag | capitalize }}</a></li>
                             {%- endfor -%}
-                        </ol>
+                        </ul>
                     </div>
                     {%- endif -%}
                     <div class="p-4">
                         <h6 class="block-label"><i class="bi bi-share"></i> Share</h6>
                         <hr class="block-label-hr">
-                        {% include reading-time.html %}
+                        {% include share-buttons.html %}
                     </div>
                 </div>
             </div>
