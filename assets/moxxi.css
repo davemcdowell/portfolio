@@ -90,16 +90,6 @@ a:visited { color: var(--card-border-hover-color); }
 
 /* hero */
 .hero-image {
-  background-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(0, 0, 0, 0)),
-      to(rgba(0, 0, 0, 0.5))
-    ),
-    url("");
-  background-image: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
-    url("");
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
     url("");
   height: 520px;
