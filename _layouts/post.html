@@ -4,7 +4,7 @@ js-postload-files:
   - /portfolio/assets/js/blog.js
 ---
 {%- assign date_format = site.date_format | default: "%A, %B %e, %Y" -%}
-{% include hero-image.html img-src="https://picsum.photos/1600/500?random=1" %}
+{%- include hero-image.html img-src="https://picsum.photos/1600/500?random=1" -%}
 <section id="post-main">
     <div id="post-container" class="my-4 mx-auto" style="max-width: 950px;">
         <div class="row g-0">
@@ -14,10 +14,10 @@ js-postload-files:
                     <div class="d-flex flex-wrap align-items-center justify-content-between">
                         <div>
                             <p class="blog-post-meta mb-0"><small class="text-muted">{{ page.date | date: date_format }} by <a class="no-underline" href="#">{{ page.author }}</a></small></p>
-                            <p class="blog-post-meta mb-0"><small class="text-muted">{% include reading-time.html %}</small></p>
+                            <p class="blog-post-meta mb-0"><small class="text-muted">{%- include reading-time.html -%}</small></p>
                         </div>
                         <div>
-                        {% include share-buttons.html %}
+                        {%- include share-buttons.html -%}
                         </div>
                     </div>
                     <hr class="block-label-hr">
@@ -37,7 +37,7 @@ js-postload-files:
                             <p><small class="text-muted" get-time-since="{{ page.title | slugify }}-lmt" get-time-since-fallback="{{ page.date | date: date_format }}"></small></p>
                         </div>
                         <div>
-                            {% include like-button.html %}
+                            {%- include like-button.html -%}
                         </div>
                     </div>
                 </article>
@@ -69,7 +69,7 @@ js-postload-files:
                     <div class="p-4 d-block d-md-none">
                         <h6 class="block-label"><i class="bi bi-share"></i> Share</h6>
                         <hr class="block-label-hr">
-                        {% include share-buttons.html %}
+                        {%- include share-buttons.html -%}
                     </div>
                 </div>
             </div>
