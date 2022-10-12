@@ -29,6 +29,17 @@ js-postload-files:
             </div>
             <div class="col-md-4">
                 <div class="position-sticky" style="top: 62px;">
+                    {%- if page.categories.size > 0 -%}
+                    <div class="p-4">
+                        <h6 class="block-label"><i class="bi bi-tags"></i> Categories</h6>
+                        <hr class="block-label-hr">
+                        <ol class="list-unstyled mb-0">
+                            {%- for category in page.categories -%}
+                            <li><a class="btn btn-outline-light py-1 px-2 me-2" href="{{ tag.url }}">{{ category | capitalize }}</a></li>
+                            {%- endfor -%}
+                        </ol>
+                    </div>
+                    {%- endif -%}
                     {%- if page.tags.size > 0 -%}
                     <div class="p-4">
                         <h6 class="block-label"><i class="bi bi-tags"></i> Tags</h6>
