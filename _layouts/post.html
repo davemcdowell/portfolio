@@ -22,9 +22,9 @@ js-postload-files:
                     </div>
                     <hr class="block-label-hr">
                     {{ page.content }}
-                    <div class="d-flex align-items-center justify-content-between">
-                        <button class="btn btn-outline-light py-1 px-2">Previous Post</button>
-                        <button class="btn btn-outline-light py-1 px-2">Next Post</button>
+                    <div class="d-flex align-items-center justify-content-between mt-2">
+                        <a class="btn btn-outline-light py-1 px-2">Previous Post</a>
+                        <a class="btn btn-outline-light py-1 px-2">Next Post</a>
                     </div>
                     <hr class="mb-0">
                     <div class="d-flex flex-wrap align-items-center justify-content-between">
@@ -62,7 +62,7 @@ js-postload-files:
                         </ul>
                     </div>
                     {%- endif -%}
-                    <div class="p-4 d-none d-sm-block d-lg-none">
+                    <div class="p-4 d-none d-sm-block d-md-none">
                         <h6 class="block-label"><i class="bi bi-share"></i> Share</h6>
                         <hr class="block-label-hr">
                         {% include share-buttons.html %}
