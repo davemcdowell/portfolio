@@ -6,5 +6,4 @@
 {%- else -%}
 ~{{ readTime | append: ' minute to read' }}
 {%- endif -%}
-{{ words | plus: 150 | divided_by: 150 | append: ' minutes to read' }}
 {% endunless %}
