@@ -24,10 +24,10 @@ js-postload-files:
                     {{ page.content }}
                     <div class="d-flex align-items-center justify-content-between mt-2">
                         {%- if page.previous.url -%}
-                        <a class="btn btn-outline-light py-1 px-2 me-auto" href="{{ site.baseurl }}{{ page.previous.url }}">Previous Post</a>
+                        <a class="btn btn-outline-light py-1 px-2 me-auto" href="{{ site.baseurl }}{{ page.previous.url }}"><i class="bi bi-caret-left"></i> Previous Post</a>
                         {%- endif -%}
                         {%- if page.next.url -%}
-                        <a class="btn btn-outline-light py-1 px-2 ms-auto" href="{{ site.baseurl }}{{ page.next.url }}">Next Post</a>
+                        <a class="btn btn-outline-light py-1 px-2 ms-auto" href="{{ site.baseurl }}{{ page.next.url }}">Next Post <i class="bi bi-caret-right"></i></a>
                         {%- endif -%}
                     </div>
                     <hr class="mb-0">
