@@ -11,8 +11,15 @@ js-postload-files:
             <div class="col-md-8">
                 <article class="blog-post p-4 p-lg-0">
                     <h2 class="blog-post-title">{{ page.title }}</h2>
-                    <p class="blog-post-meta mb-0"><small class="text-muted">{{ page.date | date: date_format }} by <a class="no-underline" href="#">{{ page.author }}</a></small></p>
-                    <p class="blog-post-meta mb-0"><small class="text-muted">{% include reading-time.html %}</small></p>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <p class="blog-post-meta mb-0"><small class="text-muted">{{ page.date | date: date_format }} by <a class="no-underline" href="#">{{ page.author }}</a></small></p>
+                            <p class="blog-post-meta mb-0"><small class="text-muted">{% include reading-time.html %}</small></p>
+                        </div>
+                        <div>
+                        {% include share-buttons.html %}
+                        </div>
+                    </div>
                     <hr class="block-label-hr">
                     {{ page.content }}
                     <hr>
