@@ -22,7 +22,7 @@ js-postload-files:
                     </div>
                     <hr class="block-label-hr">
                     {{ page.content }}
-                    <div class="d-flex align-items-center justify-content-between mt-5">
+                    <nav class="d-flex align-items-center justify-content-between mt-5">
                         {%- if page.previous.url -%}
                         <a class="btn btn-outline-light py-1 px-2 me-auto text-right" href="{{ site.baseurl }}{{ page.previous.url }}">
                             <p class="p-0 m-0 text-right"><i class="bi bi-rewind"></i> Previous Post</p>
@@ -35,7 +35,7 @@ js-postload-files:
                             <p class="p-0 m-0 text-muted text-left"><small>{{ page.next.title | truncatewords: 4 }}</small></p>
                         </a>
                         {%- endif -%}
-                    </div>
+                    </nav>
                     <hr class="mb-0">
                     <div class="d-flex flex-wrap align-items-center justify-content-between">
                         <div>
