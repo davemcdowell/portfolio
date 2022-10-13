@@ -188,9 +188,27 @@ let app = function() {
         
         return Boolean(checkCount === gLength);
     }
+    
+    /* toasts */
+    function showToast(title, message, imgSrc) {
+        let toastTemp = document.querySelector('#toast-temp');
+        let tClone = toastTemp.content.cloneNode(true);
+
+        let cImg = tClone.querySelector('img');
+        let cTitle = tClone.querySelector('.toast-title');
+        let cContent = tClone.querySelector('.toast-body');
+        
+        cImg.src = imgSrc;
+        cTitle.innerText = title;
+        cContent.innerText = message;
+    }
 
     /* utils */
     function getRandomInteger(min, max) {
         return Math.floor(Math.random() * (max - min) ) + min;
     }
+
+    return {
+        show_toast : showToast,
+    };
 }();

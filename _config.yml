@@ -8,6 +8,18 @@ url: https://davemcdowell.github.io
 twitter_username: "@func_dave"
 github_username:  davemcdowell 
 
+# collections
+collections_dir: collections
+collections:
+  level_design:
+    output: true
+    thumbnail: 
+    permalink: /:collection/:name
+  web_design:
+    thumbnail: 
+    output: true
+    permalink: /:collection/:name
+    
 # custom
 mailto_url: mailto:dave@dcmcdowell.com
 github_url: https://github.com/davemcdowell

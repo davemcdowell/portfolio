@@ -91,6 +91,10 @@ a:visited { color: var(--card-border-hover-color); }
   font-size: 1.25em;
 }
 
+.content-wrapper {
+  max-width: 950px;
+}
+
 /* hero */
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),

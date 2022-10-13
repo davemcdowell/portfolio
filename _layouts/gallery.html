@@ -2,36 +2,41 @@
 layout: default
 js-postload-files: 
   - /portfolio/assets/js/blog.js
+  - https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js
+css-files:
+  - https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css
+
 ---
 {%- assign date_format = site.date_format | default: "%A, %B %e, %Y" -%}
-{%- include hero-image.html img-src="https://picsum.photos/1600/500?random=1" -%}
-<section id="post-main">
-    <div id="post-container" class="content-wrapper my-4 mx-auto">
+<section id="gallery-main">
+    <div id="gallery-container" class="content-wrapper my-4 mx-auto">
         <div class="row g-0">
             <div class="col-md-8">
-                <article class="blog-post p-4 p-lg-0">
-                    <h2 class="blog-post-title">{{ page.title }}</h2>
+                <article class="gallery p-4 p-lg-0">
+                    <h2 class="gallery-title">{{ page.title }}</h2>
                     <div class="d-flex flex-wrap align-items-center justify-content-between">
                         <div>
-                            <p class="blog-post-meta mb-0"><small class="text-muted">{{ page.date | date: date_format }} by <a class="no-underline" href="#">{{ page.author }}</a></small></p>
-                            <p class="blog-post-meta mb-0"><small class="text-muted">{%- include reading-time.html -%}</small></p>
+                            <p class="gallery-meta mb-0"><small class="text-muted">{{ page.date | date: date_format }} by <a class="no-underline" href="#">{{ page.author }}</a></small></p>
+                            <p class="gallery-meta mb-0"><small class="text-muted">{%- include reading-time.html -%}</small></p>
                         </div>
                         <div>
                         {%- include share-buttons.html -%}
                         </div>
                     </div>
                     <hr class="block-label-hr">
+                    <!-- gallery here, followed by page content -->
+
                     {{ page.content }}
                     <nav class="d-flex align-items-center justify-content-between mt-5">
                         {%- if page.previous.url -%}
                         <a class="btn btn-outline-light py-1 px-2 me-auto text-right" href="{{ site.baseurl }}{{ page.previous.url }}" title="previous post">
-                            <p class="p-0 m-0 text-right"><i class="bi bi-rewind"></i> Previous Post</p>
+                            <p class="p-0 m-0 text-right"><i class="bi bi-rewind"></i> Previous Gallery</p>
                             <p class="p-0 m-0 text-muted text-right"><small>{{ page.previous.title | truncatewords: 4 }}</small></p>
                         </a>
                         {%- endif -%}
                         {%- if page.next.url -%}
                         <a class="btn btn-outline-light py-1 px-2 ms-auto text-left" href="{{ site.baseurl }}{{ page.next.url }}" title="next post">
-                            <p class="p-0 m-0 text-left">Next Post <i class="bi bi-fast-forward"></i></p>
+                            <p class="p-0 m-0 text-left">Next Gallery <i class="bi bi-fast-forward"></i></p>
                             <p class="p-0 m-0 text-muted text-left"><small>{{ page.next.title | truncatewords: 4 }}</small></p>
                         </a>
                         {%- endif -%}
