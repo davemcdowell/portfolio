@@ -41,16 +41,16 @@ collections_dir: collections
 collections:
   level_design:
     output: true
-    permalink: /:collection/:name
+    #permalink: /:collection/:name
   web_design:
     output: true
-    permalink: /:collection/:name
+    #permalink: /:collection/:name
   game_design:
     output: true
-    permalink: /:collection/:name
+    #permalink: /:collection/:name
   downloads:
     output: true
-    permalink: /:collection/:name
+    #permalink: /:collection/:name
 
 # paginate
 #paginate: 5

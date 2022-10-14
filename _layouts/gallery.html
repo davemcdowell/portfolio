@@ -27,20 +27,6 @@ css-files:
                     <!-- gallery here, followed by page content -->
 
                     {{ page.content }}
-                    <nav class="d-flex align-items-center justify-content-between mt-5">
-                        {%- if page.previous.url -%}
-                        <a class="btn btn-outline-light py-1 px-2 me-auto text-right" href="{{ site.baseurl }}{{ page.previous.url }}" title="previous post">
-                            <p class="p-0 m-0 text-right"><i class="bi bi-rewind"></i> Previous Gallery</p>
-                            <p class="p-0 m-0 text-muted text-right"><small>{{ page.previous.title | truncatewords: 4 }}</small></p>
-                        </a>
-                        {%- endif -%}
-                        {%- if page.next.url -%}
-                        <a class="btn btn-outline-light py-1 px-2 ms-auto text-left" href="{{ site.baseurl }}{{ page.next.url }}" title="next post">
-                            <p class="p-0 m-0 text-left">Next Gallery <i class="bi bi-fast-forward"></i></p>
-                            <p class="p-0 m-0 text-muted text-left"><small>{{ page.next.title | truncatewords: 4 }}</small></p>
-                        </a>
-                        {%- endif -%}
-                    </nav>
                     <hr class="mb-0">
                     <div class="d-flex flex-wrap align-items-center justify-content-between">
                         <div>
