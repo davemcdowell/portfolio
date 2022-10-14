@@ -8,12 +8,17 @@ permalink: /about/
 I'm a designer and developer of many things with a knack for making levels, games and a good amount of front-end web experience on the side. I started my interest with game development using the <a href="https://en.wikipedia.org/wiki/Build_(game_engine)" target="_blank" rel="noreferrer">BUILD Engine</a> and playing tons of <a href="https://en.wikipedia.org/wiki/Duke_Nukem_3D" target="_blank" rel="noreferrer">Duke 3D</a> <abbr title="Total Conversions">'TCs'</abbr> back in 1996. About a year before that Microsoft gave us FrontPage, so making websites became a thing in my life too.
 Since then I've done a bit of everything when it comes to games&mdash;level design, scripting, sound foley, 2D/3D art and animation, game/level mechanics programming. I have a Bachelor of Fine Arts in Design from <a href="https://www.cornish.edu/" target="_blank" rel="noreferrer">Cornish College of the Arts</a> and an Associate of Applied Science in Interactive Media from <a href="https://www.cscc.edu/" target="_blank" rel="noreferrer"></a>Columbus State Community College</a>.
 {% endcapture %}
-{%- include logo-header.html title="About" content=aboutMe link="" -%}
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-10 col-lg-offset-1">
-            
+            <section id="blog-main">
+                <div id="blog-container" class="content-wrapper mx-auto">
+                    <h3 class="block-label">About</h3>
+                    <hr class="block-label-hr">
+                    <p>{{ aboutMe }}</p>
+                    <hr>
+                </div>
+            </section>
         </div>
     </div>
 </div>
