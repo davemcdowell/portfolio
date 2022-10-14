@@ -4,4 +4,14 @@ title:
 authors: 
 game:
 year:
+# make sure each piece of media has a thumbnail otherwise a fallback will be used
+media:
+  - title:
+    # image, video, cubemap, 3d
+    type:
+    thumbnail:
+    thumbnail_alt:
+    image: 
+    image_alt:
+    description: >-
 ---

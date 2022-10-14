@@ -20,6 +20,7 @@ let app = function() {
         bindDarkModeToggle();
         setContactForm();
         setToolTips();
+        setToast();
 
         let pSlider = new Splide('.splide', topLevelSliderOptions);
         let sliderBar = pSlider.root.querySelector('.slider-progress');
@@ -31,6 +32,13 @@ let app = function() {
         });
 
         pSlider.mount();
+    }
+
+    function setToast() {
+        let toastElList = [].slice.call(document.querySelectorAll('.toast'))
+        let toastList = toastElList.map(function (toastEl) {
+          return new bootstrap.Toast(toastEl, option)
+        })
     }
 
     function setToolTips() {
@@ -201,6 +209,8 @@ let app = function() {
         cImg.src = imgSrc;
         cTitle.innerText = title;
         cContent.innerText = message;
+
+        tClone.
     }
 
     /* utils */

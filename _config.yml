@@ -4,22 +4,9 @@ name: Dave McDowell
 email: davecmcdowell@gmail.com
 description: Designer & Developer of things
 url: https://davemcdowell.github.io
-
 twitter_username: "@func_dave"
 github_username:  davemcdowell 
 
-# collections
-collections_dir: collections
-collections:
-  level_design:
-    output: true
-    thumbnail: 
-    permalink: /:collection/:name
-  web_design:
-    thumbnail: 
-    output: true
-    permalink: /:collection/:name
-    
 # custom
 mailto_url: mailto:dave@dcmcdowell.com
 github_url: https://github.com/davemcdowell
@@ -49,11 +36,28 @@ google_analytics: "G-FW1FS38ZN7"
 # timezone
 timezone: America/Los_Angeles
 
+# collections
+collections_dir: collections
+collections:
+  level_design:
+    output: true
+    permalink: /:collection/:name
+  web_design:
+    output: true
+    permalink: /:collection/:name
+  game_design:
+    output: true
+    permalink: /:collection/:name
+  downloads:
+    output: true
+    permalink: /:collection/:name
+
 # paginate
 #paginate: 5
 #paginate_path: "/blog/page:num/"
 
 # build settings
+theme: null
 #theme: moxxi
 plugins:
   - jekyll-feed
