@@ -20,7 +20,6 @@ let app = function() {
         bindDarkModeToggle();
         setContactForm();
         setToolTips();
-        setToast();
 
         let pSlider = new Splide('.splide', topLevelSliderOptions);
         let sliderBar = pSlider.root.querySelector('.slider-progress');
@@ -35,15 +34,15 @@ let app = function() {
     }
 
     function setToast() {
-        let toastElList = [].slice.call(document.querySelectorAll('.toast'))
-        let toastList = toastElList.map(function (toastEl) {
-          return new bootstrap.Toast(toastEl, option)
+        let toastElList = [].slice.call(document.querySelectorAll('.toast'));
+        toastElList.map(function (toastEl) {
+          return new bootstrap.Toast(toastEl, option);
         })
     }
 
     function setToolTips() {
         let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-        let tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+        tooltipTriggerList.map(function(tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl);
         });
     }
@@ -83,10 +82,6 @@ let app = function() {
         darkModeToggleBtn.setAttribute('aria-label', 'Dark Mode');
     }
 
-    function initiateSlideShows(slideSelector, options) {
-
-    }
-    
     function setContactForm() {
         let form = document.querySelector('#contact-form');
 
@@ -210,7 +205,7 @@ let app = function() {
         cTitle.innerText = title;
         cContent.innerText = message;
 
-        tClone.
+        tClone.show();
     }
 
     /* utils */
@@ -222,3 +217,5 @@ let app = function() {
         show_toast : showToast,
     };
 }();
+
+app.show_toast('Test Message', 'This is a test message.');
