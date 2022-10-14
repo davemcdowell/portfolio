@@ -58,7 +58,6 @@ collections:
 
 # build settings
 theme: null
-#theme: moxxi
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -71,7 +70,7 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
- #exclude:
+#  exclude:
 #  - .sass-cache/
 #  - .jekyll-cache/
 #  - gemfiles/
