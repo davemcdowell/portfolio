@@ -1,6 +1,15 @@
 <section id="portfolio-main" class="portfolio">
   <div id="portfolio-container">
-      <section id="level-design-slider" class="splide portfolio-slider mx-auto" aria-labelledby="carousel-heading">
+    {% for collection in site.collections %}
+    <h2>Items from {{ collection.label }}</h2>
+    <ul>
+      {% for item in site[collection.label] %}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+    
+    <section id="level-design-slider" class="splide portfolio-slider mx-auto" aria-labelledby="carousel-heading">
         <h2 id="carousel-heading" class="block-label">{{ site.level_design.label }}</h2>
         <hr class="block-label-hr mb-0">
         <div class="slider-progress mt-0">
