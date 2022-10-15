@@ -411,13 +411,9 @@ a:visited { color: var(--card-border-hover-color); }
   width: 0;
 }
 
-.splide__track--draggable {
-  cursor: grab;
-}
-
 /* project-card */
 .project-card {
-  cursor: grab;
+  cursor: pointer;
   border: 1px solid var(--bg-color-dark);
   background-color: solid var(--bg-color-dark);
   transition: all 0.35s ease-in-out;
