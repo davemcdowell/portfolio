@@ -41,7 +41,7 @@ collections_dir: collections
 collections:
   level_design:
     output: true
-    #permalink: /:level-design/:name
+    permalink: /:collection/:name
   web_design:
     output: true
     #permalink: /:web-design/:name
