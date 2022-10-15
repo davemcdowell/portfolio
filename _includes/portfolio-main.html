@@ -26,7 +26,7 @@
                     {%- if forloop.first -%}
                       {% assign cfClass = 'cf-link-top' %}
                     {%- else -%}
-                      {% assign cfClass = 'cf-link-btm' %}
+                      {% assign cfClass = 'cf-link-btm bs-sm' %}
                     {%- endif -%}
                     <a class="{{ cfClass }}" href="{{ item.url | relative_url }}"><img class="rounded" data-splide-lazy="{{ media.thumbnail }}" width="445" height="296" alt="{{ media.thumbnail_alt }}"></a>
                     {%- endfor -%}
