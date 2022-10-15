@@ -411,6 +411,10 @@ a:visited { color: var(--card-border-hover-color); }
   width: 0;
 }
 
+.splide__track--draggable {
+  cursor: grab;
+}
+
 /* project-card */
 .project-card {
   cursor: grab;
