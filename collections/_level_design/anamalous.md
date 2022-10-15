@@ -14,7 +14,6 @@ media:
     alt:
     description: >-
       An image generated from lorem picsum for testing.
-
   - title: Image 2
     # image, video, cubemap, 3d
     type: image
