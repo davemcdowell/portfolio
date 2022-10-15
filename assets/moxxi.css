@@ -413,9 +413,15 @@ a:visited { color: var(--card-border-hover-color); }
 
 /* project-card */
 .project-card {
+  cursor: grab;
   border: 1px solid var(--bg-color-dark);
   background-color: solid var(--bg-color-dark);
   transition: all 0.35s ease-in-out;
+}
+
+.project-card img {
+  min-width: 445px;
+  min-height: 296px;
 }
 
 .project-card:hover {

@@ -21,17 +21,6 @@ let app = function() {
         setContactForm();
         setToolTips();
         setSlides();
-/*
-        let pSlider = new Splide('.splide', topLevelSliderOptions);
-        let sliderBar = pSlider.root.querySelector('.slider-progress');
-
-        pSlider.on('mounted move', function () {
-            let end  = pSlider.Components.Controller.getEnd() + 1;
-            let rate = Math.min(( pSlider.index + 1 ) / end, 1);
-            sliderBar.style.width = String(100 * rate) + '%';
-        });
-
-        pSlider.mount();*/
     }
 
     function setSlides() {
@@ -235,5 +224,3 @@ let app = function() {
         show_toast : showToast,
     };
 }();
-
-app.show_toast('Test Message', 'This is a test message.');
