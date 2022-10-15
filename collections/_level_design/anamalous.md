@@ -5,7 +5,8 @@ authors: Dave McDowell
 game: 'Half-Life 2: Opposition'
 year: 2018
 media:
-  - title: Image 1
+  - 
+    title: Image 1
     # image, video, cubemap, 3d
     type: image
     thumbnail: https://picsum.photos/445/296?random=1 
@@ -14,7 +15,8 @@ media:
     alt:
     description: >-
       An image generated from lorem picsum for testing.
-  - title: Image 2
+  - 
+    title: Image 2
     # image, video, cubemap, 3d
     type: image
     thumbnail: https://picsum.photos/445/296?random=2 

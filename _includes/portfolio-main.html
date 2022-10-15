@@ -1,7 +1,7 @@
 <section id="portfolio-main" class="portfolio">
   <div id="portfolio-container">
 
-    {% for collection in site.collections where:  %}
+    {% for collection in site.collections | where:"show-on-home", true %}
       <h2>Items from {{ collection.label }}</h2>
       <ul>
         {% for item in site[collection.label] %}
@@ -35,7 +35,7 @@
                     {%- else -%}
                       {% assign cfClass = 'cf-link-btm' %}
                     {%- endif -%}
-                    <a class="{{ cfClass }}" href="{{ item.url }}"><img class="rounded" data-splide-lazy="{{ media.thumbnail }}" width="445" height="296" alt="{{ media.thumbnail_alt }}"></a>
+                    <a class="{{ cfClass }}" href="{{ item.url }}"><img class="rounded" data-splide-lazy="{{ item.thumbnail }}" width="445" height="296" alt="{{ item.thumbnail_alt }}"></a>
                     {%- endfor -%}
                   </div>
                   <div class="project-data splide__slide__content mt-3">
