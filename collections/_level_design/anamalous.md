@@ -13,7 +13,8 @@ media:
     src:
     alt:
     description: >-
-    An image generated from lorem picsum for testing.
+      An image generated from lorem picsum for testing.
+
   - title: Image 2
     # image, video, cubemap, 3d
     type: image
@@ -22,5 +23,5 @@ media:
     src:
     alt:
     description: >-
-    An image generated from lorem picsum for testing.
+      An image generated from lorem picsum for testing.
 ---
