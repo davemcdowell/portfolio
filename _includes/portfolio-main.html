@@ -1,7 +1,7 @@
 <section id="portfolio-main" class="portfolio">
   <div id="portfolio-container">
 
-    {% for collection in site.collections | where:"show-on-home", true %}
+    {% for collection in site.collections | where:"show-main", true %}
       <h2>Items from {{ collection.label }}</h2>
       <ul>
         {% for item in site[collection.label] %}
