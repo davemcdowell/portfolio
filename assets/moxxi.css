@@ -423,7 +423,7 @@ a:visited { color: var(--card-border-hover-color); }
   transition: all 0.35s ease-in-out;
 }
 
-.project-card img {
+.project-card-img {
   min-width: 445px;
   min-height: 296px;
 }
@@ -454,7 +454,7 @@ a:visited { color: var(--card-border-hover-color); }
   color: var(--white-type-color);
   text-decoration: none;
   font-size: 1.4rem;
-  line-height: 1.5rem;
+  line-height: 1.55rem;
   font-weight: 500;
   max-height: 4.4rem;
   overflow: hidden;

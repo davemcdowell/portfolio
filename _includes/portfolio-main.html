@@ -20,7 +20,7 @@
               {%- for item in sortedCollection -%}
               <li class="splide__slide">
                 <div class="project-card splide__slide__container rounded p-1">
-                  <div class="crossfade-wrap">
+                  <div class="project-card-img crossfade-wrap">
                     {% assign mediaItem = item.media | where: "type", "image" | limit: 2 %}
                     {%- for media in mediaItem -%}
                     {%- if forloop.first -%}
