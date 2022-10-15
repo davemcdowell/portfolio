@@ -11,6 +11,7 @@
     {% endfor %}
 
     {% for collection in site.collections | where:"show-main", true %}
+      {%- unless collection == '_post' -%}
       <section id="{{ collection.label }}-slider" class="splide portfolio-slider mx-auto" aria-labelledby="{{ collection.label }}-heading">
         <h2 id="{{ collection.label }}-heading" class="block-label">{{ collection.label | replace: '_', ' ' | capitalize }}</h2>
         <hr class="block-label-hr mb-0">
@@ -56,6 +57,7 @@
           </div>
         </div>
       </section>
+      {%- endunless -%}
     {%- endfor -%}
   </div>
 </section>    
