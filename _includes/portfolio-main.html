@@ -2,16 +2,7 @@
   <div id="portfolio-container">
 
     {% for collection in site.collections | where:"show-main", true %}
-      <h2>Items from {{ collection.label }}</h2>
-      <ul>
-        {% for item in site[collection.label] %}
-          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-        {% endfor %}
-      </ul>
-    {% endfor %}
-
-    {% for collection in site.collections | where:"show-main", true %}
-      {%- unless collection == '_post' -%}
+      {%- unless site[collection.label] == '_post' -%}
       <section id="{{ collection.label }}-slider" class="splide portfolio-slider mx-auto" aria-labelledby="{{ collection.label }}-heading">
         <h2 id="{{ collection.label }}-heading" class="block-label">{{ collection.label | replace: '_', ' ' | capitalize }}</h2>
         <hr class="block-label-hr mb-0">
