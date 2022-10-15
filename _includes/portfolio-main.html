@@ -1,16 +1,18 @@
 <section id="portfolio-main" class="portfolio">
   <div id="portfolio-container">
-    {% for collection in site.collections %}
-    <h2>Items from {{ collection.label }}</h2>
-    <ul>
-      {% for item in site[collection.label] %}
-        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-      {% endfor %}
-    </ul>
-  {% endfor %}
-    
-    <section id="level-design-slider" class="splide portfolio-slider mx-auto" aria-labelledby="carousel-heading">
-        <h2 id="carousel-heading" class="block-label">{{ site.level_design.label }}</h2>
+
+    {% for collection in site.collections where:  %}
+      <h2>Items from {{ collection.label }}</h2>
+      <ul>
+        {% for item in site[collection.label] %}
+          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+
+    {% for collection in site.collections  %}
+      <section id="{{ collection.label }}-slider" class="splide portfolio-slider mx-auto" aria-labelledby="{{ collection.label }}-heading">
+        <h2 id="{{ collection.label }}-heading" class="block-label">{{ collection.label | capitalize | remove: '_'}}</h2>
         <hr class="block-label-hr mb-0">
         <div class="slider-progress mt-0">
           <div class="slider-progress-bar"></div>
@@ -22,17 +24,18 @@
         <div class="position-relative">
           <div class="splide__track">
             <ul class="splide__list">
-              {%- for level in site.level_design | sort: 'year' -%}
+              {% assign sortedCollection = site[collection.label] | sort: 'year' | reverse %}
+              {%- for item in sortedCollection -%}
               <li class="splide__slide">
                 <div class="project-card splide__slide__container rounded p-1">
                   <div class="crossfade-wrap">
-                    {%- for media in level.media | where: "type", "image" | limit: 2 -%}
+                    {%- for media in item.media | where: "type", "image" | limit: 2 -%}
                     {%- if forloop.first -%}
                       {% assign cfClass = 'cf-link-top' %}
                     {%- else -%}
                       {% assign cfClass = 'cf-link-btm' %}
                     {%- endif -%}
-                    <a class="{{ cfClass }}" href="{{ level.url }}"><img class="rounded" data-splide-lazy="{{ media.thumbnail }}" width="445" height="296" alt="{{ media.thumbnail_alt }}"></a>
+                    <a class="{{ cfClass }}" href="{{ item.url }}"><img class="rounded" data-splide-lazy="{{ media.thumbnail }}" width="445" height="296" alt="{{ media.thumbnail_alt }}"></a>
                     {%- endfor -%}
                   </div>
                   <div class="project-data splide__slide__content mt-3">
@@ -41,8 +44,8 @@
                         <a href="#"><img class="rounded-circle" src="https://picsum.photos/36/36?random={{ forloop.index }}" width="36" height="36" alt="..."></a>
                       </div>
                       <div class="flex-grow-1 ms-2">
-                        <span class="title"><a href="{{ level.url }}">{{ level.title }}</a></span>
-                        <span class="project">{{ level.game }}</span><span class="year">{{ level.year }}</span>
+                        <span class="title"><a href="{{ item.url }}">{{ item.title }}</a></span>
+                        <span class="project">{{ item.game }}</span><span class="year">{{ item.year }}</span>
                       </div>
                     </div>
                   </div>
@@ -53,6 +56,7 @@
           </div>
         </div>
       </section>
+    {%- endfor -%}
   </div>
 </section>    
 
