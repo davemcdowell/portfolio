@@ -179,6 +179,7 @@ a:visited { color: var(--card-border-hover-color); }
   background-color: var(--default-type-color);
   font-size: 0.75rem;
   font-weight: 600;
+  text-transform: capitalize;
   color: var(--bg-color-dark);
   padding: 6px 8px 6px 8px;
   -webkit-user-select: none;

@@ -35,7 +35,7 @@
                     {%- else -%}
                       {% assign cfClass = 'cf-link-btm' %}
                     {%- endif -%}
-                    <a class="{{ cfClass }}" href="{{ item.url }}"><img class="rounded" data-splide-lazy="{{ item.thumbnail }}" width="445" height="296" alt="{{ item.thumbnail_alt }}"></a>
+                    <a class="{{ cfClass }}" href="{{ item.url | relative_url }}"><img class="rounded" data-splide-lazy="{{ item.thumbnail }}" width="445" height="296" alt="{{ item.thumbnail_alt }}"></a>
                     {%- endfor -%}
                   </div>
                   <div class="project-data splide__slide__content mt-3">
@@ -44,7 +44,7 @@
                         <a href="#"><img class="rounded-circle" src="https://picsum.photos/36/36?random={{ forloop.index }}" width="36" height="36" alt="..."></a>
                       </div>
                       <div class="flex-grow-1 ms-2">
-                        <span class="title"><a href="{{ item.url }}">{{ item.title }}</a></span>
+                        <span class="title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></span>
                         <span class="project">{{ item.game }}</span><span class="year">{{ item.year }}</span>
                       </div>
                     </div>
