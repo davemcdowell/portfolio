@@ -20,6 +20,7 @@ let app = function() {
         bindDarkModeToggle();
         setContactForm();
         setToolTips();
+        setSlides();
 
         let pSlider = new Splide('.splide', topLevelSliderOptions);
         let sliderBar = pSlider.root.querySelector('.slider-progress');
@@ -31,6 +32,24 @@ let app = function() {
         });
 
         pSlider.mount();
+    }
+
+    function setSlides() {
+        let slides = document.querySelectorAll('.splide');
+
+        for(let i = 0; i < slides.length; i++) {
+            pSlider[i] = new Splide(topLevelSliderOptions);
+            let sliderBar = pSlider.root.querySelector('.slider-progress');
+            pSlider[i].defaults = topLevelSliderOptions;
+
+            pSlider.on('mounted move', function () {
+                let end  = pSlider.Components.Controller.getEnd() + 1;
+                let rate = Math.min(( pSlider.index + 1 ) / end, 1);
+                sliderBar.style.width = String(100 * rate) + '%';
+            });
+
+            pSlider[i].mount();
+        }
     }
 
     function setToast() {

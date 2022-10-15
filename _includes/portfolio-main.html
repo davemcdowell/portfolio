@@ -10,7 +10,7 @@
       </ul>
     {% endfor %}
 
-    {% for collection in site.collections  %}
+    {% for collection in site.collections | where:"show-main", true %}
       <section id="{{ collection.label }}-slider" class="splide portfolio-slider mx-auto" aria-labelledby="{{ collection.label }}-heading">
         <h2 id="{{ collection.label }}-heading" class="block-label">{{ collection.label | capitalize | remove: '_'}}</h2>
         <hr class="block-label-hr mb-0">
