@@ -14,10 +14,10 @@ js-postload-files:
                     <div class="d-flex flex-wrap align-items-center justify-content-between">
                         <div>
                             <p class="blog-post-meta mb-0"><small class="text-muted">{{ page.date | date: date_format }} by <a class="no-underline" href="#">{{ page.author }}</a></small></p>
-                            <p class="blog-post-meta mb-0"><small class="text-muted">{%- include reading-time.html -%}</small></p>
+                            <p class="blog-post-meta mb-0"><small class="text-muted">{%- include snippets/reading-time.html -%}</small></p>
                         </div>
                         <div>
-                        {%- include share-buttons.html -%}
+                        {%- include snippets/share-buttons.html -%}
                         </div>
                     </div>
                     <hr class="block-label-hr">
@@ -75,7 +75,7 @@ js-postload-files:
                     <div class="p-4 d-block d-md-none">
                         <h6 class="block-label"><i class="bi bi-share"></i> Share</h6>
                         <hr class="block-label-hr">
-                        {%- include share-buttons.html -%}
+                        {%- include snippets/share-buttons.html -%}
                     </div>
                 </div>
             </div>
