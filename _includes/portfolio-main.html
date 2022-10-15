@@ -17,14 +17,14 @@
               <li class="splide__slide">
                 <div class="project-card splide__slide__container rounded p-1">
                   <div class="crossfade-wrap">
-                    {% for media in level.media | where: "type", "image" | limit: 2 %}
+                    {%- for media in level.media | where: "type", "image" | limit: 2 -%}
                     {%- if forloop.first -%}
                       {% assign cfClass = 'cf-link-top' %}
                     {%- else -%}
                       {% assign cfClass = 'cf-link-btm' %}
                     {%- endif -%}
                     <a class="{{ cfClass }}" href="{{ level.url }}"><img class="rounded" data-splide-lazy="{{ media.thumbnail }}" width="445" height="296" alt="{{ media.alt }}"></a>
-                    {% endfor %}
+                    {%- endfor -%}
                   </div>
                   <div class="project-data splide__slide__content mt-3">
                     <div class="d-flex">
