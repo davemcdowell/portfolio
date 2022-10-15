@@ -51,10 +51,6 @@ collections:
     show-main: true
     output: true
     #permalink: /:game-design/:name
-  downloads:
-    show-main: false
-    output: true
-    #permalink: /:downloads/:name
 
 # paginate
 #paginate: 5
