@@ -1,7 +1,7 @@
 <section id="portfolio-main" class="portfolio">
   <div id="portfolio-container">
       <section id="level-design-slider" class="splide portfolio-slider mx-auto" aria-labelledby="carousel-heading">
-        <h2 id="carousel-heading" class="block-label">{{ site.level_design.label | capitalize | remove: '_' }}</h2>
+        <h2 id="carousel-heading" class="block-label">{{ site.level_design | remove: '_' | capitalize }}</h2>
         <hr class="block-label-hr mb-0">
         <div class="slider-progress mt-0">
           <div class="slider-progress-bar"></div>
@@ -13,7 +13,7 @@
         <div class="position-relative">
           <div class="splide__track">
             <ul class="splide__list">
-              {%- for level in site.level_design -%}
+              {%- for level in site.level_design | sort: 'year' -%}
               <li class="splide__slide">
                 <div class="project-card splide__slide__container rounded p-1">
                   <div class="crossfade-wrap">
