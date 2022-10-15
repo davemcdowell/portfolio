@@ -1,7 +1,8 @@
 <section id="portfolio-main" class="portfolio">
   <div id="portfolio-container">
 
-    {% for collection in site.collections | where:"show-main", true %}
+    {% assign mainSort = site.collections | where:"show-main", true %}
+    {% for collection in mainSort %}
       {%- unless site[collection.label] == '_post' -%}
       <section id="{{ collection.label }}-slider" class="splide portfolio-slider mx-auto" aria-labelledby="{{ collection.label }}-heading">
         <h2 id="{{ collection.label }}-heading" class="block-label">{{ collection.label | replace: '_', ' ' | capitalize }}</h2>
@@ -21,7 +22,8 @@
               <li class="splide__slide">
                 <div class="project-card splide__slide__container rounded p-1">
                   <div class="crossfade-wrap">
-                    {%- for media in item.media | where: "type", "image" | limit: 2 -%}
+                    {% assign mediaItem = item.media | where: "type", "image" | limit: 2 %}
+                    {%- for media in mediaItem -%}
                     {%- if forloop.first -%}
                       {% assign cfClass = 'cf-link-top' %}
                     {%- else -%}
