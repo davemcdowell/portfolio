@@ -38,7 +38,7 @@ let app = function() {
         let slides = document.querySelectorAll('.splide');
 
         for(let i = 0; i < slides.length; i++) {
-            let newSplide = new Splide(slides[i]);
+            let newSplide = new Splide(slides[i], topLevelSliderOptions);
             let sliderBar = newSplide.root.querySelector('.slider-progress');
 
             newSplide.on('mounted move', function () {
