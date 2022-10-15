@@ -9,7 +9,7 @@ media:
     title: Image 1
     # image, video, cubemap, 3d
     type: image
-    thumbnail: https://picsum.photos/445/296?random=5 
+    thumbnail: https://picsum.photos/445/296?random=1 
     thumbnail_alt: Image 1
     src:
     alt:
@@ -19,7 +19,7 @@ media:
     title: Image 2
     # image, video, cubemap, 3d
     type: image
-    thumbnail: https://picsum.photos/445/296?random=6 
+    thumbnail: https://picsum.photos/445/296?random=2 
     thumbnail_alt: Image 2
     src:
     alt:
