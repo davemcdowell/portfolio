@@ -23,9 +23,7 @@
                     {%- else -%}
                       {% assign cfClass = 'cf-link-btm' %}
                     {%- endif -%}
-                    <a class="{{ cfClass }}" href="{{ level.url }}">
-                      <img class="rounded" data-splide-lazy="{{ media.thumbnail }}" width="445" height="296" alt="{{ media.alt }}">
-                    </a>
+                    <a class="{{ cfClass }}" href="{{ level.url }}"><img class="rounded" data-splide-lazy="{{ media.thumbnail }}" width="445" height="296" alt="{{ media.alt }}"></a>
                     {% endfor %}
                   </div>
                   <div class="project-data splide__slide__content mt-3">
