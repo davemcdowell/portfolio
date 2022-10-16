@@ -4,8 +4,9 @@
     Since then I've done a bit of everything when it comes to games—level design, scripting, sound foley, 2D/3D art and animation, game/level mechanics programming. I have a Bachelor of Fine Arts in Design from <a href="https://www.cornish.edu/" target="_blank" rel="noreferrer">Cornish College of the Arts</a> and an Associate of Applied Science in Interactive Media from <a href="https://www.cscc.edu/" target="_blank" rel="noreferrer">Columbus State Community College</a>.
   experience:
     -
-      logo:
+      logo: /assets/images/bex.jpg
       company: Expedia Group
+      url: https://www.linkedin.com/company/expedia/
       job-title: Lab Manager, BEX User Research
       start-date: 2017
       end-date: 2019
@@ -13,8 +14,9 @@
         A short description here
   education:
     -
-      logo:
+      logo: /assets/images/cca.jpg
       school: Cornish College of the Arts
+      url: https://www.cornish.edu/
       degree: Bachelor of Fine Arts
       subject: Design
       description: >-
@@ -22,8 +24,9 @@
       start-date: 2015
       end-date: 2017
     -
-      logo:
+      logo: /assets/images/cscc.jpg
       school: Columbus State Community College
+      url: https://www.cscc.edu/
       degree: Associate of Applied Science
       subject: Interactive Media
       description: >-
