@@ -425,7 +425,7 @@ a:visited { color: var(--card-border-hover-color); }
   transition: all 0.35s ease-in-out;
 }
 
-.project-avatar { width: 36px; height: 36px; }
+.project-avatar { max-width: 36px; max-height: 36px; }
 
 .project-card:hover {
   border: 1px solid var(--card-border-hover-color);
