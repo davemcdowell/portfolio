@@ -51,9 +51,11 @@ permalink: /about/
                         <h2 class="block-label">Skills</h2>
                         <hr class="block-label-hr">
                         <div class="d-flex justify-content-between">
-                            {%- for skill in site.data.cv.skills -%}
-                            {{ skill.name }}
-                            {%- endfor -%}
+                            <ul class="list-inline">
+                                {%- for skill in site.data.cv.skills -%}
+                                <li class="list-inline-item"><span class="btn btn-sm btn-outline-light py-1 px-2">{{ skill.name | capitalize }}</span></li>
+                                {%- endfor -%}
+                            </ul>
                         </div>
                     </div>
                 </div>
