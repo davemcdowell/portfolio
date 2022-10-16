@@ -21,17 +21,28 @@ Since then I've done a bit of everything when it comes to games&mdash;level desi
                         <h2 class="block-label">Experience</h2>
                         <hr class="block-label-hr">
                         <div class="d-flex justify-content-between">
-                            <div class=""></div>
-                            <div class=""></div>
+                            {%- for experience in site.data.cv.experience -%}
+                            {{ experience }}
+                            {%- endfor -%}
                         </div>
                     </div>
                     <div class="mb-5">
                         <h2 class="block-label">Education</h2>
                         <hr class="block-label-hr">
+                        <div class="d-flex justify-content-between">
+                            {%- for education in site.data.cv.education -%}
+                            {{ education.school }}
+                            {%- endfor -%}
+                        </div>
                     </div>
                     <div class="mb-5">
                         <h2 class="block-label">Skills</h2>
                         <hr class="block-label-hr">
+                        <div class="d-flex justify-content-between">
+                            {%- for skill in site.data.cv.skills -%}
+                            {{ skill.name }}
+                            {%- endfor -%}
+                        </div>
                     </div>
                 </div>
             </section>
