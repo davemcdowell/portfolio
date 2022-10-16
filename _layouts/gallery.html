@@ -33,7 +33,7 @@ css-files:
                             <p><small class="text-muted" get-time-since="{{ page.title | slugify }}-lmt" get-time-since-fallback="{{ page.date | date_to_xmlschema }}"></small></p>
                         </div>
                         <div>
-                            {%- include like-button.html -%}
+                            {%- include snippets/like-button.html -%}
                         </div>
                     </div>
                 </article>
@@ -72,4 +72,4 @@ css-files:
         </div>
     </div>
 </section>
-{%- include contact.html -%}
+{%- include sections/contact.html -%}

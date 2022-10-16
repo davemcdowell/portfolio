@@ -4,7 +4,7 @@ js-postload-files:
   - /portfolio/assets/js/blog.js
 ---
 {%- assign date_format = site.date_format | default: "%A, %B %e, %Y" -%}
-{%- include hero-image.html img-src="https://picsum.photos/1600/500?random=1" -%}
+{%- include snippets/hero-image.html img-src="https://picsum.photos/1600/500?random=1" -%}
 <section id="post-main">
     <div id="post-container" class="content-wrapper my-4 mx-auto">
         <div class="row g-0">
@@ -43,7 +43,7 @@ js-postload-files:
                             <p><small class="text-muted" get-time-since="{{ page.title | slugify }}-lmt" get-time-since-fallback="{{ page.date | date_to_xmlschema }}"></small></p>
                         </div>
                         <div>
-                            {%- include like-button.html -%}
+                            {%- include snippets/like-button.html -%}
                         </div>
                     </div>
                 </article>
@@ -82,4 +82,4 @@ js-postload-files:
         </div>
     </div>
 </section>
-{%- include contact.html -%}
+{%- include sections/contact.html -%}

@@ -6,11 +6,11 @@ layout: default
     <div class="row justify-content-center">
         <div class="col-lg-10 col-lg-offset-1">
             {% capture blogLink %}{{ '/blog/' | relative_url }}{% endcapture %}
-            {%- include callout.html title="&lt;Blog&gt;" content="Check out my blog for updates on current work and probably other stuff that's probably blog-worthy, probably." icon="bi-megaphone" link=blogLink link_label="View Blog" -%}
-            {%- include portfolio-main.html -%}
+            {%- include snippets/callout.html title="&lt;Blog&gt;" content="Check out my blog for updates on current work and probably other stuff that's probably blog-worthy, probably." icon="bi-megaphone" link=blogLink link_label="View Blog" -%}
+            {%- include sections/portfolio-main.html -%}
         </div>
     </div>
 </div>
 {% capture homeEndText %}I hope you've enjoyed my work! Come back soon for updates or visit my <a href="{{ '/blog/' | relative_url }}">blog</a>. You can also find me at...{% endcapture %}
-{%- include ender.html title="Thanks for Looking" content=homeEndText -%}
-{%- include contact.html -%}
+{%- include sections/ender.html title="Thanks for Looking" content=homeEndText -%}
+{%- include sections/contact.html -%}
