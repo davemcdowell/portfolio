@@ -42,8 +42,8 @@ permalink: /about/
                                   <a href="{{ education.url }}" target="_blank" rel="noreferrer"><img class="rounded bs-sm" src="{{ education.logo | relative_url }}" width="48" height="48" alt="{{ education.school }} logo" style="max-width: 48px; max-height: 48px;"></a>
                                 </div>
                                 <div class="flex-grow-1 ms-2">
-                                  <p class="p-0 mb-0"><strong>{{ education.degree }}, {{ education.subject }}</strong></p>
-                                  <p class="p-0 mb-0 text-muted"><small>{{ education.school }}</small></p>
+                                  <p class="p-0 mb-0"><strong><a href="{{ education.url }}" target="_blank" rel="noreferrer">{{ education.school }}</a></strong></p>
+                                  <p class="p-0 mb-0 text-muted"><small>{{ education.degree }}, {{ education.subject }}</small></p>
                                   <p class="p-0 mb-2 text-muted"><small>{{ education.start-date }} - {{ education.end-date }}</small></p>
                                   <p><small>{{ education.description }}</small></p>
                                 </div>
