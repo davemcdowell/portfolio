@@ -19,6 +19,7 @@
       school: Cornish College of the Arts
       url: https://www.cornish.edu/
       degree: Bachelor of Fine Arts
+      degree-short: (BFA)
       subject: Design
       description: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -30,6 +31,7 @@
       school: Columbus State Community College
       url: https://www.cscc.edu/
       degree: Associate of Applied Science
+      degree-short: (AAS)
       subject: Interactive Media
       description: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
