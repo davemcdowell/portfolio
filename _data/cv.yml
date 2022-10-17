@@ -92,9 +92,13 @@
     - name: HTML
     - name: CSS
     - name: Vanilla Js
+    - name: Jekyll
+    - name: Shopify
     - name: 'C#'
     - name: Level Design
     - name: Game Design
+    - name: Web Design
+    - name: Web Development
     - name: Unity
     - name: Source Engine
     - name: Hammer World Editor
