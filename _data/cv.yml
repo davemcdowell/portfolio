@@ -105,6 +105,10 @@
     - name: BUILD Engine
     - name: Aurora Engine
     - name: Game Prototyping
+    - name: UX Research
+    - name: UX Testing
+    - name: iMotions
+    - name: Tobii Pro Labs
     - name: Maya
     - name: Blender
 ---
