@@ -91,6 +91,8 @@
   skills:
     - name: HTML
     - name: CSS
+    - name: BEM
+    - name: Bootstrap
     - name: Javascript
     - name: Jekyll
     - name: Shopify
