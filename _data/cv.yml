@@ -91,8 +91,8 @@
   skills:
     - name: HTML
     - name: CSS
-    - name: Bootstrap
     - name: Javascript
+    - name: Bootstrap
     - name: Jekyll
     - name: Shopify
     - name: Adobe Photoshop
