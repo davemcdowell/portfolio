@@ -109,6 +109,7 @@
     - name: BUILD Engine
     - name: Aurora Engine
     - name: Game Prototyping
+    - name: UI/UX Prototyping
     - name: UX Research
     - name: UX Testing
     - name: iMotions
