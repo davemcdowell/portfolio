@@ -13,7 +13,7 @@ let gallery = function() {
             width: '100%',
             pagination: false,
             arrows: false,
-        }); 
+        });
 
         let thumbnailSlide = new Splide('#thumbnail-slide', {
             fixedWidth: 100,

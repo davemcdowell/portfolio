@@ -47,6 +47,10 @@ a {
 a:hover, a:focus, a:active { color: var(--white-type-color); }
 a:visited { color: var(--card-border-hover-color); }
 
+main {
+  padding-top: 62px;
+}
+
 /* navbar */
 .navbar {
   background-color: var(--bg-color-nav) !important;
@@ -369,7 +373,7 @@ a:visited { color: var(--card-border-hover-color); }
 }
 
 .splide__arrow:hover:not(:disabled) i { color: gainsboro; }
-.portfolio-slider .splide__arrow:disabled { opacity: 0.3;}
+.splide__arrow:disabled { opacity: 0.3;}
 
 .splide__arrow:focus-visible {
   outline: 3px solid ghostwhite;
