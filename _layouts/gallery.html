@@ -7,6 +7,8 @@ css-files:
   - https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css
 ---
 {%- assign date_format = site.date_format | default: "%A, %B %e, %Y" -%}
+{% assign videos = page.media | where: "type", "video" %}
+{% assign images = page.media | where: "type", "image" %}
 <section id="gallery-main">
     <div id="gallery-container" class="content-wrapper my-4 mx-auto">
         <div class="row g-0">
@@ -26,7 +28,11 @@ css-files:
                     <section id="main-slide" class="splide" aria-label="Gallery main slide">
                         <div class="splide__track">
                             <ul class="splide__list">
-                                {% assign images = page.media | where: "type", "image" %}
+                                {%- for vid in videos -%}
+                                <li class="splide__slide">
+                                    <img src="{{ vid.src }}" alt="{{ vid.alt }}">
+                                </li>
+                                {%- endfor -%}
                                 {%- for img in images -%}
                                 <li class="splide__slide">
                                     <img src="{{ img.src }}" alt="{{ img.alt }}">
@@ -43,6 +49,11 @@ css-files:
                         <div class="position-relative">
                             <div class="splide__track">
                                 <ul class="splide__list">
+                                    {%- for vid in videos -%}
+                                    <li class="splide__slide">
+                                        <img src="{{ vid.thumbnail }}" alt="{{ vid.thumbnail_alt }}">
+                                    </li>
+                                    {%- endfor -%}
                                     {%- for img in images -%}
                                     <li class="splide__slide">
                                         <img src="{{ img.thumbnail }}" alt="{{ img.thumbnail_alt }}">
@@ -69,7 +80,7 @@ css-files:
                 <aside>
                     <div class="position-sticky sticky-top-offset">
                         <div class="p-4">
-                            <h6 class="block-label"><i class="bi bi-folder"></i> Summary</h6>
+                            <h6 class="block-label"><i class="bi bi-folder"></i> Category</h6>
                             <hr class="block-label-hr">
                             <ul class="list-inline">
                                 {%- for category in page.categories -%}
