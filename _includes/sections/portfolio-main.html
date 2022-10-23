@@ -21,14 +21,13 @@
               <li class="splide__slide">
                 <div class="project-card splide__slide__container rounded p-1">
                   <div class="project-card-img crossfade-wrap">
-                    {% assign mediaItem = item.media | where: "type", "image" | limit: 2 %}
-                    {%- for media in mediaItem -%}
-                    {%- if forloop.first -%}
-                      {% assign cfClass = 'cf-link-top' %}
-                    {%- else -%}
-                      {% assign cfClass = 'cf-link-btm' %}
-                    {%- endif -%}
-                    <a class="{{ cfClass }}" href="{{ item.url | relative_url }}"><img class="rounded {% if forloop.last %}bs-sm{% endif %}" data-splide-lazy="{{ media.thumbnail }}" width="445" height="296" alt="{{ media.thumbnail_alt }}"></a>
+                    {% assign mediaItems = item.media | where: "type", "image" | limit: 2 %}
+                    {%- for media in mediaItems -%}
+                      {%- if forloop.first -%}
+                        <a class="cf-link-top" href="{{ item.url | relative_url }}"><img class="rounded" data-splide-lazy="{{ media.thumbnail }}" width="445" height="296" alt="{{ media.thumbnail_alt }}"></a>
+                      {%- else -%}
+                        <a class="cf-link-btm" href="{{ item.url | relative_url }}"><img class="rounded bs-sm" data-splide-lazy="{{ media.thumbnail }}" width="445" height="296" alt="{{ media.thumbnail_alt }}"></a>
+                      {%- endif -%}
                     {%- endfor -%}
                   </div>
                   <div class="project-data splide__slide__content mt-3">

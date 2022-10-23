@@ -260,13 +260,6 @@ a:visited { color: var(--card-border-hover-color); }
   user-select: none;
 }
 
-.jumbotron p {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 .jumbotron .container {
   max-width: 40rem;
 }
@@ -414,8 +407,15 @@ a:visited { color: var(--card-border-hover-color); }
 .slider-progress-bar {
   background: var(--default-type-color);
   height: 1px;
-  transition: width 0.15s ease;
   width: 0;
+  transition: width 0.35s ease;
+}
+
+/* gallery slider */
+.gallery-slider .splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* project-card */
