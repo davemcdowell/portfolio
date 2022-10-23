@@ -39,15 +39,17 @@ css-files:
                         <div class="splide__arrows">
                             <button class="splide__arrow splide__arrow--prev"><i class="bi bi-chevron-left icon-2x"></i></button>
                             <button class="splide__arrow splide__arrow--next"><i class="bi bi-chevron-right icon-2x"></i></button>
-                          </div>
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                {%- for img in images -%}
-                                <li class="splide__slide">
-                                    <img src="{{ img.thumbnail }}" alt="{{ img.thumbnail_alt }}">
-                                </li>
-                                {%- endfor -%}
-                            </ul>
+                        </div>
+                        <div class="position-relative">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    {%- for img in images -%}
+                                    <li class="splide__slide">
+                                        <img src="{{ img.thumbnail }}" alt="{{ img.thumbnail_alt }}">
+                                    </li>
+                                    {%- endfor -%}
+                                </ul>
+                            </div>
                         </div>
                     </section>
                     {{ page.content }}
