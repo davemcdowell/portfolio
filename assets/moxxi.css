@@ -359,7 +359,7 @@ main {
   justify-content: center;
   padding: 0;
   position: absolute;
-  top: 50%;
+  top: calc(50% - 2.5em);
   transform: translateY(-50%);
   width: 2.5em;
   z-index: 1;
