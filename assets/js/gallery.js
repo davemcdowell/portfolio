@@ -21,6 +21,7 @@ let gallery = function() {
             gap: 10,
             rewind: true,
             pagination: false,
+            arrows: true,
             isNavigation: true,
             breakpoints: {
               600: {
