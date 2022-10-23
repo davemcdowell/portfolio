@@ -341,7 +341,7 @@ a:visited { color: var(--card-border-hover-color); }
 }
 
 /* portfolio-slider */
-.portfolio-slider .splide__arrow {
+.splide__arrow {
   -ms-flex-align: center;
   align-items: center;
   background: transparent;
@@ -361,44 +361,44 @@ a:visited { color: var(--card-border-hover-color); }
   z-index: 1;
 }
 
-.portfolio-slider .splide__arrow i {
+.splide__arrow i {
   color: ghostwhite;
   height: 2.5em;
   transition: color 0.2s linear;
   width: 2.5em;
 }
 
-.portfolio-slider .splide__arrow:hover:not(:disabled) i { color: gainsboro; }
+.splide__arrow:hover:not(:disabled) i { color: gainsboro; }
 .portfolio-slider .splide__arrow:disabled { opacity: 0.3;}
 
-.portfolio-slider .splide__arrow:focus-visible {
+.splide__arrow:focus-visible {
   outline: 3px solid ghostwhite;
   outline-offset: 3px;
 }
 
-.portfolio-slider .splide__arrow--prev { left: 1em; }
+.splide__arrow--prev { left: 1em; }
 .portfolio-slider .splide__arrow--next { right: 1em; }
 
-.portfolio-slider .splide.is-focus-in .splide__arrow:focus {
+.splide.is-focus-in .splide__arrow:focus {
   outline: 3px solid ghostwhite;
   outline-offset: 3px;
 }
 
-.portfolio-slider .splide__track {
+.splide__track {
   justify-content: center !important;
   margin: 0 !important;
 }
 
-.portfolio-slider .splide:not(.is-overflow) .splide__list {
+.splide:not(.is-overflow) .splide__list {
   justify-content: center;
 }
 
-.portfolio-slider .splide .splide__slide:last-child {
+.splide .splide__slide:last-child {
   margin: 0 !important;
 }
 
-.portfolio-slider .splide__slide .splide__slide__container img,
-.portfolio-slider .splide__slide .splide__slide__container a img {
+.splide__slide .splide__slide__container img,
+.splide__slide .splide__slide__container a img {
   width: 100%;
   height: auto;
 }

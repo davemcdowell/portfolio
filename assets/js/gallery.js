@@ -20,7 +20,6 @@ let gallery = function() {
             rewind: true,
             pagination: false,
             isNavigation: true,
-            focus: 'center',
             breakpoints: {
               600: {
                 fixedWidth: 60,
