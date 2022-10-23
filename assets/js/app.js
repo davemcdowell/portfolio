@@ -24,7 +24,7 @@ let app = function() {
     }
 
     function setSlides() {
-        let slides = document.querySelectorAll('.splide');
+        let slides = document.querySelectorAll('.portfolio-slider');
 
         for(let i = 0; i < slides.length; i++) {
             let newSplide = new Splide(slides[i], topLevelSliderOptions);
