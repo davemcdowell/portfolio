@@ -54,7 +54,7 @@ css-files:
                                 <ul class="splide__list">
                                     {%- for vid in videos -%}
                                     <li class="splide__slide">
-                                        <img src="{{ vid.thumbnail }}" alt="{{ vid.thumbnail_alt }}">
+                                        <img src="{{ vid.src }}" alt="{{ vid.src_alt }}">
                                     </li>
                                     {%- endfor -%}
                                     {%- for img in images -%}
