@@ -11,7 +11,7 @@ media:
     type: image
     thumbnail: https://picsum.photos/445/296?random=1 
     thumbnail_alt: Image 1
-    src:
+    src: https://picsum.photos/445/296?random=1 
     alt:
     description: >-
       An image generated from lorem picsum for testing.
@@ -21,7 +21,7 @@ media:
     type: image
     thumbnail: https://picsum.photos/445/296?random=2 
     thumbnail_alt: Image 2
-    src:
+    src: https://picsum.photos/445/296?random=2 
     alt:
     description: >-
       An image generated from lorem picsum for testing.
