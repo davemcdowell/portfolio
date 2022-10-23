@@ -381,7 +381,7 @@ main {
 }
 
 .splide__arrow--prev { left: 1em; }
-.portfolio-slider .splide__arrow--next { right: 1em; }
+.splide__arrow--next { right: 1em; }
 
 .splide.is-focus-in .splide__arrow:focus {
   outline: 3px solid ghostwhite;
