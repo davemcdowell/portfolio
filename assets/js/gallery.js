@@ -19,8 +19,8 @@ let gallery = function() {
         });
 
         let thumbnailSlide = new Splide('#thumbnail-slide', {
-            fixedWidth: 128,
-            fixedHeight: 64,
+            fixedWidth: 100,
+            fixedHeight: 60,
             gap: 10,
             rewind: true,
             pagination: false,
@@ -28,8 +28,8 @@ let gallery = function() {
             isNavigation: true,
             breakpoints: {
               600: {
-                fixedWidth: 64,
-                fixedHeight: 48,
+                fixedWidth: 60,
+                fixedHeight: 44,
               },
             },
         });
