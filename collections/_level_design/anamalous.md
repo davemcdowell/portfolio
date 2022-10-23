@@ -1,10 +1,12 @@
 ---
 layout: gallery
 title: Anamalous
-authors: 
-  - Dave McDowell
+author: Dave McDowell
 game: 'Half-Life 2: Opposition'
 year: 2018
+date: 2018-10-23 11:30:00 -0700
+categories: 'Half-Life 2: Opposition'
+last-modified: "2022-10-04 12:00:00"
 media:
   - 
     title: Image 1
