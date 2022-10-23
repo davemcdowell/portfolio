@@ -9,7 +9,7 @@ let gallery = function() {
     function setGallerySlider() {
         let mainSlide = new Splide('#main-slide', {
             type: 'fade',
-            width: '768px',
+            width: '633px',
             height: 'auto',
             rewind: true,
             pagination: false,
