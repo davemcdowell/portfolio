@@ -12,11 +12,15 @@ let gallery = function() {
             rewind: true,
             pagination: false,
             arrows: false,
+            video: {
+                loop: true,
+                mute: true,
+            },
         });
 
         let thumbnailSlide = new Splide('#thumbnail-slide', {
-            fixedWidth: 100,
-            fixedHeight: 60,
+            fixedWidth: 128,
+            fixedHeight: 64,
             gap: 10,
             rewind: true,
             pagination: false,
@@ -24,8 +28,8 @@ let gallery = function() {
             isNavigation: true,
             breakpoints: {
               600: {
-                fixedWidth: 60,
-                fixedHeight: 44,
+                fixedWidth: 64,
+                fixedHeight: 48,
               },
             },
         });

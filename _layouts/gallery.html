@@ -1,9 +1,12 @@
 ---
 layout: default
+js-preload-files:
+  - https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.8.0/dist/js/splide-extension-video.min.js
 js-postload-files: 
   - /portfolio/assets/js/gallery.js
   - https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js
 css-files:
+  - https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.8.0/dist/css/splide-extension-video.min.css
   - https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css
 ---
 {%- assign date_format = site.date_format | default: "%A, %B %e, %Y" -%}
@@ -29,8 +32,8 @@ css-files:
                         <div class="splide__track">
                             <ul class="splide__list">
                                 {%- for vid in videos -%}
-                                <li class="splide__slide">
-                                    <img src="{{ vid.src }}" alt="{{ vid.alt }}">
+                                <li class="splide__slide" data-splide-youtube="{{ vid.src }}">
+                                    <img src="{{ vid.thumbnail }}" alt="{{ vid.thumbnail_alt }}">
                                 </li>
                                 {%- endfor -%}
                                 {%- for img in images -%}
@@ -42,7 +45,7 @@ css-files:
                         </div>
                     </section>
                     <section id="thumbnail-slide" class="gallery-slider splide" aria-label="Gallery thumbnail slide">
-                        <div class="splide__arrows">
+                        <div class="splide__arrows position-relative">
                             <button class="splide__arrow splide__arrow--prev"><i class="bi bi-chevron-left icon-1x"></i></button>
                             <button class="splide__arrow splide__arrow--next"><i class="bi bi-chevron-right icon-1x"></i></button>
                         </div>
