@@ -25,19 +25,24 @@ css-files:
                     <hr class="block-label-hr">
                     <section id="main-slide" class="splide" aria-label="Gallery main slide">
                         <div class="splide__track">
-                              <ul class="splide__list">
-                                  <li class="splide__slide">
-                                      <img src="image01.jpg" alt="">
-                                  </li>
-                              </ul>
+                            <ul class="splide__list">
+                                {% assign images = page.media | where: "type", "image" %}
+                                {%- for img in images -%}
+                                <li class="splide__slide">
+                                    <img src="{{ img.src }}" alt="{{ img.alt }}">
+                                </li>
+                                {%- endfor -%}
+                            </ul>
                         </div>
-                      </section>
+                    </section>
                     <section id="thumbnail-slide" class="gallery-slider splide" aria-label="Gallery thumbnail slide">
                         <div class="splide__track">
                             <ul class="splide__list">
+                                {%- for img in images -%}
                                 <li class="splide__slide">
-                                    <img src="thumbnail01.jpg" alt="">
+                                    <img src="{{ img.thumbnail }}" alt="{{ img.thumbnail_alt }}">
                                 </li>
+                                {%- endfor -%}
                             </ul>
                         </div>
                     </section>
