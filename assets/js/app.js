@@ -17,6 +17,7 @@ let app = function() {
     window.addEventListener('DOMContentLoaded', init);
 
     function init() {
+        console.log('--      app.js initiated');
         bindDarkModeToggle();
         setContactForm();
         setToolTips();

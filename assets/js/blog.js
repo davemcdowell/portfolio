@@ -2,7 +2,8 @@ let blog = function() {
     window.addEventListener('DOMContentLoaded', init);
 
     function init() {
-        setLastModifiedDates();
+      console.log('--      blog.js initiated');
+      setLastModifiedDates();
     }
 
     function setLastModifiedDates() {

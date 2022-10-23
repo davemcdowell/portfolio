@@ -411,8 +411,8 @@ a:visited { color: var(--card-border-hover-color); }
 .slider-progress-bar {
   background: var(--default-type-color);
   height: 1px;
-  width: 0;
   transition: width 0.35s ease;
+  width: 0;
 }
 
 /* gallery slider */

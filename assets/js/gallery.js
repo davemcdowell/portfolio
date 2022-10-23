@@ -2,6 +2,7 @@ let gallery = function() {
     window.addEventListener('DOMContentLoaded', init);
 
     function init() {
+        console.log('--      gallery.js initiated');
         setGallerySlider();
     }
 
