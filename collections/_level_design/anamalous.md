@@ -4,9 +4,9 @@ title: Anamalous
 author: Dave McDowell
 game: 'Half-Life 2: Opposition'
 year: 2018
-date: 2018-10-23 11:30:00 -0700
-categories: 'Half-Life 2: Opposition'
-last-modified: "2022-10-04 12:00:00"
+date: 2022-10-23 11:30:00 -0700
+category: 'Half-Life 2: Opposition'
+last-modified: "2022-10-23 2:00:00 -0700"
 media:
   - 
     title: Image 1
@@ -47,5 +47,15 @@ media:
     src: https://picsum.photos/1024/768?random=4 
     alt: Image 4
     description: >-
-      An image generated from lorem picsum for testing.      
+      An image generated from lorem picsum for testing.
+  - 
+    title: Video 1
+    # image, video, cubemap, 3d
+    type: video
+    thumbnail: https://picsum.photos/445/296?random=4 
+    thumbnail_alt: Video 1
+    src: https://www.youtube.com/watch?v=7X8II6J-6mU
+    alt: Video 1
+    description: >-
+      An video generated from lorem picsum for testing.      
 ---
