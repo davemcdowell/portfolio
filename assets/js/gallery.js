@@ -6,14 +6,14 @@ let gallery = function() {
     }
 
     function setGallerySlider() {
-        let mainSlide = new Splide( '#main-carousel', {
+        let mainSlide = new Splide( '#main-slide', {
             type: 'fade',
             rewind: true,
             pagination: false,
             arrows: false,
         }); 
 
-        let thumbnailSlide = new Splide("#thumbnail-carousel", {
+        let thumbnailSlide = new Splide("#thumbnail-slide", {
             fixedWidth: 100,
             fixedHeight: 60,
             gap: 10,

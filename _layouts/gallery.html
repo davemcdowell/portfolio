@@ -23,7 +23,16 @@ css-files:
                         </div>
                     </div>
                     <hr class="block-label-hr">
-                    <section id="thumbnail-carousel" class="gallery-slider splide" aria-label="Gallery thumbnail carousel">
+                    <section id="main-slide" class="splide" aria-label="Gallery main slide">
+                        <div class="splide__track">
+                              <ul class="splide__list">
+                                  <li class="splide__slide">
+                                      <img src="image01.jpg" alt="">
+                                  </li>
+                              </ul>
+                        </div>
+                      </section>
+                    <section id="thumbnail-slide" class="gallery-slider splide" aria-label="Gallery thumbnail slide">
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <li class="splide__slide">
@@ -46,7 +55,7 @@ css-files:
                 </article>
             </div>
             <div class="col-md-4">
-                <div class="position-sticky" style="top: 62px;">
+                <div class="position-sticky sticky-top-offset">
                     {%- if page.categories.size > 0 -%}
                     <div class="p-4">
                         <h6 class="block-label"><i class="bi bi-folder"></i> Categories</h6>

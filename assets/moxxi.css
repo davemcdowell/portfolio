@@ -119,13 +119,8 @@ a:visited { color: var(--card-border-hover-color); }
 }
 
 /* utils */
-.angle-top-left {
-  display: block;
-  width: 100%;
-  height: 48px;
-  background-color: var(--bg-color-darkest);
-  -webkit-clip-path: polygon(0 0, 100% 92%, 100% 100%, 0% 100%);
-  clip-path: polygon(0 0, 100% 92%, 100% 100%, 0% 100%);
+.sticky-top-offset {
+  top: 62px;
 }
 
 /* home logo */
@@ -139,6 +134,15 @@ a:visited { color: var(--card-border-hover-color); }
 }
 
 /* graphical */
+.angle-top-left {
+  display: block;
+  width: 100%;
+  height: 48px;
+  background-color: var(--bg-color-darkest);
+  -webkit-clip-path: polygon(0 0, 100% 92%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 92%, 100% 100%, 0% 100%);
+}
+
 .bg-default {
   background-color: var(--bg-color-dark);
 }
