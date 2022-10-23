@@ -6,7 +6,7 @@ let gallery = function() {
     }
 
     function setGallerySlider() {
-        let mainSlide = new Splide( '#main-slide', {
+        let mainSlide = new Splide('#main-slide', {
             type: 'fade',
             rewind: true,
             width: '100%',
@@ -14,7 +14,7 @@ let gallery = function() {
             arrows: false,
         }); 
 
-        let thumbnailSlide = new Splide("#thumbnail-slide", {
+        let thumbnailSlide = new Splide('#thumbnail-slide', {
             fixedWidth: 100,
             fixedHeight: 60,
             gap: 10,
