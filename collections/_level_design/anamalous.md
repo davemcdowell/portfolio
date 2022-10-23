@@ -52,7 +52,7 @@ media:
     title: Video 1
     # image, video, cubemap, 3d
     type: video
-    thumbnail: https://i3.ytimg.com/vi/7X8II6J-6mU/hqdefault.jpg 
+    thumbnail: https://i3.ytimg.com/vi/7X8II6J-6mU/maxresdefault.jpg 
     thumbnail_alt: Video 1
     src: https://www.youtube.com/watch?v=7X8II6J-6mU
     alt: Video 1
