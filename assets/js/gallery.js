@@ -35,7 +35,7 @@ let gallery = function() {
         });
 
         mainSlide.sync(thumbnailSlide);
-        mainSlide.mount();
+        mainSlide.mount(window.splide.Extensions);
         thumbnailSlide.mount();
     }
 }();
