@@ -367,7 +367,9 @@ main {
 
 .splide__arrow i {
   color: ghostwhite;
+  height: 2.5em;
   transition: color 0.2s linear;
+  width: 2.5em;
 }
 
 .splide__arrow:hover:not(:disabled) i { color: gainsboro; }
@@ -419,11 +421,17 @@ main {
 
 /* gallery slider */
 .gallery-slider  .splide__slide {
-  border: 1px solid transparent;
+  border: 1px solid var(--card-border-hover-color);
 }
 
 .gallery-slider  .splide__slide.is-active {
   border: 1px solid var(--card-border-hover-color);
+}
+
+.gallery-slider .splide__slide .thumbnail {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /* project-card */

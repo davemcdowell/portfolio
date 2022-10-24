@@ -42,15 +42,12 @@ collections:
   level_design:
     show-main: true
     output: true
-    #permalink: '/:level-design/:name'
   web_design:
     show-main: true
     output: true
-    #permalink: /:web-design/:name
   game_design:
     show-main: true
     output: true
-    #permalink: /:game-design/:name
 
 # paginate
 #paginate: 5
