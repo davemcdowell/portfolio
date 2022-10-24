@@ -32,12 +32,12 @@ css-files:
                         <div class="splide__track">
                             <ul class="splide__list">
                                 {%- for vid in videos -%}
-                                <li class="splide__slide" data-splide-youtube="{{ vid.src }}">
+                                <li class="splide__slide bs-sm" data-splide-youtube="{{ vid.src }}">
                                     <img src="{{ vid.src }}" alt="{{ vid.src_alt }}">
                                 </li>
                                 {%- endfor -%}
                                 {%- for img in images -%}
-                                <li class="splide__slide">
+                                <li class="splide__slide bs-sm">
                                     <img src="{{ img.src }}" alt="{{ img.alt }}">
                                 </li>
                                 {%- endfor -%}
