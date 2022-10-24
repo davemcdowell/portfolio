@@ -457,6 +457,7 @@ main {
   border: none;
   height: 2.5em;
   width: 2.5em;
+  
   border-radius: 50%;
   color: var(--default-type-color);
   background-color: var(--bg-color-darkest);
@@ -465,7 +466,7 @@ main {
   transform: translateY(-50%, -50%);
 }
 
-.splide__video__play::after { content: '\F4F4'; }
+.splide__video__play::after { font-family: "bootstrap-icons"; content: '\F4F4'; }
 
 /* project-card */
 .project-card {
