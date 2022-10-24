@@ -417,15 +417,16 @@ main {
   width: 0;
 }
 
-/* gallery slider */
+/* main gallery slider */
+.main-slider .splide__slide img {
+  width: 100% !important;
+}
+
+/* gallery thumbanil slider */
 .gallery-slider .splide__slide {
   position: relative;
   text-align: center;
   border: 2px solid var(--card-border-hover-color);
-}
-
-.gallery-slider .splide__slide img {
-  width: 100% !important;
 }
 
 .gallery-slider .splide__slide.is-active {
