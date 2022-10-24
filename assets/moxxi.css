@@ -421,16 +421,16 @@ main {
 
 /* gallery slider */
 .gallery-slider .splide__slide {
-  border: 1px solid var(--card-border-hover-color);
+  border: 2px solid transparent;
 }
 
 .gallery-slider .splide__slide.is-active {
-  border: 1px solid var(--card-border-hover-color);
+  border: 2px solid var(--card-border-hover-color);
 }
 
 .gallery-slider .splide__slide.thumbnail img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 
