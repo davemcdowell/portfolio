@@ -432,16 +432,13 @@ main {
   pointer-events: none;
   content: " ";
   position: absolute;
-  left: calc(50% - 32px);
-  top: -24px;
+  left: calc(50% - 8px);
+  top: -12px;
   margin: 0 auto;
   border-top: none;
-  border-right: 32px solid transparent;
-  border-left: 32px solid transparent;
-  border-bottom: 24px solid var(--default-type-color);
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  border-bottom: 12px solid var(--bg-color-dark);
 }
 
 .gallery-slider .splide__slide.thumbnail img {
