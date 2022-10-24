@@ -12,6 +12,7 @@ let gallery = function() {
             rewind: true,
             pagination: false,
             arrows: false,
+            focus: 'left',
             video: {
                 loop: true,
                 mute: true,
