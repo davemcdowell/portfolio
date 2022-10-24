@@ -420,6 +420,7 @@ main {
 /* gallery slider */
 .gallery-slider .splide__slide {
   position: relative;
+  padding-top: 8px;
   border: 2px solid var(--card-border-hover-color);
 }
 
