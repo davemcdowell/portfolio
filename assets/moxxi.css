@@ -424,6 +424,10 @@ main {
   border: 2px solid var(--card-border-hover-color);
 }
 
+.gallery-slider .splide__slide img {
+  width: 100%;
+}
+
 .gallery-slider .splide__slide.is-active {
   border: 2px solid var(--default-type-color);
 }
