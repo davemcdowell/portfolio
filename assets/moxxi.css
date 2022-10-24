@@ -469,7 +469,7 @@ main {
   transform: translateY(-50%, -50%);
 }
 
-.splide__video__play::after { font-family: "bootstrap-icons";  font-size: 2rem; line-height: 3em; content: '\F4F4'; }
+.splide__video__play::after { font-family: "bootstrap-icons";  font-size: 1.8rem; line-height: 3em; content: '\F4F4'; }
 
 /* project-card */
 .project-card {
