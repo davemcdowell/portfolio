@@ -62,6 +62,9 @@ let app = function() {
     function setContactForm() {
         let form = document.querySelector('#contact-form');
 
+        if(!form)
+         return;
+         
         let nameGroup = form.querySelector('#form-name-group');
         let emailGroup = form.querySelector('#form-email-group');
         let msgGroup = form.querySelector('#form-msg-group');
