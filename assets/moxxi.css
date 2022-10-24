@@ -419,6 +419,7 @@ main {
 
 /* gallery slider */
 .gallery-slider .splide__slide {
+  position: relative;
   border: 2px solid var(--card-border-hover-color);
 }
 
@@ -427,18 +428,17 @@ main {
 }
 
 .gallery-slider .splide__slide.is-active::after {
-  cursor: default;
   z-index: 99;
   pointer-events: none;
   content: " ";
   position: absolute;
-  left: calc(50% - 8px);
-  top: -12px;
+  left: calc(50% - 32px);
+  top: -24px;
   margin: 0 auto;
   border-top: none;
-  border-right: 8px solid transparent;
-  border-left: 8px solid transparent;
-  border-bottom: 12px solid var(--default-type-color);
+  border-right: 32px solid transparent;
+  border-left: 32px solid transparent;
+  border-bottom: 24px solid var(--bg-color-dark);
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
@@ -467,10 +467,16 @@ main {
   transform: translateY(-50%, -50%);
 }
 
-.splide__video__play::after { font-family: "bootstrap-icons";  font-size: 1.8rem; line-height: 3em; content: '\F4F4'; }
+.splide__video__play::after { 
+  font-family: "bootstrap-icons";  
+  font-size: 1.8rem; 
+  line-height: 3em; 
+  content: '\F4F4'; 
+}
 
 /* project-card */
 .project-card {
+  min-height: 372px;
   border: 1px solid var(--bg-color-dark);
   background-color: solid var(--bg-color-dark);
   transition: all 0.35s ease-in-out;
