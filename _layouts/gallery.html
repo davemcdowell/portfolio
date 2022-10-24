@@ -15,7 +15,7 @@ css-files:
 <section id="gallery-main">
     <div id="gallery-container" class="content-wrapper my-4 mx-auto">
         <div class="row g-0">
-            <div class="col-12">
+            <div class="col-md-8">
                 <article class="gallery p-4 p-lg-0">
                     <h2 class="gallery-title">{{ page.title }}</h2>
                     <div class="d-flex flex-wrap align-items-center justify-content-between">
@@ -50,7 +50,7 @@ css-files:
                         </div>
                         <div class="position-relative mt-2">
                             <div class="splide__track">
-                                <ul class="splide__list pt-2">
+                                <ul class="splide__list">
                                     {%- for vid in videos -%}
                                     <li class="splide__slide thumbnail">
                                         <img src="{{ vid.thumbnail }}" alt="{{ vid.thumbnail_alt }}">
@@ -77,6 +77,35 @@ css-files:
                         </div>
                     </div>
                 </article>
+            </div>
+            <div class="col-md-4">
+                <aside>
+                    <div class="p-4">
+                        <h6 class="block-label"><i class="bi bi-folder"></i> Category</h6>
+                        <hr class="block-label-hr">
+                        <ul class="list-inline">
+                            {%- for category in page.categories -%}
+                            <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ category.url }}">{{ category }}</a></li>
+                            {%- endfor -%}
+                        </ul>
+                    </div>
+                    {%- if page.tags.size > 0 -%}
+                    <div class="p-4">
+                        <h6 class="block-label"><i class="bi bi-tags"></i> Tags</h6>
+                        <hr class="block-label-hr">
+                        <ul class="list-inline">
+                            {%- for tag in page.tags -%}
+                            <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ tag.url }}">{{ tag | capitalize }}</a></li>
+                            {%- endfor -%}
+                        </ul>
+                    </div>
+                    {%- endif -%}
+                    <div class="p-4 d-block d-md-none">
+                        <h6 class="block-label"><i class="bi bi-share"></i> Share</h6>
+                        <hr class="block-label-hr">
+                        {%- include snippets/share-buttons.html -%}
+                    </div>
+                </aside>
             </div>
         </div>
     </div>
