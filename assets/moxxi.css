@@ -359,7 +359,7 @@ main {
   justify-content: center;
   padding: 0;
   position: absolute;
-  top: calc(50% + 1em);
+  top: 50%;
   transform: translateY(-50%);
   width: 2.5em;
   z-index: 1;
@@ -367,9 +367,7 @@ main {
 
 .splide__arrow i {
   color: ghostwhite;
-  height: 2.5em;
   transition: color 0.2s linear;
-  width: 2.5em;
 }
 
 .splide__arrow:hover:not(:disabled) i { color: gainsboro; }
