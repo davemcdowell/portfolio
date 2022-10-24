@@ -378,8 +378,8 @@ main {
   outline-offset: 3px;
 }
 
-.splide__arrow--prev { left: 1.2em; }
-.splide__arrow--next { right: 1.2em; }
+.splide__arrow--prev { left: 0.5em; }
+.splide__arrow--next { right: 0.5em; }
 
 .splide.is-focus-in .splide__arrow:focus {
   outline: 3px solid ghostwhite;
