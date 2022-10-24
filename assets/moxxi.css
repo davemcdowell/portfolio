@@ -452,6 +452,19 @@ main {
   object-fit: cover;
 }
 
+.splide__video__play {
+  position: absolute;
+  border: none;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 50%;
+  color: var(--default-type-color);
+  background-color: var(--bg-color-darkest);
+  top: calc(50% - 1.5em);
+  left: calc(50% - 1.5em);
+  transform: translateY(-50%, -50%);
+}
+
 /* project-card */
 .project-card {
   border: 1px solid var(--bg-color-dark);
