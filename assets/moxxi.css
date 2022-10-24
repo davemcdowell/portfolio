@@ -367,9 +367,7 @@ main {
 
 .splide__arrow i {
   color: ghostwhite;
-  height: 2.5em;
   transition: color 0.2s linear;
-  width: 2.5em;
 }
 
 .splide__arrow:hover:not(:disabled) i { color: gainsboro; }
