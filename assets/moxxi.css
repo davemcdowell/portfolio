@@ -454,7 +454,6 @@ main {
 
 .splide__video__play {
   position: absolute;
-  content: 'U+F4F4';
   border: none;
   height: 2.5em;
   width: 2.5em;
@@ -465,6 +464,8 @@ main {
   left: calc(50% - 1.5em);
   transform: translateY(-50%, -50%);
 }
+
+.splide__video__play::after { content: '\F4F4'; }
 
 /* project-card */
 .project-card {
