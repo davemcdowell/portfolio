@@ -438,7 +438,7 @@ main {
   border-top: none;
   border-right: 32px solid transparent;
   border-left: 32px solid transparent;
-  border-bottom: 24px solid var(--bg-color-dark);
+  border-bottom: 24px solid var(--default-type-color);
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
