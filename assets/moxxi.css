@@ -428,6 +428,24 @@ main {
   border: 2px solid var(--default-type-color);
 }
 
+.gallery-slider .splide__slide.is-active::after {
+  cursor: default;
+  z-index: 99;
+  pointer-events: none;
+  content: " ";
+  position: absolute;
+  left: calc(50% - 8px);
+  top: -12px;
+  margin: 0 auto;
+  border-top: none;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-bottom: 12px solid var(--default-type-color);
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
 .gallery-slider .splide__slide.thumbnail img {
   width: 100%;
   height: 100%;
