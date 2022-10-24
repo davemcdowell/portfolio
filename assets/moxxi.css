@@ -454,7 +454,7 @@ main {
 
 .splide__video__play {
   position: absolute;
-  content: '\F4F4';
+  content: 'U+F4F4';
   border: none;
   height: 2.5em;
   width: 2.5em;
