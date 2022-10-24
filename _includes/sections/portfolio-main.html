@@ -21,8 +21,8 @@
               <li class="splide__slide">
                 <div class="project-card splide__slide__container rounded p-1">
                   <div class="project-card-img crossfade-wrap">
-                    {% assign mediaItems = item.media | where: "type", "image" | limit: 2 %}
-                    {%- for media in mediaItems -%}
+                    {% assign mediaItems = item.media | where: "type", "image" %}
+                    {%- for media in mediaItems limit: 2 -%}
                       {%- if forloop.first -%}
                         <a class="cf-link-top" href="{{ item.url | relative_url }}"><img class="rounded" data-splide-lazy="{{ media.thumbnail }}" width="445" height="296" alt="{{ media.thumbnail_alt }}"></a>
                       {%- else -%}
