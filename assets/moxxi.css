@@ -420,15 +420,15 @@ main {
 }
 
 /* gallery slider */
-.gallery-slider  .splide__slide {
+.gallery-slider .splide__slide {
   border: 1px solid var(--card-border-hover-color);
 }
 
-.gallery-slider  .splide__slide.is-active {
+.gallery-slider .splide__slide.is-active {
   border: 1px solid var(--card-border-hover-color);
 }
 
-.gallery-slider .splide__slide .thumbnail {
+.gallery-slider .splide__slide.thumbnail img {
   width: 100%;
   height: auto;
   object-fit: cover;
