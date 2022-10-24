@@ -457,7 +457,6 @@ main {
   border: none;
   height: 2.5em;
   width: 2.5em;
-  
   border-radius: 50%;
   color: var(--default-type-color);
   background-color: var(--bg-color-darkest);
