@@ -453,10 +453,14 @@ main {
 }
 
 .splide__video__play {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
   position: absolute;
   border: none;
-  height: 2.5em;
-  width: 2.5em;
+  height: 3em;
+  width: 3em;
   border-radius: 50%;
   color: var(--default-type-color);
   background-color: var(--bg-color-darkest);
@@ -465,7 +469,7 @@ main {
   transform: translateY(-50%, -50%);
 }
 
-.splide__video__play::after { font-family: "bootstrap-icons";  font-size: 2rem; content: '\F4F4'; }
+.splide__video__play::after { font-family: "bootstrap-icons";  font-size: 2rem; line-height: 3em; content: '\F4F4'; }
 
 /* project-card */
 .project-card {
