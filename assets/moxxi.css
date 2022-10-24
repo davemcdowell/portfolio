@@ -373,7 +373,7 @@ main {
 }
 
 .splide__arrow:hover:not(:disabled) i { color: gainsboro; }
-.splide__arrow:disabled { opacity: 0.3;}
+.splide__arrow:disabled { opacity: 0.3; }
 
 .splide__arrow:focus-visible {
   outline: 3px solid ghostwhite;
@@ -420,10 +420,12 @@ main {
 }
 
 /* gallery slider */
-.gallery-slider .splide__slide img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+.gallery-slider  .splide__slide {
+  border: 1px solid transparent;
+}
+
+.gallery-slider  .splide__slide.is-active {
+  border: 1px solid var(--card-border-hover-color);
 }
 
 /* project-card */
