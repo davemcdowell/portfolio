@@ -4,12 +4,21 @@ layout: default
 ---
 <style type="text/css" media="screen">
 .background {
+  position: relative;
   height: 100vh;
   width: 100%;
   background-color: #0e0b0e;
   background: url('/portfolio/assets/images/404/skybox.png') no-repeat center, linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
   background-size: cover;
 }
+
+.blimp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%, -50%);
+}
 </style>
 <div class="background">
+  <div class="blimp"><img src="/portfolio/assets/images/404/skybox.png"></div>
 </div>
