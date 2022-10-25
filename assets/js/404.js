@@ -1,10 +1,10 @@
 let fourOFour = function() {
     window.addEventListener('DOMContentLoaded', init);
 
-    let blimp = document.querySelector('.blimp');
+    const blimp = document.querySelector('.blimp');
     let blimpInterval;
-    let speed = 5;
-    let frameRate = 24;
+    const speed = 5;
+    const frameRate = 24;
 
     let blimpHits = 0;
     const blimpHitMax = 4;
@@ -25,7 +25,7 @@ let fourOFour = function() {
     function moveBlimp() {
         let margin = 0;
         margin = (margin > window.innerWidth ? 0 : margin + speed);
-        blimp.style.marginLeft = margin + "px";       
+        blimp.style.marginRight = margin + "px";       
     }
 
     function blimpHit() {
