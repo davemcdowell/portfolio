@@ -25,7 +25,7 @@ let fourOFour = function() {
     function moveBlimp() {
         let margin = 0;
         margin = (margin > window.innerWidth ? 0 : margin + speed);
-        box.style.marginLeft = margin + "px";       
+        blimp.style.marginLeft = margin + "px";       
     }
 
     function blimpHit() {
