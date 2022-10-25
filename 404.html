@@ -21,7 +21,23 @@ js-postload-files:
   left: 50%; 
   transform: translate(-50%, -50%);
 }
+
+.floating { 
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
 </style>
 <div class="background">
-  <div class="blimp"><img src="/portfolio/assets/images/404/blimp.png"></div>
+  <div class="blimp floating"><img src="/portfolio/assets/images/404/blimp.png"></div>
 </div>

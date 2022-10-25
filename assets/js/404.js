@@ -23,21 +23,14 @@ let fourOFour = function() {
     }
     
     function moveBlimp() {
+        let margin = 0;
+        margin = (margin > window.innerWidth ? 0 : margin + speed);
+        box.style.marginLeft = margin + "px";       
     }
-
-    function animate() {
-        var margin = 0;
-        int = setInterval(function() {
-            margin = (margin > window.innerWidth ? 0 : margin + Number(distance.value));
-            box.style.marginLeft = margin + "px";
-          },
-          1000 / Number(frameRate.value))
-      }
 
     function blimpHit() {
         blimpHits++;
 
-        blimp.style.backgroundColor = '#fff';
         if(blimpHits >= blimpHitMax) {
             blimp.remove();
         }
