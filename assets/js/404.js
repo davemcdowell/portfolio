@@ -3,7 +3,7 @@ let fourOFour = function() {
 
     const blimp = document.querySelector('.blimp');
     let int;
-    const speed = 5;
+    const speed = 2;
     const frameRate = 24;
 
     let blimpHits = 0;
