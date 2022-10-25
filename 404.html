@@ -23,6 +23,7 @@ js-postload-files:
   position: absolute;
   right: -230px;
   z-index: 10;
+  margin-bottom: 10em;
 }
 
 .fence {
@@ -56,6 +57,26 @@ js-postload-files:
   height: auto;
 }
 
+.palm {
+  position: absolute;
+  z-index: 10;
+}
+
+.palmA {
+  left: 15%;
+  width: auto;
+  height: auto;
+  bottom: 0;
+  height: 256px;
+}
+
+.palmB {
+  right: 15%;
+  bottom: 0;
+  width: auto;
+  height: 256px;
+}
+
 .floating { 
     animation-name: floating;
     animation-duration: 3s;
@@ -72,6 +93,8 @@ js-postload-files:
 </style>
 <div class="background">
   <div class="blimp floating user-select-none"><img src="/portfolio/assets/images/404/blimp.png" draggable="false"></div>
+  <img class="palm palmA" src="/portfolio/assets/images/404/palmA.png" draggable="false">
+  <img class="palm palmB" src="/portfolio/assets/images/404/palmB.png" draggable="false">
   <div class="fence">
     <img class="sign signA" src="/portfolio/assets/images/404/signA.png" draggable="false">
     <img class="sign signB" src="/portfolio/assets/images/404/signB.png" draggable="false">
