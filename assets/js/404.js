@@ -26,7 +26,7 @@ let fourOFour = function() {
         var margin = 0;
         int = setInterval(function() {
             margin = (margin > window.innerWidth ? 0 : margin + speed);
-            blimp.style.marginLeft = margin + "px";
+            blimp.style.marginRight = margin + "px";
           },
           1000 / frameRate)
       }
