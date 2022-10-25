@@ -27,10 +27,10 @@ let fourOFour = function() {
         let w = 1300;
 
         console.log(w);
-        if (margin == w) {
+        if(margin == w) {
           margin = 0 + "px";
         } else {
-          blimp.style.marginLeft = margin + "px";
+          blimp.style.marginRight = margin + "px";
         }
         margin += 10;
       }
