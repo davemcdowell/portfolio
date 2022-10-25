@@ -2,7 +2,7 @@ let fourOFour = function() {
     window.addEventListener('DOMContentLoaded', init);
 
     const blimp = document.querySelector('.blimp');
-    let blimpInterval;
+    let int;
     const speed = 5;
     const frameRate = 24;
 
@@ -19,15 +19,17 @@ let fourOFour = function() {
             return;
 
         blimp.addEventListener('click', blimpHit);
-        blimpInterval = setInterval(moveBlimp, 1000 / frameRate);
+        animate();
     }
     
-    function moveBlimp() {
-        let margin = 0;
-        margin = (margin > window.innerWidth ? 0 : margin + speed);
-        blimp.style.marginRight = margin + "px";
-        console.log('moving');
-    }
+    function animate() {
+        var margin = 0;
+        int = setInterval(function() {
+            margin = (margin > window.innerWidth ? 0 : margin + speed);
+            blimp.style.marginLeft = margin + "px";
+          },
+          1000 / frameRate)
+      }
 
     function blimpHit() {
         blimpHits++;
