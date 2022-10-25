@@ -17,27 +17,16 @@ let fourOFour = function() {
             return;
 
         blimp.addEventListener('click', blimpHit);
-        blimpLoop = setInterval(moveBlimp, 90);
     }
     
     function moveBlimp() {
-        let margin = 0;
-    
-        let l = window.screen.width;
-        let w = 1300;
 
-        console.log(w);
-        if(margin == w) {
-          margin = 0 + "px";
-        } else {
-          blimp.style.marginRight = margin + "px";
-        }
-        margin += 10;
       }
 
     function blimpHit() {
         blimpHits++;
 
+        blimp.style.backgroundColor = '#fff';
         if(blimpHits >= blimpHitMax) {
             blimp.remove();
         }
