@@ -22,6 +22,7 @@ js-postload-files:
 .blimp {
   position: absolute;
   right: -230px;
+  z-index: 10;
 }
 
 .fence {
@@ -32,6 +33,26 @@ js-postload-files:
   width: 100%;
   background: url('/portfolio/assets/images/404/fence.png') repeat-x;
   background-size: contain;
+  z-index: 20;
+}
+
+.sign {
+  position: absolute;
+  z-index: 25;
+}
+
+.signA {
+  left: 0;
+  bottom: 0;
+  width: 64px;
+  height: auto;
+}
+
+.signB {
+  left: 0;
+  bottom: 0;
+  width: 64px;
+  height: auto;
 }
 
 .floating { 
@@ -50,5 +71,8 @@ js-postload-files:
 </style>
 <div class="background">
   <div class="blimp floating user-select-none"><img src="/portfolio/assets/images/404/blimp.png" draggable="false"></div>
-  <div class="fence"></div>
+  <div class="fence">
+    <img class="signA" src="/portfolio/assets/images/404/signA.png" draggable="false">
+    <img class="signB" src="/portfolio/assets/images/404/signB.png" draggable="false">
+  </div>
 </div>
