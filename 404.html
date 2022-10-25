@@ -87,6 +87,13 @@ js-postload-files:
   transform: rotate(5deg);
 }
 
+.back {
+  position: absolute;
+  left: 0;
+  bottom: 25%;
+  z-index: 30;
+}
+
 .floating { 
     animation-name: floating;
     animation-duration: 3s;
@@ -103,6 +110,7 @@ js-postload-files:
 </style>
 <div class="background">
   <div class="blimp floating user-select-none"><img src="/portfolio/assets/images/404/blimp.png" draggable="false"></div>
+  <img class="back" src="/portfolio/assets/images/404/back.png" draggable="false">
   <img class="palm palmA" src="/portfolio/assets/images/404/palmA.png" draggable="false">
   <img class="palm palmB" src="/portfolio/assets/images/404/palmB.png" draggable="false">
   <img class="palm palmC" src="/portfolio/assets/images/404/palmA.png" draggable="false">
