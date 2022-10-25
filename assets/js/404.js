@@ -19,9 +19,9 @@ let fourOFour = function() {
     }
 
     function blimpHit() {
-        blimpHit++;
+        blimpHits++;
 
-        if(blimpHit >= blimpHitMax) {
+        if(blimpHits >= blimpHitMax) {
             blimp.remove();
             console.log('blimp destroyed');
         }
