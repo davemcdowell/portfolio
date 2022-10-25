@@ -23,7 +23,7 @@ let fourOFour = function() {
     }
     
     function animate() {
-        var margin = 0;
+        let margin = 0;
         int = setInterval(function() {
             margin = (margin > (window.innerWidth - 115) ? 0 : margin + speed);
             blimp.style.marginRight = margin + "px";
