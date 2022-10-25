@@ -2,12 +2,12 @@ let fourOFour = function() {
     window.addEventListener('DOMContentLoaded', init);
 
     const blimp = document.querySelector('.blimp');
-    let int;
+    let blimpInterval;
     const speed = 1;
     const frameRate = 24;
 
     let blimpHits = 0;
-    const blimpHitMax = 4;
+    const blimpHitMax = 15;
 
     function init() {
         console.log('--      404.js initiated');
@@ -18,24 +18,28 @@ let fourOFour = function() {
         if(!blimp)
             return;
 
-        blimp.addEventListener('click', blimpHit);
+        blimp.addEventListener('click', hitBlimp);
         animateBlimp();
     }
     
     function animateBlimp() {
-        let margin = 0;
-        int = setInterval(function() {
-            margin = (margin > (window.innerWidth + 230) ? 0 : margin + speed);
-            blimp.style.marginRight = margin + "px";
-          },
-          1000 / frameRate);
+        let offset = 0;
+        blimpInterval = setInterval(function() {
+            offset = (offset > (window.innerWidth + 320) ? 0 : offset + speed);
+            blimp.style.marginRight = offset + 'px';
+          }, 1000 / frameRate);
       }
 
-    function blimpHit() {
+    function hitBlimp() {
         blimpHits++;
 
         if(blimpHits >= blimpHitMax) {
-            blimp.remove();
+            destroyBlimp();
         }
+    }
+
+    function destroyBlimp() {
+        clearInterval(blimpInterval);
+        blimp.remove();
     }
 }();
