@@ -484,6 +484,10 @@ main {
   transition: all 0.35s ease-in-out;
 }
 
+.project-card img {
+  min-height: 296px;
+}
+
 .project-avatar { max-width: 36px; max-height: 36px; }
 
 .project-card:hover {
@@ -532,9 +536,7 @@ main {
 }
 
 /* contact section */
-.contact {
-  background-color: var(--bg-color-darkest);
-}
+.contact { background-color: var(--bg-color-darkest); }
 
 .contact p {
   -webkit-user-select: none;

@@ -27,8 +27,8 @@ let fourOFour = function() {
         blimpInterval = setInterval(function() {
             offset = (offset > (window.innerWidth + 320) ? 0 : offset + speed);
             blimp.style.marginRight = offset + 'px';
-          }, 1000 / frameRate);
-      }
+        }, 1000 / frameRate);
+    }
 
     function hitBlimp() {
         blimpHits++;
