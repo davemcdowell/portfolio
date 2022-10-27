@@ -484,7 +484,7 @@ main {
   transition: all 0.35s ease-in-out;
 }
 
-.project-card img {
+.project-card img:not(.project-avatar) {
   min-height: 296px;
 }
 
