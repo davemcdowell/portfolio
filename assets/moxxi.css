@@ -646,6 +646,7 @@ footer a {
   -o-transition: color 0.35s ease-in-out;
   transition: color 0.35s ease-in-out;
 }
+
 footer a:hover,
 footer a:active,
 footer a:focus {
