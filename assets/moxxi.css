@@ -485,6 +485,7 @@ main {
 }
 
 .project-card img:not(.project-avatar) {
+  height: 296px;
   min-height: 296px !important;
 }
 
