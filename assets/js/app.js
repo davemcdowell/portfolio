@@ -150,7 +150,7 @@ let app = function() {
             submitBtn.setAttribute('aria-disabled', true);
             btnLabel.textContent = 'Write Me';
 
-            let fieldsLeft = (parseInt(form.dataset.validFields) - vFields.length);
+            let fieldsLeft = (vFields.length - parseInt(form.dataset.validFields));
             countTxt.textContent = `${fieldsLeft} fields left`;
         }
     }
