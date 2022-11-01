@@ -145,6 +145,7 @@ let app = function() {
             submitBtn.classList.remove('disabled');
             submitBtn.setAttribute('aria-disabled', false);
             btnLabel.textContent = 'Send';
+            countTxt.textContent = '';
         } else {
             submitBtn.classList.add('disabled');
             submitBtn.setAttribute('aria-disabled', true);
