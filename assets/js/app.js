@@ -113,7 +113,7 @@ let app = function() {
             groups[i].removeAttribute('is-valid');
         }
 
-        submitBtn.classList.add('disabled');
+        checkFormValidation(form);
     }
 
     function setFormGroupValidation(group, input, validationCheck) {
