@@ -150,7 +150,7 @@ let app = function() {
             submitBtn.setAttribute('aria-disabled', true);
             btnLabel.textContent = 'Write Me';
 
-            let fieldsLeft = (parseInt(form.dataset.validFields) - vFields);
+            let fieldsLeft = (parseInt(form.dataset.validFields) - vFields.length);
             countTxt.textContent = `${fieldsLeft} fields left`;
         }
     }
@@ -175,7 +175,6 @@ let app = function() {
         }
 
         form.dataset.validFields = checkCount;
-        
         return Boolean(checkCount === gLength);
     }
     
