@@ -71,11 +71,13 @@ js-postload-files:
                             {%- endfor -%}
                         </ul>
                     </div>
+                    {%- endif -%}
+                    {% assign posts = site.posts | where: 'tags', page.tags %}
+                    {%- if posts.size > 0 -%}
                     <div class="p-4">
                         <h6 class="block-label"><i class="bi bi-symmetry-vertical"></i> Similar</h6>
                         <hr class="block-label-hr">
                         <ul class="list-unstyled">
-                            {% assign posts = site.posts | where: 'tags', page.tags %}
                             {%- for post in posts -%}
                             <li><a href="{{ post.url }}">{{ post.title | capitalize }}</a></li>
                             {%- endfor -%}
