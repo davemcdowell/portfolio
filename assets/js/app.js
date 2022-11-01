@@ -151,7 +151,7 @@ let app = function() {
             btnLabel.textContent = 'Write Me';
 
             let fieldsLeft = (vFields.length - parseInt(form.dataset.validFields));
-            countTxt.textContent = `${fieldsLeft} fields left`;
+            (fieldsLeft > 1) ? countTxt.textContent = `${fieldsLeft} fields left` : countTxt.textContent = `${fieldsLeft} field left`;
         }
     }
 
