@@ -125,35 +125,33 @@ let app = function() {
             invalidFeedback.style.display = 'none';
             validFeedback.style.display = 'block';
             input.setAttribute('style', 'border-color: #198754 !important;');
+
             group.setAttribute('is-valid', '');
         } else {
             validFeedback.style.display = 'none';
             invalidFeedback.style.display = 'block';
             input.setAttribute('style', 'border-color: #dc3545 !important;');
+
             group.removeAttribute('is-valid');
         }
     }
 
     function checkFormValidation(form) {
-        isFormValid(form, formSuccess, formFail);
-    }
-
-    function formSuccess() {
         let submitBtn = form.querySelector('#form-submit, input[type="submit"]');
+        let countTxt = submitBtn.querySelector('small');
+        
+        if(isFormValid(form)) {
+            submitBtn.classList.remove('disabled');
+            submitBtn.setAttribute('aria-disabled', false);
+            submitBtn.textContent = 'Send';
+        } else {
+            submitBtn.classList.add('disabled');
+            submitBtn.setAttribute('aria-disabled', true);
+            submitBtn.textContent = 'Write Me';
 
-        submitBtn.classList.remove('disabled');
-        submitBtn.setAttribute('aria-disabled', false);
-        submitBtn.textContent = 'Send';
-    }
-
-    function formFail(fieldsLeft) {
-        let submitBtn = form.querySelector('#form-submit, input[type="submit"]');
-        let diffTxt = submitBtn.querySelector('small');
-
-        submitBtn.classList.add('disabled');
-        submitBtn.setAttribute('aria-disabled', true);
-        submitBtn.textContent = 'Write Me';
-        diffTxt.textContent = fieldsLeft + ' fields left';
+            let fieldsLeft = form.dataset.validFields.value;
+            countTxt.textContent = `${fieldsLeft} fields left`;
+        }
     }
 
     function isEmailValid(email) {
@@ -164,7 +162,7 @@ let app = function() {
     const isStringValid = (string) => { return Boolean(string !== ''); };
     const isHumanValid = (answer) => { return Boolean(parseInt(answer) === 7); };
 
-    function isFormValid(form, successCallback, failCallback) {
+    function isFormValid(form) {
         let groupArray = form.querySelectorAll('[data-check-validation]');
         let gLength = groupArray.length;
         let checkCount = 0;
@@ -172,14 +170,10 @@ let app = function() {
         for(let i = 0; i < gLength; i++) {
             if(groupArray[i].hasAttribute('is-valid')) {
                 checkCount++;
-            }
+            } 
         }
 
-        if(checkCount == gLength) {
-            successCallback();
-        } else {
-            failCallback(checkCount);
-        }
+        form.dataset.validFields = checkCount;
         
         return Boolean(checkCount === gLength);
     }
