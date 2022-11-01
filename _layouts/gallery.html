@@ -83,6 +83,7 @@ css-files:
             </div>
             <div class="col-md-4">
                 <aside>
+                    {%- if page.tags.size > 0 -%}
                     <div class="p-4">
                         <h6 class="block-label"><i class="bi bi-folder"></i> Category</h6>
                         <hr class="block-label-hr">
@@ -92,6 +93,7 @@ css-files:
                             {%- endfor -%}
                         </ul>
                     </div>
+                    {%- endif -%}
                     {%- if page.tags.size > 0 -%}
                     <div class="p-4">
                         <h6 class="block-label"><i class="bi bi-tags"></i> Tags</h6>

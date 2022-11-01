@@ -71,6 +71,16 @@ js-postload-files:
                             {%- endfor -%}
                         </ul>
                     </div>
+                    <div class="p-4">
+                        <h6 class="block-label"><i class="bi bi-symmetry-vertical"></i> Similar</h6>
+                        <hr class="block-label-hr">
+                        <ul class="list-unstyled">
+                            {% assign posts = site.posts | where: 'tags', page.tags %}
+                            {%- for post in posts -%}
+                            <li><a href="{{ post.url }}">{{ post.title | capitalize }}</a></li>
+                            {%- endfor -%}
+                        </ul>
+                    </div>
                     {%- endif -%}
                     <div class="p-4 d-block d-md-none">
                         <h6 class="block-label"><i class="bi bi-share"></i> Share</h6>
