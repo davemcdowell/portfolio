@@ -138,6 +138,7 @@ let app = function() {
 
     function checkFormValidation(form) {
         let submitBtn = form.querySelector('#form-submit, input[type="submit"]');
+        let countTxt = submitBtn.querySelector('small');
 
         if(isFormValid(form)) {
             submitBtn.classList.remove('disabled');
@@ -163,11 +164,17 @@ let app = function() {
         let gLength = groupArray.length;
         let checkCount = 0;
 
+        let subBtn = form.querySelector('#form-submit, input[type="submit"]');
+        let countTxt = subBtn.querySelector('small');
+
         for(let i = 0; i < gLength; i++) {
             if(groupArray[i].hasAttribute('is-valid')) {
                 checkCount++;
             } 
         }
+
+        let diff = (gLength - checkCount);
+        countTxt.textContent = `${diff} fields left`;
         
         return Boolean(checkCount === gLength);
     }
