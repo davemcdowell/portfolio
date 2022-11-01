@@ -125,31 +125,32 @@ let app = function() {
             invalidFeedback.style.display = 'none';
             validFeedback.style.display = 'block';
             input.setAttribute('style', 'border-color: #198754 !important;');
-
             group.setAttribute('is-valid', '');
         } else {
             validFeedback.style.display = 'none';
             invalidFeedback.style.display = 'block';
             input.setAttribute('style', 'border-color: #dc3545 !important;');
-
             group.removeAttribute('is-valid');
         }
     }
 
     function checkFormValidation(form) {
         let submitBtn = form.querySelector('#form-submit, input[type="submit"]');
+        let btnLabel = form.querySelector('.btn-label');
+
+        let vFields = form.querySelectorAll('[data-check-validation]');
         let countTxt = submitBtn.querySelector('small');
         
         if(isFormValid(form)) {
             submitBtn.classList.remove('disabled');
             submitBtn.setAttribute('aria-disabled', false);
-            submitBtn.textContent = 'Send';
+            btnLabel.textContent = 'Send';
         } else {
             submitBtn.classList.add('disabled');
             submitBtn.setAttribute('aria-disabled', true);
-            submitBtn.textContent = 'Write Me';
+            btnLabel.textContent = 'Write Me';
 
-            let fieldsLeft = form.dataset.validFields.value;
+            let fieldsLeft = (parseInt(form.dataset.validFields) - vFields);
             countTxt.textContent = `${fieldsLeft} fields left`;
         }
     }
