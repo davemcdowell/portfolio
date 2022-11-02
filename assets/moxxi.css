@@ -547,6 +547,7 @@ main {
 
 /* thumbnail cards */
 .thumbnail-card img {
+  max-width: 350px;
   width: 100%;
   height: auto;
 }
