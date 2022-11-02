@@ -720,9 +720,9 @@ footer textarea {
   pointer-events: none;
   content: " ";
   position: absolute;
-  left: calc(50% - 32px);
+  left: 0;
   height: 24px;
-  top: -24px;
+  top: 0;
   /*
   margin: 0 auto;
   border-top: none;
