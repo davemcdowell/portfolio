@@ -553,6 +553,8 @@ main {
 }
 
 /* thumbnail cards */
+.thumbnail-card { position: relative; }
+
 .thumbnail-card img {
   background-color: var(--bg-color-darker);
   width: 100%;
