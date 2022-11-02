@@ -546,7 +546,9 @@ main {
 }
 
 /* thumbnail cards */
-
+.thumbnail-card {
+  
+}
 
 /* contact section */
 .contact { background-color: var(--bg-color-darkest); }
