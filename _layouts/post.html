@@ -105,7 +105,11 @@ js-postload-files:
                                     {%- endfor -%}
                                 {%- endif -%}
                                 {%- if sameTagCount >= minCommonTags -%}
+                                    {%- if post.short-title -%}
                                     <li><a class="no-underline" href="{{ site.baseurl }}{{ post.url }}">{{ post.short-title | capitalize }}</a></li>
+                                    {%- else -%}
+                                    <li><a class="no-underline" href="{{ site.baseurl }}{{ post.url }}">{{ post.title | capitalize }}</a></li>
+                                    {%- endif -%}
                                     {% assign maxRelatedPosts = maxRelatedPosts | plus: 1 %}
                                     {%- if maxRelatedPosts > maxPosts -%}
                                         {% break %}
