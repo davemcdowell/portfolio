@@ -721,6 +721,7 @@ footer textarea {
   content: " ";
   position: absolute;
   left: calc(50% - 32px);
+  height: 24px;
   top: -24px;
   /*
   margin: 0 auto;
