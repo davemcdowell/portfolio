@@ -72,27 +72,25 @@ js-postload-files:
                         </ul>
                     </div>
                     {%- endif -%}
-
-                    {% assign maxPosts = 5 %}
-                    {% assign minCommonTags =  1 %}
-                    {% assign maxRelatedPosts = 0 %}
-
+                    {%- assign maxPosts = 5 -%}
+                    {%- assign minCommonTags =  1 -%}
+                    {%- assign maxRelatedPosts = 0 -%}
                     <div class="p-4">
-                        <h6 class="block-label"><i class="bi bi-symmetry-vertical"></i> Similar</h6>
+                        <h6 class="block-label"><i class="bi bi-symmetry-vertical"></i> Similar Posts</h6>
                         <hr class="block-label-hr">
                         <ul class="list-unstyled">
                             {%- for post in site.posts -%}
-                                {% assign sameTagCount = 0 %}
+                                {%- assign sameTagCount = 0 -%}
                                 {%- if post.url != page.url -%}
                                     {%- for tag in post.tags -%}
                                         {%- if page.tags contains tag -%}
-                                        {% assign sameTagCount = sameTagCount | plus: 1 %}
+                                        {%- assign sameTagCount = sameTagCount | plus: 1 -%}
                                         {%- endif -%}
                                     {%- endfor -%}
                                 {%- endif -%}
                                 {%- if sameTagCount >= minCommonTags -%}
                                     <li><a class="no-underline" href="{{ site.baseurl }}{{ post.url }}">{{ post.title | capitalize | truncatewords: 5 }}</a></li>
-                                    {% assign maxRelatedPosts = maxRelatedPosts | plus: 1 %}
+                                    {%- assign maxRelatedPosts = maxRelatedPosts | plus: 1 -%}
                                     {%- if maxRelatedPosts > maxPosts -%}
                                         {%- break -%}
                                     {%- endif -%}
@@ -100,7 +98,6 @@ js-postload-files:
                             {%- endfor -%}
                         </ul>
                     </div>
-
                     <div class="p-4 d-block d-md-none">
                         <h6 class="block-label"><i class="bi bi-share"></i> Share</h6>
                         <hr class="block-label-hr">

@@ -13,7 +13,7 @@ let app = function() {
     function setToast() {
         let toastElList = [].slice.call(document.querySelectorAll('.toast'));
         toastElList.map(function (toastEl) {
-          return new bootstrap.Toast(toastEl, option);
+          return new bootstrap.Toast(toastEl);
         });
     }
 
@@ -124,12 +124,10 @@ let app = function() {
         if(validationCheck(inputValue)) {
             invalidFeedback.style.display = 'none';
             validFeedback.style.display = 'block';
-            input.setAttribute('style', 'border-color: #198754 !important;');
             group.setAttribute('is-valid', '');
         } else {
             validFeedback.style.display = 'none';
             invalidFeedback.style.display = 'block';
-            input.setAttribute('style', 'border-color: #dc3545 !important;');
             group.removeAttribute('is-valid');
         }
     }

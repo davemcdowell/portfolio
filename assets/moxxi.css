@@ -626,6 +626,10 @@ form button:active {
   border: 1px dashed var(--lighter-type-color);
 }
 
+/* about */
+.cv-item-logo { max-width: 48px; max-height: 48px; }
+.cv-pill { border-radius: 50px; }
+
 /* footer */
 footer {
   background-color: var(--bg-color-dark);
