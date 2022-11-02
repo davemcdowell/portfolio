@@ -45,15 +45,15 @@
     <link rel="icon" href="favIcon.ico">
     
     <title>
-        {%- if page.tag or page.title -%}
+        {%- if page.tag or page.short-title or page.title -%}
           {%- if page.tag -%}
             {{ page.tag | escape }}
-          {%- elsif -%}
+          {%- elsif page.short-title -%}
             {{ page.short-title | escape }}
           {%- else -%}
             {{ page.title | escape }}
-          {%- endif -%}
-          &nbsp;-&nbsp;
+        {%- endif -%}
+        &nbsp;-&nbsp;
         {%- endif -%}
         {%- if paginator and paginator.page and paginator.total_pages > 1 and paginator.page > 1 -%}
           Page {{ paginator.page }} of {{ paginator.total_pages }} -
