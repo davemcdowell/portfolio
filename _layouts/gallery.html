@@ -82,33 +82,33 @@ css-files:
                 </article>
             </div>
             <div class="col-md-4">
-                    {%- if page.categories.size > 0 -%}
-                    <div class="p-4">
-                        <h6 class="block-label"><i class="bi bi-folder"></i> Category</h6>
-                        <hr class="block-label-hr">
-                        <ul class="list-inline">
-                            {%- for category in page.categories -%}
-                            <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ category.url }}">{{ category }}</a></li>
-                            {%- endfor -%}
-                        </ul>
-                    </div>
-                    {%- endif -%}
-                    {%- if page.tags.size > 0 -%}
-                    <div class="p-4">
-                        <h6 class="block-label"><i class="bi bi-tags"></i> Tags</h6>
-                        <hr class="block-label-hr">
-                        <ul class="list-inline">
-                            {%- for tag in page.tags -%}
-                            <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ tag.url }}">{{ tag | capitalize }}</a></li>
-                            {%- endfor -%}
-                        </ul>
-                    </div>
-                    {%- endif -%}
-                    <div class="p-4 d-block d-md-none">
-                        <h6 class="block-label"><i class="bi bi-share"></i> Share</h6>
-                        <hr class="block-label-hr">
-                        {%- include snippets/share-buttons.html -%}
-                    </div>
+                {%- if page.categories.size > 0 -%}
+                <div class="p-4">
+                    <h6 class="block-label"><i class="bi bi-folder"></i> Category</h6>
+                    <hr class="block-label-hr">
+                    <ul class="list-inline">
+                        {%- for category in page.categories -%}
+                        <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ category.url }}">{{ category }}</a></li>
+                        {%- endfor -%}
+                    </ul>
+                </div>
+                {%- endif -%}
+                {%- if page.tags.size > 0 -%}
+                <div class="p-4">
+                    <h6 class="block-label"><i class="bi bi-tags"></i> Tags</h6>
+                    <hr class="block-label-hr">
+                    <ul class="list-inline">
+                        {%- for tag in page.tags -%}
+                        <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ tag.url }}">{{ tag | capitalize }}</a></li>
+                        {%- endfor -%}
+                    </ul>
+                </div>
+                {%- endif -%}
+                <div class="p-4 d-block d-md-none">
+                    <h6 class="block-label"><i class="bi bi-share"></i> Share</h6>
+                    <hr class="block-label-hr">
+                    {%- include snippets/share-buttons.html -%}
+                </div>
             </div>
         </div>
     </div>
