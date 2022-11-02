@@ -83,10 +83,17 @@ css-files:
             </div>
             <div class="col-md-4">
                 <aside class="position-sticky sticky-top-offset">
+                    {%- if page.summary -%}
                     <div class="p-4 m-1 rounded bg-offset">
                         <h4>Summary</h4>
                         <p>{{ page.summary }}</p>
                     </div>
+                    {%- elsif -%}
+                    <div class="p-4 m-1 rounded bg-offset">
+                        <h4>Summary</h4>
+                        <p>{{ page.excerpt }}</p>
+                    </div>                   
+                    {%- endif -%}
                     {%- if page.categories.size > 0 or page.category -%}
                     <div class="p-4">
                         <h6 class="block-label"><i class="bi bi-folder"></i> Category</h6>
