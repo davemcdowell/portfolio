@@ -88,7 +88,7 @@ css-files:
                         <h4>Summary</h4>
                         <p>{{ page.summary }}</p>
                     </div>
-                    {%- elsif -%}
+                    {%- elsif page.excerpt -%}
                     <div class="p-4 m-4 rounded bg-offset">
                         <h4>Summary</h4>
                         <p>{{ page.excerpt }}</p>
