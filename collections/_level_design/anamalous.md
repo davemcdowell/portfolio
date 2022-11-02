@@ -7,7 +7,7 @@ year: 2018
 date: 2022-10-23 11:30:00 -0700
 category: 'Half-Life 2: Opposition'
 last-modified: "2022-10-23 2:00:00 -0700"
-tags: multiplayer 
+tags: multiplayer mod source
 media:
   - 
     title: Image 1
