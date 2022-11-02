@@ -1,6 +1,8 @@
 ---
 layout: gallery
 title: Anamalous
+sumary: >-
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis
 author: Dave McDowell
 game: 'Half-Life 2: Opposition'
 year: 2018
