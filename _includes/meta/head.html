@@ -48,6 +48,8 @@
         {%- if page.tag or page.title -%}
           {%- if page.tag -%}
             {{ page.tag | escape }}
+          {%- elsif -%}
+            {{ page.short-title | escape }}
           {%- else -%}
             {{ page.title | escape }}
           {%- endif -%}
