@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Some articles are just so long they deserve a really long title to see if things will break well"
-short-title: "Some articles are long"
 author: Dave McDowell
 date:   2016-05-20 11:30:00 -0700
 categories: misc
