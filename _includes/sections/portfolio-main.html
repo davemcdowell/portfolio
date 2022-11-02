@@ -19,7 +19,7 @@
               {% assign sortedCollection = site[collection.label] | sort: 'year' | reverse %}
               {%- for item in sortedCollection -%}
               <li class="splide__slide">
-                <div class="project-card splide__slide__container rounded p-1">
+                <div class="project-card highlight-border splide__slide__container rounded p-1">
                   <div class="project-card-img crossfade-wrap">
                     {% assign mediaItems = item.media | where: "type", "image" %}
                     {%- for media in mediaItems limit: 2 -%}
