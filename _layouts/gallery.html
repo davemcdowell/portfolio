@@ -10,7 +10,7 @@ css-files:
   - https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.8.0/dist/css/splide-extension-video.min.css
   - https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css
 ---
-{%- assign date_format = site.date_format | default: "%A, %B %e, %Y" -%}
+{% assign date_format = site.date_format | default: "%A, %B %e, %Y" %}
 {% assign videos = page.media | where: "type", "video" %}
 {% assign images = page.media | where: "type", "image" %}
 <section id="gallery-main">
