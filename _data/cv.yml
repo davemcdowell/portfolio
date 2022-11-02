@@ -95,6 +95,7 @@
     - name: Bootstrap
     - name: Jekyll
     - name: Shopify
+    - name: GitHub
     - name: Adobe Photoshop
     - name: Adobe Illustrator
     - name: Adobe Premier
