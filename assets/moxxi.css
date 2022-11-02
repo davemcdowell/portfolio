@@ -408,13 +408,13 @@ main {
 .slider-progress {
   background: #ccc;
   margin-bottom: 1rem;
+  transition: width 0.35s ease;
+  width: 0;
 }
 
 .slider-progress-bar {
   background: var(--default-type-color);
   height: 1px;
-  transition: width 0.35s ease;
-  width: 0;
 }
 
 /* main gallery slider */
