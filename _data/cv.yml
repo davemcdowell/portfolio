@@ -34,7 +34,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     -
-      logo: /assets/images/cca.jpg
+      logo: /assets/images/cca.png
       company: Cornish College of the Arts
       url: https://www.cornish.edu/
       job-title: Game Designer & Developer
@@ -44,7 +44,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     -
-      logo: /assets/images/cca.jpg
+      logo: /assets/images/cca.png
       company: Cornish College of the Arts
       url: https://www.cornish.edu/
       job-title: ADFM IT Assistant
@@ -65,7 +65,7 @@
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.                
   education:
     -
-      logo: /assets/images/cca.jpg
+      logo: /assets/images/cca.png
       school: Cornish College of the Arts
       url: https://www.cornish.edu/
       degree: Bachelor of Fine Arts
