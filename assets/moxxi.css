@@ -1,6 +1,7 @@
 /* globals */
 :root {
   --bg-color-dark: #212121;
+  --bg-color-darker: #1b1b1b;
   --bg-color-darkest: #141414;
   --bg-color-offset: #2e2e2e;
   --bg-color-nav: #171a21;
@@ -422,7 +423,8 @@ main {
 }
 
 .splide__slide--has-video {
-  background-color: var(--bg-color-darkest);
+  background-color: var(--bg-color-darker);
+  border-radius: .25rem !important;
 }
 
 /* gallery thumbanil slider */
