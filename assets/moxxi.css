@@ -147,9 +147,9 @@ main {
   clip-path: polygon(0 0, 100% 92%, 100% 100%, 0% 100%);
 }
 
-.bg-default {
-  background-color: var(--bg-color-dark);
-}
+.bg-default { background-color: var(--bg-color-dark); }
+
+.bg-offset { background-color: rgba(0, 0, 0, 0.15); }
 
 .bs-sm {
   box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.1), 
