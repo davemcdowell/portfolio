@@ -421,6 +421,10 @@ main {
   width: 100% !important;
 }
 
+.splide__slide--has-video {
+  background-color: var(--bg-color-darkest);
+}
+
 /* gallery thumbanil slider */
 .gallery-slider .splide__slide {
   position: relative;
