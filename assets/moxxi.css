@@ -546,13 +546,8 @@ main {
 }
 
 /* thumbnail cards */
-.thumbnail-card {
-  position: relative;
-}
-
 .thumbnail-card img {
   background-color: var(--bg-color-darker);
-  max-width: 350px;
   width: 100%;
   height: auto;
 }
