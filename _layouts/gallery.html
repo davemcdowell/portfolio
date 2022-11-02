@@ -82,14 +82,19 @@ css-files:
                 </article>
             </div>
             <div class="col-md-4">
-                {%- if page.categories.size > 0 -%}
+                {%- if page.categories.size > 0 or page.category -%}
                 <div class="p-4">
                     <h6 class="block-label"><i class="bi bi-folder"></i> Category</h6>
                     <hr class="block-label-hr">
                     <ul class="list-inline">
-                        {%- for category in page.categories -%}
-                        <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ category.url }}">{{ category }}</a></li>
-                        {%- endfor -%}
+                        {%- if page.categories -%}
+                            {%- for category in page.categories -%}
+                            <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ category.url }}">{{ category }}</a></li>
+                            {%- endfor -%}
+                        {%- endif -%}
+                        {%- if page.category -%}
+                            <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{  page.category.url }}">{{  page.category }}</a></li>
+                        {%- endif -%}
                     </ul>
                 </div>
                 {%- endif -%}
