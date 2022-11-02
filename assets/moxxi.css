@@ -271,6 +271,13 @@ main {
 
 /* jumbotron */
 .jumbotron {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  margin-bottom: 0;
+  background-color: var(--bg-color-dark);
+}
+
+.jumbotron.small {
   padding-top: 3rem;
   padding-bottom: 3rem;
   margin-bottom: 0;
