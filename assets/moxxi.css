@@ -716,6 +716,7 @@ footer textarea {
   position: absolute;
   left: calc(50% - 32px);
   top: -24px;
+  /*
   margin: 0 auto;
   border-top: none;
   border-right: 32px solid transparent;
@@ -724,6 +725,8 @@ footer textarea {
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
+  */
+  clip-path: polygon(50% 90%, 0% 100%, 100% 100%);
 }
 
 /* animations */
