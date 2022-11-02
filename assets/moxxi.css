@@ -547,6 +547,7 @@ main {
 
 /* thumbnail cards */
 .thumbnail-card img {
+  position: relative;
   background-color: var(--bg-color-darker);
   max-width: 350px;
   width: 100%;
