@@ -26,13 +26,29 @@ js-postload-files:
                         {%- if page.previous.url -%}
                         <a class="btn btn-outline-light py-1 px-2 me-auto text-right" href="{{ site.baseurl }}{{ page.previous.url }}" title="previous post" style="max-width: 300px;">
                             <p class="p-0 m-0 text-right"><i class="bi bi-rewind"></i> Previous Post</p>
-                            <p class="p-0 m-0 text-muted text-right"><small>{{ page.previous.title | truncatewords: 5 }}</small></p>
+                            <p class="p-0 m-0 text-muted text-right">
+                                <small>
+                                    {%- if page.previous.short-title -%}
+                                    {{ page.previous.short-title }}
+                                    {%- else -%}
+                                    {{ page.previous.title | truncatewords: 5 }}
+                                    {%- endif -%}
+                                </small>
+                            </p>
                         </a>
                         {%- endif -%}
                         {%- if page.next.url -%}
                         <a class="btn btn-outline-light py-1 px-2 ms-auto text-left" href="{{ site.baseurl }}{{ page.next.url }}" title="next post" style="max-width: 300px;">
                             <p class="p-0 m-0 text-left">Next Post <i class="bi bi-fast-forward"></i></p>
-                            <p class="p-0 m-0 text-muted text-left"><small>{{ page.next.title | truncatewords: 5 }}</small></p>
+                            <p class="p-0 m-0 text-muted text-left">
+                                <small>
+                                    {%- if page.next.short-title -%}
+                                    {{ page.next.short-title }}
+                                    {%- else -%}
+                                    {{ page.next.title | truncatewords: 5 }}
+                                    {%- endif -%}
+                                </small>
+                            </p>
                         </a>
                         {%- endif -%}
                     </nav>
@@ -89,7 +105,7 @@ js-postload-files:
                                     {%- endfor -%}
                                 {%- endif -%}
                                 {%- if sameTagCount >= minCommonTags -%}
-                                    <li><a class="no-underline" href="{{ site.baseurl }}{{ post.url }}">{{ post.title | capitalize }}</a></li>
+                                    <li><a class="no-underline" href="{{ site.baseurl }}{{ post.url }}">{{ post.short-title | capitalize }}</a></li>
                                     {%- assign maxRelatedPosts = maxRelatedPosts | plus: 1 -%}
                                     {%- if maxRelatedPosts > maxPosts -%}
                                         {%- break -%}
