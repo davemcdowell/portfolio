@@ -92,8 +92,7 @@ css-files:
                                 {%- for category in page.categories -%}
                                 <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ category.url }}">{{ category }}</a></li>
                                 {%- endfor -%}
-                            {%- endif -%}
-                            {%- if page.category -%}
+                            {%- elsif page.category -%}
                                 <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{  page.category.url }}">{{  page.category }}</a></li>
                             {%- endif -%}
                         </ul>
