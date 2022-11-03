@@ -239,6 +239,7 @@ main { padding-top: 62px; }
 }
 
 .accent-text { color: var(--accent-type-color); }
+.left-border-accent { border-left: 2px solid var(--accent-type-color); }
 
 /* share buttons */
 #share-buttons {display: inline-block; vertical-align: middle; }
