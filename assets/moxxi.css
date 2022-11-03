@@ -557,10 +557,7 @@ main { padding-top: 62px; }
 }
 
 .contact-list li { padding-bottom: 1rem; }
-
-.contact-list li span {
-  color: var(--lighter-type-color);
-}
+.contact-list li span { color: var(--lighter-type-color); }
 
 .contact-list li a {
   font-weight: lighter;
@@ -669,7 +666,6 @@ footer textarea { resize: vertical; }
 }
 
 .back-top:hover { background-color: var(--bg-color-offset); }
-
 .back-top:hover::after { border-bottom-color: var(--bg-color-offset); }
 
 .back-top a {
@@ -716,3 +712,6 @@ footer textarea { resize: vertical; }
   transform: rotate(180deg);
   transition: transform 0.25s linear;
 }
+
+/* hover.css  */
+.hvr-underline-from-center { color: var(--default-type-color); }
