@@ -46,15 +46,15 @@ collections:
   level_design:
     show-main: true
     output: true
-    #permalink: /levels/:path/
+    permalink: /levels/:path/
   web_design:
     show-main: true
     output: true
-    #permalink: /web/:path/
+    permalink: /web/:path/
   game_design:
     show-main: true
     output: true
-    #permalink: /games/:path/
+    permalink: /games/:path/
 
 # paginate
 #paginate: 5

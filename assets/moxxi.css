@@ -7,6 +7,7 @@
   --bg-color-nav: #171a21;
   --bg-light-color: #949494;
 
+  --accent-type-color: #ffcc00;
   --white-type-color: #ffffff;
   --default-type-color: #f8f8ff;
   --lighter-type-color: #6c757d;
@@ -236,6 +237,8 @@ main { padding-top: 62px; }
   color: var(--lighter-type-color);
   font-size: 1rem;
 }
+
+.accent-text { color: var(--accent-type-color); }
 
 /* share buttons */
 #share-buttons {display: inline-block; vertical-align: middle; }
