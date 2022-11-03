@@ -4,7 +4,7 @@
     Since then I've done a bit of everything when it comes to games—level design, scripting, sound foley, 2D/3D art and animation, game/level mechanics programming. I have a Bachelor of Fine Arts in Design from <a href="https://www.cornish.edu/" target="_blank" rel="noreferrer">Cornish College of the Arts</a> and an Associate of Applied Science in Interactive Media from <a href="https://www.cscc.edu/" target="_blank" rel="noreferrer">Columbus State Community College</a>.
   experience:
     -
-      logo: /assets/images/wrs.png
+      logo: /assets/images/cv/wrs.png
       company: '100 Worries, LLC.'
       url: https://100worries.com/
       job-title: Partner
@@ -14,7 +14,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  
     -
-      logo: /assets/images/omg.jpg
+      logo: /assets/images/cv/omg.jpg
       company: Team Gourmet, USA
       url: https://omgoliveoils.com/
       job-title: Web Designer & Developer
@@ -24,7 +24,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  
     -
-      logo: /assets/images/bex.jpg
+      logo: /assets/images/cv/bex.jpg
       company: Expedia Group
       url: https://www.linkedin.com/company/expedia/
       job-title: Lab Manager, BEX User Research
@@ -34,7 +34,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     -
-      logo: /assets/images/cca.png
+      logo: /assets/images/cv/cca.png
       company: Cornish College of the Arts
       url: https://www.cornish.edu/
       job-title: Game Designer & Developer
@@ -44,7 +44,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     -
-      logo: /assets/images/cca.png
+      logo: /assets/images/cv/cca.png
       company: Cornish College of the Arts
       url: https://www.cornish.edu/
       job-title: ADFM IT Assistant
@@ -54,7 +54,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     -
-      logo: /assets/images/vgl.jpg
+      logo: /assets/images/cv/vgl.jpg
       company: Venom Game Labs, LLC.
       url: https://web.archive.org/web/20150702093108/https://www.venomgamelabs.com/
       job-title: Lead Level Designer
@@ -65,7 +65,7 @@
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.                
   education:
     -
-      logo: /assets/images/cca.png
+      logo: /assets/images/cv/cca.png
       school: Cornish College of the Arts
       url: https://www.cornish.edu/
       degree: Bachelor of Fine Arts
@@ -77,7 +77,7 @@
       start-date: 2015
       end-date: 2017
     -
-      logo: /assets/images/cscc.jpg
+      logo: /assets/images/cv/cscc.jpg
       school: Columbus State Community College
       url: https://www.cscc.edu/
       degree: Associate of Applied Science
@@ -90,16 +90,27 @@
       end-date: 2013
   skills:
     - name: HTML
+      link: https://en.wikipedia.org/wiki/HTML
     - name: CSS
+      link: https://en.wikipedia.org/wiki/CSS
     - name: Javascript
+      link: https://en.wikipedia.org/wiki/JavaScript
     - name: Bootstrap
+      link: https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)
     - name: Jekyll
+      link: https://en.wikipedia.org/wiki/Jekyll_(software)
     - name: Shopify
+      link: https://en.wikipedia.org/wiki/Shopify
     - name: GitHub
+      link: https://en.wikipedia.org/wiki/GitHub
     - name: Adobe Photoshop
+      link: https://en.wikipedia.org/wiki/Adobe_Photoshop
     - name: Adobe Illustrator
+      link: https://en.wikipedia.org/wiki/Adobe_Illustrator
     - name: Adobe Premier
+      link: https://en.wikipedia.org/wiki/Adobe_Premier
     - name: Adobe After Effects
+      link: https://en.wikipedia.org/wiki/Adobe_After_Effects
     - name: 'C#'
     - name: Level Design
     - name: Game Design

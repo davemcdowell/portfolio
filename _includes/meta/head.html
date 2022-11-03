@@ -63,7 +63,9 @@
         &nbsp;-&nbsp;{{ site.description | escape }}
         {%- endunless -%}
     </title>
-  
+    
+    {%- feed_meta -%}
+
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include snippets/analytics.html -%}
     {%- endif -%}
