@@ -63,7 +63,7 @@ main {
 
 .nav-item i,
 .nav-item a {
-  color: var(--default-type-color);
+  color: ghostwhite;
 }
 
 .navbar-toggler {
