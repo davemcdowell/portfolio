@@ -718,4 +718,4 @@ footer textarea { resize: vertical; }
 }
 
 /* hover.css  */
-.hvr-underline-from-center { border-color: var(--accent-type-color); }
+.hvr-underline-from-center { border-color: var(--accent-type-color); border-width: 2px; }
