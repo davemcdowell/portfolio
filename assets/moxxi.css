@@ -63,8 +63,10 @@ main {
 
 .nav-item i,
 .nav-item a {
-  color: ghostwhite;
+  color: var(--default-type-color);
 }
+
+.navbar-dark .navbar-nav .nav-link { color: ghostwhite; }
 
 .navbar-toggler {
   -ms-flex-item-align: start;
