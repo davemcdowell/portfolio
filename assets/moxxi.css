@@ -289,7 +289,9 @@ main { padding-top: 62px; }
   margin-bottom: 0;
 }
 
-.jumbotron a:hover { color: var(--white-type-color); }
+.jumbotron a:hover:not(.btn) { color: var(--white-type-color); }
+
+
 
 /* modal */
 .modal-content {
