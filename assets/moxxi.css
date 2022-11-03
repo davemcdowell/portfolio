@@ -609,7 +609,7 @@ form button:active {
 /* about */
 .cv-item-logo { max-width: 48px; max-height: 48px; }
 .link-pill { border-radius: 50px; }
-.link-pill:hover { color: var(--bg-color-dark); }
+.link-pill:hover { color: var(--bg-color-dark) !important;  }
 
 /* footer */
 footer { background-color: var(--bg-color-dark); }
