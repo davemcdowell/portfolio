@@ -50,16 +50,16 @@ let gallery = function() {
 
         console.log(suggestions);
 
-        for(let i = 0; i < data.length; i++) {
+        for(let i = 0; i < suggestions.length; i++) {
             let clone = template.content.firstElementChild.cloneNode(true);
             let cTitle = clone.querySelector('strong');
             let cSub = clone.querySelector('small');
             let cImg = clone.querySelector('img');
 
-            cTitle.textContent = data.title;
-            cSub.textContent = data.subject;
-            cImg.src = data.image;
-            cImg.alt = data.alt;
+            cTitle.textContent = suggestions[i].title;
+            cSub.textContent = suggestions[i].subject;
+            cImg.src = suggestions[i].image;
+            cImg.alt = suggestions[i].alt;
 
             fragment.append(clone);
         }
