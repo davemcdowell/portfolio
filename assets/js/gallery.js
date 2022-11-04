@@ -48,16 +48,16 @@ let gallery = function() {
 
         let suggestions = app.get_random_from_array(data, 3);
 
-        console.log(suggestions);
-
         for(let i = 0; i < suggestions.length; i++) {
             let clone = template.content.firstElementChild.cloneNode(true);
             let cTitle = clone.querySelector('strong');
             let cSub = clone.querySelector('small');
             let cImg = clone.querySelector('img');
+            let cLink = clone.querySelector('a');
 
+            cLink.href = suggestions[i].url;
             cTitle.textContent = suggestions[i].title;
-            cSub.textContent = suggestions[i].subject;
+            cSub.textContent = " | " + suggestions[i].subject;
             cImg.src = suggestions[i].image;
             cImg.alt = suggestions[i].alt;
 
