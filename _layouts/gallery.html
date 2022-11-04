@@ -144,20 +144,22 @@ css-files:
 {%- include sections/contact.html -%}
 <script id="suggest-json" type="application/json">
 [
-    {% assign isLast = false %}
+
     {%- for item in site[page.collection] -%}
     {% assign images = item.media | where: "type", "image" %}
     {% assign image = images.first %}
-    {%- if forloop.last -%}
-    {% assign isLast = true %}
-    {%- endif -%}
+    {% raw %}
     {
+    {% endraw %}
         "url": "{{site.baseurl}}{{ item.url }}",
         "title": "{{ item.title }}",
         "subject": "{{ item.game }}",
         "image": "{{ image.thumbnail }}",
         "alt": "{{ image.thumbnail_alt }}"
-    }{%- if isLast == true -%},{%- endif -%}
+    {% raw %}
+    }
+    {% endraw %}
+    {%- uless forloop.last -%},{%- endunless -%}
     {%- endfor -%}
 ]
 </script>
