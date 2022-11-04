@@ -151,7 +151,7 @@ css-files:
 <script id="suggest-json" type="application/json">
 [
     {%- for item in site[page.collection] -%}
-    {%- unless item.url != page.url -%}
+    {%- unless item.url == page.url -%}
 
     {% assign images = item.media | where: "type", "image" %}
     {% assign image = images.first %}
