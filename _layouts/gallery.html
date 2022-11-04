@@ -143,7 +143,7 @@ css-files:
 </section>
 {%- include sections/contact.html -%}
 {%- for item in site[page.collection] -%}
- {{ item.url }} - {{ page.collection.url }} ::
+ Item: {{ item.url }} - Page: {{ page.collection.url }} ::
 {%- endfor -%}
 <script id="suggest-json" type="application/json">
 [
