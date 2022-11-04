@@ -147,7 +147,7 @@ css-files:
 {% assign images = page.media | where: "type", "image" %}
 {% assign image = images.first %}
 {
-    url: "{{ page.url }}",
+    url: "{{site.baseurl}}{{ page.url }}",
     title: "{{ page.title }}",
     subject: "{{ page.game }}",
     image: "{{ image.thumbnail }}",
