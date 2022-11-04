@@ -129,8 +129,8 @@ css-files:
     </div>
     {%- include sections/ender.html title="Other Work" content="Some more stuff below if you're still looking, otherwise you can also find me and my work at..." -%}
     <div class="container">
-        <div class="row g-1 justify-content-around">
-            <template id="suggest-card-template">
+        <div id="suggest-list" class="row g-1 justify-content-around">
+            <template id="suggest-template">
                 <div class="col-sm-12 col-md-4">
                     <div class="thumbnail-card rounded text-center p-1">
                       <img class="img-portfolio rounded bs-sm mb-2" src="..." alt="..." width="350" height="230">
@@ -143,17 +143,13 @@ css-files:
 </section>
 {%- include sections/contact.html -%}
 <script id="suggest-json" type="application/json">
+{%- for page in site[page.collection] -%}
+{% assign images = page.media | where: "type", "image" %}
 {
-    [
-        {%- for page in site[page.collection] -%}
-        {% assign images = page.media | where: "type", "image" %}
-        {
-            url: "{{ page.url }}",
-            title: "{{ page.title }}",
-            subject: "{{ page.game }}",
-            image: "{{ images.first }}" 
-        }{%- unless forloop.last -%},{%- endunless -%}
-        {%- endfor -%}
-    ]
-}
+    url: "{{ page.url }}",
+    title: "{{ page.title }}",
+    subject: "{{ page.game }}",
+    image: "{{ images.first.thumbnail }}" 
+}{%- unless forloop.last -%},{%- endunless -%}
+{%- endfor -%}
 </script>
