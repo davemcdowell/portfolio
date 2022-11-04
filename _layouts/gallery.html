@@ -145,11 +145,13 @@ css-files:
 <script id="suggest-json" type="application/json">
 {%- for page in site[page.collection] -%}
 {% assign images = page.media | where: "type", "image" %}
+{% assign image = images.first %}
 {
     url: "{{ page.url }}",
     title: "{{ page.title }}",
     subject: "{{ page.game }}",
-    image: "{{ images.first.thumbnail }}" 
+    image: "{{ image.thumbnail }}",
+    alt: "{{ image.thumbnail_alt }}",
 }{%- unless forloop.last -%},{%- endunless -%}
 {%- endfor -%}
 </script>

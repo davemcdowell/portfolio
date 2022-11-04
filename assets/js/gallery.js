@@ -45,9 +45,9 @@ let gallery = function() {
         const data = JSON.parse(document.querySelector('#suggest-json').textContent);
         const container = document.querySelector('#suggest-list');
 
-        for(let i = 0; i < data.length; i++) {
-            let clone = template.content.firstElementChild.cloneNode(true);
-            let title = clone.querySelector('strong') = ;
-        }
+        console.log(data);
+        //for(let i = 0; i < data.length; i++) {
+        //    let clone = template.content.firstElementChild.cloneNode(true);
+        //}
     }
 }();
