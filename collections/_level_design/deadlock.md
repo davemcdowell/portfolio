@@ -6,7 +6,7 @@ summary: >-
 author: Dave McDowell
 game: 'Half-Life 2: Opposition'
 year: 2021
-date: 2021-10-23 11:30:00 -0700
+date: 2021-10-21 11:30:00 -0700
 category: 'Half-Life 2: Opposition'
 last-modified: "2022-10-23 2:00:00 -0700"
 tags: multiplayer mod source
