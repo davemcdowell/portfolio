@@ -137,20 +137,8 @@ css-files:
             {% assign image = images.first %}
             <div class="col-sm-12 col-md-4">
               <div class="thumbnail-card rounded text-center p-1">
-                <img class="img-portfolio rounded bs-sm mb-2" src="{{ image.thumbnail }}" alt="..." width="350" height="230">
+                <img class="img-portfolio rounded bs-sm mb-2" src="{{ image.thumbnail }}" alt="{{ image.thumbnail_alt }}" width="350" height="230">
                 <a href="#" class="no-underline stretched-link"><p> <strong>{{ page.title }}</strong><small class="text-muted"> | {{ page.game }}</small></p></a>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-4">
-              <div class="thumbnail-card rounded text-center p-1">
-                <img class="img-portfolio rounded bs-sm mb-2" src="https://picsum.photos/445/296?random=2" alt="..." width="350" height="230">
-                <a href="#" class="no-underline stretched-link"><p> <strong>Title</strong><small class="text-muted">  | Game</small></p></a>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-4">
-              <div class="thumbnail-card rounded text-center p-1">
-                <img class="img-portfolio rounded bs-sm mb-2" src="https://picsum.photos/445/296?random=3" alt="..." width="350" height="230">
-                <a href="#" class="no-underline stretched-link"><p> <strong>Title</strong><small class="text-muted"> | Game</small></p></a>
               </div>
             </div>
             {%- endfor -%}
