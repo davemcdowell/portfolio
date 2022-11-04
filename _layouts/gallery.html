@@ -142,9 +142,12 @@ css-files:
     </div>
 </section>
 {%- include sections/contact.html -%}
-<script id="suggest-json" >
+<script id="suggest-json">
 [
     {%- for item in site[page.collection] -%}
+
+    console.log({{ item.title }} + ' | ' + {{ page.collection }});
+
     {%- if item.title != page.collection -%}
 
     {% assign images = item.media | where: "type", "image" %}
