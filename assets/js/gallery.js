@@ -41,7 +41,7 @@ let gallery = function() {
     }
 
     function setSuggestionLinks() {
-        const template = document.querySelectorAll('#suggest-template');
+        const template = document.querySelector('#suggest-template');
         const data = JSON.parse(document.querySelector('#suggest-json').textContent);
         const container = document.querySelector('#suggest-list');
         const fragment = new DocumentFragment();
