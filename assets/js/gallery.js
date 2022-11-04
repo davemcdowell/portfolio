@@ -4,6 +4,7 @@ let gallery = function() {
     function init() {
         console.log('--      gallery.js initiated');
         setGallerySlider();
+        setSuggestionLinks();
     }
 
     function setGallerySlider() {
@@ -37,5 +38,9 @@ let gallery = function() {
         mainSlide.sync(thumbnailSlide);
         mainSlide.mount(window.splide.Extensions);
         thumbnailSlide.mount();
+    }
+
+    function setSuggestionLinks() {
+        
     }
 }();

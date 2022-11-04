@@ -127,22 +127,33 @@ css-files:
             </div>
         </div>
     </div>
-    {%- include sections/ender.html title="Other Work" content="Some more galleries below if you're still looking, otherwise you can also find me and my work at..." -%}
+    {%- include sections/ender.html title="Other Work" content="Some more stuff below if you're still looking, otherwise you can also find me and my work at..." -%}
     <div class="container">
         <div class="row g-1 justify-content-around">
-            {% assign index = 0 %}
-            {%- for page in site[page.collection] limit: 3 -%}
-            {% assign index = index | plus: 1 %}
-            {% assign images = page.media | where: "type", "image" %}
-            {% assign image = images.first %}
-            <div class="col-sm-12 col-md-4">
-              <div class="thumbnail-card rounded text-center p-1">
-                <img class="img-portfolio rounded bs-sm mb-2" src="{{ image.thumbnail }}" alt="{{ image.thumbnail_alt }}" width="350" height="230">
-                <a href="#" class="no-underline stretched-link"><p> <strong>{{ page.title }}</strong><small class="text-muted"> | {{ page.game }}</small></p></a>
-              </div>
-            </div>
-            {%- endfor -%}
+            <template id="suggest-card-template">
+                <div class="col-sm-12 col-md-4">
+                    <div class="thumbnail-card rounded text-center p-1">
+                      <img class="img-portfolio rounded bs-sm mb-2" src="..." alt="..." width="350" height="230">
+                      <a href="..." class="no-underline stretched-link"><strong>Title</strong><small class="text-muted"> | Subject</small></a>
+                    </div>
+                  </div>
+            </template>
         </div>
     </div>
 </section>
 {%- include sections/contact.html -%}
+<script id="suggest-json" type="application/json">
+{
+    [
+        {%- for page in site[page.collection] -%}
+        {% assign images = page.media | where: "type", "image" %}
+        {
+            url: "{{ page.url }}",
+            title: "{{ page.title }}",
+            subject: "{{ page.game }}",
+            image: "{{ images.first }}" 
+        }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+    ]
+}
+</script>
