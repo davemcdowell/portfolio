@@ -142,10 +142,16 @@ css-files:
     </div>
 </section>
 {%- include sections/contact.html -%}
+
+{% assign suggestions = "" | split: ',' %}
+{%- for item in site[page.collection] -%}
+{%- unless item.url == page.url -%}
+{% assign suggestions = suggestions | push: item %}
+{%- endunless -%}
+{%- endfor -%}
 <script id="suggest-json" type="application/json">
 [
-    {%- for item in site[page.collection] -%}
-    {%- unless item.url == page.url -%}
+{%- for item in suggestions -%}
     {% assign images = item.media | where: "type", "image" %}
     {% assign image = images.first %}
     {% raw %}
@@ -160,7 +166,6 @@ css-files:
     }
     {% endraw %}
     {%- unless forloop.last -%},{%- endunless -%}
-    {%- endunless -%}
-    {%- endfor -%}
+{%- endfor -%}
 ]
 </script>
