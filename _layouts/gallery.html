@@ -142,17 +142,10 @@ css-files:
     </div>
 </section>
 {%- include sections/contact.html -%}
-
-<div style="visibility: hidden;">
-{%- for item in site[page.collection] -%}
- Item: {{ item.url }} - Page: {{ page.url }} ::
-{%- endfor -%}
-</div>
 <script id="suggest-json" type="application/json">
 [
     {%- for item in site[page.collection] -%}
     {%- unless item.url == page.url -%}
-
     {% assign images = item.media | where: "type", "image" %}
     {% assign image = images.first %}
     {
@@ -162,7 +155,6 @@ css-files:
         "image": "{{ image.thumbnail }}",
         "alt": "{{ image.thumbnail_alt }}"
     }{%- unless forloop.last -%},{%- endunless -%}
-
     {%- endunless -%}
     {%- endfor -%}
 ]
