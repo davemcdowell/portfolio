@@ -159,7 +159,7 @@ css-files:
     {% raw %}
     }
     {% endraw %}
-    {%- uless forloop.last -%},{%- endunless -%}
+    {%- unless forloop.last -%},{%- endunless -%}
     {%- endfor -%}
 ]
 </script>
