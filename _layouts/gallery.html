@@ -147,11 +147,15 @@ css-files:
 {% assign images = page.media | where: "type", "image" %}
 {% assign image = images.first %}
 {
-    url: "{{site.baseurl}}{{ page.url }}",
-    title: "{{ page.title }}",
-    subject: "{{ page.game }}",
-    image: "{{ image.thumbnail }}",
-    alt: "{{ image.thumbnail_alt }}",
-}{%- unless forloop.last -%},{%- endunless -%}
+    [
+        {
+            url: "{{site.baseurl}}{{ page.url }}",
+            title: "{{ page.title }}",
+            subject: "{{ page.game }}",
+            image: "{{ image.thumbnail }}",
+            alt: "{{ image.thumbnail_alt }}",
+        }{%- unless forloop.last -%},{%- endunless -%}
+    ]
+}
 {%- endfor -%}
 </script>
