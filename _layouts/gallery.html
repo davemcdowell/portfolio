@@ -144,7 +144,7 @@ css-files:
 {%- include sections/contact.html -%}
 <script id="suggest-json" type="application/json">
 [
-    {%- for item in site[page.collection] -%}
+    {%- for item in site[item.collection] -%}
 
     console.log({{ item.collection }} + ' | ' + {{ item.name }} + ' | ' + {{ site[page.collection] }});
 
