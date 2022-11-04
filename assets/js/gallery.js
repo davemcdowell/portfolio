@@ -44,10 +44,25 @@ let gallery = function() {
         const template = document.querySelectorAll('#suggest-template');
         const data = JSON.parse(document.querySelector('#suggest-json').textContent);
         const container = document.querySelector('#suggest-list');
+        const fragment = new DocumentFragment();
 
-        console.log(data);
-        //for(let i = 0; i < data.length; i++) {
-        //    let clone = template.content.firstElementChild.cloneNode(true);
-        //}
+        let suggestions = getRandomFromArray(data, 3);
+
+        console.log(suggestions);
+
+        for(let i = 0; i < data.length; i++) {
+            let clone = template.content.firstElementChild.cloneNode(true);
+            let cTitle = clone.querySelector('strong');
+            let cSub = clone.querySelector('small');
+            let cImg = clone.querySelector('img');
+
+            cTitle.textContent = data.title;
+            cSub.textContent = data.subject;
+            cImg.src = data.image;
+            cImg.alt = data.alt;
+
+            fragment.append(clone);
+        }
+        container.append(fragment);
     }
 }();
