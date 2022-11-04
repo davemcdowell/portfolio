@@ -130,10 +130,15 @@ css-files:
     {%- include sections/ender.html title="Other Work" content="Some more galleries below if you're still looking, otherwise you can also find me and my work at..." -%}
     <div class="container">
         <div class="row g-1 justify-content-around">
+            {% assign index = 0 %}
+            {%- for page in site[page.collection] limit: 3 -%}
+            {% assign index = index | plus: 1 %}
+            {% assign images = page.media | where: "type", "image" %}
+            {% assign image = images.first %}
             <div class="col-sm-12 col-md-4">
               <div class="thumbnail-card rounded text-center p-1">
-                <img class="img-portfolio rounded bs-sm mb-2" src="https://picsum.photos/445/296?random=1" alt="..." width="350" height="230">
-                <a href="#" class="no-underline stretched-link"><p> <strong>Title</strong><small class="text-muted"> | Game</small></p></a>
+                <img class="img-portfolio rounded bs-sm mb-2" src="{{ image.thumbnail }}" alt="..." width="350" height="230">
+                <a href="#" class="no-underline stretched-link"><p> <strong>{{ page.title }}</strong><small class="text-muted"> | {{ page.game }}</small></p></a>
               </div>
             </div>
             <div class="col-sm-12 col-md-4">
@@ -148,6 +153,7 @@ css-files:
                 <a href="#" class="no-underline stretched-link"><p> <strong>Title</strong><small class="text-muted"> | Game</small></p></a>
               </div>
             </div>
+            {%- endfor -%}
         </div>
     </div>
 </section>
