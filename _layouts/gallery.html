@@ -145,17 +145,17 @@ css-files:
 <script id="suggest-json" type="application/json">
 [
     {%- for item in site[page.collection] -%}
-        {%- unless page.url == item.url -%}
-        {% assign images = item.media | where: "type", "image" %}
-        {% assign image = images.first %}
-        {
-            "url": "{{site.baseurl}}{{ item.url }}",
-            "title": "{{ item.title }}",
-            "subject": "{{ item.game }}",
-            "image": "{{ image.thumbnail }}",
-            "alt": "{{ image.thumbnail_alt }}"
-        }{%- unless forloop.last -%},{%- endunless -%}
-        {%- endunless -%}
+        {%- if page.url != item.url -%}
+            {% assign images = item.media | where: "type", "image" %}
+            {% assign image = images.first %}
+            {
+                "url": "{{site.baseurl}}{{ item.url }}",
+                "title": "{{ item.title }}",
+                "subject": "{{ item.game }}",
+                "image": "{{ image.thumbnail }}",
+                "alt": "{{ image.thumbnail_alt }}"
+            }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endif -%}
     {%- endfor -%}
 ]
 </script>
