@@ -146,7 +146,7 @@ css-files:
 [
     {%- for item in site[page.collection] -%}
 
-    console.log({{ page.collection }} + ' | ' + {{ item.name }} + ' | ' + {{ site[page.collection] }});
+    console.log({{ item.collection }} + ' | ' + {{ item.name }} + ' | ' + {{ site[page.collection] }});
 
     {% assign images = item.media | where: "type", "image" %}
     {% assign image = images.first %}
