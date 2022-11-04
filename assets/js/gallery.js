@@ -46,7 +46,7 @@ let gallery = function() {
         const container = document.querySelector('#suggest-list');
         const fragment = new DocumentFragment();
 
-        let suggestions = getRandomFromArray(data, 3);
+        let suggestions = app.get_random_from_array(data, 3);
 
         console.log(suggestions);
 
