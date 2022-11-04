@@ -151,11 +151,11 @@ css-files:
     {% raw %}
     {
     {% endraw %}
-        "url": "{{site.baseurl | jsonify }}{{ item.url | jsonify }}",
-        "title": "{{ item.title | jsonify }}",
-        "subject": "{{ item.game | jsonify }}",
-        "image": "{{ image.thumbnail | jsonify }}",
-        "alt": "{{ image.thumbnail_alt | jsonify }}"
+        "url": "{{ site.baseurl }}{{ item.url }}",
+        "title": {{ item.title | jsonify }},
+        "subject": {{ item.game | jsonify }},
+        "image": {{ image.thumbnail | jsonify }},
+        "alt": {{ image.thumbnail_alt | jsonify }}
     {% raw %}
     }
     {% endraw %}
