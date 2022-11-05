@@ -539,9 +539,7 @@ main { padding-top: 62px; }
   transition: opacity 0.35s ease-in-out; 
 }
 
-.thumbnail-card img:hover {
-  opacity: 1;
-}
+.thumbnail-card:hover img { opacity: 1; }
 
 /* contact section */
 .contact { background-color: var(--bg-color-darkest); }
@@ -617,7 +615,6 @@ form button:active {
 }
 
 #form-response .success { border: 1px dashed var(--lighter-type-color); }
-
 #form-response .error { border: 1px dashed var(--lighter-type-color); }
 
 /* about */
