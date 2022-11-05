@@ -433,7 +433,7 @@ main { padding-top: 62px; }
 .gallery-slider .splide__slide {
   position: relative;
   text-align: center;
-  opacity: 0.85;
+  opacity: 0.75;
   border: 2px solid var(--card-border-hover-color);
   transition: border 0.35s ease-in-out, opacity 0.25s ease;
 }
