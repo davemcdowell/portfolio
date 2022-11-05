@@ -532,9 +532,15 @@ main { padding-top: 62px; }
 .thumbnail-card { position: relative; }
 
 .thumbnail-card img {
+  opacity: 0.75;
   background-color: var(--bg-color-darker);
   width: 100%;
   height: auto;
+  transition: opacity 0.35s ease-in-out; 
+}
+
+.thumbnail-card img:hover {
+  opacity: 1;
 }
 
 /* contact section */
