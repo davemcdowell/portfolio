@@ -433,10 +433,12 @@ main { padding-top: 62px; }
 .gallery-slider .splide__slide {
   position: relative;
   text-align: center;
+  opacity: 0.5;
   border: 2px solid var(--card-border-hover-color);
+  transition: border 0.35s ease-in-out, opacity 0.25s ease;
 }
 
-.gallery-slider .splide__slide.is-active { border: 2px solid var(--default-type-color); }
+.gallery-slider .splide__slide.is-active { border: 2px solid var(--default-type-color); opacity: 1.0; }
 
 .gallery-slider .splide__slide.is-active::after {
   z-index: 99;
