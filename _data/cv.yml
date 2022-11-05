@@ -114,19 +114,37 @@
     - name: 'C#'
       link: https://en.wikipedia.org/wiki/C_Sharp_(programming_language)
     - name: Level Design
-      link: https://en.wikipedia.org/wiki/C_Sharp_(programming_language)
+      link: https://en.wikipedia.org/wiki/Level_(video_games)#Level_design
     - name: Game Design
+      link: https://en.wikipedia.org/wiki/Game_design
     - name: Web Design
+      link: https://en.wikipedia.org/wiki/Web_design
     - name: Web Development
+      link: https://en.wikipedia.org/wiki/Web_development
     - name: Unity
+      link: https://en.wikipedia.org/wiki/Unity_(game_engine)
     - name: Source Engine
+      link: https://en.wikipedia.org/wiki/Source_(game_engine)
     - name: Hammer World Editor
+      link: https://en.wikipedia.org/wiki/Source_(game_engine)#Hammer_Editor
     - name: Game Prototyping
-    - name: UI/UX Prototyping
+      link: https://departmentofplay.net/7-tips-for-successful-video-game-prototyping/
+    - name: UX Design
+      link: https://en.wikipedia.org/wiki/User_experience_design
     - name: UX Research
+      link: https://en.wikipedia.org/wiki/User_research
     - name: UX Testing
+      link: https://en.wikipedia.org/wiki/Usability_testing
     - name: iMotions
+      link: https://imotions.com/
+    - name: Affectiva
+      link: https://www.affectiva.com/
+    - name: Eye Tracking
+      link: https://en.wikipedia.org/wiki/Eye_tracking
     - name: Tobii Pro Labs
+      link: https://www.tobii.com/products/software/data-analysis-tools/tobii-pro-lab
     - name: Maya
+      link: https://en.wikipedia.org/wiki/Autodesk_Maya
     - name: Blender
+      link: https://en.wikipedia.org/wiki/Blender_(software)
 ---
