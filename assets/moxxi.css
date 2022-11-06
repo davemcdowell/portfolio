@@ -720,4 +720,5 @@ footer textarea { resize: vertical; }
 }
 
 /* hover.css  */
-.hvr-underline-from-center::before { background-color: var(--accent-type-color); height: 2px; width: 75% }
+.hvr-underline-from-center { width: 75%; }
+.hvr-underline-from-center::before { background-color: var(--accent-type-color); height: 2px; }
