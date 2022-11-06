@@ -94,7 +94,6 @@ main { padding-top: 62px; }
 }
 
 .nav-link i { font-size: 1.25em; }
-
 .content-wrapper { max-width: 950px; }
 
 /* hero */
@@ -143,7 +142,6 @@ main { padding-top: 62px; }
 }
 
 .bg-default { background-color: var(--bg-color-dark); }
-
 .bg-offset { background-color: rgba(0, 0, 0, 0.15); }
 
 .bs-sm {
@@ -171,9 +169,7 @@ main { padding-top: 62px; }
 
 /* typography */
 .icon-1x { font-size: 1em; }
-
 .icon-2x { font-size: 2em; }
-
 .icon-3x { font-size: 3em; }
 
 .btn-icon {
@@ -290,8 +286,6 @@ main { padding-top: 62px; }
 }
 
 .jumbotron a:hover:not(.btn) { color: var(--white-type-color); }
-
-
 
 /* modal */
 .modal-content {
@@ -699,7 +693,7 @@ footer textarea { resize: vertical; }
   position: absolute;
   left: 0;
   height: 24px;
-  top: 0;
+  bottom: 0;
   /*
   margin: 0 auto;
   border-top: none;
