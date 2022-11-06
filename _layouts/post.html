@@ -67,6 +67,11 @@ js-postload-files:
             </div>
             <div class="col-md-4">
                 <aside class="position-sticky sticky-top-offset">
+                    <div class="p-4 d-block d-md-none">
+                        <h6 class="block-label"><i class="bi bi-share"></i> Share</h6>
+                        <hr class="block-label-hr">
+                        {%- include snippets/share-buttons.html -%}
+                    </div>
                     {%- if page.categories.size > 0 -%}
                     <div class="p-4">
                         <h6 class="block-label"><i class="bi bi-folder"></i> Categories</h6>
@@ -118,11 +123,6 @@ js-postload-files:
                                 {%- endif -%}
                             {%- endfor -%}
                         </ul>
-                    </div>
-                    <div class="p-4 d-block d-md-none">
-                        <h6 class="block-label"><i class="bi bi-share"></i> Share</h6>
-                        <hr class="block-label-hr">
-                        {%- include snippets/share-buttons.html -%}
                     </div>
                 </aside>
             </div>
