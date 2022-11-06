@@ -433,7 +433,6 @@ main { padding-top: 62px; }
 }
 
 .gallery-slider .splide__track { overflow-x: hidden; overflow-y: visible; }
-
 .gallery-slider .splide__slide.is-active { border: 2px solid var(--default-type-color); opacity: 1.0; }
 
 .gallery-slider .splide__slide.is-active::after {
@@ -721,4 +720,4 @@ footer textarea { resize: vertical; }
 }
 
 /* hover.css  */
-.hvr-underline-from-center::before { background-color: var(--accent-type-color); height: 2px; }
+.hvr-underline-from-center::before { background-color: var(--accent-type-color); height: 2px; width: 75% }
