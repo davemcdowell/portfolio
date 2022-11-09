@@ -1,6 +1,32 @@
 ---
 files:
-  - category: Articles
+  - group: Articles
+    items:
+      - title: PCGamer GOTY Edition | Firearms Best Mod
+        url: ~
+        date: March 2001
+        md5: ~
+        version: ~
+        description: >-
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      - title: PCGamer GOTY Edition | Firearms Opinion
+        url: ~
+        date: March 2001
+        md5: ~
+        version: ~
+        description: >-
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      - title: PCGamer GOTY Edition | Firearms Letter
+        url: ~
+        date: March 2001
+        md5: ~
+        version: ~
+        description: >-
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  - group: Games
     items:
       - title: ~
         url: ~
@@ -10,17 +36,7 @@ files:
         description: >-
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  - category: Games
-    items:
-      - title: ~
-        url: ~
-        date: ~
-        md5: ~
-        version: ~
-        description: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  - category: Links
+  - group: Links
     items:
       - page: Widget 1
       - page: Widget 2
