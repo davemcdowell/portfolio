@@ -18,7 +18,7 @@ css-files:
             <hr>
               {%- for item in category.items -%}
               <div class="d-flex flex-row justify-content-between align-items-center my-3">
-                <div>
+                <div class="d-flex flex-row justify-content-between align-items-center">
                   <a class="btn btn-sm btn-outline-light" href="{{ item.url }}" download="{{ item.title | downcase | replace ' ', '_' }}"><i class="bi bi-download"></i></a>
                   <p>{{ item.title }}</p>
                 </div>
