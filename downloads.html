@@ -17,15 +17,15 @@ css-files:
             <h3>{{ category.group }}</h3>
             <hr>
               {%- for item in category.items -%}
-              <div class="d-flex flex-row justify-content-between align-items-center highlight-border bs-sm-hover p-3 my-3">
+              <div class="d-flex flex-row justify-content-between align-items-center highlight-border rounded p-3 my-3">
                 <div>
                   <a class="btn btn-sm btn-outline-light me-2" href="{{ item.url }}" download="{{ item.title | downcase | replace ' ', '_' }}"><i class="bi bi-download"></i></a>
                   <p class="d-inline-block m-0">{{ item.title }}</p>
                 </div>
-                <button class="btn btn-sm btn-outline-light" type="button" data-toggle="collapse" data-target="dl-{{ forloop.index }}" aria-expanded="false" aria-controls="dl-{{ forloop.index }}">
+                <button class="btn btn-sm btn-outline-light" type="button" data-toggle="collapse" data-target="#download-{{ forloop.index }}" aria-expanded="false" aria-controls="download-{{ forloop.index }}">
                   See more
                 </button>
-                <div class="collapse w-100" id="dl-{{ forloop.index }}">
+                <div class="collapse w-100" id="download-{{ forloop.index }}">
                   <div class="card card-body">
                   {{ item.description }}
                   </div>
