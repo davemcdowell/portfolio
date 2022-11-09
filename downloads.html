@@ -14,8 +14,8 @@ css-files:
           {%- for category in site.data.downloads.files -%}
           <h3>{{ category.title }}</h3>
           <ul>
-            {%- for file in category.items -%}
-            <li>{{ file.title }}</li>
+            {%- for item in category.items -%}
+            <li><a href="{{ item.url }}"></a>{{ item.title }}</li>
             {%- endfor -%}
           </ul>
           {%- endfor -%}
