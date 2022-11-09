@@ -12,6 +12,7 @@ css-files:
     <div class="row justify-content-center">
         <div class="col-lg-10 col-lg-offset-1">
           <section id="downloads-main" class="jumbotron my-0">
+            <div class="container">
             {%- for category in site.data.downloads.files -%}
             <h3>{{ category.name }}</h3>
             <hr>
@@ -29,6 +30,7 @@ css-files:
               </div>
               {%- endfor -%}
             {%- endfor -%}
+            </div>
           </section>
         </div>
     </div>
