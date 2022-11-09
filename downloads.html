@@ -17,9 +17,9 @@ css-files:
             <h3>{{ category.group }}</h3>
             <hr>
               {%- for item in category.items -%}
-              <div class="d-flex flex-row justify-content-between align-items-center my-2">
+              <div class="d-flex flex-row justify-content-between align-items-center my-3">
                 <a class="btn btn-sm btn-outline-light" href="{{ item.url }}" download="{{ item.title | downcase | replace ' ', '_' }}"><i class="bi bi-download"></i></a>
-                <p>{{ category.title }}</p>
+                <p>{{ item.title }}</p>
                 <button class="btn btn-sm btn-outline-light" type="button" data-toggle="collapse" data-target="#dl-{{ forloop.index }}" aria-expanded="false" aria-controls="dl-{{ forloop.index }}">
                   See more
                 </button>
