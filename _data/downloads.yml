@@ -1,0 +1,28 @@
+---
+files:
+  - category: Articles
+    subitems:
+      - title: ~
+        url: ~
+        date: ~
+        md5: ~
+        version: ~
+        description: >-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  - category: Games
+    subitems:
+      - title: ~
+        url: ~
+        date: ~
+        md5: ~
+        version: ~
+        description: >-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  - category: Links
+    subitems:
+      - page: Widget 1
+      - page: Widget 2 it's
+      - page: Widget 3
+---

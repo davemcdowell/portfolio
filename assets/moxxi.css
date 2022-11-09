@@ -702,18 +702,9 @@ footer textarea { resize: vertical; }
   content: " ";
   position: absolute;
   left: 0;
-  height: 24px;
   bottom: 0;
-  /*
-  margin: 0 auto;
-  border-top: none;
-  border-right: 32px solid transparent;
-  border-left: 32px solid transparent;
-  border-bottom: 24px solid var(--bg-color-dark);
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
-  */
+  height: 24px;
+  width: 100%;
   clip-path: polygon(50% 90%, 0% 100%, 100% 100%);
 }
 
