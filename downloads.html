@@ -16,7 +16,7 @@ css-files:
             {%- for category in site.data.downloads.files -%}
             <h3>{{ category.group }}</h3>
             <hr>
-              {%- for item in file.items -%}
+              {%- for item in category.items -%}
               <div class="d-flex flex-row justify-content-between align-items-center my-2">
                 <a class="btn btn-sm btn-outline-light" href="{{ item.url }}" download="{{ item.title | downcase | replace ' ', '_' }}"><i class="bi bi-download"></i> {{ item.title }}</a>
                 <p>{{ category.title }}</p>
