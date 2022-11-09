@@ -20,7 +20,7 @@ css-files:
               <div class="d-flex flex-row justify-content-between align-items-center highlight-border bs-sm-hover  p-3 my-3">
                 <div>
                   <a class="btn btn-sm btn-outline-light me-2" href="{{ item.url }}" download="{{ item.title | downcase | replace ' ', '_' }}"><i class="bi bi-download"></i></a>
-                  <p class="display-inline-block m-0">{{ item.title }}</p>
+                  <p class="d-inline-block m-0">{{ item.title }}</p>
                 </div>
                 <button class="btn btn-sm btn-outline-light" type="button" data-toggle="collapse" data-target="dl-{{ forloop.index }}" aria-expanded="false" aria-controls="dl-{{ forloop.index }}">
                   See more
