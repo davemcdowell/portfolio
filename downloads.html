@@ -18,16 +18,16 @@ css-files:
             <hr>
               {%- for item in category.items -%}
               <div class="d-flex flex-row justify-content-between align-items-center my-3">
-                <div class="d-flex flex-row justify-content-between align-items-center">
-                  <a class="btn btn-sm btn-outline-light" href="{{ item.url }}" download="{{ item.title | downcase | replace ' ', '_' }}"><i class="bi bi-download"></i></a>
-                  <p>{{ item.title }}</p>
+                <div>
+                  <a class="btn btn-sm btn-outline-light me-2" href="{{ item.url }}" download="{{ item.title | downcase | replace ' ', '_' }}"><i class="bi bi-download"></i></a>
+                  <p class="m-0">{{ item.title }}</p>
                 </div>
-                <button class="btn btn-sm btn-outline-light" type="button" data-toggle="collapse" data-target="#dl-{{ forloop.index }}" aria-expanded="false" aria-controls="dl-{{ forloop.index }}">
+                <button class="btn btn-sm btn-outline-light" type="button" data-toggle="collapse" data-target="dl-{{ forloop.index }}" aria-expanded="false" aria-controls="dl-{{ forloop.index }}">
                   See more
                 </button>
-                <div class="collapse" id="dl-{{ forloop.index }}">
+                <div class="collapse w-100" id="dl-{{ forloop.index }}">
                   <div class="card card-body">
-                   {{ item.description }}
+                  {{ item.description }}
                   </div>
                 </div>
               </div>
