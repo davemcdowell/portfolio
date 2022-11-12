@@ -14,19 +14,21 @@ css-files:
           <section id="downloads-main" class="jumbotron my-0">
             <div class="container">
             {%- for category in site.data.downloads.files -%}
-            <h3>{{ category.group }}</h3>
+            <h3 class="text-center">{{ category.group }}</h3>
             <hr>
               {%- for item in category.items -%}
-              <div class="d-flex flex-row justify-content-between align-items-center highlight-border rounded p-3 my-3">
-                <div>
-                  <a class="btn btn-sm btn-outline-light me-2" href="{{ item.url }}" download="{{ item.title | downcase | replace ' ', '_' }}"><i class="bi bi-download"></i></a>
-                  <p class="d-inline-block m-0">{{ item.title }}</p>
+              <div clas="highlight-border rounded p-3 my-3">
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                  <div>
+                    <a class="btn btn-sm btn-outline-light me-2" href="{{ item.url }}" download="{{ item.title | downcase | replace ' ', '_' }}"><i class="bi bi-download"></i></a>
+                    <p class="d-inline-block m-0">{{ item.title }}</p>
+                  </div>
                 </div>
-                <button class="btn btn-sm btn-outline-light" type="button" type="button" data-bs-toggle="collapse" data-bs-target="#download-{{ forloop.index }}" aria-expanded="false" aria-controls="download-{{ forloop.index }}">
-                  See more
-                </button>
-                <div class="collapse w-100" id="download-{{ forloop.index }}">
-                  <div class="card card-body">
+                <a class="no-underline" data-bs-toggle="collapse" href="#download-{{ forloop.index }}-{{ category.group }}" role="button" aria-expanded="false" aria-controls="download-{{ forloop.index }}-{{ category.group }}">
+                  See more ><i class="bi bi-download"></i>
+                </a>
+                <div class="collapse w-100" id="download-{{ forloop.index }}-{{ category.group }}">
+                  <div class="card-body">
                   {{ item.description }}
                   </div>
                 </div>
