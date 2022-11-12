@@ -19,10 +19,8 @@ css-files:
               {%- for item in category.items -%}
               <div clas="highlight-border rounded p-3 my-3">
                 <div class="d-flex flex-row justify-content-between align-items-center">
-                  <div>
-                    <a class="btn btn-sm btn-outline-light me-2" href="{{ item.url }}" download="{{ item.title | downcase | replace: ' ', '_' }}"><i class="bi bi-download"></i></a>
                     <p class="d-inline-block m-0">{{ item.title }}</p>
-                  </div>
+                    <a class="btn btn-sm btn-outline-light me-2" href="{{ item.url }}" download="{{ item.title | downcase | replace: ' ', '_' }}"><i class="bi bi-download"></i></a>
                 </div>
                 <a class="no-underline d-flex flex-row justify-content-between align-items-center" data-bs-toggle="collapse" href="#download-{{ forloop.index }}-{{ category.group }}" role="button" aria-expanded="false" aria-controls="download-{{ forloop.index }}-{{ category.group }}">
                   <span>See more </span><i class="bi bi-chevron-down"></i>
