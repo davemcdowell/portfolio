@@ -22,7 +22,7 @@ css-files:
                     <p class="d-inline-block m-0">{{ item.title }}</p>
                     <a class="btn btn-sm btn-outline-light me-2" href="{{ item.url }}" download="{{ item.title | downcase | replace: ' ', '_' }}"><i class="bi bi-download"></i></a>
                 </div>
-                <a class="no-underline d-flex flex-row justify-content-between align-items-center border-btm my-2" data-bs-toggle="collapse" href="#download-{{ forloop.index }}-{{ category.group }}" role="button" aria-expanded="false" aria-controls="download-{{ forloop.index }}-{{ category.group }}">
+                <a class="no-underline d-flex flex-row justify-content-between align-items-center border-bottom my-2" data-bs-toggle="collapse" href="#download-{{ forloop.index }}-{{ category.group }}" role="button" aria-expanded="false" aria-controls="download-{{ forloop.index }}-{{ category.group }}">
                   <span>See more </span><i class="bi bi-chevron-down"></i>
                 </a>
                 <div class="collapse w-100" id="download-{{ forloop.index }}-{{ category.group }}">
