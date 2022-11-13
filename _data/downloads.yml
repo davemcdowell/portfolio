@@ -2,7 +2,9 @@
 files:
   - group: Articles
     items:
-      - title: PCGamer GOTY Edition | Firearms Best Mod
+      - title: PCGamer GOTY Edition
+        sub-title: Firearms Best Mod
+        icon: ~
         url: ~
         date: March 2001
         md5: ~
@@ -10,7 +12,9 @@ files:
         description: >-
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      - title: PCGamer GOTY Edition | Firearms Opinion
+      - title: PCGamer GOTY Edition
+        sub-title: Firearms Opinion
+        icon: ~      
         url: ~
         date: March 2001
         md5: ~
@@ -18,7 +22,9 @@ files:
         description: >-
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      - title: PCGamer GOTY Edition | Firearms Letter
+      - title: PCGamer GOTY Edition
+        sub-title: Firearms Letter
+        icon: ~
         url: ~
         date: March 2001
         md5: ~
@@ -29,6 +35,8 @@ files:
   - group: Games
     items:
       - title: ~
+        sub-title: ~
+        icon: ~
         url: ~
         date: ~
         md5: ~
