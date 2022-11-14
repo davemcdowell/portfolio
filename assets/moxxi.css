@@ -723,7 +723,8 @@ footer textarea { resize: vertical; }
   clip-path: polygon(50% 90%, 0% 100%, 100% 100%);
 }
 
-/* animations */
+/* animation */
+.trans-default { transition: all 0.35s ease-in-out; }
 .rotate {
   transform: rotate(0deg);
   transition: transform 0.25s linear;
