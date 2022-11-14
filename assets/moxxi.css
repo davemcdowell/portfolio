@@ -686,7 +686,6 @@ footer textarea { resize: vertical; }
   font-weight: 600;
   text-align: center;
   margin: 0;
-  padding: 12px;
   color: var(--default-type-color);
   background-color: var(--bg-color-dark);
   -webkit-transition: all 0.35s ease-in-out;
