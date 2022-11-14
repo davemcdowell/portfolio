@@ -14,7 +14,7 @@ css-files:
           <section id="downloads-main" class="jumbotron py-0">
             <div class="container">
               {%- include forms/search-form.html -%}
-              {%- capture downloads -%}{{ site.data.downloads.files | where_exp:"file", "file.group != 'Links'" }}{%- endcapture -%}
+              {%- assign downloads = site.data.downloads.files | where_exp:"file", "file.group != 'Links'" -%}
               <script>console.log('{{ downloads | jsonify }}');</script>
               {%- for category in site.data.downloads.files -%}
                 <h3>{{ category.group }}</h3>
