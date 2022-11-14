@@ -15,7 +15,7 @@ css-files:
             <div class="container">
               {%- include forms/search-form.html -%}
               {%- capture downloads -%}{{ site.data.downloads.files | where_exp:"file", "file.group != 'Link'" }}{%- endcapture -%}
-              <script>console.log("{{ downloads }}");</script>
+              <script>console.log('{{ downloads | jsonify }}');</script>
               {%- for category in site.data.downloads.files -%}
               <h3 class="hr-title my-3"><span>{{ category.group }}</span></h3>
                 {%- for item in category.items -%}
