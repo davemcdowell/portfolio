@@ -53,6 +53,7 @@ a:hover, a:focus, a:active { color: var(--white-type-color); }
 a:visited { color: var(--card-border-hover-color); }
 
 main { padding-top: var(--navbar-offset); }
+img { color: transparent; };
 
 /* navbar */
 .navbar {
