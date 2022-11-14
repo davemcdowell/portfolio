@@ -508,7 +508,6 @@ img { color: transparent; };
 
 .project-card img:not(.project-avatar) {
   height: 296px;
-  min-height: 296px !important;
 }
 
 .project-avatar { max-width: 36px; max-height: 36px; }
