@@ -16,14 +16,14 @@ css-files:
               <nav class="navbar justify-content-between rounded mb-2 p-2 stick-to-nav">
                   <form id="search-file-form" class="form-inline me-sm-2">
                     <div class="input-group">
-                      <input id="search-input" type="text" class="form-control border-right-0" placeholder="Search files..." aria-label="Search files..." aria-describedby="search-btn" autocomplete="off">
+                      <input id="search-input" type="text" class="form-control border-end-0" placeholder="Search files..." aria-label="Search files..." aria-describedby="search-btn" autocomplete="off">
                       <div class="input-group-append">
-                        <button id="clear-search" class="btn border border-left-0 border-right-0 px-1" type="button"><span class="icon-bg-sm p-1 rounded-circle"><i class="bi bi-eraser icon-1x"></i></span></button>
+                        <button id="clear-search" class="btn border border-start-0 border-end-0 px-1" type="button"><span class="icon-bg-sm p-1 rounded-circle"><i class="bi bi-eraser icon-1x"></i></span></button>
                         <button id="search-btn" class="btn border" type="button" data-ascending="true">Search</button>
                       </div>
                     </div>
                   </form>
-                  <button id="sort-az" class="btn border" type="button"><i class="fa-solid fa-arrow-down-a-z fa-fw"></i></button>
+                  <button id="sort-az" class="btn border" type="button"><i class="bi bi-sort-alpha-down"></i></button>
               </nav>
               {%- for category in site.data.downloads.files -%}
               <h3>{{ category.group }}</h3>
