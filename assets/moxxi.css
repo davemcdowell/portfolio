@@ -120,6 +120,8 @@ main { padding-top: 62px; }
 
 /* utils */
 .sticky-top-offset { top: 62px; }
+.outline-0 { outline: none !important; }
+.z-90 { z-index: 90 !important; }
 
 /* home logo */
 .logo-main {
@@ -175,8 +177,6 @@ main { padding-top: 62px; }
 .bs-sm-hover:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-
-.outline-0 { outline: none !important; }
 
 /* typography */
 .icon-1x { font-size: 1em; }
