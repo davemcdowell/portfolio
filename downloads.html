@@ -14,24 +14,24 @@ css-files:
           <section id="downloads-main" class="jumbotron py-0">
             <div class="container">
               <nav class="navbar navbar-light justify-content-between rounded shadow-sm mb-2 stick-to-nav">
-              <form id="search-file-form" class="form-inline mr-sm-2">
-                <div class="input-group">
-                  <input id="search-input" type="text" class="form-control border-right-0" placeholder="Search files..." aria-label="Search files..." aria-describedby="search-btn" autocomplete="off">
-                  <div class="input-group-append">
-                    <button id="clear-search" class="btn border border-left-0 border-right-0 px-1" type="button"><span class="icon-bg-sm p-1 rounded-circle"><i class="fa-solid fa-eraser fa-sm fa-fw text-dark"></i></span></button>
-                    <button id="search-btn" class="btn border" type="button" data-ascending="true">Search</button>
-                  </div>
-                </div>
-              </form>
-              <button id="sort-az" class="btn border" type="button"><i class="fa-solid fa-arrow-down-a-z fa-fw"></i></button>
-            </nav>
-            {%- for category in site.data.downloads.files -%}
-            <h3 class="text-center">{{ category.group }}</h3>
-            <hr>
-              {%- for item in category.items -%}
+                  <form id="search-file-form" class="form-inline me-sm-2">
+                    <div class="input-group">
+                      <input id="search-input" type="text" class="form-control border-right-0" placeholder="Search files..." aria-label="Search files..." aria-describedby="search-btn" autocomplete="off">
+                      <div class="input-group-append">
+                        <button id="clear-search" class="btn border border-left-0 border-right-0 px-1" type="button"><span class="icon-bg-sm p-1 rounded-circle"><i class="bi bi-eraser"></i></span></button>
+                        <button id="search-btn" class="btn border" type="button" data-ascending="true">Search</button>
+                      </div>
+                    </div>
+                  </form>
+                  <button id="sort-az" class="btn border" type="button"><i class="fa-solid fa-arrow-down-a-z fa-fw"></i></button>
+              </nav>
+              {%- for category in site.data.downloads.files -%}
+              <h3 class="text-center">{{ category.group }}</h3>
+              <hr>
+                {%- for item in category.items -%}
 
+                {%- endfor -%}
               {%- endfor -%}
-            {%- endfor -%}
             </div>
           </section>
         </div>
