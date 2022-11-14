@@ -14,7 +14,8 @@ css-files:
           <section id="downloads-main" class="jumbotron py-0">
             <div class="container">
               {%- include forms/search-form.html -%}
-              {%- assign downloads = site.data.downloads.files | where: {{ site.data.downloads.files | where_exp:"file","file.group !== 'Link'" }} -%}
+              {%- capture downloads -%}{{ site.data.downloads.files | where_exp:"file", "file.group != 'Link'" }}{%- endcapture -%}
+              <script>console.log("{{ downloads }}");</script>
               {%- for category in site.data.downloads.files -%}
               <h3 class="hr-title my-3"><span>{{ category.group }}</span></h3>
                 {%- for item in category.items -%}
