@@ -132,6 +132,7 @@ main { padding-top: 62px; }
 }
 
 /* graphical */
+
 .angle-top-left {
   display: block;
   width: 100%;
@@ -180,6 +181,12 @@ main { padding-top: 62px; }
 .icon-1x { font-size: 1em; }
 .icon-2x { font-size: 2em; }
 .icon-3x { font-size: 3em; }
+
+.icon-bg-sm {
+  width: 16px; 
+  height: 16px; 
+  background-color: rgba(0, 0, 0, 0.12);
+}
 
 .btn-icon {
   display: inline-block;
