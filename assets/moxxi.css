@@ -249,6 +249,24 @@ img { color: transparent; };
   white-space: normal;
 }
 
+.hr-title {
+  width: 100%; 
+  text-align: center; 
+  border-bottom: 1px solid #262626; 
+  line-height: 0.1em; 
+  margin: 10px 0 20px;  
+}
+
+.hr-dashed {
+  border: none;
+  border-top: 1px dashed var(--default-type-color);
+}
+
+.hr-title span {
+  background: var(--default-type-color); 
+  padding: 0 10px; 
+}
+
 .no-underline { text-decoration: none; }
 
 .meta-data {
