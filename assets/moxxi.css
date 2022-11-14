@@ -182,8 +182,9 @@ main { padding-top: 62px; }
 .icon-3x { font-size: 3em; }
 
 .icon-bg-sm {
-  width: 16px; 
-  height: 16px; 
+  display: inline-block;
+  width: 32px; 
+  height: 32px; 
   background-color: rgba(0, 0, 0, 0.12);
 }
 
