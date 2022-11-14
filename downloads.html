@@ -18,7 +18,7 @@ css-files:
                     <div class="input-group">
                       <input id="search-input" type="text" class="form-control border-right-0" placeholder="Search files..." aria-label="Search files..." aria-describedby="search-btn" autocomplete="off">
                       <div class="input-group-append">
-                        <button id="clear-search" class="btn border border-left-0 border-right-0 px-1" type="button"><span class="icon-bg-sm p-1 rounded-circle"><i class="bi bi-eraser"></i></span></button>
+                        <button id="clear-search" class="btn border border-left-0 border-right-0 px-1" type="button"><span class="icon-bg-sm p-1 rounded-circle"><i class="bi bi-eraser icon-1x"></i></span></button>
                         <button id="search-btn" class="btn border" type="button" data-ascending="true">Search</button>
                       </div>
                     </div>
@@ -26,7 +26,7 @@ css-files:
                   <button id="sort-az" class="btn border" type="button"><i class="fa-solid fa-arrow-down-a-z fa-fw"></i></button>
               </nav>
               {%- for category in site.data.downloads.files -%}
-              <h3 class="text-center">{{ category.group }}</h3>
+              <h3>{{ category.group }}</h3>
               <hr>
                 {%- for item in category.items -%}
 
