@@ -26,7 +26,7 @@ css-files:
                       <div class="list-item-actions">
                         <span class="badge rounded-pill rounded border user-select-none me-2" data-file-size>-</span>
                         <a href="{{ item.url }}" class="btn btn-sm btn-outline-light" target="_blank"><i class="bi bi-download icon-1x"></i></a>
-                        <button type="button" class="btn btn-sm btn-outline-light me-2" data-bs-toggle="collapse" data-bs-target="#{{ download.group }}-clp-{{ forloop.index }}" aria-expanded="false" aria-controls="collapseExample">
+                        <button type="button" class="btn btn-sm btn-outline-light me-2" data-bs-toggle="collapse" data-bs-target="#{{ download.group }}-clp-{{ forloop.index }}" aria-expanded="false" aria-controls="{{ download.group }}-clp-{{ forloop.index }}">
                           <i class="bi bi-plus icon-1x"></i>
                         </button>
                       </div>
