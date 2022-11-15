@@ -38,10 +38,12 @@ body {
 
 hr {
   border: none;
-  height: 1px;
+  height: 1px !important;
   color: var(--default-type-color);
   background-color: var(--default-type-color);
 }
+
+
 
 a {
   font-size: inherit;

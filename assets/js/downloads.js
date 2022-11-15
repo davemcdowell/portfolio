@@ -29,7 +29,7 @@ let downloads = (function () {
       }
     };
     http.send();
-    return fileSize;
+    return;
   }
 
   function formatBytes(bytes, decimals = 2) {
