@@ -14,7 +14,7 @@ files:
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       - title: PCGamer GOTY Edition
         sub-title: Firearms Opinion
-        icon: ~      
+        icon: ~
         url: ~
         date: March 2001
         md5: ~
@@ -46,7 +46,10 @@ files:
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   - group: Links
     items:
-      - page: Widget 1
-      - page: Widget 2
-      - page: Widget 3
+      - label: ~ 
+        url: ~
+      - label: ~ 
+        url: ~
+      - label: ~ 
+        url: ~
 ---
