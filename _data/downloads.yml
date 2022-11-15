@@ -4,7 +4,7 @@ files:
     items:
       - title: PCGamer GOTY Edition
         sub-title: Firearms Best Mod
-        icon: ~
+        icon: bi bi-filetype-pdf
         url: http://dcmcdowell.com/downloads/pcgamer1.pdf
         date: March 2001
         md5: ~
@@ -14,7 +14,7 @@ files:
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       - title: PCGamer GOTY Edition
         sub-title: Firearms Opinion
-        icon: ~
+        icon: bi bi-filetype-pdf
         url: http://dcmcdowell.com/downloads/pcgamer2.pdf
         date: March 2001
         md5: ~
@@ -24,7 +24,7 @@ files:
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       - title: PCGamer GOTY Edition
         sub-title: Firearms Letter
-        icon: ~
+        icon: bi bi-filetype-pdf
         url: http://dcmcdowell.com/downloads/pcgamer3.pdf
         date: March 2001
         md5: ~
@@ -36,7 +36,7 @@ files:
     items:
       - title: "Firearms: Source"
         sub-title: 2.02 Alpha Client
-        icon: ~
+        icon: bi bi-file-earmark-zip
         url: http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_202_Alpha_Full_Client.zip
         date: ~
         md5: ~
@@ -46,7 +46,7 @@ files:
           This is an official file from Venom Game Labs, LLC.
       - title: "Firearms: Source"
         sub-title: 2.02 Alpha Server
-        icon: ~
+        icon: bi bi-file-earmark-zip
         url: http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_202_Alpha_Full_Windows_Server.zip
         date: ~
         md5: ~
@@ -56,7 +56,7 @@ files:
           This is an official file from Venom Game Labs, LLC.
       - title: "Firearms: Source"
         sub-title: "2.01 to 2.02 Client Patch"
-        icon: ~
+        icon: bi bi-file-earmark-zip
         url: http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_Alpha_201-202_Client_Patch.zip
         date: ~
         md5: ~
@@ -66,7 +66,7 @@ files:
           This is an official file from Venom Game Labs, LLC.
       - title: "Firearms: Source"
         sub-title: "2.01 to 2.02 Server Patch"
-        icon: ~
+        icon: bi bi-file-earmark-zip
         url: http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_Alpha_201-202_Server_Patch.zip
         date: ~
         md5: ~
