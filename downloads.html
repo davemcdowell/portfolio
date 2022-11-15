@@ -15,11 +15,10 @@ css-files:
             <div class="container">
               {%- include forms/search-form.html -%}
               {%- assign downloads = site.data.downloads.files | where_exp:"file", "file.group != 'Links'" -%}
-              <script>console.log('{{ downloads | jsonify }}');</script>
-              {%- for category in site.data.downloads.files -%}
-                <h3>{{ category.group }}</h3>
+              {%- for download in downloads -%}
+                <h3>{{ download.group }}</h3>
                 <hr>
-                {%- for item in category.items -%}
+                {%- for item in download.items -%}
                 
                 {%- endfor -%}
               {%- endfor -%}
