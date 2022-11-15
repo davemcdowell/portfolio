@@ -255,7 +255,6 @@ img { color: transparent; };
 }
 
 .txt-color-default { color: var(--default-type-color) !important; }
-
 .accent-text { color: var(--accent-type-color) !important; }
 .left-border-accent { border-left: 2px solid var(--accent-type-color); }
 
