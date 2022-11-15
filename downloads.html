@@ -22,16 +22,16 @@ css-files:
                 {%- for item in download.items -%}
                   <li class="list-group-item bg-transparent txt-color-default">
                     <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
-                      <a href="{{ item.url }}" class="text-decoration-none" target="_blank"><i class="{{ item.icon }} me-2"></i> {{ item.title }}<small>{{ item.sub-title }}</small></a>
+                      <a href="{{ item.url }}" class="text-decoration-none" target="_blank"><i class="{{ item.icon }} me-2"></i> {{ item.title }} <small class="text-muted">{{ item.sub-title }}</small></a>
                       <div class="list-item-actions">
                         <small><span class="badge rounded-pill rounded border user-select-none me-2" data-file-size>-</span></small>
                         <a href="{{ item.url }}" class="btn btn-sm btn-outline-light" target="_blank"><i class="bi bi-download icon-1x"></i></a>
-                        <button type="button" class="btn btn-sm btn-outline-light me-2" data-bs-toggle="collapse" data-bs-target="#{{ download.group }}-clp-{{ forloop.index }}" aria-expanded="false" aria-controls="{{ download.group }}-clp-{{ forloop.index }}">
+                        <button type="button" class="btn btn-sm btn-outline-light me-2" data-bs-toggle="collapse" data-bs-target="#{{ download.group | downcase }}-clp-{{ forloop.index }}" aria-expanded="false" aria-controls="{{ download.group | downcase }}-clp-{{ forloop.index }}">
                           <i class="bi bi-plus icon-1x"></i>
                         </button>
                       </div>
                     </div>
-                    <div class="collapse" id="{{ download.group }}-clp-{{ forloop.index }}">
+                    <div class="collapse" id="{{ download.group | downcase }}-clp-{{ forloop.index }}">
                       <div class="card-body">
                         <hr>
                         {{ item.description }}
