@@ -1,18 +1,13 @@
 {% assign leftToRight = include.leftToRight | default: true %}
 <section id="callout-{{ include.title | slugify }}">
-    
-</section>
-
-
-<section id="callout-{{ include.title | slugify }}">
-    <div class="callout position-relative d-flex align-items-center rounded">
-        <div class="flex-shrink-0">
-            <i class="bi {{ include.icon }} icon-3x"></i>
+    <div class="row">
+        <div class="col-md-7">
+          <h3 class="display-6"></h3>
+          <p class="lead text-muted">{{ include.content }}</p>
+          <a href="{{ include.link }}">{{ include.link_label }} </a>
         </div>
-        <div class="flex-grow-1 ms-4">
-            <h3 class="display-6">{{ include.title }}</h3>
-            <p class="lead text-muted">{{ include.content }}</p>
-            <a class="callout-btn" href="{{ include.link }}">{{ include.link_label }} <i class="bi bi-arrow-right"></i></a>
+        <div class="col-md-5">
+            <img src="{{ '/assets/images/swatch1.svg' | relative_url }}" width="256" height="256">
         </div>
     </div>
 </section>

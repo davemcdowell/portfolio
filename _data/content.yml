@@ -1,4 +1,4 @@
-  # main page
+---
 - main: 
     header-title: >-
       Dave McDowell
@@ -8,14 +8,25 @@
       Some text for text sake...
     ender-copy: >-
       Some text for text sake...
-    blog-callout: >-
+    blog-callout-title: >-
       Some text for text sake...
-    download-callout: >-
+    blog-callout-copy: >-
+      Some text for text sake...
+    download-callout-title: >-
+      Some text for text sake...
+    download-callout-copuy: >-
       Some text for text sake...
 
-# about page
+- about:
+    header-title: >-
+      Some text for text sake...
+    header-copy: >-
+      Some text for text sake...
+    ender-title: >-
+      Some text for text sake...
+    ender-copy: >-
+      Some text for text sake...
 
-# blog page
 - blog:
     header-title: >-
       Some text for text sake...
@@ -26,15 +37,19 @@
     ender-copy: >-
       Some text for text sake...
 
-# downloads page
 - downloads:
     header-title: >-
-      Some text for text sake...
+      Downloads
     header-copy: >-
-      Some text for text sake...
+      Everybody loves free stuff, below is a collection of downloadable things—ranging from maps, games, old articles and more.
     ender-title: >-
-      Some text for text sake...
+      That's it
     ender-copy: >-
-      Some text for text sake...
+      That's about it for downloads ¯\_ (ツ)_/¯<br> there's always these places below.
 
-# contact section
+- contact:
+    section-title: >-
+      Let's Talk
+    section-copy: >-
+      Looking to get in touch? Below are a few options to contact me along with my resume for download or viewing directly.
+---
