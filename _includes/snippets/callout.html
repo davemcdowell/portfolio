@@ -4,9 +4,9 @@
         {%- if facing contains 'left' -%}
         <div class="callout my-4">
             <div class="col-md-7">
-            <h3 class="display-6">{{ inlcude.title }}</h3>
-            <p class="lead text-muted">{{ include.content }}</p>
-            <a href="{{ include.link }}" class="btn btn-outline-light">{{ include.link_label }}</a>
+                <h3 class="display-6">{{ inlcude.title }}</h3>
+                <p class="lead text-muted">{{ include.content }}</p>
+                <a href="{{ include.link }}" class="btn btn-outline-light">{{ include.link_label }}</a>
             </div>
             <div class="col-md-5">
                 <img src="{{ '/assets/images/swatch1.svg' | relative_url }}" class="img-fluid mx-auto" width="128" height="128">
@@ -22,7 +22,7 @@
                 <p class="lead text-muted">{{ include.content }}</p>
                 <a href="{{ include.link }}" class="btn btn-outline-light">{{ include.link_label }}</a>
             </div>
-          </div>
+        </div>
         {%- endif -%}
     </div>
 </section>
