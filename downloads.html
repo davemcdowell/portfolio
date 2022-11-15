@@ -23,12 +23,12 @@ css-files:
                   <li class="list-group-item bg-transparent">
                     <div class="d-flex flex-wrap justify-content-between align-items-center">
                       <div class="list-meta">
-                        <i class="fa-solid fa-file-pdf fa-fw fa-lg align-self-center me-2">{{ item.title }}</i>
-                        <a href="{{ item.url }}" class="lead stretched-link link-dark" target="_blank"></a>
+                        <span><i class="bi bi-file-earmark-check"></i><a href="{{ item.url }}" class="lead text-decoration-none" target="_blank">{{ item.title }}</a></span>
+                        <a href="{{ item.url }}" class="lead" target="_blank"></a>
                       </div>
                       <div class="list-item-actions">
-                        <span class="badge badge-light badge-pill border me-2 no-select">-</span>
-                        <a href="{{ item.url }}" class="btn btn-sm btn-light border" target="_blank"><i class="fa-solid fa-download fa-fw"></i></a>
+                        <span class="badge badge-light badge-pill me-2 no-select">-</span>
+                        <a href="{{ item.url }}" class="btn btn-sm" target="_blank"><i class="bi bi-download"></i></a>
                       </div>
                     </div>
                   </li>
