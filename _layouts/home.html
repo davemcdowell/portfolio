@@ -11,7 +11,7 @@ js-postload-files:
             {%- include snippets/callout.html title="&lt;Blog&gt;" content="Check out my blog for updates on current work and probably other stuff that's probably blog-worthy, probably." leftToRight="true" icon="bi-megaphone" link=blogLink link_label="View Blog" -%}
             {%- include sections/portfolio-main.html -%}
             {% capture downloadsURL %}{{ '/downloads/' | relative_url }}{% endcapture %}
-            {%- include snippets/callout.html title="Downloads" content="" leftToRight="false" icon="bi-download" link=downloadsURL link_label="Downloads" -%}
+            {%- include snippets/callout.html title="Downloads" content="" leftToRight=false icon="bi-download" link=downloadsURL link_label="Downloads" -%}
         </div>
     </div>
 </div>
