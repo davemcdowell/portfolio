@@ -18,9 +18,9 @@ css-files:
               {%- for download in downloads -%}
                 <h3>{{ download.group }}</h3>
                 <hr>
-                <ul class="list-group list-group-flush list-group-hover">
+                <ul class="list-group list-group-flush">
                 {%- for item in download.items -%}
-                  <li class="list-group-item bg-transparent txt-color-default">
+                  <li class="list-group-item list-group-item-action bg-transparent txt-color-default">
                     <div class="d-flex flex-wrap justify-content-between align-items-center">
                       <a href="{{ item.url }}" class="text-decoration-none" target="_blank"><i class="bi bi-file-earmark-check me-2"></i> {{ item.title }}</a>
                       <div class="list-item-actions">
