@@ -20,14 +20,15 @@ css-files:
                 <hr>
                 <ul class="list-group list-group-flush list-group-hover">
                 {%- for item in download.items -%}
-                  <li class="list-group-item bg-transparent">
+                  <li class="list-group-item bg-transparent txt-color-default">
                     <div class="d-flex flex-wrap justify-content-between align-items-center">
-                      <div class="list-meta">
+                      <div class="meta-data">
                         <i class="bi bi-file-earmark-check me-2"></i>
                         <a href="{{ item.url }}" class="text-decoration-none" target="_blank">{{ item.title }}</a>
                       </div>
                       <div class="list-item-actions">
-                        <span class="badge badge-light badge-pill me-2 no-select">-</span>
+                        <span class="badge rounded-pill bg-light text-dark">-</span>
+                        <button id="{{ download.group }}-dl-{{ forloop.index }}-" type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-plus-lg"></i></button>
                         <a href="{{ item.url }}" class="btn btn-sm btn-outline-light" target="_blank"><i class="bi bi-download"></i></a>
                       </div>
                     </div>
