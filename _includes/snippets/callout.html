@@ -1,7 +1,7 @@
 {% assign facing = include.face | default: true %}
 <section id="callout-{{ include.title | slugify }}">
         {%- if facing contains 'left' -%}
-        <div class="position-relative d-flex align-items-center rounded">
+        <div class="callout position-relative d-flex align-items-center rounded">
             <div class="flex-shrink-0">
                 <img src="{{ '/assets/images/swatch1.svg' | relative_url }}" class="img-fluid me-2" width="128" height="128">
             </div>
@@ -12,7 +12,7 @@
             </div>
         </div>
         {%- elsif facing contains 'right' -%}
-        <div class="position-relative d-flex align-items-center rounded">
+        <div class="callout position-relative d-flex align-items-center rounded">
             <div class="flex-grow-1 me-4">
                 <h3 class="display-6">{{ inlcude.title }}</h3>
                 <p class="lead text-muted">{{ include.content }}</p>
