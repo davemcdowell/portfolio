@@ -11,12 +11,12 @@ permalink: /about/
                     <div class="mb-5">
                         <h2 class="block-label">About</h2>
                         <hr class="block-label-hr">
-                        <p class="lead text-muted">{{ site.data.cv.about }}</p>
+                        <p class="lead text-muted">{{ site.data.about.summary }}</p>
                     </div>
                     <div class="mb-5">
                         <h2 class="block-label">Experience</h2>
                         <hr class="block-label-hr">
-                        {%- for experience in site.data.cv.experience -%}
+                        {%- for experience in site.data.about.experience -%}
                         <div class="d-flex">
                             <div class="flex-shrink-0">
                                 <a href="{{ experience.url }}" target="_blank"><img class="rounded cv-item-logo bs-sm" src="{{ experience.logo | relative_url }}" width="48" height="48" alt="{{ experience.company }} logo"></a>
@@ -33,7 +33,7 @@ permalink: /about/
                     <div class="mb-5">
                         <h2 class="block-label">Education</h2>
                         <hr class="block-label-hr">
-                        {%- for education in site.data.cv.education -%}
+                        {%- for education in site.data.about.education -%}
                         <div class="d-flex">
                             <div class="flex-shrink-0">
                                 <a href="{{ education.url }}" target="_blank"><img class="rounded cv-item-logo bs-sm" src="{{ education.logo | relative_url }}" width="48" height="48" alt="{{ education.school }} logo"></a>
@@ -52,7 +52,7 @@ permalink: /about/
                         <hr class="block-label-hr">
                         <div class="d-flex justify-content-between">
                             <ul class="list-inline">
-                                {%- for skill in site.data.cv.skills -%}
+                                {%- for skill in site.data.about.skills -%}
                                 <li class="list-inline-item mb-2"><a href="{{ skill.link }}" class="btn btn-sm btn-outline-light link-pill py-1 px-2" target="_blank">{{ skill.name }}</a></li>
                                 {%- endfor -%}
                             </ul>
