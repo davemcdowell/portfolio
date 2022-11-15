@@ -10,6 +10,8 @@ let downloads = (function () {
     let fileSizeCalls = [].slice.call(document.querySelectorAll('[data-file-size]'));
     fileSizeCalls.map(function(fileSizeCall) {
       let fileUrl = fileSizeCall.href;
+      let fileSize = getFileSize(fileUrl);
+      fileSizeCall.innerText = formatBytes(fileSize);
     });
   }
 
