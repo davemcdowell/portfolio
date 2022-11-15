@@ -14,7 +14,7 @@ js-postload-files:
                     <h2 class="blog-post-title">{{ page.title }}</h2>
                     <div class="d-flex flex-wrap align-items-center justify-content-between">
                         <div>
-                            <p class="blog-post-meta mb-0"><small class="text-muted">{{ page.date | date: date_format }} by <a class="no-underline" href="#">{{ page.author }}</a></small></p>
+                            <p class="blog-post-meta mb-0"><small class="text-muted">{{ page.date | date: date_format }} by <a class="text-decoration-none" href="#">{{ page.author }}</a></small></p>
                             <p class="blog-post-meta mb-0"><small class="text-muted">{%- include snippets/reading-time.html -%}</small></p>
                         </div>
                         <div>
@@ -112,9 +112,9 @@ js-postload-files:
                                 {%- endif -%}
                                 {%- if sameTagCount >= minCommonTags -%}
                                     {%- if post.short-title -%}
-                                    <li><a class="no-underline" href="{{ site.baseurl }}{{ post.url }}">{{ post.short-title | capitalize }}</a></li>
+                                    <li><a class="text-decoration-none" href="{{ site.baseurl }}{{ post.url }}">{{ post.short-title | capitalize }}</a></li>
                                     {%- else -%}
-                                    <li><a class="no-underline" href="{{ site.baseurl }}{{ post.url }}">{{ post.title | capitalize }}</a></li>
+                                    <li><a class="text-decoration-none" href="{{ site.baseurl }}{{ post.url }}">{{ post.title | capitalize }}</a></li>
                                     {%- endif -%}
                                     {% assign maxRelatedPosts = maxRelatedPosts | plus: 1 %}
                                     {%- if maxRelatedPosts > maxPosts -%}
