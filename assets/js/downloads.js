@@ -6,6 +6,13 @@ let downloads = (function () {
     setFileSizes();
   }
 
+  function setFileSizes() {
+    let fileSizeCalls = [].slice.call(document.querySelectorAll('[data-file-size]'));
+    fileSizeCalls.map(function(fileSizeCall) {
+      let fileUrl = fileSizeCall.href;
+    });
+  }
+
   function getFileSize(url) {
     var fileSize = "";
     var http = new XMLHttpRequest();
@@ -15,11 +22,12 @@ let downloads = (function () {
         if(this.status === 200) {
           fileSize = this.getResponseHeader("content-length");
           console.log("fileSize = " + fileSize);
+          return fileSize;
         }
       }
     };
     http.send();
-    return;
+    return fileSize;
   }
 
   function formatBytes(bytes, decimals = 2) {
