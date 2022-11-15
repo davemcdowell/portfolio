@@ -22,7 +22,7 @@ css-files:
                 {%- for item in download.items -%}
                   <li class="list-group-item bg-transparent txt-color-default">
                     <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
-                      <a href="{{ item.url }}" class="text-decoration-none" target="_blank"><i class="{{ item.icon }} me-2"></i> {{ item.title }}</a>
+                      <a href="{{ item.url }}" class="text-decoration-none" target="_blank"><i class="{{ item.icon }} me-2"></i> {{ item.title }}<small>{{ item.sub-title }}</small></a>
                       <div class="list-item-actions">
                         <span class="badge rounded-pill rounded border user-select-none me-2" data-file-size>-</span>
                         <a href="{{ item.url }}" class="btn btn-sm btn-outline-light" target="_blank"><i class="bi bi-download icon-1x"></i></a>
