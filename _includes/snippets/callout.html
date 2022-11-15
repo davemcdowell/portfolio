@@ -12,14 +12,14 @@
             </div>
         </div>
         {%- elsif facing contains 'right' -%}
-        <div class="callout position-relative d-flex align-items-center" style="border-right: 2px solid dodgerblue;">
-            <div class="flex-shrink-0">
-                <img src="{{ '/assets/images/swatch1.svg' | relative_url }}" class="img-fluid me-2" width="256" height="256">
-            </div>
-            <div class="flex-grow-1 ms-4">
+        <div class="callout position-relative d-flex align-items-center" style="border-left: 2px solid dodgerblue;">
+            <div class="flex-grow-1 me-4">
                 <h3 class="display-6">{{ inlcude.title }}</h3>
                 <p class="lead text-muted">{{ include.content }}</p>
                 <a href="{{ include.link }}" class="btn btn-outline-light">{{ include.link_label }}</a>
+            </div>
+            <div class="flex-shrink-0">
+                <img src="{{ '/assets/images/swatch1.svg' | relative_url }}" class="img-fluid me-2" width="256" height="256">
             </div>
         </div>
         {%- endif -%}
