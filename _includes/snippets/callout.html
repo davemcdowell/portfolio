@@ -1,13 +1,24 @@
 {% assign leftToRight = include.leftToRight | default: true %}
 <section id="callout-{{ include.title | slugify }}">
     <div class="row">
+        {%- if leftToRight -%}
         <div class="col-md-7">
           <h3 class="display-6"></h3>
           <p class="lead text-muted">{{ include.content }}</p>
           <a href="{{ include.link }}">{{ include.link_label }} </a>
         </div>
         <div class="col-md-5">
-            <img src="{{ '/assets/images/swatch1.svg' | relative_url }}" width="256" height="256">
+            <img src="{{ '/assets/images/swatch1.svg' | relative_url }}" class="img-fluid mx-auto" width="256" height="256">
         </div>
+        {%- else -%}
+        <div class="col-md-5">
+            <img src="{{ '/assets/images/swatch1.svg' | relative_url }}" class="img-fluid mx-auto" width="256" height="256">
+        </div>
+        <div class="col-md-7">
+            <h3 class="display-6"></h3>
+            <p class="lead text-muted">{{ include.content }}</p>
+            <a href="{{ include.link }}">{{ include.link_label }} </a>
+          </div>
+        {%- endif -%}
     </div>
 </section>
