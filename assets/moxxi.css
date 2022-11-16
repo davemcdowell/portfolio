@@ -383,7 +383,7 @@ img { color: transparent; };
   -khtml-opacity: 0.15;
 }
 
-.callout-bg:hover {
+.callout:hover .callout-bg {
   transform: scale(1.5);
 }
 
