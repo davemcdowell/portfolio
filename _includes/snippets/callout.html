@@ -1,7 +1,7 @@
 <section id="callout-{{ include.title | slugify }}">
-    <div class="callout bs-inner-hover mx-auto my-4 rounded">
+    <div class="callout position-relative bs-inner-hover mx-auto my-4 rounded">
         <h3 class="display-6">{{ include.title }}</h3>
         <p class="lead text-muted">{{ include.content }}</p>
-        <a href="{{ include.link }}" class="btn btn-outline-light">{{ include.link-label }}</a>
+        <a href="{{ include.link }}" class="btn btn-outline-light stretched-link">{{ include.link-label }}</a>
     </div>
 </section>
