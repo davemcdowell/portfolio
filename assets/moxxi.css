@@ -159,21 +159,16 @@ img { color: transparent; };
 }
 
 .bs-inner-hover {
-  -webkit-box-shadow: inset 0px 0px 10px 5px rgba(255,255,255,0.2); 
-  box-shadow: inset 0px 0px 10px 5px rgba(255,255,255,0.2);
+  -webkit-box-shadow: inset 0px 0px 10px 5px rgba(255,255,255,0.1); 
+  box-shadow: inset 0px 0px 10px 5px rgba(255,255,255,0.1);
   transition: all 0.35s ease-in-out;
 }
 
 .bs-inner-hover:hover
 .bs-inner-hover:active,
 .bs-inner-hover:focus {
-  -webkit-box-shadow: inset 0px 0px 16px 14px rgba(255,255,255,0.22); 
-  box-shadow: inset 0px 0px 16px 14px rgba(255,255,255,0.22);
-}
-
-.bs-inner-hover {
-  -webkit-box-shadow: inset 0px 0px 10px 5px rgba(255,255,255,0.2); 
-  box-shadow: inset 0px 0px 10px 5px rgba(255,255,255,0.2);
+  -webkit-box-shadow: inset 0px 0px 16px 14px rgba(255,255,255,0.12); 
+  box-shadow: inset 0px 0px 16px 14px rgba(255,255,255,0.12);
 }
 
 .highlight-border {
