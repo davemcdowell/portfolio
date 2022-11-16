@@ -233,11 +233,13 @@ img { color: transparent; };
 .btn-blur {
   color: var(--default-type-color);
   -webkit-backdrop-filter: blur(10px);
+  border: 1px solid transparent;
   backdrop-filter: blur(10px);
-  transition: color 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 
 .btn-blur:hover {
+  border: 1px solid var(--white-type-color);
   color: var(--white-type-color);
 }
 
