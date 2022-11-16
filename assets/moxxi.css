@@ -384,7 +384,7 @@ img { color: transparent; };
 }
 
 .callout:hover .callout-bg {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .callout-body {
