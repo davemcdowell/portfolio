@@ -347,41 +347,19 @@ img { color: transparent; };
 
 .callout-bg-image {
   width: 100%; height: 100%;
-  padding: 1rem 2rem;
   opacity: 0.6;
 }
 
-.callout h3 { color: var(--white-type-color); opacity: 1 !important; }
-.callout i { color: var(--default-type-color); opacity: 1 !important; }
-
-.callout-btn {
-  position: absolute;
-  bottom: 0;
-  right: 5%;
-  transform: translateY(50%);
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--bg-color-dark);
-  text-decoration: none;
-  background-color: var(--default-type-color);
-  color: var(--bg-color-dark);
-  padding: 1rem;
-  user-select: none;
-  line-height: 24px;
-  vertical-align: middle;
+.callout-body {
+  padding: 1rem 2rem;
+  opacity: 1 !important;
+  color: var(--default-type-color);
 }
 
-.callout-btn i { color: var(--bg-color-dark); }
-
-.callout-btn:hover,
-.callout-btn:active,
-.callout-btn:focus {
-  color: var(--bg-color-dark);
-}
-
-.callout-btn:hover .callout { border: 1px solid var(--default-type-color); }
-
+.callout-body h3 { color: var(--white-type-color); }
+.callout-body p { color: var(--default-type-color); }
+.callout-body i { color: var(--default-type-color); }
+/* 
 .hvr-icon-forward:before {
   content: "\F138";
   position: absolute;
@@ -393,7 +371,7 @@ img { color: transparent; };
   transition-property: transform;
   transition-timing-function: ease-out;
 }
-
+*/
 /* portfolio */
 .portfolio {
   margin-top: 4rem;
