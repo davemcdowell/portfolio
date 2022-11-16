@@ -359,7 +359,7 @@ img { color: transparent; };
   text-decoration: none;
   background-color: var(--default-type-color);
   color: var(--bg-color-dark);
-  padding: 6px 8px 6px 8px;
+  padding: 1rem;
   user-select: none;
   line-height: 24px;
   vertical-align: middle;
