@@ -372,19 +372,7 @@ img { color: transparent; };
 .callout-body h3 { color: ghostwhite; }
 .callout-body p { color: var(--default-type-color); }
 .callout-body i { color: var(--default-type-color); }
-/* 
-.hvr-icon-forward:before {
-  content: "\F138";
-  position: absolute;
-  right: 1em;
-  padding: 0 1px;
-  font-family: inherit;
-  transform: translateZ(0);
-  transition-duration: 0.1s;
-  transition-property: transform;
-  transition-timing-function: ease-out;
-}
-*/
+
 /* portfolio */
 .portfolio {
   margin-top: 4rem;
