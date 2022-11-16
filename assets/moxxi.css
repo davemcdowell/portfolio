@@ -210,6 +210,10 @@ img { color: transparent; };
   background-color: rgba(0, 0, 0, 0.12);
 }
 
+.shadow-text {
+  text-shadow: 0.0125em 0.0125em rgba(0,0,0,0.12);
+}
+
 .btn-icon {
   display: inline-block;
   color: var(--lighter-type-color);
