@@ -343,20 +343,36 @@ img { color: transparent; };
   border: 1px solid var(--bg-color-offset);
   overflow: hidden;
   transition: all 0.35s ease-in-out;
+
+  position: relative;
+  background: url("") no-repeat center top;
+  display: flex;
+  background-size: cover;
 }
 
-.callout-bg-image {
-  width: 100%; height: 100%;
-  opacity: 0.3;
+.callout:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, #eaee44, #33d0ff);
+  background-color: var(--bg-color-offset);
+  opacity: 0.6;
+  -moz-opacity: 0.6;
+  -khtml-opacity: 0.6;
 }
 
 .callout-body {
+  position: relative;
   padding: 1rem 2rem;
   opacity: 1 !important;
   color: var(--default-type-color);
+  z-index: 1;
 }
 
-.callout-body h3 { color: var(--white-type-color); }
+.callout-body h3 { color: ghostwhite; }
 .callout-body p { color: var(--default-type-color); }
 .callout-body i { color: var(--default-type-color); }
 /* 
