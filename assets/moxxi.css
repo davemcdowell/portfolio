@@ -390,6 +390,7 @@ img { color: transparent; };
 
 .callout-body {
   position: relative;
+  width: 100%;
   padding: 1rem 2rem;
   color: var(--default-type-color);
   z-index: 1;
