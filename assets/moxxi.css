@@ -359,7 +359,11 @@ img { color: transparent; };
   background-size: cover;
 }
 
-.callout-bg:after {
+.callout-bg {
+  transition: all 0.35s ease-in-out;
+}
+
+.callout-bg::after {
   content: "";
   position: absolute;
   top: 0;
@@ -373,7 +377,7 @@ img { color: transparent; };
   -khtml-opacity: 0.15;
 }
 
-.callout-bg:hover {
+.callout-bg::after:hover:not(.callout-body) {
   transform: scale(1.5);
 }
 
