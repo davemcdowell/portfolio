@@ -379,7 +379,7 @@ img { color: transparent; };
   -khtml-opacity: 0.15;
 }
 
-.callout-bg:hover:not(.callout-body) {
+.callout-bg::after:hover:not(.callout-body) {
   transform: scale(1.5);
 }
 
