@@ -8,10 +8,10 @@ js-postload-files:
     <div class="row justify-content-center">
         <div class="col-lg-10 col-lg-offset-1">
             {% capture blogURL %}{{ '/blog/' | relative_url }}{% endcapture %}
-            {%- include snippets/callout.html title="&lt;Blog&gt;" content="Check out my blog for updates on current work and probably other stuff that's probably blog-worthy, probably." face="right" icon="bi-megaphone" link=blogLink link_label="View Blog" -%}
+            {%- include snippets/callout.html title="&lt;Blog&gt;" content="Check out my blog for updates on current work and probably other stuff that's probably blog-worthy, probably." link=blogLink link-label="View Blog" -%}
             {%- include sections/portfolio-main.html -%}
             {% capture downloadsURL %}{{ '/downloads/' | relative_url }}{% endcapture %}
-            {%- include snippets/callout.html title="Downloads" content="" face="left" icon="bi-download" link=downloadsURL link_label="Downloads" -%}
+            {%- include snippets/callout.html title="Downloads" content="A collection of odds and end for your downloading pleasure."  link=downloadsURL link-label="Downloads" -%}
         </div>
     </div>
 </div>
