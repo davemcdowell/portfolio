@@ -1,7 +1,9 @@
 <section id="callout-{{ include.title | slugify }}">
-    <div class="d-flex justify-content-between align-items-center rounded">
-        <h3 class="display-6">{{ include.title }}</h3>
-        <p class="lead text-muted">{{ include.content }}</p>
+    <div class="d-flex justify-content-between align-items-center rounded my-4">
+        <div>        
+            <h3 class="display-6">{{ include.title }}</h3>
+            <p class="lead text-muted">{{ include.content }}</p>
+        </div>
         <a href="" class="btn btn-outline-light">{{ include.link-label }}</a>
     </div>
 </section>
