@@ -357,9 +357,9 @@ img { color: transparent; };
   height: 100%;
   background-image: linear-gradient(120deg, #eaee44, #33d0ff);
   background-color: var(--bg-color-offset);
-  opacity: 0.6;
-  -moz-opacity: 0.6;
-  -khtml-opacity: 0.6;
+  opacity: 0.25;
+  -moz-opacity: 0.25;
+  -khtml-opacity: 0.25;
 }
 
 .callout-body {
