@@ -341,6 +341,7 @@ img { color: transparent; };
   margin: 1rem auto 4rem auto;
   color: var(--lighter-type-color); 
   border: 1px solid var(--bg-color-offset);
+  overflow: hidden;
   transition: all 0.35s ease-in-out;
 }
 
@@ -350,8 +351,8 @@ img { color: transparent; };
   opacity: 0.6;
 }
 
-.callout h3 { color: var(--white-type-color); }
-.callout i { color: var(--default-type-color); }
+.callout h3 { color: var(--white-type-color); opacity: 1 !important; }
+.callout i { color: var(--default-type-color); opacity: 1 !important; }
 
 .callout-btn {
   position: absolute;
