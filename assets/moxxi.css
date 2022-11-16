@@ -231,8 +231,14 @@ img { color: transparent; };
 .btn-icon:hover { color: var(--default-type-color); }
 
 .btn-blur {
+  color: var(--default-type-color);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  transition: color 0.35s ease-in-out;
+}
+
+.btn-blur:hover {
+  color: var(--white-type-color);
 }
 
 .block-label {
