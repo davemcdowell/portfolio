@@ -360,11 +360,6 @@ img { color: transparent; };
 }
 
 .callout-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   width: 100%;
   height: 100%;
   transition: all 0.35s ease-in-out;
@@ -372,6 +367,11 @@ img { color: transparent; };
 
 .callout-bg::after {
   content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: linear-gradient(120deg, #eaee44, #33d0ff);
   background-color: var(--bg-color-offset);
   opacity: 0.15;
