@@ -211,7 +211,7 @@ img { color: transparent; };
 }
 
 .shadow-text {
-  text-shadow: 0.0125em 0.0125em rgba(0,0,0,0.19);
+  text-shadow: 0.0125em 0.0125em rgba(0,0,0,0.2);
 }
 
 .btn-icon {
@@ -229,6 +229,10 @@ img { color: transparent; };
 }
 
 .btn-icon:hover { color: var(--default-type-color); }
+
+.btn-blur {
+  filter: blur(5px);
+}
 
 .block-label {
   display: inline-block;
