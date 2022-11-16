@@ -239,6 +239,7 @@ img { color: transparent; };
   transition: all 0.35s ease-in-out;
 }
 
+* ~ .btn-blur:hover,
 .btn-blur:hover {
   border: 1px solid var(--white-type-color);
   color: var(--white-type-color);
@@ -397,6 +398,10 @@ img { color: transparent; };
 .callout-body h3 { color: ghostwhite; font-weight: 600; }
 .callout-body p { color: var(--default-type-color); }
 .callout-body i { color: var(--default-type-color); }
+
+.callout:hover > button {
+  border: inherit;
+}
 
 /* portfolio */
 .portfolio {
