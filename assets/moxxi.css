@@ -231,7 +231,7 @@ img { color: transparent; };
 .btn-icon:hover { color: var(--default-type-color); }
 
 .btn-blur {
-  filter: blur(5px);
+  backdrop-filter: blur(1);
 }
 
 .block-label {
