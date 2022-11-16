@@ -387,6 +387,12 @@ img { color: transparent; };
   transition-timing-function: ease-out;
 }
 
+/* portfolio */
+.portfolio {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 /* portfolio-slider */
 .splide__arrow {
   -ms-flex-align: center;
