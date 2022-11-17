@@ -7,7 +7,7 @@ main:
   ender:
     title: Thanks for looking
     copy: >-
-      I hope you've enjoyed my work! Come back soon for updates or visit my blog. You can also find me at...
+      I hope you've enjoyed my work! Come back soon for updates or visit my <a href="/portfolio/blog/">blog</a>. You can also find me at...
   blog-callout:
     title: Blog
     copy: >-
