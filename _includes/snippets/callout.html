@@ -4,7 +4,7 @@
         <div class="callout-body">
             <h3 class="display-6 shadow-text">{{ include.title }}</h3>
             <p class="lead shadow-text">{{ include.content }}</p>
-            {%- if include.links > 0 -%}
+            {%- if include.links -%}
             {%- for link in links -%}
             <a href="{{ link.url | relative_url }}" class="btn btn-blur">{{ link.label }}</a>
             {%- endfor -%}
