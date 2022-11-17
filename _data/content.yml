@@ -15,7 +15,7 @@ main:
     links:
       - url: "/blog/"
         label: View Blog
-      - url: "/portfolio/feed.xml"
+      - url: "/feed.xml"
         label: RSS
   download-callout:
     title: Downloads
