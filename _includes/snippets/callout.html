@@ -2,7 +2,7 @@
     <div class="callout highlight-border bs-inner-hover mx-auto my-4 rounded">
         <div class="callout-bg" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('{{ include.img-src }}') no-repeat center top;"></div>
         <div class="callout-body">
-            <h3 class="display-6 shadow-text">{{ include.title }}</h3>
+            <h3 class="display-6 shadow-text">{{ include.title | capitalize }}</h3>
             <p class="lead shadow-text">{{ include.content }}</p>
             {%- if include.links -%}
             {%- for link in links -%}
