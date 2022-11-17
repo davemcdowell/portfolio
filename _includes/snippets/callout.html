@@ -7,7 +7,7 @@
             {% assign links = include.links %}
             {%- if links.size > 0 -%}
             {%- for link in links -%}
-            <a href="{{ link.url | relative_url }}" class="btn btn-blur {% unless forloop.last %}me-2{% endif %}">{{ link.label }}</a>
+            <a href="{{ link.url | relative_url }}" class="btn btn-blur {% unless forloop.last %}me-2{% endunless %}">{{ link.label }}</a>
             {%- endfor -%}
             {%- endif -%}
         </div>
