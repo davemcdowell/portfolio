@@ -1,29 +1,29 @@
 ---
 main: 
-  - header:
-      title: Dave McDowell
-      copy: >-
-        I'm a designer and game developer from Seattle, and you've just found my portfolio—scroll down to see some of my work.
-  - ender:
-      title: Thanks for looking
-      copy: >-
-        I hope you've enjoyed my work! Come back soon for updates or visit my <a href="{{ '/blog/' | relative_url }}">blog</a>. You can also find me at...
-  - blog-callout:
-      title: Blog
-      copy: >-
-        Updates on current work and probably other stuff that's probably blog-worthy, probably.
-      links:
-        - url: "/blog/"
-          label: View Blog
-        - url: "/portfolio/feed.xml"
-          label: RSS
-  - download-callout:
-      title: Downloads
-      copy: >-
-        A collection of odds and ends for your downloading pleasure.
-      links:
-        - url: "/downloads/"
-          label: Downloads
+  header:
+    title: Dave McDowell
+    copy: >-
+      I'm a designer and game developer from Seattle, and you've just found my portfolio—scroll down to see some of my work.
+  ender:
+    title: Thanks for looking
+    copy: >-
+      I hope you've enjoyed my work! Come back soon for updates or visit my <a href="{{ '/blog/' | relative_url }}">blog</a>. You can also find me at...
+  blog-callout:
+    title: Blog
+    copy: >-
+      Updates on current work and probably other stuff that's probably blog-worthy, probably.
+    links:
+      - url: "/blog/"
+        label: View Blog
+      - url: "/portfolio/feed.xml"
+        label: RSS
+  download-callout:
+    title: Downloads
+    copy: >-
+      A collection of odds and ends for your downloading pleasure.
+    links:
+      - url: "/downloads/"
+        label: Downloads
 
 - about:
     header-title: >-
