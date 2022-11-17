@@ -3,18 +3,25 @@ layout: default
 js-postload-files: 
   - /portfolio/assets/js/home.js
 ---
-{%- include sections/logo-header.html title="Dave McDowell" content="I'm a designer and game developer from Seattle, and you've just found my portfolio—scroll down to see some of my work." link="#portfolio-main" -%}
+{%- assign headerTitle = site.data.content.main.header.title -%}
+{%- assign headerCopy = site.data.content.main.header.copy -%}
+{%- include sections/logo-header.html title=headerTitle content=headerCopy link="#portfolio-main" -%}
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-10 col-lg-offset-1">
-            {% capture blogURL %}{{ '/blog/' | relative_url }}{% endcapture %}
-            {%- include snippets/callout.html title="Blog" content="Updates on current work and probably other stuff that's probably blog-worthy, probably." link=blogURL link-label="View Blog" img-src="https://picsum.photos/1024/768?random=5" -%}
+            {%- assign blogTitle = site.data.content.main.blog-callout.title -%}
+            {%- assign blogCopy = site.data.content.main.blog-callout.copy -%}
+            {%- assign blogLinks = site.data.content.main.blog-callout.links -%}
+            {%- include snippets/callout.html title=blogTitle content=blogCopy links=blogLinks img-src="https://picsum.photos/1024/768?random=5" -%}
             {%- include sections/portfolio-main.html -%}
-            {% capture downloadsURL %}{{ '/downloads/' | relative_url }}{% endcapture %}
-            {%- include snippets/callout.html title="Downloads" content="A collection of odds and ends for your downloading pleasures."  link=downloadsURL link-label="Downloads" img-src="https://picsum.photos/1024/768?random=4" -%}
+            {%- assign dlTitle = site.data.content.main.download-callout.title -%}
+            {%- assign dlCopy = site.data.content.main.download-callout.copy -%}
+            {%- assign dlLinks = site.data.content.main.download-callout.links -%}
+            {%- include snippets/callout.html title=dlTitle content=dlCopy link=dlLinks img-src="https://picsum.photos/1024/768?random=4" -%}
         </div>
     </div>
 </div>
-{% capture homeEndText %}I hope you've enjoyed my work! Come back soon for updates or visit my <a href="{{ '/blog/' | relative_url }}">blog</a>. You can also find me at...{% endcapture %}
-{%- include sections/ender.html title="Thanks for Looking" content=homeEndText -%}
+{%- assign enderTitle = site.data.content.main.ender.title -%}
+{%- assign enderCopy = site.data.content.main.ender.copy -%}
+{%- include sections/ender.html title=enderTitle content=enderCopy -%}
 {%- include sections/contact.html -%}
