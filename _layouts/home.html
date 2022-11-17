@@ -3,7 +3,7 @@ layout: default
 js-postload-files: 
   - /portfolio/assets/js/home.js
 ---
-{% assign headerTitle = site.data.content.main[header.title] %}
+{% assign headerTitle = site.data.content.main.header.title %}
 {% assign headerCopy = site.data.content.main.header.copy %}
 {%- include sections/logo-header.html title=headerTitle content=headerCopy link="#portfolio-main" -%}
 <div class="container">
