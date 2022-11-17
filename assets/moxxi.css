@@ -159,7 +159,6 @@ img { color: transparent; };
 }
 
 .bs-inner-hover {
-  cursor: pointer;
   -webkit-box-shadow: inset 0px 0px 10px 5px rgba(255,255,255,0.01); 
   box-shadow: inset 0px 0px 10px 5px rgba(255,255,255,0.01);
   transition: all 0.35s ease-in-out;
