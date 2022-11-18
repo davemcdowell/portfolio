@@ -3,15 +3,15 @@ main:
   header:
     title: Dave McDowell
     copy: >-
-      I'm a designer and developer from Seattle who loves making games and you've just found my portfolio—scroll down to see some of my work.
+      I'm a designer and developer from Seattle who loves making games and you've just found my portfolio<br>Scroll down to see some of my work.
   ender:
     title: Thanks for looking
     copy: >-
-      I hope you've enjoyed my work! Come back soon for updates or visit my <a href="/portfolio/blog/">blog</a>. You can also find me at...
+      I hope you've enjoyed my work! Check back soon or visit my <a href="/portfolio/blog/">blog</a> for more regular updates. You can find me at these places too...
   blog-callout:
     title: Blog
     copy: >-
-      Updates on current work and probably other stuff that's probably blogworthy, probably.
+      Updates on current work and probably other stuff that's probably blogworthy, probably
     links:
       - url: "/blog/"
         label: View Blog
@@ -20,8 +20,21 @@ main:
   download-callout:
     title: Downloads
     copy: >-
-      A collection of odds and ends for your downloading pleasure.
+      A collection of odds and ends for your downloading pleasure
     links:
       - url: "/downloads/"
         label: Downloads
+  double-callout:
+    - title: About
+      copy: >-
+        A little more about myself and my background, it's about time
+      links:
+        - url: "/about/"
+          label: About
+    - title: Top 100 Levels
+      copy: >-
+        An on-going effort to figure out my top 100 levels and what's so great about them
+      links:
+        - url: ~
+          label: Top 100
 ---
