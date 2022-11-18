@@ -538,8 +538,6 @@ img { color: transparent; };
 }
 
 /* project-card */
-.project-card { min-height: 372px; }
-
 .project-card img:not(.project-avatar) {
   height: 296px;
 }
