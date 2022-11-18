@@ -18,7 +18,7 @@ js-postload-files:
             {% assign dlCopy = site.data.content.main.download-callout.copy %}
             {% assign dlLinks = site.data.content.main.download-callout.links %}
             {% assign dlBG =  '/assets/images/downloads-bg.png' | relative_url %}
-            {%- include snippets/callout.html title=dlTitle content=dlCopy links=dlLinks img-src=dlBG -%}
+            {%- include snippets/callout.html title=dlTitle content=dlCopy links=dlLinks img-src=dlBG display-options="repeat center center" -%}
         </div>
     </div>
 </div>
