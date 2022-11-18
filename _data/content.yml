@@ -11,7 +11,7 @@ main:
   blog-callout:
     title: Blog
     copy: >-
-      Updates on current work and probably other stuff that's probably blog-worthy, probably.
+      Updates on current work and probably other stuff that's probably blogworthy, probably.
     links:
       - url: "/blog/"
         label: View Blog
