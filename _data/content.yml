@@ -3,11 +3,11 @@ main:
   header:
     title: Dave McDowell
     copy: >-
-      I'm a designer and developer from Seattle who loves making games and you've just found my portfolio<br>Scroll down to see some of my work.
+      I'm a designer and developer from Seattle who loves making games, and you've just found my portfolio—scroll down to see some of my work.
   ender:
     title: Thanks for looking
     copy: >-
-      I hope you've enjoyed my work! Check back soon or visit my <a href="/portfolio/blog/">blog</a> for more regular updates. You can find me at these places too...
+      I hope you've enjoyed my work! Check back soon or visit my <a href="/portfolio/blog/">blog</a> for more regular updates. You can also find me at these places below...
   blog-callout:
     title: Blog
     copy: >-
