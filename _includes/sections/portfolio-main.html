@@ -10,8 +10,8 @@
           <div class="slider-progress-bar"></div>
         </div>
         <div class="splide__arrows">
-          <button class="splide__arrow splide__arrow--prev btn-blur rounded bs-sm"><i class="bi bi-chevron-left shadow-text icon-2x"></i></button>
-          <button class="splide__arrow splide__arrow--next btn-blur rounded bs-sm"><i class="bi bi-chevron-right shadow-text icon-2x"></i></button>
+          <button class="splide__arrow splide__arrow--prev btn-blur rounded"><i class="bi bi-chevron-left shadow-text icon-2x"></i></button>
+          <button class="splide__arrow splide__arrow--next btn-blur rounded"><i class="bi bi-chevron-right shadow-text icon-2x"></i></button>
         </div>
         <div class="position-relative">
           <div class="splide__track">
@@ -24,7 +24,7 @@
                     {% assign mediaItems = item.media | where: "type", "image" %}
                     {%- for media in mediaItems limit: 2 -%}
                       {%- if forloop.first -%}
-                        <a class="cf-link-top" href="{{ item.url | relative_url }}"><img class="rounded" data-splide-lazy="{{ media.thumbnail }}" width="445" height="296" alt="{{ media.thumbnail_alt }}"></a>
+                        <a class="cf-link-top" href="{{ item.url | relative_url }}" disabled><img class="rounded" data-splide-lazy="{{ media.thumbnail }}" width="445" height="296" alt="{{ media.thumbnail_alt }}"></a>
                       {%- else -%}
                         <a class="cf-link-btm" href="{{ item.url | relative_url }}"><img class="rounded bs-sm" data-splide-lazy="{{ media.thumbnail }}" width="445" height="296" alt="{{ media.thumbnail_alt }}"></a>
                       {%- endif -%}
