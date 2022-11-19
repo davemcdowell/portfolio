@@ -57,6 +57,17 @@ a:visited { color: var(--card-border-hover-color); }
 main { padding-top: var(--navbar-offset); }
 img { color: transparent; };
 
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+  font-size: .875em;
+  border: 1px solid #1c1c1c;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
 /* navbar */
 .navbar {
   background-color: var(--bg-color-nav) !important;

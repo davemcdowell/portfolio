@@ -33,8 +33,10 @@ main:
           label: About
     - title: Top 100 Levels
       copy: >-
-        An on-going effort to figure out my top 100 levels and what's so great about them
+        An ongoing effort to figure out my top 100 levels and what's so great about them
       links:
         - url: ~
           label: Top 100
+about: 
+
 ---
