@@ -1,5 +1,5 @@
-<section id="dbl-callout-{{ include.title | strip_html | downcase }}">
-    <div class="container content-wrapper px-0  my-4 mx-auto">
+<section class="content-wrapper">
+    <div class="container px-0 my-4 mx-auto">
         {% assign callouts = include.callouts %}
         <div class="row">
             {% for callout in callouts limit: 2 %}
