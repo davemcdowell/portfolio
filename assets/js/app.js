@@ -1,4 +1,4 @@
-let app = function() {
+const app = function() {
     let isDarkMode = true;
 
     window.addEventListener('DOMContentLoaded', init);

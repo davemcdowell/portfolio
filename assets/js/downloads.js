@@ -1,4 +1,4 @@
-let downloads = (function () {
+const downloads = (function () {
   window.addEventListener("DOMContentLoaded", init);
 
   function init() {
