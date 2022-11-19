@@ -2,8 +2,8 @@
     <div class="callout highlight-border bs-inner-hover bs-sm mx-auto my-4 rounded">
         <div class="callout-bg" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('{{ include.img-src }}') {% if include.display-options %} {{ include.display-options }}{% else %} no-repeat center top{% endif %};"></div>
         <div class="callout-body">
-            <h3 class="display-6 shadow-text">{{ include.title | capitalize }}</h3>
-            <p class="lead shadow-text">{{ include.content }}</p>
+            <h3 class="display-6 shadow-text user-select-none">{{ include.title | capitalize }}</h3>
+            <p class="lead shadow-text user-select-none">{{ include.content }}</p>
             {% assign links = include.links %}
             {%- if links.size > 0 -%}
             {%- for link in links -%}
