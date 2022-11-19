@@ -12,7 +12,7 @@ js-postload-files:
             {% assign blogTitle = site.data.content.main.blog-callout.title %}
             {% assign blogCopy = site.data.content.main.blog-callout.copy %}
             {% assign blogLinks = site.data.content.main.blog-callout.links %}
-            {%- include snippets/callout.html title=blogTitle content=blogCopy links=blogLinks img-src="https://picsum.photos/1024/768?random=5" -%}
+            {%- include snippets/callout.html title=blogTitle content=blogCopy links=blogLinks image="https://picsum.photos/1024/768?random=5" -%}
             {%- include sections/portfolio-main.html -%}
             {% assign dblCallout = site.data.content.main.double-callout %}
             {% assign dlTitle = site.data.content.main.download-callout.title %}
@@ -20,7 +20,7 @@ js-postload-files:
             {% assign dlLinks = site.data.content.main.download-callout.links %}
             {% assign dlBG =  '/assets/images/downloads-bg.png' | relative_url %}
             {%- include snippets/double-callout.html callouts=dblCallout -%}
-            {%- include snippets/callout.html title=dlTitle content=dlCopy links=dlLinks img-src=dlBG display-options="repeat center" -%}
+            {%- include snippets/callout.html title=dlTitle content=dlCopy links=dlLinks image=dlBG display-options="repeat center" -%}
         </div>
     </div>
 </div>
