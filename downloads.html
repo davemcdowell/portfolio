@@ -5,7 +5,9 @@ permalink: /downloads/
 js-postload-files: 
   - /portfolio/assets/js/downloads.js
 ---
-{%- include sections/header.html title="Downloads" content="Everybody loves free stuff, below is a collection of downloadable things—ranging from maps, games, old articles and more." link="#downloads-main" -%}
+{% assign headerTitle = site.data.content.downloads.ender.title %}
+{% assign headerCopy = site.data.content.downloads.ender.copy %}
+{%- include sections/header.html title=headerTitle content=headerCopy link="#downloads-main" -%}
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-10 col-lg-offset-1">
@@ -44,5 +46,7 @@ js-postload-files:
         </div>
     </div>
 </div>
-{%- include sections/ender.html title="That's it" content="That's about it for downloads ¯\_ (ツ)_/¯<br> there's always these places below." -%}
+{% assign enderTitle = site.data.content.downloads.ender.title %}
+{% assign enderCopy = site.data.content.downloads.ender.copy %}
+{%- include sections/ender.html title=enderTitle content=enderCopy -%}
 {%- include sections/contact.html -%}

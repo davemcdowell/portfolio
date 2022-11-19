@@ -41,4 +41,13 @@ main:
       links:
         - url: ~
           label: Top 100
+downloads:
+  header:
+    title: Downloads
+    copy: >-
+      Everybody loves free stuff, below is a collection of downloadable things—ranging from maps, games, old articles and more.
+  ender:
+    title: That's it
+    copy: >-
+      That's about it for downloads ¯\_ (ツ)_/¯<br> there's always these places below.
 ---
