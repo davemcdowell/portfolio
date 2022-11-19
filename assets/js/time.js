@@ -1,4 +1,4 @@
-let time = function() {
+const time = function() {
     window.addEventListener('DOMContentLoaded', init);
 
     function init() {

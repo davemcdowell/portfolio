@@ -1,4 +1,4 @@
-let gallery = function() {
+const gallery = function() {
     window.addEventListener('DOMContentLoaded', init);
 
     function init() {

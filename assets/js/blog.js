@@ -1,4 +1,4 @@
-let blog = function() {
+const blog = function() {
     window.addEventListener('DOMContentLoaded', init);
 
     function init() {

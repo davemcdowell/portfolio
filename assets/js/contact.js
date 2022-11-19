@@ -1,4 +1,4 @@
-let contact = function() {
+const contact = function() {
     window.addEventListener('DOMContentLoaded', init);
 
     function init() {
