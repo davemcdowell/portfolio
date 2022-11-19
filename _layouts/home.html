@@ -14,10 +14,12 @@ js-postload-files:
             {% assign blogLinks = site.data.content.main.blog-callout.links %}
             {%- include snippets/callout.html title=blogTitle content=blogCopy links=blogLinks img-src="https://picsum.photos/1024/768?random=5" -%}
             {%- include sections/portfolio-main.html -%}
+            {% assign dblCallout = site.data.content.main.double-callout %}
             {% assign dlTitle = site.data.content.main.download-callout.title %}
             {% assign dlCopy = site.data.content.main.download-callout.copy %}
             {% assign dlLinks = site.data.content.main.download-callout.links %}
             {% assign dlBG =  '/assets/images/downloads-bg.png' | relative_url %}
+            {%- include snippets/double-callout.html callouts=dblCallout -%}
             {%- include snippets/callout.html title=dlTitle content=dlCopy links=dlLinks img-src=dlBG display-options="repeat center center" -%}
         </div>
     </div>
