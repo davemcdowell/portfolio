@@ -4,7 +4,7 @@
         <div class="row">
             {% for callout in callouts limit: 2 %}
             {% assign links = callout.links %}
-            <div class="col-md-6">
+            <div class="col-md-6 mb-0 mb-sm-4">
                 <div class="callout h-100 rounded highlight-border bs-inner-hover bs-sm">
                     <div class="callout-bg" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('{{ callout.image }}') {% if callout.display-options %} {{ callout.display-options }}{% else %} no-repeat center top{% endif %};"></div>
                     <div class="callout-body">
