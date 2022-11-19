@@ -55,10 +55,10 @@ a:visited { color: var(--card-border-hover-color); }
 main { padding-top: var(--navbar-offset); }
 img { color: transparent; };
 
-pre code {
-  border: 1px solid #1c1c1c;
-  border-radius: 5px;
-  padding: 1rem;
+pre {
+  border: 1px solid #1c1c1c !important;
+  border-radius: 5px !important;
+  padding: 1rem !important;
 }
 
 /* navbar */
