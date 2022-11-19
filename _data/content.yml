@@ -27,6 +27,7 @@ main:
   double-callout:
     - title: About
       imgage: https://picsum.photos/1024/768?random=8
+      display-options: ~
       copy: >-
         A little more about myself and my background, it's about time
       links:
@@ -34,6 +35,7 @@ main:
           label: About
     - title: Top 100 Levels
       imgage: https://picsum.photos/1024/768?random=9
+      display-options: ~
       copy: >-
         An ongoing effort to figure out my top 100 levels and what's so great about them
       links:
