@@ -1,10 +1,10 @@
 <section id="dbl-callout-{{ include.title | strip_html | downcase | slugify }}">
-    <div class="container content-wrapper px-0 mx-auto">
+    <div class="container content-wrapper px-0  my-4 mx-auto">
         {% assign callouts = include.callouts %}
         <div class="row">
             {% for callout in callouts limit: 2 %}
             <div class="col-md-6">
-                <div class="callout rounded h-100 highlight-border bs-inner-hover bs-sm my-4">
+                <div class="callout rounded highlight-border bs-inner-hover bs-sm">
                     <div class="callout-bg" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('{{ callout.image }}') {% if callout.display-options %} {{ callout.display-options }}{% else %} no-repeat center top{% endif %};"></div>
                     <div class="callout-body">
                         <h3 class="display-6 shadow-text user-select-none">{{ callout.title }}</h3>
