@@ -1,4 +1,20 @@
 <section class="content-wrapper mx-auto">
+    <div class="card highlight-border bs-inner-hover bs-sm">
+        <img src="..." class="card-img" alt="...">
+        <div class="card-img-overlay" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('{{ include.img-src }}') {% if include.display-options %} {{ include.display-options }}{% else %} no-repeat center top{% endif %};">
+          <h5 class="card-title">{{ include.title | capitalize }}</h5>
+          <p class="card-text">{{ include.content }}</p>
+          {% assign links = include.links %}
+          {%- if links.size > 0 -%}
+          {%- for link in links -%}
+          <a href="{{ link.url | relative_url }}" class="btn btn-blur{% if links.size == 1 %} stretched-link{% endif %}{% unless forloop.last %} me-2{% endunless %}">{{ link.label }}</a>
+          {%- endfor -%}
+          {%- endif -%}
+        </div>
+      </div>
+</section>
+{% comment %}
+<section class="content-wrapper mx-auto">
     <div class="callout highlight-border bs-inner-hover bs-sm my-4 rounded">
         <div class="callout-bg" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('{{ include.img-src }}') {% if include.display-options %} {{ include.display-options }}{% else %} no-repeat center top{% endif %};"></div>
         <div class="callout-body">
@@ -13,3 +29,4 @@
         </div>
     </div>
 </section>
+{% endcomment %}
