@@ -379,8 +379,8 @@ pre {
 /* callout */
 .callout {
   position: relative;
-  max-width: 950px;
-  margin: 1rem auto 4rem auto;
+  /*max-width: 950px;*/
+  /*margin: 1rem auto 4rem auto;*/
   color: var(--lighter-type-color); 
   border: 1px solid var(--bg-color-offset);
   overflow: hidden;
