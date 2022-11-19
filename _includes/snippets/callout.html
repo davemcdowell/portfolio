@@ -1,7 +1,7 @@
 <section class="content-wrapper mx-auto">
     <div class="card highlight-border bs-inner-hover bs-sm">
-        <img src="..." class="card-img" alt="...">
-        <div class="card-img-overlay" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('{{ include.img-src }}') {% if include.display-options %} {{ include.display-options }}{% else %} no-repeat center top{% endif %};">
+        <img src="{{ include.image }}" class="card-img" alt="...">
+        <div class="card-img-overlay" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)) {% if include.display-options %} {{ include.display-options }}{% else %} no-repeat center top{% endif %};">
           <h5 class="card-title shadow-text user-select-none">{{ include.title | capitalize }}</h5>
           <p class="card-text lead shadow-text user-select-none">{{ include.content }}</p>
           {% assign links = include.links %}
