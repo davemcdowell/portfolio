@@ -7,7 +7,7 @@
                 <div class="callout rounded highlight-border bs-inner-hover bs-sm my-4">
                     <div class="callout-bg" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('{{ callout.image }}') {% if callout.display-options %} {{ callout.display-options }}{% else %} no-repeat center top{% endif %};"></div>
                     <div class="callout-body">
-                        <h3 class="display-6 shadow-text">{{ callout.title | capitalize }}</h3>
+                        <h3 class="display-6 shadow-text">{{ callout.title }}</h3>
                         <p class="lead shadow-text">{{ callout.copy }}</p>
                         {% assign links = callout.links %}
                         {%- if links.size > 0 -%}
