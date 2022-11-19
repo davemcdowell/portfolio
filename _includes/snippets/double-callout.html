@@ -3,16 +3,16 @@
         {% assign callouts = include.callouts %}
         <div class="row">
             {% for callout in callouts limit: 2 %}
+            {% assign links = callout.links %}
             <div class="col-md-6">
                 <div class="callout rounded highlight-border bs-inner-hover bs-sm">
                     <div class="callout-bg" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('{{ callout.image }}') {% if callout.display-options %} {{ callout.display-options }}{% else %} no-repeat center top{% endif %};"></div>
                     <div class="callout-body">
-                        <h3 class="display-6 shadow-text user-select-none">{{ callout.title }}</h3>
+                        <h3 class="display-6 shadow-text user-select-none"><a href="{{ links[0].url }}" class="stretched-link">{{ callout.title }}</a></h3>
                         <p class="lead shadow-text user-select-none">{{ callout.copy }}</p>
-                        {% assign links = callout.links %}
                         {%- if links.size > 0 -%}
                         {%- for link in links -%}
-                        <a href="{{ link.url | relative_url }}" class="btn btn-blur{% if links.size == 1 %} stretched-link{% endif %}{% unless forloop.last %} me-2{% endunless %}">{{ link.label }}</a>
+                        <a href="{{ link.url | relative_url }}" class="btn btn-blur{% unless forloop.last %} me-2{% endunless %}">{{ link.label }}</a>
                         {%- endfor -%}
                         {%- endif -%}
                     </div>
