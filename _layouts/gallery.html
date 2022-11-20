@@ -33,18 +33,20 @@ css-files:
                     <hr class="block-label-hr">
                     <section id="main-slide" class="main-slider splide" aria-label="Gallery main slide">
                         <div class="splide__track">
-                            <ul class="splide__list">
-                                {%- for vid in videos -%}
-                                <li class="splide__slide" data-splide-youtube="{{ vid.src }}">
-                                    <img src="{{ vid.src }}" class="rounded bs-sm" alt="{{ vid.src_alt }}">
-                                </li>
-                                {%- endfor -%}
-                                {%- for img in images -%}
-                                <li class="splide__slide">
-                                    <img src="{{ img.src }}" class="rounded bs-sm" alt="{{ img.alt }}">
-                                </li>
-                                {%- endfor -%}
-                            </ul>
+                            <div style="overflow-y:visible;">
+                                <ul class="splide__list">
+                                    {%- for vid in videos -%}
+                                    <li class="splide__slide" data-splide-youtube="{{ vid.src }}">
+                                        <img src="{{ vid.src }}" class="rounded bs-sm" alt="{{ vid.src_alt }}">
+                                    </li>
+                                    {%- endfor -%}
+                                    {%- for img in images -%}
+                                    <li class="splide__slide">
+                                        <img src="{{ img.src }}" class="rounded bs-sm" alt="{{ img.alt }}">
+                                    </li>
+                                    {%- endfor -%}
+                                </ul>
+                            </div>
                         </div>
                     </section>
                     <section id="thumbnail-slide" class="gallery-slider splide" aria-label="Gallery thumbnail slide">
