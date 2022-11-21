@@ -9,17 +9,15 @@ js-postload-files:
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-10 col-lg-offset-1">
-            {% assign blogTitle = site.data.content.main.blog-callout.title %}
-            {% assign blogCopy = site.data.content.main.blog-callout.copy %}
-            {% assign blogLinks = site.data.content.main.blog-callout.links %}
+            {% assign blogCallout = site.data.content.main.blog-callout %}
             {%- include snippets/callout.html title=blogTitle content=blogCopy links=blogLinks image="https://picsum.photos/1024/768?random=5" -%}
+            
             {%- include sections/portfolio-main.html -%}
+
             {% assign dblCallout = site.data.content.main.double-callout %}
-            {% assign dlTitle = site.data.content.main.download-callout.title %}
-            {% assign dlCopy = site.data.content.main.download-callout.copy %}
-            {% assign dlLinks = site.data.content.main.download-callout.links %}
-            {% assign dlBG =  '/assets/images/downloads/downloads-bg.png' | relative_url %}
             {%- include snippets/double-callout.html callouts=dblCallout -%}
+
+            {% assign dlCallout = site.data.content.main.download-callout %}
             {%- include snippets/callout.html title=dlTitle content=dlCopy links=dlLinks image=dlBG display-options="repeat center" -%}
         </div>
     </div>

@@ -4,10 +4,12 @@ main:
     title: Dave McDowell
     copy: >-
       I'm a designer and developer from Seattle who loves making games, and you've just found my portfolio—scroll down to see some of my work.
+    link: ~
   ender:
     title: Thanks for looking
     copy: >-
       I hope you've enjoyed my work! Check back soon or visit my <a href="/portfolio/blog/">blog</a> for more regular updates. You can also find me at these places below...
+    link: "#top"
   blog-callout:
     title: Blog
     copy: >-
@@ -46,8 +48,10 @@ downloads:
     title: Downloads
     copy: >-
       Everybody loves free stuff, below is a collection of downloadable things—ranging from maps, games, old articles and more.
+    link: ~
   ender:
     title: That's it
     copy: >-
       That's about it for downloads ¯\_ (ツ)_/¯<br> there's always these places below.
+    link: "#top"
 ---

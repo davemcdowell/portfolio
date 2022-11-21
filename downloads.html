@@ -5,9 +5,8 @@ permalink: /downloads/
 js-postload-files: 
   - /portfolio/assets/js/downloads.js
 ---
-{% assign headerTitle = site.data.content.downloads.header.title %}
-{% assign headerCopy = site.data.content.downloads.header.copy %}
-{%- include sections/header.html title=headerTitle content=headerCopy link="#downloads-main" -%}
+{% assign headerData = site.data.content.downloads.header %}
+{%- include sections/header.html data=headerData -%}
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-10 col-lg-offset-1">
@@ -36,7 +35,7 @@ js-postload-files:
                         <hr>
                         <div class="clearfix">
                           {%- if item.image -%}
-                          <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" class="rounded bs-sm float-start ms-0 me-2 mb-2 mt-2 dl-image" width="128">
+                          <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" class="rounded bs-sm float-start ms-0 me-2 mb-2 mt-2 dl-image" width="128" height="74">
                           {%- endif -%}
                           <p>{{ item.description }}</p>
                         </div>
@@ -51,7 +50,6 @@ js-postload-files:
         </div>
     </div>
 </div>
-{% assign enderTitle = site.data.content.downloads.ender.title %}
-{% assign enderCopy = site.data.content.downloads.ender.copy %}
-{%- include sections/ender.html title=enderTitle content=enderCopy -%}
+{% assign enderData = site.data.content.downloads.ender %}
+{%- include sections/ender.html data=enderData -%}
 {%- include sections/contact.html -%}

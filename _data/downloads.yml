@@ -74,6 +74,8 @@ files:
     items:
       - title: "Firearms: Source"
         sub-title: 2.02 Alpha Client
+        image: /assets/images/downloads/fa-client.png
+        image_alt: "Firearms: Source client background graphic"
         icon: bi bi-file-earmark-zip
         url: http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_202_Alpha_Full_Client.zip
         date: ~
@@ -84,6 +86,8 @@ files:
           This is an official file from Venom Game Labs, LLC.
       - title: "Firearms: Source"
         sub-title: 2.02 Alpha Server
+        image: /assets/images/downloads/fa-server.png
+        image_alt: "Firearms: Source server background graphic"
         icon: bi bi-file-earmark-zip
         url: http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_202_Alpha_Full_Windows_Server.zip
         date: ~
@@ -94,6 +98,8 @@ files:
           This is an official file from Venom Game Labs, LLC.
       - title: "Firearms: Source"
         sub-title: "2.01 to 2.02 Client Patch"
+        image: /assets/images/downloads/fa-client.png
+        image_alt: "Firearms: Source client background graphic"
         icon: bi bi-file-earmark-zip
         url: http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_Alpha_201-202_Client_Patch.zip
         date: ~
@@ -104,6 +110,8 @@ files:
           This is an official file from Venom Game Labs, LLC.
       - title: "Firearms: Source"
         sub-title: "2.01 to 2.02 Server Patch"
+        image: /assets/images/downloads/fa-server.png
+        image_alt: "Firearms: Source server background graphic"
         icon: bi bi-file-earmark-zip
         url: http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_Alpha_201-202_Server_Patch.zip
         date: ~

@@ -1,9 +1,9 @@
 <section class="jumbotron small text-center">
     <div class="container">
-        <p><a class="hvr-float" href="#top" title="Scroll Up" rel="noopener"><i class="bi bi-chevron-compact-up icon-3x"></i></a></p>
-        <h1 class="jumbotron-heading"><strong>{{ include.title }}</strong></h1>
+        <p><a class="hvr-float" href="{{ include.data.link }}" title="Scroll Up" rel="noopener"><i class="bi bi-chevron-compact-up icon-3x"></i></a></p>
+        <h1 class="jumbotron-heading"><strong>{{ include.data.title }}</strong></h1>
         <p class="lead text-muted">
-            {{ include.content }}
+            {{ include.data.content }}
         </p>
         <ul class="list-inline social-list">
             <li class="list-inline-item me-4">
