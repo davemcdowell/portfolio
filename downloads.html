@@ -34,13 +34,9 @@ js-postload-files:
                     <div class="collapse" id="{{ download.group | downcase }}-clp-{{ forloop.index }}">
                       <div class="card-body">
                         <hr>
-                        <div class="d-flex">
-                          <div class="flex-shrink-0">
-                            <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" width="48">
-                          </div>
-                          <div class="flex-grow-1 ms-2">
-                            {{ item.description }}
-                          </div>
+                        <div class="clearfix">
+                          <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" class="float-start m-2" width="48">
+                          <p>{{ item.description }}</p>
                         </div>
                       </div>
                     </div>
