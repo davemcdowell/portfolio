@@ -35,7 +35,9 @@ js-postload-files:
                       <div class="card-body">
                         <hr>
                         <div class="clearfix">
+                          {%- if item.image -%}
                           <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" class="rounded bs-sm float-start ms-0 me-2 mb-2 mt-2 dl-image" width="128">
+                          {%- endif -%}
                           <p>{{ item.description }}</p>
                         </div>
                       </div>

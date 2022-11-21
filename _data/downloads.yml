@@ -25,6 +25,8 @@ files:
           </figure>
       - title: PCGamer GOTY Edition
         sub-title: Firearms Opinion
+        image: /assets/images/downloads/fa-2.png
+        image_alt: Screenshot of Firearms 1
         icon: bi bi-filetype-pdf
         url: http://dcmcdowell.com/downloads/pcgamer2.pdf
         date: March 2001
