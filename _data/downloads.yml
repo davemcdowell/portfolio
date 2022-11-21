@@ -68,7 +68,7 @@ files:
         md5: ~
         version: "2.02 Client Patch"
         description: >-
-          This patch updates the client files for Firearms: Source 2.01 to 2.02. If you're just playing FA:S `2.01` and want to join servers using FA:S 2.02 or just want the latest official patch, you'll need this file.
+          This patch updates the client files for Firearms: Source 2.01 to 2.02. If you're just playing FA:S 2.01 and want to join servers using FA:S 2.02 or just want the latest official patch, you'll need this file.
           This is an official file from Venom Game Labs, LLC.
       - title: "Firearms: Source"
         sub-title: "2.01 to 2.02 Server Patch"
