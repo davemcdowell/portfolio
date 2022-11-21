@@ -4,7 +4,8 @@ files:
     items:
       - title: PCGamer GOTY Edition
         sub-title: Firearms Best Mod
-        thumbnail: /assets/images/downloads/fa-1.png
+        image: /assets/images/downloads/fa-1.png
+        image_alt: Screenshot of Firearms 1
         icon: bi bi-filetype-pdf
         url: http://dcmcdowell.com/downloads/pcgamer1.pdf
         date: March 2001
