@@ -9,7 +9,7 @@ files:
         icon: bi bi-filetype-pdf
         url: "http://dcmcdowell.com/downloads/pcgamer1.pdf"
         date: March 2001
-        size:
+        size: "5.95 MB"
         md5: ~
         version: ~
         description: >-
@@ -31,7 +31,7 @@ files:
         icon: bi bi-filetype-pdf
         url: "http://dcmcdowell.com/downloads/pcgamer2.pdf"
         date: March 2001
-        size:
+        size: "5.52 MB"
         md5: ~
         version: ~
         description: >-
@@ -56,7 +56,7 @@ files:
         icon: bi bi-filetype-pdf
         url: "http://dcmcdowell.com/downloads/pcgamer3.pdf"
         date: March 2001
-        size:
+        size: "6.46 MB"
         md5: ~
         version: ~
         description: >-
@@ -82,7 +82,7 @@ files:
         icon: bi bi-file-earmark-zip
         url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_202_Alpha_Full_Client.zip"
         date: ~
-        size:
+        size: "1.6 GB"
         md5: ~
         version: "2.02 Alpha Client"
         description: >-
@@ -99,11 +99,11 @@ files:
         icon: bi bi-file-earmark-zip
         url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_202_Alpha_Full_Windows_Server.zip"
         date: ~
-        size:
+        size: "354 MB"
         md5: ~
         version: "2.02 Alpha Server"
         description: >-
-          <p>The latest official Firearms: Source 2.02 Server files If you want to host your own FA:S server these are the files you'll need to get started.</p>
+          <p>The latest official Firearms: Source 2.02 Windows Server files If you want to host your own FA:S server these are the files you'll need to get started.</p>
           <h6 class="pt-2">Note:</h6>
           <ul>
             <li>Steam and Half-Life 2 are required to play this game</li>
@@ -116,7 +116,7 @@ files:
         icon: bi bi-file-earmark-zip
         url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_Alpha_201-202_Client_Patch.zip"
         date: ~
-        size:
+        size: "391 MB"
         md5: ~
         version: "2.02 Client Patch"
         description: >-
@@ -133,7 +133,7 @@ files:
         icon: bi bi-file-earmark-zip
         url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_Alpha_201-202_Server_Patch.zip"
         date: ~
-        size:
+        size: "128 MB"
         md5: ~
         version: "2.01 to 2.02 Server Patch"
         description: >-
