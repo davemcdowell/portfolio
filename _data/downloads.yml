@@ -5,7 +5,7 @@ files:
       - title: PCGamer GOTY Edition
         sub-title: Firearms Best Mod
         image: /assets/images/downloads/fa-1.png
-        image_alt: Screenshot of Firearms 1
+        image_alt: Screenshot of a player firing at another player in Firearms 1
         icon: bi bi-filetype-pdf
         url: http://dcmcdowell.com/downloads/pcgamer1.pdf
         date: March 2001
@@ -26,7 +26,7 @@ files:
       - title: PCGamer GOTY Edition
         sub-title: Firearms Opinion
         image: /assets/images/downloads/fa-2.png
-        image_alt: Screenshot of Firearms 1
+        image_alt: Screenshot of players parachuting on the map Iwo Jima in Firearms 1
         icon: bi bi-filetype-pdf
         url: http://dcmcdowell.com/downloads/pcgamer2.pdf
         date: March 2001
@@ -49,14 +49,27 @@ files:
           </figure>
       - title: PCGamer GOTY Edition
         sub-title: Firearms Letter
+        image: /assets/images/downloads/fa-3.png
+        image_alt: He may wield a wimpy gun, but Jeremy gets it done.
         icon: bi bi-filetype-pdf
         url: http://dcmcdowell.com/downloads/pcgamer3.pdf
         date: March 2001
         md5: ~
         version: ~
         description: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <p>The Letters to the Editor section from PCGamer March 2001 issue has some amusing letters from the time, one in particular is titled "That Boy Ain't Right" which the writer calls out PCGamers previews editor,
+          Jeremy Williams love of the "cheesy" AUG in Half-Life Firearms  - which is apparently a 42-round clipped, scoped, rifle for campers in their AK-47 loving opinion.</p>
+
+          <p>I'm still looking for the issue where Jeremy Williams mentions Firearms and his love for the AUG, I'll post it here when I find it.</p>
+          
+          <figure>
+            <blockquote class="blockquote">
+              <p><small><em>"He may wield a wimpy gun, but Jeremy gets it done."</em></small></p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+            Letters, PCGamer - <cite title="Source Title">March 2001</cite>
+            </figcaption>
+          </figure>
   - group: Games
     items:
       - title: "Firearms: Source"
