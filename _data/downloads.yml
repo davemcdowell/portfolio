@@ -7,7 +7,7 @@ files:
         image: /assets/images/downloads/fa-1.png
         image_alt: Screenshot of a player firing at another player in Firearms 1
         icon: bi bi-filetype-pdf
-        url: http://dcmcdowell.com/downloads/pcgamer1.pdf
+        url: "http://dcmcdowell.com/downloads/pcgamer1.pdf"
         date: March 2001
         md5: ~
         version: ~
@@ -28,7 +28,7 @@ files:
         image: /assets/images/downloads/fa-2.png
         image_alt: Screenshot of players parachuting on the map Iwo Jima in Firearms 1
         icon: bi bi-filetype-pdf
-        url: http://dcmcdowell.com/downloads/pcgamer2.pdf
+        url: "http://dcmcdowell.com/downloads/pcgamer2.pdf"
         date: March 2001
         md5: ~
         version: ~
@@ -52,7 +52,7 @@ files:
         image: /assets/images/downloads/fa-3.png
         image_alt: He may wield a wimpy gun, but Jeremy gets it done.
         icon: bi bi-filetype-pdf
-        url: http://dcmcdowell.com/downloads/pcgamer3.pdf
+        url: "http://dcmcdowell.com/downloads/pcgamer3.pdf"
         date: March 2001
         md5: ~
         version: ~
@@ -77,20 +77,23 @@ files:
         image: /assets/images/downloads/fa-client.png
         image_alt: "Firearms: Source client background graphic"
         icon: bi bi-file-earmark-zip
-        url: http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_202_Alpha_Full_Client.zip
+        url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_202_Alpha_Full_Client.zip"
         date: ~
         md5: ~
         version: "2.02 Alpha Client"
         description: >-
-          The latest official Firearms: Source 2.02 Client files. If you want to play the awesomeness that is Firearms, this file will make that happen.
-          This is an official file from Venom Game Labs, LLC.
+          <p>The latest official Firearms: Source 2.02 Client files. If you want to play the awesomeness that is Firearms: Source, this file will make that happen.</p>
+          <ul>
+            <li>Steam and Half-Life 2 are required to play this game<li>
+            <li>This is an official file from Venom Game Labs, LLC. - developers of Firearms: Source</li>
+          </ul>
       - title: "Firearms: Source"
         sub-title: 2.02 Alpha Server
         image: /assets/images/downloads/fa-server.png
         image_alt: "Firearms: Source server background graphic"
         icon: bi bi-file-earmark-zip
-        url: http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_202_Alpha_Full_Windows_Server.zip
-        date: ~
+        url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_202_Alpha_Full_Windows_Server.zip"
+        date: ~"
         md5: ~
         version: "2.02 Alpha Server"
         description: >-
@@ -101,24 +104,24 @@ files:
         image: /assets/images/downloads/fa-client.png
         image_alt: "Firearms: Source client background graphic"
         icon: bi bi-file-earmark-zip
-        url: http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_Alpha_201-202_Client_Patch.zip
+        url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_Alpha_201-202_Client_Patch.zip"
         date: ~
         md5: ~
         version: "2.02 Client Patch"
         description: >-
-          This patch updates the client files for Firearms: Source 2.01 to 2.02. If you're just playing FA:S 2.01 and want to join servers using FA:S 2.02 or just want the latest official patch, you'll need this file.
+          This official patch updates the client files for Firearms: Source 2.01 to 2.02. If you're just playing FA:S 2.01 and want to join servers using FA:S 2.02 or just want the latest official patch, you'll need this file.
           This is an official file from Venom Game Labs, LLC.
       - title: "Firearms: Source"
         sub-title: "2.01 to 2.02 Server Patch"
         image: /assets/images/downloads/fa-server.png
         image_alt: "Firearms: Source server background graphic"
         icon: bi bi-file-earmark-zip
-        url: http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_Alpha_201-202_Server_Patch.zip
+        url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_Alpha_201-202_Server_Patch.zip"
         date: ~
         md5: ~
         version: "2.01 to 2.02 Server Patch"
         description: >-
-          This patch updates the server files for Firearms: Source 2.01 to 2.02. If you're hosting your own FA:S 2.01 server that needs updating to 2.02 this file is for you. 
+          This official patch updates the server files for Firearms: Source 2.01 to 2.02. If you're hosting your own FA:S 2.01 server that needs updating to 2.02 this file is for you. 
           This is an official file from Venom Game Labs, LLC.
   - group: Links
     items:
