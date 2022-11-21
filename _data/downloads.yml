@@ -9,6 +9,7 @@ files:
         icon: bi bi-filetype-pdf
         url: "http://dcmcdowell.com/downloads/pcgamer1.pdf"
         date: March 2001
+        size:
         md5: ~
         version: ~
         description: >-
@@ -30,6 +31,7 @@ files:
         icon: bi bi-filetype-pdf
         url: "http://dcmcdowell.com/downloads/pcgamer2.pdf"
         date: March 2001
+        size:
         md5: ~
         version: ~
         description: >-
@@ -54,6 +56,7 @@ files:
         icon: bi bi-filetype-pdf
         url: "http://dcmcdowell.com/downloads/pcgamer3.pdf"
         date: March 2001
+        size:
         md5: ~
         version: ~
         description: >-
@@ -79,11 +82,12 @@ files:
         icon: bi bi-file-earmark-zip
         url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_202_Alpha_Full_Client.zip"
         date: ~
+        size:
         md5: ~
         version: "2.02 Alpha Client"
         description: >-
           <p>The latest official Firearms: Source 2.02 Client files. If you want to play the awesomeness that is Firearms: Source, this file will make that happen.</p>
-          <h6 class="pt-2">requirements:</h6>
+          <h6 class="pt-2">Note:</h6>
           <ul>
             <li>Steam and Half-Life 2 are required to play this game</li>
             <li>This is an official file from Venom Game Labs, LLC.</li>
@@ -94,12 +98,17 @@ files:
         image_alt: "Firearms: Source server background graphic"
         icon: bi bi-file-earmark-zip
         url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_202_Alpha_Full_Windows_Server.zip"
-        date: ~"
+        date: ~
+        size:
         md5: ~
         version: "2.02 Alpha Server"
         description: >-
-          The latest official Firearms: Source 2.02 Server files If you want to host your own FA:S server these are the files you'll need to get started.
-          This is an official file from Venom Game Labs, LLC.
+          <p>The latest official Firearms: Source 2.02 Server files If you want to host your own FA:S server these are the files you'll need to get started.</p>
+          <h6 class="pt-2">Note:</h6>
+          <ul>
+            <li>Steam and Half-Life 2 are required to play this game</li>
+            <li>This is an official file from Venom Game Labs, LLC.</li>
+          </ul>
       - title: "Firearms: Source"
         sub-title: "2.01 to 2.02 Client Patch"
         image: /assets/images/downloads/fa-client.png
@@ -107,11 +116,16 @@ files:
         icon: bi bi-file-earmark-zip
         url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_Alpha_201-202_Client_Patch.zip"
         date: ~
+        size:
         md5: ~
         version: "2.02 Client Patch"
         description: >-
-          This official patch updates the client files for Firearms: Source 2.01 to 2.02. If you're just playing FA:S 2.01 and want to join servers using FA:S 2.02 or just want the latest official patch, you'll need this file.
-          This is an official file from Venom Game Labs, LLC.
+          <p>This official patch updates the client files for Firearms: Source 2.01 to 2.02. If you're just playing FA:S 2.01 and want to join servers using FA:S 2.02 or just want the latest official patch, you'll need this file.</p>
+          <h6 class="pt-2">Note:</h6>
+          <ul>
+            <li>Steam and Half-Life 2 are required to play this game</li>
+            <li>This is an official file from Venom Game Labs, LLC.</li>
+          </ul>
       - title: "Firearms: Source"
         sub-title: "2.01 to 2.02 Server Patch"
         image: /assets/images/downloads/fa-server.png
@@ -119,11 +133,16 @@ files:
         icon: bi bi-file-earmark-zip
         url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_Alpha_201-202_Server_Patch.zip"
         date: ~
+        size:
         md5: ~
         version: "2.01 to 2.02 Server Patch"
         description: >-
-          This official patch updates the server files for Firearms: Source 2.01 to 2.02. If you're hosting your own FA:S 2.01 server that needs updating to 2.02 this file is for you. 
-          This is an official file from Venom Game Labs, LLC.
+          <p>This official patch updates the server files for Firearms: Source 2.01 to 2.02. If you're hosting your own FA:S 2.01 server that needs updating to 2.02 this file is for you.</p>
+          <h6 class="pt-2">Note:</h6>
+          <ul>
+            <li>Steam and Half-Life 2 are required to play this game</li>
+            <li>This is an official file from Venom Game Labs, LLC.</li>
+          </ul>
   - group: Links
     items:
       - label: ~ 
