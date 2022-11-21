@@ -84,9 +84,9 @@ files:
         description: >-
           <p>The latest official Firearms: Source 2.02 Client files. If you want to play the awesomeness that is Firearms: Source, this file will make that happen.</p>
           <h6 class="pt-2">requirements:</h6>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Steam and Half-Life 2 are required to play this game</li>
-            <li class="list-group-item">This is an official file from Venom Game Labs, LLC.</li>
+          <ul>
+            <li>Steam and Half-Life 2 are required to play this game</li>
+            <li>This is an official file from Venom Game Labs, LLC.</li>
           </ul>
       - title: "Firearms: Source"
         sub-title: 2.02 Alpha Server
