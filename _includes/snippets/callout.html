@@ -1,10 +1,10 @@
 <section class="content-wrapper mx-auto">
     <div class="callout highlight-border bs-inner-hover bs-sm my-4 rounded">
-        <div class="callout-bg" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('{{ include.image }}') {% if include.display-options %} {{ include.display-options }}{% else %} no-repeat center top{% endif %};"></div>
+        <div class="callout-bg" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('{{ include.data.image }}') {% if include.data.display-options %} {{ include.data.display-options }}{% else %} no-repeat center top{% endif %};"></div>
         <div class="callout-body">
-            <h3 class="display-6 shadow-text user-select-none">{{ include.title | capitalize }}</h3>
-            <p class="lead shadow-text user-select-none">{{ include.content }}</p>
-            {% assign links = include.links %}
+            <h3 class="display-6 shadow-text user-select-none">{{ include.data.title | capitalize }}</h3>
+            <p class="lead shadow-text user-select-none">{{ include.data.copy }}</p>
+            {% assign links = include.data.links %}
             {%- if links.size > 0 -%}
             {%- for link in links -%}
             <a href="{{ link.url | relative_url }}" class="btn btn-blur{% if links.size == 1 %} stretched-link{% endif %}{% unless forloop.last %} me-2{% endunless %}">{{ link.label }}</a>

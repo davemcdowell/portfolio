@@ -3,9 +3,8 @@ layout: default
 js-postload-files: 
   - /portfolio/assets/js/home.js
 ---
-{% assign headerTitle = site.data.content.main.header.title %}
-{% assign headerCopy = site.data.content.main.header.copy %}
-{%- include sections/logo-header.html title=headerTitle content=headerCopy link="#portfolio-main" -%}
+{% assign headerData = site.data.content.main.header %}
+{%- include sections/logo-header.html data=headerData -%}
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-10 col-lg-offset-1">
