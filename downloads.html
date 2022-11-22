@@ -41,20 +41,20 @@ js-postload-files:
                           <p>{{ item.description }}</p>
                           {%- endif -%}
                         </div>
-                        <div class="border rounded my-2 p-2">
+                        <div class="border rounded fw-light font-monospace my-2 p-2">
                           {%- if item.file-type -%}
-                          <p>Filetype: {{ item.file-type }}</p>
+                          <p><small>Filetype: {{ item.file-type }}</small></p>
                           {%- endif -%}
                           {%- if item.md5 -%}
-                          <p>MD5: {{ item.md5 }}</p>
+                          <p><small>MD5: {{ item.md5 }}</small></p>
                           {%- endif -%}
+                          {%- if item.notes.size > 0 -%}
                           <ul class="list-group list-group-flush text-muted">
-                            {%- if item.notes.size > 0 -%}
                             {%- for note in item.notes -%}
                             <li class="list-group-item bg-transparent">{{ note }}</li>
                             {%- endfor -%}
-                            {%- endif -%}
                           </ul>
+                          {%- endif -%}
                         </div>
                       </div>
                     </div>
