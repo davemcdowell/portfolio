@@ -39,13 +39,13 @@ js-postload-files:
                           {%- endif -%}
                           <p>{{ item.description }}</p>
                         </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item bg-transparent txt-color-default">
+                            {{ item.md5 }}
+                          </li>
+                        </ul>
                       </div>
                     </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item bg-transparent txt-color-default">
-                        {{ item.md5 }}
-                      </li>
-                    </ul>
                   </li>
                 {%- endfor -%}
                 </ul>
