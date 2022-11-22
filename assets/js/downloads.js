@@ -11,7 +11,7 @@ const downloads = (function () {
     fileSizeCalls.map(function(fileSizeCall) {
       let fileUrl = fileSizeCall.href;
       let fileSize = getFileSize(fileUrl);
-      fileSizeCall.innerText = formatBytes(fileSize);
+      //fileSizeCall.innerText = formatBytes(fileSize);
     });
   }
 
