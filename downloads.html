@@ -35,7 +35,7 @@ js-postload-files:
                         <hr>
                         <div class="clearfix">
                           {%- if item.image -%}
-                          <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" class="rounded bs-sm float-start ms-0 me-2 mb-2 mt-2 dl-image" width="128" height="74">
+                          <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" class="rounded bs-sm float-start ms-0 me-2 mb-2 mt-2" width="128" height="74">
                           {%- endif -%}
                           {%- if item.description -%}
                           <p>{{ item.description }}</p>
@@ -51,7 +51,7 @@ js-postload-files:
                           <p class="m-0 p-0">Filesize: {{ item.size }}</p>
                           {%- endif -%}
                           {%- if item.md5 -%}
-                          <p class="m-0 p-0" data-copy-paste>MD5:<span class="user-select-all">{{ item.md5 }}</span></p>
+                          <p class="m-0 p-0">MD5:<span class="user-select-all" data-copy-paste>{{ item.md5 }}</span></p>
                           {%- endif -%}
                           {%- if item.notes.size > 0 -%}
                           <p class="mt-2 mb-0">---<br>Notes:</p>
