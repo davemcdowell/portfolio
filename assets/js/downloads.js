@@ -3,7 +3,8 @@ const downloads = (function () {
 
   function init() {
     console.log("--      downloads.js initiated");
-    setFileSizes();
+    setFileNames();
+    //setFileSizes();
   }
 
   function setFileSizes() {
@@ -11,7 +12,7 @@ const downloads = (function () {
     fileSizeCalls.map(function(fileSizeCall) {
       let fileUrl = fileSizeCall.href;
       let fileSize = getFileSize(fileUrl);
-      //fileSizeCall.innerText = formatBytes(fileSize);
+      fileSizeCall.innerText = formatBytes(fileSize);
     });
   }
 
@@ -23,7 +24,7 @@ const downloads = (function () {
       if(this.readyState == this.DONE) {
         if(this.status === 200) {
           fileSize = this.getResponseHeader("content-length");
-          console.log("fileSize = " + fileSize);
+          console.log("fileSize: " + fileSize);
           return fileSize;
         }
       }
@@ -42,5 +43,18 @@ const downloads = (function () {
     const i = Math.floor(Math.log(bytes) / Math.log(k))
 
     return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`
-}
+  }
+
+  function setFileNames() {
+    let fileNameCalls = [].slice.call(document.querySelectorAll('[data-file-name]'));
+    fileNameCalls.map(function(fileNameCall) {
+      let fileUrl = fileSizeCall.href;
+      fileNameCall.innerText = getFileName(fileUrl);
+    });
+  }
+
+  function getFileName(fileString) {
+    let lastIndex = fileString.lastIndexOf('/');
+    return str.substring(lastIndex + 1);
+  }
 })();

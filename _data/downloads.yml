@@ -7,6 +7,7 @@ files:
         image: /assets/images/downloads/fa-1.png
         image_alt: Screenshot of a player firing at another player in Firearms 1
         icon: bi bi-filetype-pdf
+        file-type: .pdf
         url: "http://dcmcdowell.com/downloads/pcgamer1.pdf"
         date: March 2001
         size: "5.95 MB"
@@ -29,6 +30,7 @@ files:
         image: /assets/images/downloads/fa-2.png
         image_alt: Screenshot of players parachuting on the map Iwo Jima in Firearms 1
         icon: bi bi-filetype-pdf
+        file-type: .pdf
         url: "http://dcmcdowell.com/downloads/pcgamer2.pdf"
         date: March 2001
         size: "5.52 MB"
@@ -54,6 +56,7 @@ files:
         image: /assets/images/downloads/fa-3.png
         image_alt: He may wield a wimpy gun, but Jeremy gets it done.
         icon: bi bi-filetype-pdf
+        file-type: .pdf
         url: "http://dcmcdowell.com/downloads/pcgamer3.pdf"
         date: March 2001
         size: "6.46 MB"
@@ -80,6 +83,7 @@ files:
         image: /assets/images/downloads/fa-client.png
         image_alt: "Firearms: Source client background graphic"
         icon: bi bi-file-earmark-zip
+        file-type: .zip
         url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_202_Alpha_Full_Client.zip"
         date: ~
         size: "1.6 GB"
@@ -95,6 +99,7 @@ files:
         image: /assets/images/downloads/fa-server.png
         image_alt: "Firearms: Source server background graphic"
         icon: bi bi-file-earmark-zip
+        file-type: .zip
         url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_202_Alpha_Full_Windows_Server.zip"
         date: ~
         size: "354 MB"
@@ -110,6 +115,7 @@ files:
         image: /assets/images/downloads/fa-client.png
         image_alt: "Firearms: Source client background graphic"
         icon: bi bi-file-earmark-zip
+        file-type: .zip
         url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_Alpha_201-202_Client_Patch.zip"
         date: ~
         size: "391 MB"
@@ -125,6 +131,7 @@ files:
         image: /assets/images/downloads/fa-server.png
         image_alt: "Firearms: Source server background graphic"
         icon: bi bi-file-earmark-zip
+        file-type: .zip
         url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_Alpha_201-202_Server_Patch.zip"
         date: ~
         size: "128 MB"
@@ -142,7 +149,8 @@ files:
         image:  /assets/images/downloads/bridge-ahead.png
         image_alt: screenshot from bridge ahead
         icon: bi bi-file-earmark
-        url: ~
+        file-type: .scm
+        url: "/starcraft/(2)BridgeAhead.scm"
         date: June 2017
         size: 124 KB
         md5: C4E11F16B8A5986801123C3E9DF5FD88
@@ -156,7 +164,8 @@ files:
         image: /assets/images/downloads/frozen-chosen.png
         image_alt: screenshot from frozen chozen
         icon: bi bi-file-earmark
-        url: ~
+        file-type: .scx
+        url: "/starcraft/(2)FrozenChosen.scx"
         date: June 2017
         size: 72 KB
         md5: 7EA808BA25F5FF1D1087DBDFEBBA496D
@@ -170,7 +179,8 @@ files:
         image: /assets/images/downloads/morningstar.png
         image_alt: screenshot from morningstar
         icon: bi bi-file-earmark
-        url: ~
+        file-type: .scx
+        url: "/starcraft/(2)Morningstar.scx"
         date: June 2017
         size: 76 KB
         md5: 3F1FDC18D14CE701F8C49B873F036E96
@@ -184,7 +194,8 @@ files:
         image: /assets/images/downloads/maddening-brook.png
         image_alt: screenshot from maddening brook
         icon: bi bi-file-earmark
-        url: ~
+        file-type: .scx
+        url: "/starcraft/(4)MaddeningBrook.scx"
         date: June 2017
         size: 52 KB
         md5: 359490EF41DE00704E1687D56F1D616C
@@ -198,7 +209,8 @@ files:
         image: /assets/images/downloads/pyromancy.png
         image_alt: screenshot from pyromancy
         icon: bi bi-file-earmark
-        url: ~
+        file-type: .scm
+        url: "/starcraft/(4)Pyromancy.scm"
         date: June 2017
         size: 64 KB
         md5: 05B9D4D717D038F7CDB3EE84C0575BB5
@@ -212,7 +224,8 @@ files:
         image: /assets/images/downloads/razed-jungle.png
         image_alt: screenshot from razed jungle
         icon: bi bi-file-earmark
-        url: ~
+        file-type: .scm
+        url: "/starcraft/(4)RazedJungle.scm"
         date: June 2017
         size: 76 KB
         md5: CEE305DD8B188C6A982DA505E38D1641
