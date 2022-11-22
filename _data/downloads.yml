@@ -145,7 +145,7 @@ files:
           </ul>
   - group: Maps
     items:
-      - title: Starcraft
+      - title: "Starcraft: Brood War"
         sub-title: Bridge Ahead
         image:  /assets/images/downloads/bridge-ahead.png
         image_alt: screenshot from bridge ahead
@@ -156,9 +156,10 @@ files:
         md5: C4E11F16B8A5986801123C3E9DF5FD88
         version: 1.0
         description: >-
-          <p><em>Suggested Players: 2</em></p>
           <p>Two opposing forces both look to control a vital crossing, who will be victorious?</p>
-      - title: Starcraft
+          <p><em>Suggested Players: 2</em></p>
+          <p><em>Theme: Badlands</em></p>
+      - title: "Starcraft: Brood War"
         sub-title: Frozen Chosen
         image: /assets/images/downloads/frozen-chosen.png
         image_alt: screenshot from frozen chozen
@@ -169,9 +170,10 @@ files:
         md5: 7EA808BA25F5FF1D1087DBDFEBBA496D
         version: 1.0
         description: >-
+          <p>Two armies face each other across a frozen ravine. An infamous battleground which once hosted a desperate retreat. Will your forces suffer the same?</p>
           <p><em>Suggested Players: 2</em></p>
-          <p>Two armies face each other across a frozen ravine. An infamous battleground which once hosted a desperate retreat. Will your forces suffer the same?</p>   
-      - title: Starcraft
+          <p><em>Theme: Ice</em></p>
+      - title: "Starcraft: Brood War"
         sub-title: Morningstar
         image: /assets/images/downloads/morningstar.png
         image_alt: screenshot from morningstar
@@ -182,9 +184,10 @@ files:
         md5: ~
         version: 1.0
         description: >-
+          <p>The Morningstar crossing, a once prosperous mining operation is the site of a heated conflict.</p>   
           <p><em>Suggested Players: 2</em></p>
-          <p>The Morningstar crossing, a once prosperous mining operation is the site of a heated conflict.</p>                
-      - title: Starcraft
+          <p><em>Theme: Desert</em></p>
+      - title: "Starcraft: Brood War"
         sub-title: Maddening Brook
         image: /assets/images/downloads/maddening-brook.png
         image_alt: screenshot from maddening brook
@@ -195,9 +198,10 @@ files:
         md5: 359490EF41DE00704E1687D56F1D616C
         version: 1.0
         description: >-
-          <p><em>Suggested Players: 2-4</em></p>
           <p>Ancient feuds have always been ended amongst the waters of the Maddening Brook.</p>
-      - title: Starcraft
+          <p><em>Suggested Players: 2-4</em></p>
+          <p><em>Theme: Twilight</em></p>
+      - title: "Starcraft: Brood War"
         sub-title: Pyromancy
         image: /assets/images/downloads/pyromancy.png
         image_alt: screenshot from pyromancy
@@ -208,9 +212,10 @@ files:
         md5: 05B9D4D717D038F7CDB3EE84C0575BB5
         version: 1.0
         description: >-
-          <p><em>Suggested Players: 2-4</em></p>
           <p>The gas must flow! Dominate the middle and ensure a quick victory over your contenders.</p>
-      - title: Starcraft
+          <p><em>Suggested Players: 2-4</em></p>
+          <p><em>Theme: Ash World</em></p>
+      - title: "Starcraft: Brood War"
         sub-title: Razed Jungle
         image: /assets/images/downloads/razed-jungle.png
         image_alt: screenshot from razed jungle
@@ -221,8 +226,9 @@ files:
         md5: CEE305DD8B188C6A982DA505E38D1641
         version: 1.0
         description: >-
+          <p>Four foes remain in a long war, only one will conquer the jungle.</p>                        
           <p><em>Suggested Players: 2-4</em></p>
-          <p>Four foes remain in a long war, only one will conquer the jungle.</p>                                    
+          <p><em>Theme: Jungle World</em></p>
   - group: Links
     items:
       - label: ~ 
