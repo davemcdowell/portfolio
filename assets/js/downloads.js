@@ -55,6 +55,6 @@ const downloads = (function () {
 
   function getFileName(fileString) {
     let lastIndex = fileString.lastIndexOf('/');
-    return str.substring(lastIndex + 1);
+    return fileString.substring(lastIndex + 1);
   }
 })();
