@@ -143,6 +143,20 @@ files:
             <li>Steam and Half-Life 2 are required to play this game</li>
             <li>This is an official file from Venom Game Labs, LLC.</li>
           </ul>
+  - group: Maps
+    items:
+      - title: Starcraft
+        sub-title: Map 1
+        image: ~
+        image_alt: ~
+        icon: ~
+        url: ~
+        date: ~
+        size: ~
+        md5: ~
+        version: ~
+        description: >-
+          
   - group: Links
     items:
       - label: ~ 
