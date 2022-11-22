@@ -51,10 +51,10 @@ js-postload-files:
                           <p class="m-0 p-0"><small>MD5: {{ item.md5 }}</small></p>
                           {%- endif -%}
                           {%- if item.notes.size > 0 -%}
-                          <p class="my-2"><small>Notes:</small></p>
+                          <p class="mt-2 mb-0"><small>Notes:</small></p>
                           <ul class="list-group list-group-flush">
                             {%- for note in item.notes -%}
-                            <li class="list-group-item bg-transparent text-light"><small>- {{ note }}</small></li>
+                            <li class="list-group-item bg-transparent text-white-50"><small>- {{ note }}</small></li>
                             {%- endfor -%}
                           </ul>
                           {%- endif -%}
