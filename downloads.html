@@ -45,10 +45,10 @@ js-postload-files:
                           <div class="block-title px-1">File Info</div>
                           <p class="m-0 p-0">Filename:&nbsp;<span data-file-name="{{ item.url }}"></span></p>
                           {%- if item.file-type -%}
-                          <p class="m-0 p-0">Filetype: {{ item.size }}</p>
+                          <p class="m-0 p-0">Filetype: {{ item.filetype }}</p>
                           {%- endif -%}
-                          {%- if item.filesize -%}
-                          <p class="m-0 p-0">Filetype: {{ item.file-type }}</p>
+                          {%- if item.size -%}
+                          <p class="m-0 p-0">Filesize: {{ item.size }}</p>
                           {%- endif -%}
                           {%- if item.md5 -%}
                           <p class="m-0 p-0">MD5: {{ item.md5 }}</p>
