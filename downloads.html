@@ -41,20 +41,20 @@ js-postload-files:
                           <p>{{ item.description }}</p>
                           {%- endif -%}
                         </div>
-                        <div class="border border-dark rounded position-relative bg-offset fw-light font-monospace my-2 px-2 pb-2 pt-3">
+                        <div class="border border-dark rounded position-relative bg-offset fs-small fw-light font-monospace mt-4 mb-2 px-2 pb-2 pt-3">
                           <div class="block-title px-1">File Info</div>
-                          <p class="m-0 p-0"><small>Filename:&nbsp;<span data-file-name="{{ item.url }}"></span></small></p>
+                          <p class="m-0 p-0">Filename:&nbsp;<span data-file-name="{{ item.url }}"></span></p>
                           {%- if item.file-type -%}
-                          <p class="m-0 p-0"><small>Filetype: {{ item.file-type }}</small></p>
+                          <p class="m-0 p-0">Filetype: {{ item.file-type }}</p>
                           {%- endif -%}
                           {%- if item.md5 -%}
-                          <p class="m-0 p-0"><small>MD5: {{ item.md5 }}</small></p>
+                          <p class="m-0 p-0">MD5: {{ item.md5 }}</p>
                           {%- endif -%}
                           {%- if item.notes.size > 0 -%}
-                          <p class="mt-2 mb-0"><small>Notes:</small></p>
+                          <p class="mt-2 mb-0">Notes:</p>
                           <ul class="list-unstyled">
                             {%- for note in item.notes -%}
-                            <li><small>- {{ note }}</small></li>
+                            <li>- {{ note }}</li>
                             {%- endfor -%}
                           </ul>
                           {%- endif -%}
