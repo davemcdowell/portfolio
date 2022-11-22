@@ -290,11 +290,12 @@ pre {
 
 .block-title {
   position: absolute;
-  left: 50%;
-  top: 0;
+  left: 10%;
+  top: -9px;
+  height: 18px;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--lighter-type-color);
+  color: var(--default-type-color);
   background-color: var(--bg-color-offset-darker);
 }
 
