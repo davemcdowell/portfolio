@@ -146,17 +146,77 @@ files:
   - group: Maps
     items:
       - title: Starcraft
-        sub-title: Map 1
+        sub-title: Bridge Ahead
         image: ~
         image_alt: ~
         icon: ~
         url: ~
-        date: ~
-        size: ~
+        date: June 2017
+        size: 124 KB
         md5: ~
-        version: ~
+        version: 1.0
         description: >-
-          
+
+      - title: Starcraft
+        sub-title: Frozen Chosen
+        image: ~
+        image_alt: ~
+        icon: ~
+        url: ~
+        date: June 2017
+        size: 72 KB
+        md5: ~
+        version: 1.0
+        description: >-
+                    
+      - title: Starcraft
+        sub-title: Morningstar
+        image: ~
+        image_alt: ~
+        icon: ~
+        url: ~
+        date: June 2017
+        size: 76 KB
+        md5: ~
+        version: 1.0
+        description: >-
+                    
+      - title: Starcraft
+        sub-title: Maddening Brook
+        image: ~
+        image_alt: ~
+        icon: ~
+        url: ~
+        date: June 2017
+        size: 52 KB
+        md5: ~
+        version: 1.0
+        description: >-
+
+      - title: Starcraft
+        sub-title: Pyromancy
+        image: ~
+        image_alt: ~
+        icon: ~
+        url: ~
+        date: June 2017
+        size: 64 KB
+        md5: ~
+        version: 1.0
+        description: >-
+
+      - title: Starcraft
+        sub-title: Razed Jungle
+        image: ~
+        image_alt: ~
+        icon: ~
+        url: ~
+        date: June 2017
+        size: 76 KB
+        md5: ~
+        version: 1.0
+        description: >-
+                                                              
   - group: Links
     items:
       - label: ~ 
