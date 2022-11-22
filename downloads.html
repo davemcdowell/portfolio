@@ -54,7 +54,7 @@ js-postload-files:
                           <p class="m-0 p-0">MD5: {{ item.md5 }}</p>
                           {%- endif -%}
                           {%- if item.notes.size > 0 -%}
-                          <p class="mt-2 mb-0">Notes:</p>
+                          <p class="mt-2 mb-0">---<br>Notes:</p>
                           <ul class="list-unstyled">
                             {%- for note in item.notes -%}
                             <li>- {{ note }}</li>
