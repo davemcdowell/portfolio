@@ -4,7 +4,7 @@ main:
     title: Dave McDowell
     copy: >-
       I'm a designer and developer from Seattle who loves making games, and you've just found my portfolio—scroll down to see some of my work.
-    link: ~
+    link: "#portfolio-main"
   ender:
     title: Thanks for looking
     copy: >-
@@ -12,6 +12,8 @@ main:
     link: "#top"
   blog-callout:
     title: Blog
+    image: https://picsum.photos/1024/768?random=10
+    display-options: ~
     copy: >-
       Updates on current work and probably other stuff that's probably blogworthy, probably
     links:

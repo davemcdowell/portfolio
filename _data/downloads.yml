@@ -10,7 +10,7 @@ files:
         url: "http://dcmcdowell.com/downloads/pcgamer1.pdf"
         date: March 2001
         size: "5.95 MB"
-        md5: ~
+        md5: 16761B2379A6DCA16676A1A1B653C2BF
         version: ~
         description: >-
           <p>A PCGamer spread from March 2001 covering the category for 'Best of the Year' with the HL1 version of Firearms taking the spot for 'Best Mod'. 
@@ -32,7 +32,7 @@ files:
         url: "http://dcmcdowell.com/downloads/pcgamer2.pdf"
         date: March 2001
         size: "5.52 MB"
-        md5: ~
+        md5: 2EB8B04304A9D784D50CDE1ABF5CD9E3
         version: ~
         description: >-
           <p>A PCGamer spread from March 2001 called Extended Play written by Dan Morris which covered Add-ons, patches, upgrades and mods for popular games of the time.
@@ -57,7 +57,7 @@ files:
         url: "http://dcmcdowell.com/downloads/pcgamer3.pdf"
         date: March 2001
         size: "6.46 MB"
-        md5: ~
+        md5: 273EB76EA27E7F6758EF039C6D45C39F
         version: ~
         description: >-
           <p>The Letters to the Editor section from PCGamer March 2001 issue has some amusing letters from the time, one in particular is titled "That Boy Ain't Right" which the writer calls out PCGamers previews editor,
@@ -83,7 +83,7 @@ files:
         url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_202_Alpha_Full_Client.zip"
         date: ~
         size: "1.6 GB"
-        md5: ~
+        md5: D41D8CD98F00B204E9800998ECF8427E
         version: "2.02 Alpha Client"
         description: >-
           <p>The latest official Firearms: Source 2.02 Client files. If you want to play the awesomeness that is Firearms: Source, this file will make that happen.</p>
@@ -100,7 +100,7 @@ files:
         url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_202_Alpha_Full_Windows_Server.zip"
         date: ~
         size: "354 MB"
-        md5: ~
+        md5: A4627FA4D9DCA46CC07A323EC6218D0C
         version: "2.02 Alpha Server"
         description: >-
           <p>The latest official Firearms: Source 2.02 Windows Server files If you want to host your own FA:S server these are the files you'll need to get started.</p>
@@ -117,7 +117,7 @@ files:
         url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_Alpha_201-202_Client_Patch.zip"
         date: ~
         size: "391 MB"
-        md5: ~
+        md5: 0174285FC1834389F9EE9F51AA3BABF3
         version: "2.02 Client Patch"
         description: >-
           <p>This official patch updates the client files for Firearms: Source 2.01 to 2.02. If you're just playing FA:S 2.01 and want to join servers using FA:S 2.02 or just want the latest official patch, you'll need this file.</p>
@@ -134,7 +134,7 @@ files:
         url: "http://dcmcdowell.com/mcdowellFTP/firearms-source/FAS_Alpha_201-202_Server_Patch.zip"
         date: ~
         size: "128 MB"
-        md5: ~
+        md5: A35AE7B75E2781D8C5130343E36E3319
         version: "2.01 to 2.02 Server Patch"
         description: >-
           <p>This official patch updates the server files for Firearms: Source 2.01 to 2.02. If you're hosting your own FA:S 2.01 server that needs updating to 2.02 this file is for you.</p>
