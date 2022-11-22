@@ -37,15 +37,25 @@ js-postload-files:
                           {%- if item.image -%}
                           <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" class="rounded bs-sm float-start ms-0 me-2 mb-2 mt-2 dl-image" width="128" height="74">
                           {%- endif -%}
+                          {%- if item.description -%}
                           <p>{{ item.description }}</p>
-                        </div>
-                        <ul class="list-group list-group-flush text-muted">
-                          {%- if item.md5 -%}
-                          <li class="list-group-item bg-transparent">
-                            md5: {{ item.md5 }}
-                          </li>
                           {%- endif -%}
-                        </ul>
+                        </div>
+                        <div class="border rounded my-2 p-2">
+                          {%- if item.file-type -%}
+                          <p>Filetype: {{ item.file-type }}</p>
+                          {%- endif -%}
+                          {%- if item.md5 -%}
+                          <p>MD5: {{ item.md5 }}</p>
+                          {%- endif -%}
+                          <ul class="list-group list-group-flush text-muted">
+                            {%- if item.notes.size > 0 -%}
+                            {%- for note in item.notes -%}
+                            <li class="list-group-item bg-transparent">{{ note }}</li>
+                            {%- endfor -%}
+                            {%- endif -%}
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </li>
