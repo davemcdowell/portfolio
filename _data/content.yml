@@ -21,6 +21,8 @@ main:
         label: RSS
   download-callout:
     title: Downloads
+    image: /assets/images/downloads/downloads-bg.png
+    display-options: "repeat center"
     copy: >-
       A collection of odds and ends for your downloading pleasure
     links:
