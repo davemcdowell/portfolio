@@ -149,7 +149,7 @@ files:
         sub-title: Bridge Ahead
         image:  /assets/images/downloads/bridge-ahead.png
         image_alt: screenshot from bridge ahead
-        icon: bi bi-file-earmark-zip
+        icon: bi bi-file-earmark
         url: ~
         date: June 2017
         size: 124 KB
@@ -163,7 +163,7 @@ files:
         sub-title: Frozen Chosen
         image: /assets/images/downloads/frozen-chosen.png
         image_alt: screenshot from frozen chozen
-        icon: bi bi-globe-americas
+        icon: bi bi-file-earmark
         url: ~
         date: June 2017
         size: 72 KB
@@ -177,7 +177,7 @@ files:
         sub-title: Morningstar
         image: /assets/images/downloads/morningstar.png
         image_alt: screenshot from morningstar
-        icon: bi bi-globe-americas
+        icon: bi bi-file-earmark
         url: ~
         date: June 2017
         size: 76 KB
@@ -191,7 +191,7 @@ files:
         sub-title: Maddening Brook
         image: /assets/images/downloads/maddening-brook.png
         image_alt: screenshot from maddening brook
-        icon: bi bi-globe-americas
+        icon: bi bi-file-earmark
         url: ~
         date: June 2017
         size: 52 KB
@@ -205,7 +205,7 @@ files:
         sub-title: Pyromancy
         image: /assets/images/downloads/pyromancy.png
         image_alt: screenshot from pyromancy
-        icon: bi bi-globe-americas
+        icon: bi bi-file-earmark
         url: ~
         date: June 2017
         size: 64 KB
@@ -219,7 +219,7 @@ files:
         sub-title: Razed Jungle
         image: /assets/images/downloads/razed-jungle.png
         image_alt: screenshot from razed jungle
-        icon: bi bi-globe-americas
+        icon: bi bi-file-earmark
         url: ~
         date: June 2017
         size: 76 KB
