@@ -39,10 +39,12 @@ js-postload-files:
                           {%- endif -%}
                           <p>{{ item.description }}</p>
                         </div>
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item bg-transparent text-muted">
+                        <ul class="list-group list-group-flush text-muted">
+                          {%- if item.md5 -%}
+                          <li class="list-group-item bg-transparent">
                             md5: {{ item.md5 }}
                           </li>
+                          {%- endif -%}
                         </ul>
                       </div>
                     </div>
