@@ -9,7 +9,7 @@ js-postload-files:
     <div class="row justify-content-center">
         <div class="col-lg-10 col-lg-offset-1">
             {% assign blogCallout = site.data.content.main.blog-callout %}
-            {%- include snippets/callout.html title=blogTitle content=blogCopy links=blogLinks image="https://picsum.photos/1024/768?random=5" -%}
+            {%- include snippets/callout.html data=blogCallout -%}
             
             {%- include sections/portfolio-main.html -%}
 
@@ -17,11 +17,10 @@ js-postload-files:
             {%- include snippets/double-callout.html callouts=dblCallout -%}
 
             {% assign dlCallout = site.data.content.main.download-callout %}
-            {%- include snippets/callout.html title=dlTitle content=dlCopy links=dlLinks image=dlBG display-options="repeat center" -%}
+            {%- include snippets/callout.html data=dlCallout -%}
         </div>
     </div>
 </div>
-{% assign enderTitle = site.data.content.main.ender.title %}
-{% assign enderCopy = site.data.content.main.ender.copy %}
-{%- include sections/ender.html title=enderTitle content=enderCopy -%}
+{% assign enderData = site.data.content.main.header %}
+{%- include sections/ender.html data=enderData -%}
 {%- include sections/contact.html -%}
