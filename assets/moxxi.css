@@ -288,6 +288,17 @@ pre {
   padding-top: 0;
 }
 
+.block-title {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--lighter-type-color);
+  background-color: var(--bg-color-offset-darker);
+  transform: translate(50%, 50%);
+}
+
 .link-title {
   color: var(--white-type-color);
   text-decoration: none;
