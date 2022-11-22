@@ -43,12 +43,12 @@ js-postload-files:
                         </div>
                         <div class="border border-dark rounded position-relative bg-offset fw-light font-monospace my-2 px-2 pb-2 pt-3">
                           <div class="block-title px-1">File Info</div>
-                          <p data-file-name="{{ item.url }}"></p>
+                          <p class="m-0 p-0" data-file-name="{{ item.url }}"></p>
                           {%- if item.file-type -%}
-                          <p><small>Filetype: {{ item.file-type }}</small></p>
+                          <p class="m-0 p-0"><small>Filetype: {{ item.file-type }}</small></p>
                           {%- endif -%}
                           {%- if item.md5 -%}
-                          <p><small>MD5: {{ item.md5 }}</small></p>
+                          <p class="m-0 p-0"><small>MD5: {{ item.md5 }}</small></p>
                           {%- endif -%}
                           {%- if item.notes.size > 0 -%}
                           <p><small>Notes:</small></p>

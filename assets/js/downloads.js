@@ -44,11 +44,11 @@ const downloads = (function () {
 
     return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`
   }
-
+  
   function setFileNames() {
     let fileNameCalls = [].slice.call(document.querySelectorAll('[data-file-name]'));
     fileNameCalls.map(function(fileNameCall) {
-      let fileUrl = fileSizeCall.href;
+      let fileUrl = fileNameCall.getAttribute('data-file-name');
       fileNameCall.innerText = getFileName(fileUrl);
     });
   }
