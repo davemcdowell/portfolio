@@ -209,7 +209,7 @@ const app = function() {
         let nbSpace = document.createTextNode(' ');
         let span = document.createElement('span');
         let i = document.createElement('i');
-
+        console.log(targetElement);
         button.classList.add('btn', 'btn-icon', 'fs-sm');
         button.setAttribute('data-flip-icon', 'bi bi-clipboard-check');
         button.setAttribute('aria-label', 'Copy');
