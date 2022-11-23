@@ -224,7 +224,7 @@ const app = function() {
         targetElement.appendChild(button);
 
         button.addEventListener('click', () => {
-            let copyString = targetElement.getAttribute('[data-copy-paste]');
+            let copyString = targetElement.getAttribute('[data-copy-paste]').value;
             copyString.select();
             copyString.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyString.value);
