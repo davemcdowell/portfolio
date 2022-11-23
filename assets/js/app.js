@@ -206,7 +206,7 @@ const app = function() {
 
     function createCopyButton(targetElement) {
         let button = document.createElement('button');
-        let nbSpace = document.createTextNode('&nbsp;');
+        let nbSpace = document.createTextNode(' ');
         let span = document.createElement('span');
         let i = document.createElement('i');
 
@@ -220,8 +220,15 @@ const app = function() {
         span.appendChild(i);
         button.appendChild(span);
 
+        targetElement.appendChild(nbSpace);
         targetElement.appendChild(button);
-        button.prepend(nbSpace);
+
+        button.addEventListener('click', () => {
+            let copyString = targetElement.getAttribute('[data-copy-paste]');
+            copyString.select();
+            copyString.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyString.value);
+        });
     }
 
     /* utils */
