@@ -200,7 +200,10 @@ const app = function() {
     function setCopyButtons() {
         let copyPasteCalls = [].slice.call(document.querySelectorAll('[data-copy-paste]'));
         copyPasteCalls.map(function(copyPasteCall) {
-            createCopyButton(copyPasteCall);
+            let tempInput = document.createElement('input');
+            tempInput.type = 'hidden';
+            tempInput.value = copyPasteCall.innerText;
+            createCopyButton(tempInput);
         });      
     }
 
