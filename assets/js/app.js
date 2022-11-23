@@ -223,10 +223,11 @@ const app = function() {
         targetElement.appendChild(nbSpace);
         targetElement.appendChild(button);
 
-        button.addEventListener('click', (targetElement) => {
-            targetElement.select();
-            targetElement.setSelectionRange(0, 99999);
-            navigator.clipboard.writeText(targetElement.value);
+        button.addEventListener('click', function(event) {
+            let copyElement = event.currentTarget.previousSibling;
+            copyElement.select();
+            copyElement.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyElement.value);
         });
     }
 
