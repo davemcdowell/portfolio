@@ -206,6 +206,7 @@ const app = function() {
 
     function createCopyButton(targetElement) {
         let button = document.createElement('button');
+        let nbSpace = document.createTextNode('&nbsp;');
         let span = document.createElement('span');
         let i = document.createElement('i');
 
@@ -218,7 +219,8 @@ const app = function() {
 
         span.appendChild(i);
         button.appendChild(span);
-
+        button.prepend(nbSpace);
+        
         targetElement.appendChild(button);
     }
 
