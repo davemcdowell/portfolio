@@ -225,6 +225,7 @@ const app = function() {
 
         button.addEventListener('click', function(event) {
             let copyElement = event.currentTarget.parentNode;
+            console.log(copyElement);
             copyElement.select();
             copyElement.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyElement.value);
