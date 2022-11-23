@@ -217,6 +217,7 @@ pre {
 }
 
 /* typography */
+.icon-xs { font-size: 0.8em; }
 .icon-1x { font-size: 1em; }
 .icon-2x { font-size: 2em; }
 .icon-3x { font-size: 3em; }
