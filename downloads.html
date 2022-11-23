@@ -24,8 +24,8 @@ js-postload-files:
                       <a href="{{ item.url }}" class="text-decoration-none" target="_blank"><i class="{{ item.icon }} me-2"></i> {{ item.title }} <small class="text-muted">{{ item.sub-title }}</small></a>
                       <div class="list-item-actions mt-2 mt-md-0">
                         <small class="text-muted"><span class="badge rounded-pill rounded border user-select-none me-2">{{ item.size }}</span></small>
-                        <a href="{{ item.url }}" class="btn btn-sm btn-outline-light" target="_blank"><i class="bi bi-download icon-1x"></i></a>
-                        <button type="button" class="btn btn-sm btn-outline-light me-2" data-bs-toggle="collapse" data-bs-target="#{{ download.group | downcase }}-clp-{{ forloop.index }}" aria-expanded="false" aria-controls="{{ download.group | downcase }}-clp-{{ forloop.index }}">
+                        <a href="{{ item.url }}" class="btn btn-sm btn-outline-light" target="_blank" aria-label="Download"><i class="bi bi-download icon-1x"></i></a>
+                        <button type="button" class="btn btn-sm btn-outline-light me-2" aria-label="More" data-bs-toggle="collapse" data-bs-target="#{{ download.group | downcase }}-clp-{{ forloop.index }}" aria-expanded="false" aria-controls="{{ download.group | downcase }}-clp-{{ forloop.index }}">
                           <i class="bi bi-plus icon-1x"></i>
                         </button>
                       </div>
@@ -51,7 +51,7 @@ js-postload-files:
                           <p class="m-0 p-0">Filesize: {{ item.size }}</p>
                           {%- endif -%}
                           {%- if item.md5 -%}
-                          <p class="m-0 p-0">MD5:&nbsp;<span class="user-select-all" data-copy-paste>{{ item.md5 }}</span></p>
+                          <p class="m-0 p-0">MD5:&nbsp;<span class="user-select-all" data-copy-paste>{{ item.md5 }}</span><button class="btn btn-icon" data-flip-icon="bi bi-clipboard-check" aria-label="Copy"><i class="bi bi-clipboard"></i></button></p>
                           {%- endif -%}
                           {%- if item.notes.size > 0 -%}
                           <p class="mt-2 mb-0">---<br>Notes:</p>

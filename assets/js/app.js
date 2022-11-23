@@ -8,6 +8,7 @@ const app = function() {
         bindDarkModeToggle();
         setContactForm();
         setToolTips();
+        setCopyPasteBtns();
     }
 
     function setToast() {

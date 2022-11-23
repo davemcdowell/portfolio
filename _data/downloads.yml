@@ -106,7 +106,7 @@ files:
         md5: A4627FA4D9DCA46CC07A323EC6218D0C
         version: "2.02 Alpha Server"
         description: >-
-          <p>The latest official Firearms: Source 2.02 Windows Server files If you want to host your own FA:S server these are the files you'll need to get started.</p>
+          <p>The latest official Firearms: Source 2.02 Windows Server files. If you want to host your own FA:S server these are the files you'll need to get started.</p>
         notes:
           - Steam and Half-Life 2 are required to play this game
           - This is an official file from Venom Game Labs, LLC.
