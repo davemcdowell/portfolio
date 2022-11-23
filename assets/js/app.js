@@ -212,7 +212,7 @@ const app = function() {
         let nbSpace = document.createTextNode(' ');
         let span = document.createElement('span');
         let i = document.createElement('i');
-        console.log(targetElement);
+
         button.classList.add('btn', 'btn-icon', 'fs-sm');
         button.setAttribute('data-flip-icon', 'bi bi-clipboard-check');
         button.setAttribute('aria-label', 'Copy');
@@ -228,7 +228,8 @@ const app = function() {
 
         button.addEventListener('click', function(event) {
             let copyElement = event.currentTarget.parentNode;
-            console.log(copyElement);
+
+            copyElement.select();
             copyElement.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyElement.value);
         });
