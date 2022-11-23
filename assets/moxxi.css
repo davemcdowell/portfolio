@@ -61,10 +61,6 @@ pre {
   padding: 1rem;
 }
 
-*[data-copy-paste]::before {
-  content:'&nbsp;';
-}
-
 /* navbar */
 .navbar {
   background-color: var(--bg-color-nav) !important;
