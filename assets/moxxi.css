@@ -53,12 +53,12 @@ a:hover, a:focus, a:active { color: var(--white-type-color); }
 a:visited { color: var(--card-border-hover-color); }
 
 main { padding-top: var(--navbar-offset); }
-img { color: transparent; };
+img { color: transparent; }
 
 pre {
-  border: 1px solid #1c1c1c !important;
-  border-radius: 5px !important;
-  padding: 1rem !important;
+  border: 1px solid #1c1c1c;
+  border-radius: 5px;
+  padding: 1rem;
 }
 
 /* navbar */
@@ -234,9 +234,7 @@ pre {
   background-color: rgba(0, 0, 0, 0.12);
 }
 
-.shadow-text {
-  text-shadow: 0.0125em 0.0125em rgba(0,0,0,0.2);
-}
+.shadow-text { text-shadow: 0.0125em 0.0125em rgba(0,0,0,0.2); }
 
 .btn-icon {
   display: inline-block;
