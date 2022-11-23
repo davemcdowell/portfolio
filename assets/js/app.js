@@ -200,10 +200,7 @@ const app = function() {
     function setCopyButtons() {
         let copyPasteCalls = [].slice.call(document.querySelectorAll('[data-copy-paste]'));
         copyPasteCalls.map(function(copyPasteCall) {
-            let tempInput = document.createElement('input');
-            tempInput.type = 'hidden';
-            tempInput.value = copyPasteCall.innerText;
-            createCopyButton(tempInput);
+            createCopyButton(copyPasteCall);
         });      
     }
 
@@ -212,6 +209,8 @@ const app = function() {
         let nbSpace = document.createTextNode(' ');
         let span = document.createElement('span');
         let i = document.createElement('i');
+
+        let copyString = targetElement.innerText;
 
         button.classList.add('btn', 'btn-icon', 'fs-sm');
         button.setAttribute('data-flip-icon', 'bi bi-clipboard-check');
@@ -228,10 +227,7 @@ const app = function() {
 
         button.addEventListener('click', function(event) {
             let copyElement = event.currentTarget.parentNode;
-
-            copyElement.select();
-            copyElement.setSelectionRange(0, 99999);
-            navigator.clipboard.writeText(copyElement.value);
+            navigator.clipboard.writeText(copyString);
         });
     }
 
