@@ -223,7 +223,7 @@ const app = function() {
         targetElement.appendChild(nbSpace);
         targetElement.appendChild(button);
 
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (targetElement) => {
             targetElement.select();
             targetElement.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(targetElement.value);
