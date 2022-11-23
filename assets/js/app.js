@@ -8,7 +8,7 @@ const app = function() {
         bindDarkModeToggle();
         setContactForm();
         setToolTips();
-        setCopyPasteBtns();
+        setCopyButtons();
     }
 
     function setToast() {
@@ -196,13 +196,39 @@ const app = function() {
         tClone.show();
     }
 
+    /* copy/paste */
+    function setCopyButtons() {
+        let copyPasteCalls = [].slice.call(document.querySelectorAll('[data-copy-paste]'));
+        copyPasteCalls.map(function(copyPasteCall) {
+            createCopyButton(copyPasteCall);
+        });      
+    }
+
+    function createCopyButton(targetElement) {
+        let button = document.createElement('button');
+        let span = document.createElement('span');
+        let i = document.createElement('i');
+
+        button.classList.add('btn', 'btn-icon', 'fs-sm');
+        button.setAttribute('data-flip-icon', 'bi bi-clipboard-check');
+        button.setAttribute('aria-label', 'Copy');
+
+        span.classList.add('d-flex', 'justify-content-center', 'align-items-center', 'icon-bg-xs', 'rounded-circle');
+        i.classList.add('bi', 'bi-clipboard', 'icon-xs');
+
+        span.appendChild(i);
+        button.appendChild(span);
+
+        targetElement.appendChild(button);
+    }
+
     /* utils */
     function getRandomInteger(min, max) {
         return Math.floor(Math.random() * (max - min) ) + min;
     }
 
     function getRandomFromArray(arr, n) {
-        var result = new Array(n),
+        let result = new Array(n),
             len = arr.length,
             taken = new Array(len);
         if (n > len)

@@ -23,7 +23,7 @@ main:
         label: RSS
   download-callout:
     title: Downloads
-    image: portfolio/assets/images/downloads/downloads-bg.png
+    image: /portfolio/assets/images/downloads/downloads-bg.png
     display-options: "repeat center"
     copy: >-
       A collection of odds and ends for your downloading pleasure
