@@ -61,6 +61,10 @@ pre {
   padding: 1rem;
 }
 
+*[data-copy-paste]::before {
+  content:'&nbsp;';
+}
+
 /* navbar */
 .navbar {
   background-color: var(--bg-color-nav) !important;
@@ -512,9 +516,7 @@ pre {
 }
 
 .splide:not(.is-overflow) .splide__list { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
-
 .splide .splide__slide:last-child { margin: 0 !important; }
-
 .splide__slide .splide__slide__container img,
 .splide__slide .splide__slide__container a img {
   width: 100%;
