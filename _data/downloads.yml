@@ -157,8 +157,9 @@ files:
         version: 1.0
         description: >-
           <p>Two opposing forces both look to control a vital crossing, who will be victorious?</p>
-          <p><em>Suggested Players: 2</em></p>
-          <p><em>Theme: Badlands</em></p>
+        notes:
+          - "Suggested Players: 2"
+          - "Theme: Badlands"
       - title: "Starcraft: Brood War"
         sub-title: Frozen Chosen
         image: /assets/images/downloads/frozen-chosen.png
@@ -172,8 +173,9 @@ files:
         version: 1.0
         description: >-
           <p>Two armies face each other across a frozen ravine. An infamous battleground which once hosted a desperate retreat. Will your forces suffer the same?</p>
-          <p><em>Suggested Players: 2</em></p>
-          <p><em>Theme: Ice</em></p>
+        notes:
+          - "Suggested Players: 2"
+          - "Theme: Ice"
       - title: "Starcraft: Brood War"
         sub-title: Morningstar
         image: /assets/images/downloads/morningstar.png
@@ -187,8 +189,9 @@ files:
         version: 1.0
         description: >-
           <p>The Morningstar crossing, a once prosperous mining operation is the site of a heated conflict.</p>   
-          <p><em>Suggested Players: 2</em></p>
-          <p><em>Theme: Desert</em></p>
+        notes:
+          - "Suggested Players: 2"
+          - "Theme: Desert"
       - title: "Starcraft: Brood War"
         sub-title: Maddening Brook
         image: /assets/images/downloads/maddening-brook.png
@@ -202,8 +205,9 @@ files:
         version: 1.0
         description: >-
           <p>Ancient feuds have always been ended amongst the waters of the Maddening Brook.</p>
-          <p><em>Suggested Players: 2-4</em></p>
-          <p><em>Theme: Twilight</em></p>
+        notes:
+          - "Suggested Players: 2-4"
+          - "Theme: Twilight"
       - title: "Starcraft: Brood War"
         sub-title: Pyromancy
         image: /assets/images/downloads/pyromancy.png
@@ -217,8 +221,9 @@ files:
         version: 1.0
         description: >-
           <p>The gas must flow! Dominate the middle and ensure a quick victory over your contenders.</p>
-          <p><em>Suggested Players: 2-4</em></p>
-          <p><em>Theme: Ash World</em></p>
+        notes:
+          - "Suggested Players: 2-4"
+          - "Theme: Ash World"
       - title: "Starcraft: Brood War"
         sub-title: Razed Jungle
         image: /assets/images/downloads/razed-jungle.png
@@ -232,8 +237,9 @@ files:
         version: 1.0
         description: >-
           <p>Four foes remain in a long war, only one will conquer the jungle.</p>                        
-          <p><em>Suggested Players: 2-4</em></p>
-          <p><em>Theme: Jungle World</em></p>
+        notes:
+          - "Suggested Players: 2-4"
+          - "Theme: Jungle World"
   - group: Links
     items:
       - label: ~ 
