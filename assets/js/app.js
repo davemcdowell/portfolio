@@ -196,6 +196,8 @@ const app = function() {
         tClone.show();
     }
 
+    /*  */
+
     /* copy/paste */
     function setCopyButtons() {
         let copyPasteCalls = [].slice.call(document.querySelectorAll('[data-copy-paste]'));
@@ -225,8 +227,7 @@ const app = function() {
         targetElement.appendChild(nbSpace);
         targetElement.appendChild(button);
 
-        button.addEventListener('click', function(event) {
-            let copyElement = event.currentTarget.parentNode;
+        button.addEventListener('click', () => {
             navigator.clipboard.writeText(copyString);
         });
     }
