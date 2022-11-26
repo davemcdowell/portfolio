@@ -58,4 +58,16 @@ downloads:
     copy: >-
       That's about it for downloads ¯\_ (ツ)_/¯<br> there's always these places below.
     link: "#top"
+about:
+  ender:
+    title: That about it
+    copy: >-
+      Thanks for 
+    link: "#top"
+gallery:
+  ender:
+    title: Other Work
+    copy: >-
+      Some more stuff below if you're still looking, otherwise you can also find me and my work at...
+    link: "#top"
 ---
