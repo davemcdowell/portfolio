@@ -5,7 +5,8 @@ permalink: /blog/
 js-postload-files: 
   - /portfolio/assets/js/time.js
 ---
-{%- include sections/header.html title="Blog" content="Some random bits, news and updates about work, life and other things." link="#blog-main" -%}
+{% assign headerData = site.data.content.blog.header %}
+{%- include sections/header.html data=headerData -%}
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-10 col-lg-offset-1">
@@ -13,5 +14,6 @@ js-postload-files:
         </div>
     </div>
 </div>
-{%- include sections/ender.html title="Other Work" content="Some more galleries below if you're still looking, otherwise you can also find me and my work at..." -%}
+{% assign enderData = site.data.content.blog.ender %}
+{%- include sections/ender.html data=enderData -%}
 {%- include sections/contact.html -%}

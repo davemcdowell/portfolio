@@ -196,7 +196,13 @@ const app = function() {
         tClone.show();
     }
 
-    /*  */
+    /* flip toggle */
+    function setFlipToggles() {
+        let flipToggleCalls = [].slice.call(document.querySelectorAll('[data-flip-toggle]'));
+        flipToggleCalls.map(function(flipToggleCall) {
+            
+        });  
+    }
 
     /* copy/paste */
     function setCopyButtons() {

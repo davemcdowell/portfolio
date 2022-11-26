@@ -63,5 +63,6 @@ permalink: /about/
         </div>
     </div>
 </div>
-{%- include sections/ender.html title="Other Work" content="Some more galleries below if you're still looking, otherwise you can also find me and my work at..." -%}
+{% assign enderData = site.data.content.about.ender %}
+{%- include sections/ender.html data=enderData -%}
 {%- include sections/contact.html -%}
