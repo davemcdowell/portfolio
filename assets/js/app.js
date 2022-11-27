@@ -228,7 +228,7 @@ const app = function() {
         let button = document.createElement('button');
         let nbSpace = document.createTextNode(' ');
         let span = document.createElement('span');
-        let feeback = document.createElement('span');
+        let feedback = document.createElement('span');
         let i = document.createElement('i');
 
         let copyString = targetElement.innerText;
