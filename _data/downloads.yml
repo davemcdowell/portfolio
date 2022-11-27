@@ -16,7 +16,6 @@ files:
         description: >-
           <p>A PCGamer spread from March 2001 covering the category for 'Best of the Year' with the HL1 version of Firearms taking the spot for 'Best Mod'. 
           Firearms also snagged a runner up position along side Quake 3 Arena as 'Best Multiplayer Game'; with Red Alert 2 taking the top (nice!).</p>
-
           <figure>
             <blockquote class="blockquote">
               <p><small><em>"Firearms was the most fun many of us had at a PC in the year 2000. For sheer, unadulterated excitement, nothing else really came close."</em></small></p>
@@ -39,10 +38,8 @@ files:
         description: >-
           <p>A PCGamer spread from March 2001 called Extended Play written by Dan Morris which covered Add-ons, patches, upgrades and mods for popular games of the time.
           His article here titled 'Agents of Change' speaks on the need for the game industry (at the time) to look more into hiring mod developers. Long story short Firearms gets a warm, fuzzy mention here worth reading.</p>
-
           <p>In this article Dan calls 2001 the 'Year of the Mod' as well as naming Firearms Game of the Year and a product that surpassed the ambitions of the original professional developers.
-          <em>I'm looking at you Valve.</em></p>
-          
+          <em>I'm looking at you Valve.</em></p> 
           <figure>
             <blockquote class="blockquote">
               <p><small><em>"There isn't a publisher in the world that wouldn't love to be in business with an outfit like the Firearms team..."</em></small></p>
@@ -65,9 +62,7 @@ files:
         description: >-
           <p>The Letters to the Editor section from PCGamer March 2001 issue has some amusing letters from the time, one in particular is titled "That Boy Ain't Right" which the writer calls out PCGamers previews editor,
           Jeremy Williams love of the "cheesy" AUG in Half-Life Firearms  - which is apparently a "42-round, scoped rifle for campers" in their AK-47 loving opinion.</p>
-
-          <p>I'm still looking for the issue where Jeremy Williams mentions Firearms and his love for the AUG, I'll post it here when I find it.</p>
-          
+          <p>I'm still looking for the issue where Jeremy Williams mentions Firearms and his love for the AUG, I'll post it here when I find it.</p>   
           <figure>
             <blockquote class="blockquote">
               <p><small><em>"He may wield a wimpy gun, but Jeremy gets it done."</em></small></p>
@@ -94,6 +89,7 @@ files:
         notes:
           - Steam and Half-Life 2 are required to play this game
           - This is an official file from Venom Game Labs, LLC.
+          - Windows only
       - title: "Firearms: Source"
         sub-title: 2.02 Alpha Server
         image: /assets/images/downloads/fa-server.png
@@ -110,6 +106,7 @@ files:
         notes:
           - Steam and Half-Life 2 are required to play this game
           - This is an official file from Venom Game Labs, LLC.
+          - Windows only
       - title: "Firearms: Source"
         sub-title: "2.01 to 2.02 Client Patch"
         image: /assets/images/downloads/fa-client.png
@@ -126,6 +123,7 @@ files:
         notes:
           - Steam and Half-Life 2 are required to play this game
           - This is an official file from Venom Game Labs, LLC.
+          - Windows only
       - title: "Firearms: Source"
         sub-title: "2.01 to 2.02 Server Patch"
         image: /assets/images/downloads/fa-server.png
@@ -142,6 +140,7 @@ files:
         notes:
           - Steam and Half-Life 2 are required to play this game
           - This is an official file from Venom Game Labs, LLC.
+          - Windows only
   - group: Maps
     items:
       - title: "Starcraft: Brood War"
@@ -220,7 +219,7 @@ files:
         md5: 05B9D4D717D038F7CDB3EE84C0575BB5
         version: 1.0
         description: >-
-          <p>The gas must flow! Dominate the middle and ensure a quick victory over your contenders.</p>
+          <p>The gas must flow! Dominate the middle and ensure a lethal victory over your contenders.</p>
         notes:
           - "Suggested Players: 2-4"
           - "Theme: Ash World"

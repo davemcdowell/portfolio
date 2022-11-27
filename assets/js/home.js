@@ -3,6 +3,7 @@ const gallery = function() {
 
     function init() {
         console.log('--      home.js initiated');
+        setHeroImage();
         setPortfolioSliders();
     }
 
@@ -34,5 +35,9 @@ const gallery = function() {
 
             newSplide.mount();
         }
+    }
+
+    function setHeroImage() {
+        app.get_random_int(hImages);
     }
 }();
