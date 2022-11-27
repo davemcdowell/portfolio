@@ -25,7 +25,7 @@ js-postload-files:
 {%- include sections/ender.html data=enderData -%}
 {%- include sections/contact.html -%}
 {% assign heroImages = "" | split: ',' %}
-{%- for image in site.data.content.hero.images -%}
+{%- for image in site.data.content.main.hero.images -%}
 {% assign heroImages = heroImages | push: image %}
 {%- endfor -%}
 <script id="hero-images">
