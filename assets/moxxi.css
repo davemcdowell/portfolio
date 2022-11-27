@@ -337,6 +337,7 @@ pre {
   left: 28px;
   pointer-events: none;
   font-size: 0.75em;
+  color: var(--default-type-color) !important;
 }
 
 /* share buttons */
