@@ -241,7 +241,7 @@ const app = function() {
         feedback.classList.add('feedback-text');
         i.classList.add('bi', 'bi-clipboard', 'icon-xs');
 
-        span.appendChild(feeback);
+        span.appendChild(feedback);
         span.appendChild(i);
         button.appendChild(span);
 
