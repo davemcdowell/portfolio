@@ -58,6 +58,17 @@ downloads:
     copy: >-
       That's about it for downloads ¯\_ (ツ)_/¯<br> there's always these places below.
     link: "#top"
+blog:
+  header:
+    title: Blog
+    copy: >-
+      Some random bits, news and updates about work, life and other things. I don't blog much but when I do, it's probably this blog
+    link: "#blog-main"
+  ender:
+    title: End Blog
+    copy: >-
+      Ever feel like you don't know what to say? You can find me at the below places too...
+    link: "#top"
 about:
   ender:
     title: That about it
