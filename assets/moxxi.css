@@ -217,6 +217,7 @@ pre {
 }
 
 .overflow-y-visible { overflow-y: visible !important; }
+.overflow-x-hidden { overflow-x: hidden !important; }
 
 /* typography */
 .icon-xs { font-size: 0.8em; }

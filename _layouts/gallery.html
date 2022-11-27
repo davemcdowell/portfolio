@@ -54,7 +54,7 @@ css-files:
                         </div>
                         <div class="position-relative mt-2">
                             <div class="splide__track overflow-y-visible">
-                                <ul class="splide__list">
+                                <ul class="splide__list overflow-x-hidden">
                                     {%- for vid in videos -%}
                                     <li class="splide__slide thumbnail video">
                                         <img src="{{ vid.thumbnail }}" alt="{{ vid.thumbnail_alt }}">
