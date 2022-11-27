@@ -203,7 +203,7 @@ const app = function() {
         flipToggleCalls.map(function(flipToggleCall) {
             flipToggleCall.addEventListener('click', function(event) {
                 let icon = event.currentTarget.querySelector('i');
-                if(event.currentTarget.getAttribute('is-flipped')) {
+                if(event.currentTarget.getAttribute('is-flipped') == true) {
                     event.currentTarget.removeAttribute('is-flipped');
                     icon.classList = event.currentTarget.dataset.defaultIcon;
                 } else {
