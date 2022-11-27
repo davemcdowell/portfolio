@@ -216,7 +216,7 @@ pre {
           box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.overflow-x-visible { overflow-x: visible !important; }
+.overflow-y-visible { overflow-y: visible !important; }
 
 /* typography */
 .icon-xs { font-size: 0.8em; }
