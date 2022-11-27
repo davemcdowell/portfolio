@@ -9,6 +9,7 @@ const app = function() {
         setContactForm();
         setToolTips();
         setCopyButtons();
+        setFlipToggles();
     }
 
     function setToast() {
@@ -200,7 +201,16 @@ const app = function() {
     function setFlipToggles() {
         let flipToggleCalls = [].slice.call(document.querySelectorAll('[data-flip-toggle]'));
         flipToggleCalls.map(function(flipToggleCall) {
-            
+            flipToggleCall.addEventListener('click', function(event) {
+                let icon = event.currentTarget.querySelector('i');
+                if(event.currentTarget.getAttribute('is-flipped')) {
+                    event.currentTarget.removeAttribute('is-flipped');
+                    icon.classList = event.currentTarget.dataset.defaultIcon;
+                } else {
+                    event.currentTarget.setAttribute('is-flipped', '');
+                    icon.classList = event.currentTarget.dataset.flipIcon;
+                }
+            });
         });  
     }
 

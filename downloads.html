@@ -25,7 +25,14 @@ js-postload-files:
                       <div class="list-item-actions mt-2 mt-md-0">
                         <small class="text-muted"><span class="badge rounded-pill rounded border user-select-none me-2">{{ item.size }}</span></small>
                         <a href="{{ item.url }}" class="btn btn-sm btn-outline-light" target="_blank" aria-label="Download"><i class="bi bi-download icon-1x"></i></a>
-                        <button type="button" class="btn btn-sm btn-outline-light me-2" aria-label="More" data-bs-toggle="collapse" data-bs-target="#{{ download.group | downcase }}-clp-{{ forloop.index }}" aria-expanded="false" aria-controls="{{ download.group | downcase }}-clp-{{ forloop.index }}">
+                        <button type="button" class="btn btn-sm btn-outline-light me-2" aria-label="More" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#{{ download.group | downcase }}-clp-{{ forloop.index }}" 
+                        aria-expanded="false" 
+                        aria-controls="{{ download.group | downcase }}-clp-{{ forloop.index }}"
+                        data-flip-toggle 
+                        data-default-icon="bi bi-plus icon-1x" 
+                        data-flip-icon="bi bi-minus icon-1x">
                           <i class="bi bi-plus icon-1x"></i>
                         </button>
                       </div>
