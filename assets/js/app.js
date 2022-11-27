@@ -228,6 +228,7 @@ const app = function() {
         let button = document.createElement('button');
         let nbSpace = document.createTextNode(' ');
         let span = document.createElement('span');
+        let feeback = document.createElement('span');
         let i = document.createElement('i');
 
         let copyString = targetElement.innerText;
@@ -236,9 +237,11 @@ const app = function() {
         button.setAttribute('data-flip-icon', 'bi bi-clipboard-check');
         button.setAttribute('aria-label', 'Copy');
 
-        span.classList.add('d-flex', 'justify-content-center', 'align-items-center', 'icon-bg-xs', 'rounded-circle');
+        span.classList.add('d-flex', 'justify-content-center', 'align-items-center', 'icon-bg-xs', 'rounded-circle', 'position-relative');
+        feedback.classList.add('feedback-text-right');
         i.classList.add('bi', 'bi-clipboard', 'icon-xs');
 
+        span.appendChild(feeback);
         span.appendChild(i);
         button.appendChild(span);
 

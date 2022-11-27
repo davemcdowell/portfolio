@@ -332,6 +332,12 @@ pre {
 .accent-text { color: var(--accent-type-color) !important; }
 .left-border-accent { border-left: 2px solid var(--accent-type-color); }
 .fs-small { font-size: .875em !important; }
+.feedback-text-right {
+  position: absolute;
+  left: 28px;
+  pointer-events: none;
+  font-size: 0.75em;
+}
 
 /* share buttons */
 #share-buttons {display: inline-block; vertical-align: middle; }
