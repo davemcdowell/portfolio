@@ -239,6 +239,7 @@ const app = function() {
 
         span.classList.add('d-flex', 'justify-content-center', 'align-items-center', 'icon-bg-xs', 'rounded-circle', 'position-relative');
         feedback.classList.add('feedback-text');
+        feedback.innerText = 'Copied!';
         i.classList.add('bi', 'bi-clipboard', 'icon-xs');
 
         span.appendChild(feedback);
