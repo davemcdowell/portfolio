@@ -333,6 +333,7 @@ pre {
 .left-border-accent { border-left: 2px solid var(--accent-type-color); }
 .fs-small { font-size: .875em !important; }
 .feedback-text {
+  display: none;
   position: absolute;
   left: 28px;
   pointer-events: none;
