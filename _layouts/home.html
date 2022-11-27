@@ -24,3 +24,14 @@ js-postload-files:
 {% assign enderData = site.data.content.main.header %}
 {%- include sections/ender.html data=enderData -%}
 {%- include sections/contact.html -%}
+{% assign heroImages = "" | split: ',' %}
+{%- for image in site.data.content.hero.images -%}
+{% assign heroImages = heroImages | push: image %}
+{%- endfor -%}
+<script id="hero-images">
+let images = [
+{%- for image in heroImages -%}
+    {{ image }}{%- unless forloop.last -%},{%- endunless -%}
+{%- endfor -%}
+];
+</script>
