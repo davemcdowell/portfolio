@@ -240,6 +240,7 @@ const app = function() {
         span.classList.add('d-flex', 'justify-content-center', 'align-items-center', 'icon-bg-xs', 'rounded-circle', 'position-relative');
         feedback.classList.add('feedback-text');
         feedback.innerText = 'Copied!';
+        feedback.ariaLabel = 'Copied!';
         i.classList.add('bi', 'bi-clipboard', 'icon-xs');
 
         span.appendChild(feedback);
@@ -254,7 +255,7 @@ const app = function() {
             feedback.style = "display: block;"
             setTimeout(function() {
                 feedback.style = "display: none;"
-            }, 3000);
+            }, 4000);
         });
     }
 
