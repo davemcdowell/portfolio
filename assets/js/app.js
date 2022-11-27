@@ -205,9 +205,11 @@ const app = function() {
                 let icon = event.currentTarget.querySelector('i');
                 if(event.currentTarget.getAttribute('is-flipped') == '') {
                     event.currentTarget.removeAttribute('is-flipped');
+                    event.currentTarget.ariaLabel = event.currentTarget.dataset.defaultLabel;
                     icon.classList = event.currentTarget.dataset.defaultIcon;
                 } else {
                     event.currentTarget.setAttribute('is-flipped', '');
+                    event.currentTarget.ariaLabel = event.currentTarget.dataset.flipLabel;
                     icon.classList = event.currentTarget.dataset.flipIcon;
                 }
             });
