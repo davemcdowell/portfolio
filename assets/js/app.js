@@ -238,7 +238,7 @@ const app = function() {
         button.setAttribute('aria-label', 'Copy');
 
         span.classList.add('d-flex', 'justify-content-center', 'align-items-center', 'icon-bg-xs', 'rounded-circle', 'position-relative');
-        feedback.classList.add('feedback-text-right');
+        feedback.classList.add('feedback-text');
         i.classList.add('bi', 'bi-clipboard', 'icon-xs');
 
         span.appendChild(feeback);
@@ -250,6 +250,10 @@ const app = function() {
 
         button.addEventListener('click', () => {
             navigator.clipboard.writeText(copyString);
+            feedback.style = "display: block;"
+            setTimeout(function() {
+                feedback.style = "display: none;"
+            }, 3000);
         });
     }
 
