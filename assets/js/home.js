@@ -38,6 +38,10 @@ const gallery = function() {
     }
 
     function setHeroImage() {
-        //app.get_random_int(hImages);
+        let heroImage = document.querySelector('.hero-image');
+
+        if(heroImage && hImages) {
+            console.log(hImages[app.get_random_int(0, hImages.length)]);
+        }
     }
 }();
