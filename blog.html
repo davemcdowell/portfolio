@@ -4,6 +4,16 @@ title: Blog
 permalink: /blog/
 js-postload-files: 
   - /portfolio/assets/js/time.js
+hero:
+  media:
+  - src: https://picsum.photos/1600/500?random=1
+    type: 'image'
+  - src: https://picsum.photos/1600/500?random=2
+    type: 'image'
+  - src: https://picsum.photos/1600/500?random=3
+    type: 'image'
+  - src: https://picsum.photos/1600/500?random=4
+    type: 'image'
 ---
 {% assign headerData = site.data.content.blog.header %}
 {%- include sections/header.html data=headerData -%}
@@ -17,3 +27,24 @@ js-postload-files:
 {% assign enderData = site.data.content.blog.ender %}
 {%- include sections/ender.html data=enderData -%}
 {%- include sections/contact.html -%}
+
+{% assign heroImages = page.hero.media | where: "type", "image"  %}
+{% assign heroVideos = page.hero.media | where: "type", "video"  %}
+{%- if heroImages.size > 0  or heroVideos.size > 0 -%}
+<script>
+{%- if heroImages.size > 0 -%}
+    let hImages = [
+    {%- for image in heroImages -%}
+        "{{ image.src }}"{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+    ];
+{%- endif -%}
+{%- if heroVideos.size > 0 -%}
+let hVideos = [
+    {%- for image in heroImages -%}
+        "{{ image.src }}"{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+    ];
+{%- endif -%}
+</script>
+{% endif -%}
