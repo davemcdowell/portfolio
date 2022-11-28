@@ -118,7 +118,7 @@ pre {
   position: relative;
 }
 
-.hero-base {
+.hero-base-angeled {
   position: absolute;
   display: block;
   left: 0;
@@ -128,6 +128,17 @@ pre {
   background-color: var(--bg-color-dark);
   -webkit-clip-path: polygon(0% 95%, 100% 0%, 100% 100%, 0% 100%);
   clip-path: polygon(0% 95%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.hero-base-faded {
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 42px;
+  background-color: var(--bg-color-dark);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1.0));
 }
 
 /* utils */
