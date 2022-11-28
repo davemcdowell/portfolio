@@ -43,7 +43,7 @@ const gallery = function() {
         if(heroImage && hImages) {
             let rImg = hImages[app.get_random_int(0, hImages.length)];
             console.log(rImg);
-            heroImage.style = `background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('${ rImg }')`;
+            heroImage.style = `background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('${ rImg }'); background-position: fixed;`;
         }
     }
 }();
