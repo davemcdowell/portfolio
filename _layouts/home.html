@@ -33,7 +33,7 @@ hero-media:
 {% assign enderData = site.data.content.main.ender %}
 {%- include sections/ender.html data=enderData -%}
 {%- include sections/contact.html -%}
-{% assign heroImages = page.hero-media | where: "type", "image" %}
+{% assign heroImages = page.hero-media | where: "type", "image" | split: ',' %}
 {%- if heroImages.size > 0 -%}
 <script>
 let hImages = [
