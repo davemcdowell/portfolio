@@ -93,30 +93,10 @@
                     {% assign minCommonTags =  1 %}
                     {% assign maxRelatedPosts = 0 %}
                     <div class="p-4">
-                        <h6 class="block-label"><i class="bi bi-symmetry-vertical"></i> Similar Posts</h6>
+                        <h6 class="block-label"><i class="bi bi-symmetry-vertical"></i> Archives</h6>
                         <hr class="block-label-hr">
                         <ul class="list-unstyled">
-                            {%- for post in site.posts -%}
-                                {% assign sameTagCount = 0 %}
-                                {%- if post.url != page.url -%}
-                                    {%- for tag in post.tags -%}
-                                        {%- if page.tags contains tag -%}
-                                        {% assign sameTagCount = sameTagCount | plus: 1 %}
-                                        {%- endif -%}
-                                    {%- endfor -%}
-                                {%- endif -%}
-                                {%- if sameTagCount >= minCommonTags -%}
-                                    {%- if post.short-title -%}
-                                    <li><a class="text-decoration-none" href="{{ site.baseurl }}{{ post.url }}">{{ post.short-title | capitalize }}</a></li>
-                                    {%- else -%}
-                                    <li><a class="text-decoration-none" href="{{ site.baseurl }}{{ post.url }}">{{ post.title | capitalize }}</a></li>
-                                    {%- endif -%}
-                                    {% assign maxRelatedPosts = maxRelatedPosts | plus: 1 %}
-                                    {%- if maxRelatedPosts > maxPosts -%}
-                                        {% break %}
-                                    {%- endif -%}
-                                {%- endif -%}
-                            {%- endfor -%}
+                            <li><a class="text-decoration-none" href="{{ site.baseurl }}{{ post.url }}">{{ post.short-title | capitalize }}</a></li>
                         </ul>
                     </div>
                 </aside>
