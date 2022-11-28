@@ -3,7 +3,7 @@ const gallery = function() {
 
     function init() {
         console.log('--      home.js initiated');
-        setHeroImage();
+        setHeroMedia();
         setPortfolioSliders();
     }
 
@@ -37,11 +37,13 @@ const gallery = function() {
         }
     }
 
-    function setHeroImage() {
+    function setHeroMedia() {
         let heroImage = document.querySelector('.hero-image');
 
         if(heroImage && hImages) {
-            console.log(hImages[app.get_random_int(0, hImages.length)]);
+            let rImg = hImages[app.get_random_int(0, hImages.length)];
+            console.log(rImg);
+            heroImage.style = `background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('${ rImg }')`;
         }
     }
 }();

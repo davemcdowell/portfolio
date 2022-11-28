@@ -4,7 +4,7 @@
 {% assign posts = site.posts %}
 {%- endif -%}
 {%- if posts.size > 0 -%}
-<section id="blog-main">
+<section id="blog">
     <div id="blog-container" class="content-wrapper mx-auto">
         {% assign date_format = site.date_format | default: "%A, %B %e, %Y" %}
         {%- for post in posts -%}
