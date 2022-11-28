@@ -25,8 +25,8 @@ js-postload-files:
 {%- include sections/ender.html data=enderData -%}
 {%- include sections/contact.html -%}
 
-{% assign heroImages = page.hero-media.media | where: "type", "image"  %}
-{% assign heroVideos = page.hero-media.media | where: "type", "video"  %}
+{% assign heroImages = page.hero.media | where: "type", "image"  %}
+{% assign heroVideos = page.hero.media | where: "type", "video"  %}
 {%- if heroImages.size > 0  or heroVideos.size > 0 -%}
 <script>
 {%- if heroImages.size > 0 -%}
