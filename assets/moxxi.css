@@ -112,7 +112,7 @@ pre {
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("");
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("");
   height: 520px;
-  background-position: center;
+  background-position: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -172,9 +172,9 @@ pre {
 .bs-inner-hover {
   -webkit-box-shadow: inset 0px 0px 10px 5px rgba(255,255,255,0.01); 
   box-shadow: inset 0px 0px 10px 5px rgba(255,255,255,0.01);
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.12s ease-in-out;
+  -o-transition: all 0.12s ease-in-out;
+  transition: all 0.12s ease-in-out;
 }
 
 .bs-inner-hover:hover
@@ -187,9 +187,9 @@ pre {
 .highlight-border {
   border: 1px solid var(--bg-color-dark);
   background-color: solid var(--bg-color-dark);
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.12s ease-in-out;
+  -o-transition: all 0.12s ease-in-out;
+  transition: all 0.12s ease-in-out;
 }
 
 .highlight-border:hover {
@@ -422,11 +422,11 @@ pre {
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-transition: -webkit-transform 0.75s ease-in-out;
-  transition: -webkit-transform 0.75s ease-in-out;
-  -o-transition: transform 0.75s ease-in-out;
-  transition: transform 0.75s ease-in-out;
-  transition: transform 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
+  -webkit-transition: -webkit-transform 0.35s ease-in-out;
+  transition: -webkit-transform 0.35ss ease-in-out;
+  -o-transition: transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out, -webkit-transform 0.35s ease-in-out;
 }
 
 .callout-bg::after {
