@@ -4,13 +4,13 @@ js-postload-files:
   - /portfolio/assets/js/home.js
 hero-media:
   - src: https://picsum.photos/1600/500?random=1
-    type: image
+    type: 'image'
   - src: https://picsum.photos/1600/500?random=2
-    type: image
+    type: 'image'
   - src: https://picsum.photos/1600/500?random=3
-    type: image
+    type: 'image'
   - src: https://picsum.photos/1600/500?random=4
-    type: image
+    type: 'image'
 ---
 {% assign headerData = site.data.content.main.header %}
 {%- include sections/logo-header.html data=headerData -%}
@@ -33,7 +33,7 @@ hero-media:
 {% assign enderData = site.data.content.main.ender %}
 {%- include sections/ender.html data=enderData -%}
 {%- include sections/contact.html -%}
-{% assign heroImages = page.hero-media | where: "type", "image" | split: ',' %}
+{% assign heroImages = page.hero-media | where: "type", "image"  %}
 {%- if heroImages.size > 0 -%}
 <script>
 let hImages = [
