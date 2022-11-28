@@ -4,7 +4,7 @@ title: Downloads
 permalink: /downloads/
 js-postload-files: 
   - /portfolio/assets/js/downloads.js
-hero-media:
+hero:
   type: "faded"
   media:
   - src: https://picsum.photos/1600/500?random=1
@@ -97,8 +97,8 @@ hero-media:
 {%- include sections/ender.html data=enderData -%}
 {%- include sections/contact.html -%}
 
-{% assign heroImages = page.hero-media.media | where: "type", "image"  %}
-{% assign heroVideos = page.hero-media.media | where: "type", "video"  %}
+{% assign heroImages = page.hero.media | where: "type", "image"  %}
+{% assign heroVideos = page.hero.media | where: "type", "video"  %}
 {%- if heroImages.size > 0  or heroVideos.size > 0 -%}
 <script>
 {%- if heroImages.size > 0 -%}
