@@ -3,13 +3,13 @@ layout: default
 js-postload-files: 
   - /portfolio/assets/js/home.js
 hero-media:
-  - https://picsum.photos/1600/500?random=1
+  - src: https://picsum.photos/1600/500?random=1
     type: image
-  - https://picsum.photos/1600/500?random=2
+  - src: https://picsum.photos/1600/500?random=2
     type: image
-  - https://picsum.photos/1600/500?random=3
+  - src: https://picsum.photos/1600/500?random=3
     type: image
-  - https://picsum.photos/1600/500?random=4
+  - src: https://picsum.photos/1600/500?random=4
     type: image
 ---
 {% assign headerData = site.data.content.main.header %}
@@ -38,7 +38,7 @@ hero-media:
 <script>
 let hImages = [
 {%- for image in heroImages -%}
-    "{{ image }}"{%- unless forloop.last -%},{%- endunless -%}
+    "{{ image.src }}"{%- unless forloop.last -%},{%- endunless -%}
 {%- endfor -%}
 ];
 </script>
