@@ -60,7 +60,22 @@ media:
     src: https://www.youtube.com/watch?v=7X8II6J-6mU
     alt: Video 1
     description: >-
-      An video generated from lorem picsum for testing.   
+      An video generated from lorem picsum for testing.
+  - 
+    title: Cubemap 1
+    # image, video, cubemap, 3d
+    type: cubemap
+    thumbnail: https://i3.ytimg.com/vi/7X8II6J-6mU/maxresdefault.jpg 
+    thumbnail_alt: Cubemap 1
+    up: ~
+    back: ~
+    left: ~
+    front: ~
+    right: ~
+    down: ~
+    alt: Cubemap 1
+    description: >-
+      A test cubemap for 360 display of scenes in levels with ambient background audio via three.js.
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.

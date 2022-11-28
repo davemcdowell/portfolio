@@ -3,6 +3,10 @@ layout: default
 js-postload-files: 
   - /portfolio/assets/js/home.js
 hero-media:
+  - https://picsum.photos/1600/500?random=1
+  - https://picsum.photos/1600/500?random=2
+  - https://picsum.photos/1600/500?random=3
+  - https://picsum.photos/1600/500?random=4
 ---
 {% assign headerData = site.data.content.main.header %}
 {%- include sections/logo-header.html data=headerData -%}
@@ -25,10 +29,8 @@ hero-media:
 {% assign enderData = site.data.content.main.ender %}
 {%- include sections/ender.html data=enderData -%}
 {%- include sections/contact.html -%}
-{% assign heroImages = "" | split: ',' %}
-{%- for image in site.data.content.main.hero.images -%}
-{% assign heroImages = heroImages | push: image %}
-{%- endfor -%}
+{% assign heroImages = page.hero-media | split: ',' | where: "type", "image" %}
+{%- if heroImages.size > 0 -%}
 <script>
 let hImages = [
 {%- for image in heroImages -%}
@@ -36,3 +38,4 @@ let hImages = [
 {%- endfor -%}
 ];
 </script>
+{% endif -%}
