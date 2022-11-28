@@ -4,9 +4,21 @@ const common = function() {
     function init() {
       console.log('--      common.js initiated');
       setToolTips();
+      setHeroMedia();
       //setToast();
       setCopyButtons();
       setFlipToggles();
+    }
+
+    /* hero media */
+    function setHeroMedia() {
+        let heroImage = document.querySelector('.hero-image');
+
+        if(heroImage && hImages) {
+            let rImg = hImages[app.get_random_int(0, hImages.length)];
+            console.log(rImg);
+            heroImage.style = `background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('${ rImg }'); background-position: fixed;`;
+        }
     }
 
     /* tooltips */
