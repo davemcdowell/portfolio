@@ -11,8 +11,8 @@
       start-date: Jun, 2018
       end-date: Present
       description: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  
+        Co-founder of studio. Heading brand, web, game design and development 
+        as well as internal prototyping for early titles for a small independent game studio.
     -
       logo: /assets/images/cv/omg.jpg
       company: Team Gourmet, USA
@@ -21,8 +21,8 @@
       start-date: May, 2021
       end-date: Aug, 2022
       description: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  
+        Headed rebranding of both digital and print media along with complete
+        redevelopment of official Ecommerce site theme based in Shopify.
     -
       logo: /assets/images/cv/bex.jpg
       company: Expedia Group
@@ -31,8 +31,8 @@
       start-date: Sep, 2017
       end-date: Dec, 2019
       description: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Areas of responsibility included Research Ops, Research Archive Development,
+        A/V + IT Services, Lab Support, Software training and Communications.
     -
       logo: /assets/images/cv/cca.png
       company: Cornish College of the Arts
@@ -41,8 +41,9 @@
       start-date: May, 2017
       end-date: Sep, 2017
       description: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        A WebGL based virtual gallery and interaction toolkit built in Unity, commissioned
+        by Cornish to provide a browser/HMD based experience for displaying student and
+        faculty work for virtual exhibitions.
     -
       logo: /assets/images/cv/cca.png
       company: Cornish College of the Arts
@@ -51,8 +52,8 @@
       start-date: Jun, 2017
       end-date: Sep, 2017
       description: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Provided basic IT support for the ADFM department computer & digital print lab,
+        assisted with small projects and gallery AV tech prep for student shows.
     -
       logo: /assets/images/cv/vgl.jpg
       company: Venom Game Labs, LLC.
@@ -61,8 +62,8 @@
       start-date: Dec, 2012
       end-date: Apr, 2016
       description: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.                
+        Developed several guide levels while moving towards implementing environment &
+        atmospheric standards set out by previous lead level designer.
   education:
     -
       logo: /assets/images/cv/cca.png
@@ -72,8 +73,8 @@
       degree-short: (BFA)
       subject: Design
       description: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Built a strong core in traditional design skills with emphasis on web, UI/UX and
+        emerging tech. Capstone project was a full game demo and studio brand guide.
       start-date: 2015
       end-date: 2017
     -
@@ -84,8 +85,7 @@
       degree-short: (AAS)
       subject: Interactive Media
       description: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Foundational degree with practical hands-on experience with traditional, web, 2D and 3D media. Primary focus was in 3D Art and Animation.
       start-date: 2010
       end-date: 2013
   skills:
