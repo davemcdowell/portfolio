@@ -26,7 +26,7 @@ hero:
               {%- include forms/search-form.html -%}
               {%- assign downloads = site.data.downloads.files | where_exp:"file", "file.group != 'Links'" -%}
               {%- for download in downloads -%}
-                <h3>{{ download.group }}</h3>
+                <h3>{{ download.group }}<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light">{{ download.items.size }}<span class="visually-hidden">{{ download.items.size }} items</span></span></h3>
                 <hr>
                 <ul class="list-group list-group-flush mb-2">
                 {%- for item in download.items -%}
