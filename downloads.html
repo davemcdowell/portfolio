@@ -27,7 +27,11 @@ hero:
               {%- assign downloads = site.data.downloads.files | where_exp:"file", "file.group != 'Links'" -%}
               {%- for download in downloads -%}
                 <div class="d-flex justify-content-between align-items-center">
-                  <h3 class="position-relative">{{ download.group }}<p class="fs-6 my-0 user-select-none"><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark">{{ download.items.size }}</span></p></h3>
+                  <h3 class="position-relative">{{ download.group }}
+                    <p class="fs-6 my-0 user-select-none">
+                      <small><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark">{{ download.items.size }}</span></small>
+                    </p>
+                  </h3>
                 </div>
                 <hr>
                 <ul class="list-group list-group-flush mb-2">
