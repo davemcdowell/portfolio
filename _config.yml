@@ -40,7 +40,6 @@ timezone: America/Los_Angeles
 collections_dir: collections
 collections:
   archives:
-    show-main: false
     output: true
     permalink: /archives/:path/
   level_design:
