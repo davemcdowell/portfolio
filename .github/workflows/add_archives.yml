@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Blog Archive
+      - name: Generate Jekyll Archives
         uses: kannansuresh/jekyll-blog-archive-workflow@v1.0.3
         with:
           archive_url: "https://github.com/davemcdowell/portfolio/tree/main/_archives"
