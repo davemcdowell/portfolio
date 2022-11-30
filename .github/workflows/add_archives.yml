@@ -15,7 +15,7 @@ jobs:
       - name: Blog Archive
         uses: kannansuresh/jekyll-blog-archive-workflow@v1.0.3
         with:
-          archive_url: "davemcdowell.github.io/portfolio/archives/archivedata"
+          archive_url: "https://github.com/davemcdowell/portfolio/archives/archivedata"
           archive_folder_path: "_archives"
 
       - name: setup git config
