@@ -66,7 +66,9 @@
                         <h6 class="block-label"><i class="bi bi-archive"></i> Archives</h6>
                         <hr class="block-label-hr">
                         <ul class="list-unstyled">
-                            <li><a class="text-decoration-none" href="{{ site.baseurl }}{{ post.url }}"></a></li>
+                            {%- for post in site.posts -%}
+                            <li><a class="text-decoration-none" href="{{ site.baseurl }}/archives/{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</a></li>
+                            {%- endfor -%}
                         </ul>
                     </div>
                     <div class="p-4">
