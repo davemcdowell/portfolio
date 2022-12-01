@@ -24,7 +24,7 @@
                         <hr class="block-label-hr">
                         <ul class="list-inline">
                             {%- for category in site.categories -%}
-                            <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ category.url }}">{{ category | capitalize }}</a></li>
+                            <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ category.url }}">{{ category[0] | capitalize }}</a></li>
                             {%- endfor -%}
                         </ul>
                     </div>
