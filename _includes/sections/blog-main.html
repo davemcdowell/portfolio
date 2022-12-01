@@ -24,6 +24,7 @@
                         <hr class="block-label-hr">
                         <ul class="list-inline">
                             {%- for category in site.categories -%}
+                            {% assign categoryURL = '/category/' | relative_url %}
                             <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ category.url }}">{{ category[0] | capitalize }}</a></li>
                             {%- endfor -%}
                         </ul>
@@ -35,6 +36,7 @@
                         <hr class="block-label-hr">
                         <ul class="list-inline">
                             {%- for tag in site.tags -%}
+                            {% assign tagURL = '/tag/' | relative_url %}
                             <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ tag.url }}">{{ tag[0] | capitalize }}</a></li>
                             {%- endfor -%}
                         </ul>
@@ -46,7 +48,7 @@
                         <ul class="list-unstyled">
                             {%- for post in site.posts -%}
                             {% assign postDate =  post.date | date: '%Y' %}
-                            {% assign postURL = '/year/' | relative_url %}
+                            {% assign yearURL = '/year/' | relative_url %}
                             <li><a class="text-decoration-none" href="{{ postURL }}{{ postDate }}">{{ postDate }}</a></li>
                             {%- endfor -%}
                         </ul>
