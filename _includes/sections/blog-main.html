@@ -10,25 +10,7 @@
             <div class="col-md-8">
                 {% assign date_format = site.date_format | default: "%A, %B %e, %Y" %}
                 {%- for post in posts -%}
-                <div class="card text-white bg-default border-0 mb-3">
-                    <div class="row g-0">
-                        <div class="col-md-4 p-3">
-                            <a href="{{ post.url | relative_url }}"><img src="https://picsum.photos/512/512?random={{ forloop.index }}" class="img-fluid rounded bs-sm" alt="Image for: {{ post.title }}"></a>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <a class="link-title" href="{{ post.url | relative_url }}"><h5 class="card-title">{{ post.title | escape }}</h5></a>
-                                <p class="card-text mb-0 pb-0"><small class="text-muted">{{ post.date | date: date_format }}</small></p>
-                                <hr class="block-label-hr">
-                                <p class="card-text">{{ post.excerpt | truncatewords: 150 }}</p>
-                                <a href="{{ post.url | relative_url }}">Read more<span class="text-decoration-none">...</span></a>
-                                <hr class="w-50 mb-0">
-                                <input id="post-{{ forloop.index }}-lmt" type="hidden" value="{{ post.last-modified | date_to_xmlschema }}">
-                                <p class="card-text"><small class="text-muted" get-time-since="post-{{ forloop.index }}-lmt" get-time-since-fallback="{{ post.date | date_to_xmlschema }}"></small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {%- include sections/blog-article.html post=post -%}
                 {%- endfor -%}
                 {%- if site.paginate -%}
                 <nav aria-label="Page navigation">
