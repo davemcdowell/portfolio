@@ -657,7 +657,6 @@ pre {
   line-height: 1.55rem;
   font-weight: 500;
   max-height: 4.4rem;
-  overflow: hidden;
   display: inline-block;
   -webkit-line-clamp: 2;
   display: box;
