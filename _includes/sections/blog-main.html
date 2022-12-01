@@ -35,7 +35,7 @@
                         <hr class="block-label-hr">
                         <ul class="list-inline">
                             {%- for tag in site.tags -%}
-                            <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ tag.url }}">{{ tag | capitalize }}</a></li>
+                            <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ tag.url }}">{{ tag[0] | capitalize }}</a></li>
                             {%- endfor -%}
                         </ul>
                     </div>
