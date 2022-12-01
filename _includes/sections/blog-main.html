@@ -67,7 +67,9 @@
                         <hr class="block-label-hr">
                         <ul class="list-unstyled">
                             {%- for post in site.posts -%}
-                            <li><a class="text-decoration-none" href="{{ site.baseurl }}/year/{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</a></li>
+                            {% assign postDate =  post.date | date: '%Y' %}
+                            {% assign postURL = '/year/' | relative_url %}
+                            <li><a class="text-decoration-none" href="{{ postURL }}{{ postDate }}">{{ postDate }}</a></li>
                             {%- endfor -%}
                         </ul>
                     </div>
