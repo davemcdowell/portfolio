@@ -49,7 +49,7 @@
                             {%- for post in site.posts -%}
                             {% assign postDate =  post.date | date: '%Y' %}
                             {% assign yearURL = '/year/' | relative_url %}
-                            <li><a class="text-decoration-none" href="{{ postURL }}{{ postDate }}">{{ postDate }}</a></li>
+                            <li><a class="text-decoration-none" href="{{ yearURL }}{{ postDate }}">{{ postDate }}</a></li>
                             {%- endfor -%}
                         </ul>
                     </div>
