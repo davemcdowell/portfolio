@@ -90,7 +90,7 @@ js-postload-files:
                         <hr class="block-label-hr">
                         <ul class="list-inline">
                             {%- for tag in page.tags -%}
-                            {% assign tagURL = '/tags/' %}
+                            {% assign tagURL = '/tag/' %}
                             <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ tagURL }}{{ tag[0] }}">{{ tag | capitalize }}</a></li>
                             {%- endfor -%}
                         </ul>
