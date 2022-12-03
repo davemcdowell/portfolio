@@ -13,6 +13,7 @@ css-files:
 {% assign date_format = site.date_format | default: "%A, %B %e, %Y" %}
 {% assign videos = page.media | where: "type", "video" %}
 {% assign images = page.media | where: "type", "image" %}
+{% assign cubes = page.media | where: "type", "cubemap" %}
 <section id="gallery-main">
     <div id="gallery-container" class="content-wrapper my-4 mx-auto">
         <div class="row g-0">
@@ -49,12 +50,12 @@ css-files:
                     </section>
                     <section id="thumbnail-slide" class="gallery-slider splide" aria-label="Gallery thumbnail slide">
                         <div class="splide__arrows">
-                            <button class="splide__arrow splide__arrow--prev me-2"><i class="bi bi-chevron-left icon-2x"></i></button>
-                            <button class="splide__arrow splide__arrow--next ms-2"><i class="bi bi-chevron-right icon-2x"></i></button>
+                            <button class="splide__arrow splide__arrow--prev me-2"><i class="bi bi-chevron-left icon-1x"></i></button>
+                            <button class="splide__arrow splide__arrow--next ms-2"><i class="bi bi-chevron-right icon-1x"></i></button>
                         </div>
                         <div class="position-relative mt-2">
-                            <div class="splide__track overflow-y-visible">
-                                <ul class="splide__list overflow-x-hidden">
+                            <div class="splide__track">
+                                <ul class="splide__list">
                                     {%- for vid in videos -%}
                                     <li class="splide__slide thumbnail video">
                                         <img src="{{ vid.thumbnail }}" alt="{{ vid.thumbnail_alt }}">
