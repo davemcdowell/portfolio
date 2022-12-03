@@ -78,7 +78,7 @@ js-postload-files:
                         <hr class="block-label-hr">
                         <ul class="list-inline">
                             {%- for category in page.categories -%}
-                            {% assign categoryURL = '/category/' %}
+                            {% assign categoryURL = '/category/' | relative_url %}
                             <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ categoryURL }}{{ category }}">{{ category | capitalize }}</a></li>
                             {%- endfor -%}
                         </ul>
@@ -90,7 +90,7 @@ js-postload-files:
                         <hr class="block-label-hr">
                         <ul class="list-inline">
                             {%- for tag in page.tags -%}
-                            {% assign tagURL = '/tag/' %}
+                            {% assign tagURL = '/tag/' | relative_url %}
                             <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ tagURL }}{{ tag }}">{{ tag | capitalize }}</a></li>
                             {%- endfor -%}
                         </ul>

@@ -170,6 +170,7 @@ pre {
 
 .bg-default { background-color: var(--bg-color-dark)!important; }
 .bg-offset { background-color: var(--bg-color-offset-darker)!important; }
+.bg-offset-a { background-color: rgba(0, 0, 0, 0.35); }
 
 .bs-sm {
   -webkit-box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.1), 
