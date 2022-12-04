@@ -29,6 +29,10 @@ const gallery = function() {
             pagination: false,
             arrows: true,
             isNavigation: true,
+            dragMinThreshold: {
+                mouse: 5,
+                touch: 10,
+            },
             breakpoints: {
               600: {
                 fixedWidth: 60,
