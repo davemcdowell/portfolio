@@ -592,7 +592,7 @@ pre {
   border-bottom: 12px solid var(--default-type-color);
 }*/
 
-.gallery-slider .splide__slide.is-active::before  {
+.gallery-slider .splide__slide.is-active::after  {
   content: url('/portfolio/assets/images/image-frame-hl.png');
 }
 
