@@ -1,4 +1,4 @@
-const Cubemap = function(Splide, Components) {
+export function Cubemap(Splide, Components) {
   const { slides } = Components.Elements;
 
   let _cubemap;
