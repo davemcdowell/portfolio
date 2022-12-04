@@ -6,9 +6,8 @@ export function CubemapSplide(Splide, Components) {
   let _btn;
 
   function mount() {
-    
     console.log('cubemap splide registered and mounted!');
-
+    
     //add an identifier to this slide similar to video extetnsion
     slide.classList.add('splide__slide--has-cubemap');
 
@@ -27,8 +26,6 @@ export function CubemapSplide(Splide, Components) {
     _btn.setAttribute('type', 'button');
     _btn.setAttribute('aria-label', 'View Cubemap');
 
-    //play button event listener
-
     //append play button to cubemap 
     _cubemap.appendChild(_btn);
 
@@ -37,6 +34,13 @@ export function CubemapSplide(Splide, Components) {
 
     //append our root to the slide
     slide.appendChild(_cubemap);
+
+    //play button event listener
+    _btn.addEventListener('click', playCubemap);
+  }
+
+  function playCubemap() {
+    console.log('Play Cubemap');
   }
 
   return {
