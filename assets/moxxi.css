@@ -575,8 +575,8 @@ pre {
   transition: border 0.35s ease-in-out, opacity 0.25s ease;
 }
 
-.gallery-slider .splide__track { overflow-x: hidden; overflow-y: visible; }
-.gallery-slider .splide__slide.is-active { border: 2px solid var(--default-type-color); opacity: 1.0; }
+/*.gallery-slider .splide__track { overflow-x: hidden; overflow-y: visible; }*/
+/*.gallery-slider .splide__slide.is-active { border: 2px solid var(--default-type-color); opacity: 1.0; }
 
 .gallery-slider .splide__slide.is-active::after {
   z-index: 99;
@@ -590,6 +590,10 @@ pre {
   border-right: 12px solid transparent;
   border-left: 12px solid transparent;
   border-bottom: 12px solid var(--default-type-color);
+}*/
+
+.gallery-slider .splide__slide.is-active {
+  
 }
 
 .gallery-slider .splide__slide.thumbnail img {
