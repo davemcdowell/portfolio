@@ -10,10 +10,10 @@ function Cubemap(Splide, Components) {
     
     let _slides = Splide.splides;
 
-    for(slide in _slides) {
-      if(slide.getAttribute('data-splide-cubemap')) {
+    for(var i = 0; i < _slides.length; i++) {
+      if(_slides[i].getAttribute('data-splide-cubemap')) {
         //add an identifier to this slide similar to video extetnsion
-        slide.classList.add('splide__slide--has-cubemap');
+        _slides[i].classList.add('splide__slide--has-cubemap');
   
         //create the container for the button and wrapper (in that order)
         _cubemap = document.createElement("div");
@@ -37,7 +37,7 @@ function Cubemap(Splide, Components) {
         _cubemap.appendChild(_wrapper);
   
         //append root to the slide
-        slide.appendChild(_cubemap);
+        _slides[i].appendChild(_cubemap);
   
         //play button event listener
         _btn.addEventListener('click', playCubemap);
