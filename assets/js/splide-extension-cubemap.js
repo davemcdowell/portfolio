@@ -8,7 +8,7 @@ const Cubemap = function(Splide, Components) {
   function mount() {
     for(var i = 0; i < slides.length; i++) {
       if(slides[i].getAttribute('data-splide-cubemap')) {
-        const cubeData = JSON.parse(slides[i].getAttribute('data-splide-cubemap'));
+        const cubeData = JSON.parse(document.querySelector(slides[i].getAttribute('data-splide-cubemap')));
 
         console.log(cubeData);
 

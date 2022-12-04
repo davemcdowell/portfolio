@@ -37,7 +37,37 @@ css-files:
                         <div class="splide__track">
                             <ul class="splide__list">
                                 {%- for cube in cubemaps -%}
-                                <li class="splide__slide" data-splide-cubemap="{{ cube.cubemap }}">
+                                <li class="splide__slide" data-splide-cubemap="#slide-{{ forloop.index }}-cubemap-data">
+                                    <script id="slide-{{ forloop.index }}-cubemap-data" type="application/json">
+                                        {
+                                            "cubemap": [
+                                                {
+                                                    "mp3": {{ cube.cubemap.mp3 }}
+                                                },
+                                                {
+                                                    "ogg": {{ cube.cubemap.ogg }}
+                                                },
+                                                {
+                                                    "up": {{ cube.cubemap.up }}
+                                                },
+                                                {
+                                                    "back": {{ cube.cubemap.back }}
+                                                },
+                                                {
+                                                    "left": {{ cube.cubemap.left }}
+                                                },
+                                                {
+                                                    "front": {{ cube.cubemap.front }}
+                                                },
+                                                {
+                                                    "right": {{ cube.cubemap.right }}
+                                                },
+                                                {
+                                                    "down": {{ cube.cubemap.down }}
+                                                }
+                                            ]
+                                        }
+                                    </script>
                                     <img src="{{ cube.src }}" class="rounded bs-sm" alt="{{ cube.src_alt }}">
                                 </li>                               
                                 {%- endfor -%}
