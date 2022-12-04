@@ -65,14 +65,14 @@ media:
     title: Cubemap 1
     # image, video, cubemap, 3d
     type: cubemap
-    thumbnail: '/assets/images/test/test_ft.png'
+    thumbnail: 'portfolio/assets/images/test/test_ft.png'
     thumbnail_alt: Cubemap 1
-    up: '/assets/images/test/test_up.png'
-    back: '/assets/images/test/test_bk.png'
-    left: '/assets/images/test/test_lf.png'
-    front: '/assets/images/test/test_ft.png'
-    right: '/assets/images/test/test_rt.png'
-    down: '/assets/images/test/test_dn.png'
+    up: '/portfolio/assets/images/test/test_up.png'
+    back: '/portfolio/assets/images/test/test_bk.png'
+    left: '/portfolio/assets/images/test/test_lf.png'
+    front: '/portfolio/assets/images/test/test_ft.png'
+    right: '/portfolio/assets/images/test/test_rt.png'
+    down: '/portfolio/assets/images/test/test_dn.png'
     alt: Cubemap 1
     description: >-
       A test cubemap for 360 display of scenes in levels with ambient background audio via three.js.
