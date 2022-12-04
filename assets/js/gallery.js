@@ -1,4 +1,6 @@
 const gallery = function() {
+    const { Video, Cubemap } = window.splide.Extensions;
+
     window.addEventListener('DOMContentLoaded', init);
 
     function init() {

@@ -1,4 +1,4 @@
-export function CubemapSplide(Splide, Components) {
+export function Cubemap(Splide, Components) {
   const { slide } = Components.Slides;
 
   let _cubemap;
@@ -7,7 +7,7 @@ export function CubemapSplide(Splide, Components) {
 
   function mount() {
     console.log('cubemap splide registered and mounted!');
-    
+
     //add an identifier to this slide similar to video extetnsion
     slide.classList.add('splide__slide--has-cubemap');
 
