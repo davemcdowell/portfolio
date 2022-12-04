@@ -1,6 +1,4 @@
 const gallery = function() {
-    const { Video, Cubemap } = window.splide.Extensions;
-
     window.addEventListener('DOMContentLoaded', init);
 
     function init() {
@@ -38,7 +36,7 @@ const gallery = function() {
         });
 
         mainSlide.sync(thumbnailSlide);
-        mainSlide.mount(window.splide.Extensions);
+        mainSlide.mount({ Video, Cubemap });
         thumbnailSlide.mount();
     }
 
