@@ -15,7 +15,7 @@ function Cubemap(Splide, Components) {
         //add an identifier to this slide similar to video extetnsion
         slide.classList.add('splide__slide--has-cubemap');
   
-        //create the container for the button and wrapper (in that order) - root element for us -
+        //create the container for the button and wrapper (in that order)
         _cubemap = document.createElement("div");
         _cubemap.classList.add('splide__cubemap');
   
@@ -24,7 +24,7 @@ function Cubemap(Splide, Components) {
         _wrapper.style.display = 'none';
         _wrapper.classList.add('splide__cubemap__wrapper');
   
-        //create our play button
+        //create play button
         _btn = document.createElement("button");
         _btn.classList.add('splide__cubemap__play');
         _btn.setAttribute('type', 'button');
@@ -36,7 +36,7 @@ function Cubemap(Splide, Components) {
         //append wrapper to cubemap 
         _cubemap.appendChild(_wrapper);
   
-        //append our root to the slide
+        //append root to the slide
         slide.appendChild(_cubemap);
   
         //play button event listener
