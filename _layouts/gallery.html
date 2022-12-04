@@ -2,7 +2,7 @@
 layout: default
 js-preload-files:
   - https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.8.0/dist/js/splide-extension-video.min.js
-  - /portfolio/assets/js/cubemap_splide.js
+  - /portfolio/assets/js/splide-extension-cubemap.js
 js-postload-files: 
   - /portfolio/assets/js/gallery.js
   - /portfolio/assets/js/time.js
@@ -37,7 +37,7 @@ css-files:
                         <div class="splide__track">
                             <ul class="splide__list">
                                 {%- for cube in cubemaps -%}
-                                <li class="splide__slide splide__slide--has-cubemap">
+                                <li class="splide__slide" data-splide-cubemap="{{ cube.cubemap }}">
                                     <img src="{{ cube.src }}" class="rounded bs-sm" alt="{{ cube.src_alt }}">
                                 </li>                               
                                 {%- endfor -%}
