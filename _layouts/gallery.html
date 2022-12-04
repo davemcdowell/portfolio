@@ -13,7 +13,7 @@ css-files:
 {% assign date_format = site.date_format | default: "%A, %B %e, %Y" %}
 {% assign videos = page.media | where: "type", "video" %}
 {% assign images = page.media | where: "type", "image" %}
-{% assign cubes = page.media | where: "type", "cubemap" %}
+{% assign cubemaps = page.media | where: "type", "cubemap" %}
 <section id="gallery-main">
     <div id="gallery-container" class="content-wrapper my-4 mx-auto">
         <div class="row g-0">
@@ -35,6 +35,11 @@ css-files:
                     <section id="main-slide" class="main-slider splide" aria-label="Gallery main slide">
                         <div class="splide__track">
                             <ul class="splide__list">
+                                {%- for cube in cubemaps -%}
+                                <li class="splide__slide cubemap">
+                                    <img src="{{ cube.src }}" class="rounded bs-sm" alt="{{ cube.src_alt }}">
+                                </li>                               
+                                {%- endfor -%}
                                 {%- for vid in videos -%}
                                 <li class="splide__slide" data-splide-youtube="{{ vid.src }}">
                                     <img src="{{ vid.src }}" class="rounded bs-sm" alt="{{ vid.src_alt }}">
@@ -56,6 +61,11 @@ css-files:
                         <div class="position-relative mt-2">
                             <div class="splide__track">
                                 <ul class="splide__list">
+                                    {%- for cube in cubemaps -%}
+                                    <li class="splide__slide thumbnail cubemap">
+                                        <img src="{{ cube.thumbnail }}" alt="{{ cube.src_alt }}">
+                                    </li>                               
+                                    {%- endfor -%}
                                     {%- for vid in videos -%}
                                     <li class="splide__slide thumbnail video">
                                         <img src="{{ vid.thumbnail }}" alt="{{ vid.thumbnail_alt }}">
@@ -100,10 +110,10 @@ css-files:
                         <ul class="list-inline">
                             {%- if page.categories -%}
                                 {%- for category in page.categories -%}
-                                <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ category.url }}">{{ category }}</a></li>
+                                <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ category.url }}">{{ category }}</a></li>
                                 {%- endfor -%}
                             {%- elsif page.category -%}
-                                <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{  page.category.url }}">{{  page.category }}</a></li>
+                                <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{  page.category.url }}">{{  page.category }}</a></li>
                             {%- endif -%}
                         </ul>
                     </div>
@@ -114,7 +124,7 @@ css-files:
                         <hr class="block-label-hr">
                         <ul class="list-inline">
                             {%- for tag in page.tags -%}
-                            <li class="list-inline-item"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ tag.url }}">{{ tag | capitalize }}</a></li>
+                            <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-light py-1 px-2" href="{{ tag.url }}">{{ tag | capitalize }}</a></li>
                             {%- endfor -%}
                         </ul>
                     </div>

@@ -633,6 +633,40 @@ pre {
   content: '\F4F4'; 
 }
 
+.splide__slide .cubemap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  border: none;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  color: var(--default-type-color);
+  background-color: var(--bg-color-darkest);
+  top: calc(50% - 1.5em);
+  left: calc(50% - 1.5em);
+  -webkit-transform: translateY(-50%, -50%);
+      -ms-transform: translateY(-50%, -50%);
+          transform: translateY(-50%, -50%);
+}
+
+.splide__slide .cubemap::after { 
+  font-family: "bootstrap-icons";  
+  font-size: 1.8rem; 
+  line-height: 3em; 
+  content: '\F1C8'; 
+}
+
 /* project-card */
 .project-card img:not(.project-avatar) {
   height: 296px;
