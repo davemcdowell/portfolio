@@ -37,7 +37,7 @@ css-files:
                         <div class="splide__track">
                             <ul class="splide__list">
                                 {%- for cube in cubemaps -%}
-                                <li class="splide__slide cubemap-lg">
+                                <li class="splide__slide splide__slide--has-cubemap">
                                     <img src="{{ cube.src }}" class="rounded bs-sm" alt="{{ cube.src_alt }}">
                                 </li>                               
                                 {%- endfor -%}
