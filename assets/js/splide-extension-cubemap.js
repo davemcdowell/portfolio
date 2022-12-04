@@ -1,5 +1,5 @@
 function Cubemap(Splide, Components) {
-  const { slide } = Components.Elements;
+  const { slides } = Components.Elements;
 
   let _cubemap;
   let _wrapper;
@@ -7,13 +7,11 @@ function Cubemap(Splide, Components) {
 
   function mount() {
     console.log('cubemap splide registered and mounted!');
-    
-    let _slides = Splide.splides;
 
-    for(var i = 0; i < _slides.length; i++) {
-      if(_slides[i].getAttribute('data-splide-cubemap')) {
+    for(var i = 0; i < slides.length; i++) {
+      if(slides[i].getAttribute('data-splide-cubemap')) {
         //add an identifier to this slide similar to video extetnsion
-        _slides[i].classList.add('splide__slide--has-cubemap');
+        slides[i].classList.add('splide__slide--has-cubemap');
   
         //create the container for the button and wrapper (in that order)
         _cubemap = document.createElement("div");
@@ -37,7 +35,7 @@ function Cubemap(Splide, Components) {
         _cubemap.appendChild(_wrapper);
   
         //append root to the slide
-        _slides[i].appendChild(_cubemap);
+        slides[i].appendChild(_cubemap);
   
         //play button event listener
         _btn.addEventListener('click', playCubemap);
