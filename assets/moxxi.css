@@ -557,7 +557,7 @@ pre {
 }
 
 /* main gallery slider */
-.main-slider .splide__slide img { width: 100% !important; }
+.main-slider .splide__slide img { width: 100% !important; z-index: 50; }
 
 .splide__slide--has-video {
   background-color: var(--bg-color-darker);
@@ -594,6 +594,7 @@ pre {
 
 .gallery-slider .splide__slide.is-active::after  {
   content: url('/portfolio/assets/images/image-frame-hl.png');
+  z-index: 40; 
 }
 
 .gallery-slider .splide__slide.thumbnail img {
