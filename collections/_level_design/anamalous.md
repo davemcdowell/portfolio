@@ -65,14 +65,14 @@ media:
     title: Cubemap 1
     # image, video, cubemap, 3d
     type: cubemap
-    thumbnail: https://picsum.photos/445/296?random=5 
+    thumbnail: '/assets/images/test/test_ft.png'
     thumbnail_alt: Cubemap 1
-    up: '/assets/images/test/interstellar_up.tga'
-    back: '/assets/images/test/interstellar_bk.tga'
-    left: '/assets/images/test/interstellar_lf.tga'
-    front: '/assets/images/test/interstellar_ft.tga'
-    right: '/assets/images/test/interstellar_rt.tga'
-    down: '/assets/images/test/interstellar_dn.tga'
+    up: '/assets/images/test/test_up.png'
+    back: '/assets/images/test/test_bk.png'
+    left: '/assets/images/test/test_lf.png'
+    front: '/assets/images/test/test_ft.png'
+    right: '/assets/images/test/test_rt.png'
+    down: '/assets/images/test/test_dn.png'
     alt: Cubemap 1
     description: >-
       A test cubemap for 360 display of scenes in levels with ambient background audio via three.js.

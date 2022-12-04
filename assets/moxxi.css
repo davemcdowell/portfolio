@@ -633,7 +633,7 @@ pre {
   content: '\F4F4'; 
 }
 
-.splide__slide.cubemap:not(.thumbnail) {
+.splide__slide.cubemap-lg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -660,7 +660,7 @@ pre {
           transform: translateY(-50%, -50%);
 }
 
-.splide__slide.cubemap:not(.thumbnail)::after { 
+.splide__slide.cubemap-lg::after { 
   font-family: "bootstrap-icons";  
   font-size: 1.8rem; 
   line-height: 3em; 
