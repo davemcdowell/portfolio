@@ -1,4 +1,4 @@
-export function Cubemap(Splide, Components) {
+function cubemap(Splide, Components) {
   const { slides } = Components.Elements;
 
   let _cubemap;
@@ -7,6 +7,8 @@ export function Cubemap(Splide, Components) {
 
   function mount() {
     console.log('cubemap splide registered and mounted!');
+
+    for(var i = 0; i < Splide.length; i++) {
       if(slides[i].getAttribute('data-splide-cubemap')) {
         //add an identifier to this slide similar to video extetnsion
         slides[i].classList.add('splide__slide--has-cubemap');
@@ -38,7 +40,7 @@ export function Cubemap(Splide, Components) {
         //play button event listener
         _btn.addEventListener('click', playCubemap);
       }
-  
+    }
   }
 
   function playCubemap() {
