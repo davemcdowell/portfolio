@@ -69,6 +69,9 @@ const Cubemap = function(Splide, Components) {
     let _container = document.createElement('div');
     _container.classList.add('container-fluid');
 
+    /* left-side controls */
+    let _leftActions = document.createElement('div');
+
     /* auto-rotate toggle */ 
     let _autoRotateBtn = document.createElement('button');
     _autoRotateBtn.id = `cubemap${index}__rotate-btn`;
@@ -122,8 +125,11 @@ const Cubemap = function(Splide, Components) {
     /* set source by support */
     setAudioSrcBySupport(_audioHidden, audioData);
 
-    _container.appendChild(_autoRotateBtn);
-    _container.appendChild(_ambienceMuteBtn);
+    _leftActions.appendChild(_autoRotateBtn);
+    _leftActions.appendChild(_ambienceMuteBtn);
+    
+    _container.appendChild(_leftActions);
+    _container.appendChild(_fullscreenBtn);
     _container.appendChild(_audioHidden);
 
     _nav.appendChild(_container);

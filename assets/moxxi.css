@@ -171,6 +171,12 @@ pre {
 .bg-offset { background-color: var(--bg-color-offset-darker)!important; }
 .bg-offset-a { background-color: rgba(0, 0, 0, 0.12)!important; }
 .bg-navbar { background-color: var(--bg-color-nav) !important; }
+.bg-blur { 
+  color: var(--default-type-color);
+  background-color: rgba(0, 0, 0, 0.15);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
 
 .bs-sm {
   -webkit-box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.1), 
