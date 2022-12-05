@@ -154,7 +154,7 @@ const Cubemap = function(Splide, Components) {
 
   function playCubemap(event) {
     console.log('Play Cubemap');
-    event.target.style.display = 'none';
+    event.currentTarget.style.display = 'none';
     toggleRootDisplayState();
   }
 
