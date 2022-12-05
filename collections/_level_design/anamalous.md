@@ -68,8 +68,8 @@ media:
     thumbnail: /portfolio/assets/images/test/test-front.png
     thumbnail_alt: Cubemap 1
     cubemap:
-      mp3: ~
-      ogg: ~
+      mp3: /portfolio/assets/images/test/ambience.mp3
+      ogg: /portfolio/assets/images/test/ambience.ogg
       up: /portfolio/assets/images/test/test_up.png
       back: /portfolio/assets/images/test/test_bk.png
       left: /portfolio/assets/images/test/test_lf.png
