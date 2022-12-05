@@ -91,6 +91,7 @@ const Cubemap = function(Splide, Components) {
 
     _container.appendChild(_autoRotateBtn);
     _container.appendChild(_ambienceMuteBtn);
+    _container.appendChild(_audioHidden);
 
     _nav.appendChild(_container);
 
