@@ -66,14 +66,14 @@ const Cubemap = function(Splide, Components) {
 
     /* auto-rotate toggle */ 
     let _autoRotateBtn = document.createElement('button');
-    _audioHidden.id = `slide${index}-cubemap__rotate-btn`;
+    _autoRotateBtn.id = `slide${index}-cubemap__rotate-btn`;
     _autoRotateBtn.classList.add();
     _autoRotateBtn.setAttribute('type', 'button');
     _autoRotateBtn.setAttribute('aria-label', 'Auto-rotate');
     
     /* mute ambience toggle */ 
     let _ambienceMuteBtn = document.createElement('button');
-    _audioHidden.id = `slide${index}-cubemap__audio-btn`;
+    _ambienceMuteBtn.id = `slide${index}-cubemap__audio-btn`;
     _ambienceMuteBtn.classList.add();
     _ambienceMuteBtn.setAttribute('type', 'button');
     _ambienceMuteBtn.setAttribute('aria-label', 'Mute Ambience');
