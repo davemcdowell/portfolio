@@ -155,7 +155,7 @@ const Cubemap = function(Splide, Components) {
       _root.removeAttribute('is-enabled');
       _root.style.display = 'block';
     } else {
-      _root.setAttribute('is-enabled');
+      _root.setAttribute('is-enabled', '');
       _root.style.display = 'none';
     }
   }
