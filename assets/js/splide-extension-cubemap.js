@@ -2,7 +2,7 @@ const Cubemap = function(Splide, Components) {
   const { slides } = Components.Elements;
 
   function mount() {
-    for(var i = 0; i < slides.length; i++) {
+    for(var i = 1; i < slides.length; i++) {
       if(slides[i].getAttribute('data-splide-cubemap')) {
         createCubemapBase(slides[i], i);
       }
