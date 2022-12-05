@@ -10,7 +10,7 @@ const Cubemap = function(Splide, Components) {
       if(slides[i].getAttribute('data-splide-cubemap')) {
         const cubeData = JSON.parse(document.querySelector(slides[i].getAttribute('data-splide-cubemap')).textContent);
 
-        console.log(cubeData);
+        console.log(cubeData.mp3);
 
         slides[i].id = `slide${slides[i].index}-cubemap`;
 
