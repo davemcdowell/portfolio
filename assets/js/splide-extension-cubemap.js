@@ -153,10 +153,10 @@ const Cubemap = function(Splide, Components) {
   function toggleRootDisplayState() {
     if(_root.getAttribute('is-enabled')) {
       _root.removeAttribute('is-enabled');
-      _root.style.display = 'block';
+      _root.style.display = 'none';
     } else {
       _root.setAttribute('is-enabled', '');
-      _root.style.display = 'none';
+      _root.style.display = 'block';
     }
   }
 
