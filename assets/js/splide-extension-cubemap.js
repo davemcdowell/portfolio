@@ -16,6 +16,8 @@ const Cubemap = function(Splide, Components) {
     let _wrapper;
     let _playBtn;
 
+    index += 1;
+    
     slide.id = `slide${index}-cubemap`;
 
     //add an identifier to this slide similar to video extension
