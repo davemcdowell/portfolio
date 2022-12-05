@@ -63,7 +63,6 @@ pre {
 
 /* navbar */
 .navbar {
-  background-color: var(--bg-color-nav) !important;
   -webkit-box-shadow: 0 1px -3px 3px rgba(0, 0, 0, 0.12);
   box-shadow: 0 1px -3px 3px rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
@@ -171,6 +170,7 @@ pre {
 .bg-default { background-color: var(--bg-color-dark)!important; }
 .bg-offset { background-color: var(--bg-color-offset-darker)!important; }
 .bg-offset-a { background-color: rgba(0, 0, 0, 0.12)!important; }
+.bg-navbar { background-color: var(--bg-color-nav) !important; }
 
 .bs-sm {
   -webkit-box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.1), 

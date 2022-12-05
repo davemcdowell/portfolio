@@ -71,7 +71,7 @@ const Cubemap = function(Splide, Components) {
     /* auto-rotate toggle */ 
     let _autoRotateBtn = document.createElement('button');
     _autoRotateBtn.id = `cubemap${index}__rotate-btn`;
-    _autoRotateBtn.classList.add();
+    _autoRotateBtn.classList.add('btn');
     _autoRotateBtn.setAttribute('type', 'button');
     _autoRotateBtn.setAttribute('aria-label', 'Auto-rotate');
     /* handle icon and flip */
@@ -85,7 +85,7 @@ const Cubemap = function(Splide, Components) {
     /* mute ambience toggle */ 
     let _ambienceMuteBtn = document.createElement('button');
     _ambienceMuteBtn.id = `cubemap${index}__audio-btn`;
-    _ambienceMuteBtn.classList.add();
+    _ambienceMuteBtn.classList.add('btn');
     _ambienceMuteBtn.setAttribute('type', 'button');
     _ambienceMuteBtn.setAttribute('aria-label', 'Mute Ambience');
     /* handle icon and flip */
@@ -99,7 +99,7 @@ const Cubemap = function(Splide, Components) {
     /* fullscreen toggle */ 
     let _fullscreenBtn = document.createElement('button');
     _fullscreenBtn.id = `cubemap${index}__fullscreen-btn`;
-    _fullscreenBtn.classList.add();
+    _fullscreenBtn.classList.add('btn', 'ms-auto');
     _fullscreenBtn.setAttribute('type', 'button');
     _fullscreenBtn.setAttribute('aria-label', 'Fullscreen');
     /* handle icon and flip */
