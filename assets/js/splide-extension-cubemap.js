@@ -76,7 +76,7 @@ const Cubemap = function(Splide, Components) {
     _autoRotateBtn.setAttribute('aria-label', 'Auto-rotate');
     /* handle icon and flip */
     let _rotIcon = document.createElement('i');
-    _rotIcon.classList.add('bi bi-arrow-repeat');
+    _rotIcon.classList.add('bi', 'bi-arrow-repeat');
     _autoRotateBtn.appendChild(_rotIcon);
     _autoRotateBtn.setAttribute('data-flip-toggle', '');
     _autoRotateBtn.setAttribute('data-default-icon', 'bi bi-arrow-repeat');
@@ -90,7 +90,7 @@ const Cubemap = function(Splide, Components) {
     _ambienceMuteBtn.setAttribute('aria-label', 'Mute Ambience');
     /* handle icon and flip */
     let _ambIcon = document.createElement('i');
-    _ambIcon.classList.add('bi bi-volume-up');
+    _ambIcon.classList.add('bi', 'bi-volume-up');
     _ambienceMuteBtn.appendChild(_ambIcon);
     _ambienceMuteBtn.setAttribute('data-flip-toggle', '');
     _ambienceMuteBtn.setAttribute('data-default-icon', 'bi bi-volume-up');
@@ -104,7 +104,7 @@ const Cubemap = function(Splide, Components) {
     _fullscreenBtn.setAttribute('aria-label', 'Fullscreen');
     /* handle icon and flip */
     let _fsIcon = document.createElement('i');
-    _fsIcon.classList.add('bi bi-fullscreen');
+    _fsIcon.classList.add('bi', 'bi-fullscreen');
     _fullscreenBtn.appendChild(_fsIcon);
     _fullscreenBtn.setAttribute('data-flip-toggle', '');
     _fullscreenBtn.setAttribute('data-default-icon', 'bi bi-fullscreen');
