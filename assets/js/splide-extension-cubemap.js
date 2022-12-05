@@ -67,7 +67,7 @@ const Cubemap = function(Splide, Components) {
 
     /* nav container */ 
     let _container = document.createElement('div');
-    _container.classList.add('container-fluid');
+    _container.classList.add('container-fluid', 'px-2');
 
     /* left-side controls */
     let _leftActions = document.createElement('div');
