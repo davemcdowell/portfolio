@@ -39,6 +39,7 @@ css-files:
                                 {%- for cube in cubemaps -%}
                                 <li class="splide__slide" data-splide-cubemap="#slide-{{ forloop.index }}-cubemap-data">
                                     <script id="slide-{{ forloop.index }}-cubemap-data" type="application/json">
+                                        {{ cube.cubemap }}
                                         {
                                             "cubemap": [
                                                 {
