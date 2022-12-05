@@ -1,6 +1,8 @@
 const Cubemap = function(Splide, Components) {
   const { slides } = Components.Elements;
 
+  let _root;
+
   function mount() {
     for(var i = 0; i < slides.length; i++) {
       if(slides[i].getAttribute('data-splide-cubemap')) {
@@ -13,7 +15,6 @@ const Cubemap = function(Splide, Components) {
     const cubeData = JSON.parse(document.querySelector(slide.getAttribute('data-splide-cubemap')).textContent);
 
     let _cubemap;
-    let _wrapper;
     let _playBtn;
 
     index += 1;
@@ -29,6 +30,9 @@ const Cubemap = function(Splide, Components) {
     _wrapper = document.createElement("div");
     _wrapper.style.display = 'none';
     _wrapper.classList.add('splide__cubemap__wrapper');
+
+    //assign wrapper as our 'root'
+    _root = _wrapper;
 
     //create play button
     _playBtn = document.createElement("button");
@@ -66,21 +70,49 @@ const Cubemap = function(Splide, Components) {
 
     /* auto-rotate toggle */ 
     let _autoRotateBtn = document.createElement('button');
-    _autoRotateBtn.id = `slide${index}-cubemap__rotate-btn`;
+    _autoRotateBtn.id = `cubemap${index}__rotate-btn`;
     _autoRotateBtn.classList.add();
     _autoRotateBtn.setAttribute('type', 'button');
     _autoRotateBtn.setAttribute('aria-label', 'Auto-rotate');
-    
+    /* handle icon and flip */
+    let _rotIcon = document.createElement('i');
+    _rotIcon.classList.add('bi bi-arrow-repeat');
+    _autoRotateBtn.appendChild(_rotIcon);
+    _autoRotateBtn.setAttribute('data-flip-toggle', '');
+    _autoRotateBtn.setAttribute('data-default-icon', 'bi bi-arrow-repeat');
+    _autoRotateBtn.setAttribute('data-flip-icon', 'bi bi-arrows-move');
+
     /* mute ambience toggle */ 
     let _ambienceMuteBtn = document.createElement('button');
-    _ambienceMuteBtn.id = `slide${index}-cubemap__audio-btn`;
+    _ambienceMuteBtn.id = `cubemap${index}__audio-btn`;
     _ambienceMuteBtn.classList.add();
     _ambienceMuteBtn.setAttribute('type', 'button');
     _ambienceMuteBtn.setAttribute('aria-label', 'Mute Ambience');
+    /* handle icon and flip */
+    let _ambIcon = document.createElement('i');
+    _ambIcon.classList.add('bi bi-volume-up');
+    _ambienceMuteBtn.appendChild(_ambIcon);
+    _ambienceMuteBtn.setAttribute('data-flip-toggle', '');
+    _ambienceMuteBtn.setAttribute('data-default-icon', 'bi bi-volume-up');
+    _ambienceMuteBtn.setAttribute('data-flip-icon', 'bi bi-volume-mute');
+
+    /* fullscreen toggle */ 
+    let _fullscreenBtn = document.createElement('button');
+    _fullscreenBtn.id = `cubemap${index}__fullscreen-btn`;
+    _fullscreenBtn.classList.add();
+    _fullscreenBtn.setAttribute('type', 'button');
+    _fullscreenBtn.setAttribute('aria-label', 'Fullscreen');
+    /* handle icon and flip */
+    let _fsIcon = document.createElement('i');
+    _fsIcon.classList.add('bi bi-fullscreen');
+    _fullscreenBtn.appendChild(_fsIcon);
+    _fullscreenBtn.setAttribute('data-flip-toggle', '');
+    _fullscreenBtn.setAttribute('data-default-icon', 'bi bi-fullscreen');
+    _fullscreenBtn.setAttribute('data-flip-icon', 'bi bi-fullscreen-exit');
 
     /* audio player (hidden) */
     let _audioHidden = document.createElement('audio');
-    _audioHidden.id = `slide${index}-cubemap__audio`;
+    _audioHidden.id = `cubemap${index}__audio`;
     _audioHidden.classList.add('d-none');
     _audioHidden.setAttribute('loop', '');
     _audioHidden.setAttribute('autoplay', '');
@@ -115,6 +147,17 @@ const Cubemap = function(Splide, Components) {
 
   function playCubemap() {
     console.log('Play Cubemap');
+    toggleRootDisplayState();
+  }
+
+  function toggleRootDisplayState() {
+    if(_root.getAttribute('is-enabled')) {
+      _root.removeAttribute('is-enabled');
+      _root.style.display = 'block';
+    } else {
+      _root.setAttribute('is-enabled');
+      _root.style.display = 'none';
+    }
   }
 
   return {
