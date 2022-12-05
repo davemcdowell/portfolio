@@ -70,7 +70,7 @@ media:
     cubemap:
       mp3: /portfolio/assets/images/test/ambience.mp3
       ogg: /portfolio/assets/images/test/ambience.ogg
-      up: /portfolio/assets/images/test/test_up.png
+      up: /portfolio/assets/images/test/test_up.png 
       back: /portfolio/assets/images/test/test_bk.png
       left: /portfolio/assets/images/test/test_lf.png
       front: /portfolio/assets/images/test/test_ft.png
