@@ -42,28 +42,28 @@ css-files:
                                         {
                                             "cubemap": [
                                                 {
-                                                    "mp3": {{ cube.cubemap.mp3 }}
+                                                    "mp3": {{ cube.cubemap.mp3  | jsonify }}
                                                 },
                                                 {
-                                                    "ogg": {{ cube.cubemap.ogg }}
+                                                    "ogg": {{ cube.cubemap.ogg  | jsonify }}
                                                 },
                                                 {
-                                                    "up": {{ cube.cubemap.up }}
+                                                    "up": {{ cube.cubemap.up  | jsonify }}
                                                 },
                                                 {
-                                                    "back": {{ cube.cubemap.back }}
+                                                    "back": {{ cube.cubemap.back  | jsonify }}
                                                 },
                                                 {
-                                                    "left": {{ cube.cubemap.left }}
+                                                    "left": {{ cube.cubemap.left  | jsonify }}
                                                 },
                                                 {
-                                                    "front": {{ cube.cubemap.front }}
+                                                    "front": {{ cube.cubemap.front  | jsonify }}
                                                 },
                                                 {
-                                                    "right": {{ cube.cubemap.right }}
+                                                    "right": {{ cube.cubemap.right  | jsonify }}
                                                 },
                                                 {
-                                                    "down": {{ cube.cubemap.down }}
+                                                    "down": {{ cube.cubemap.down  | jsonify }}
                                                 }
                                             ]
                                         }
