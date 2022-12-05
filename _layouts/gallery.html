@@ -39,34 +39,19 @@ css-files:
                                 {%- for cube in cubemaps -%}
                                 <li class="splide__slide" data-splide-cubemap="#slide-{{ forloop.index }}-cubemap-data">
                                     <script id="slide-{{ forloop.index }}-cubemap-data" type="application/json">
-                                        {{ cube.cubemap }}
+                                        {{ cube.cubemap | jsonify }}
+
                                         {
-                                            "cubemap": [
-                                                {
-                                                    "mp3": "{{ cube.cubemap.mp3 | jsonify }}"
-                                                },
-                                                {
-                                                    "ogg": "{{ cube.cubemap.ogg | jsonify }}"
-                                                },
-                                                {
-                                                    "up": "{{ cube.cubemap.up | jsonify }}"
-                                                },
-                                                {
-                                                    "back": "{{ cube.cubemap.back | jsonify }}"
-                                                },
-                                                {
-                                                    "left": "{{ cube.cubemap.left | jsonify }}"
-                                                },
-                                                {
-                                                    "front": "{{ cube.cubemap.front | jsonify }}"
-                                                },
-                                                {
-                                                    "right": "{{ cube.cubemap.right | jsonify }}"
-                                                },
-                                                {
-                                                    "down": "{{ cube.cubemap.down | jsonify }}"
-                                                }
-                                            ]
+                                            "cubemap": {
+                                                "mp3": {{ cube.cubemap.mp3 }},
+                                                "ogg": {{ cube.cubemap.ogg }},
+                                                "up": {{ cube.cubemap.up }},
+                                                "back": {{ cube.cubemap.back }},
+                                                "left": {{ cube.cubemap.left }},
+                                                "front": {{ cube.cubemap.front }},
+                                                "right": {{ cube.cubemap.right }},
+                                                "down": {{ cube.cubemap.down }}
+                                            }
                                         }
                                     </script>
                                     <img src="{{ cube.src }}" class="rounded bs-sm" alt="{{ cube.src_alt }}">
