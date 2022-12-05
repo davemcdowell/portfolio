@@ -63,7 +63,7 @@ const Cubemap = function(Splide, Components) {
 
     /* navbar*/ 
     let _nav = document.createElement('nav');
-    _nav.classList.add('navbar', 'fixed-bottom', 'bg-transparent');
+    _nav.classList.add('navbar', 'fixed-bottom', 'bg-blur');
 
     /* nav container */ 
     let _container = document.createElement('div');
