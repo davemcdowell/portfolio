@@ -15,6 +15,7 @@ const Cubemap = function(Splide, Components) {
     const cubeData = JSON.parse(document.querySelector(slide.getAttribute('data-splide-cubemap')).textContent);
 
     let _cubemap;
+    let _wrapper;
     let _playBtn;
 
     index += 1;
