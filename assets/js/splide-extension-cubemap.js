@@ -174,6 +174,12 @@ const Cubemap = function(Splide, Components) {
 
         let _wrapper = slides[i].querySelector('.splide__cubemap__wrapper');
         _wrapper.style.display = 'none';
+
+        let _audio = _wrapper.querySelector('.splide__cubemap__audio');
+
+        if(_audio) {
+          _audio.stop();
+        }
       }
     }
   }
