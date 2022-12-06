@@ -13,7 +13,6 @@ const Cubemap = function(Splide, Components) {
   }
 
   function inactive(index) {
-    index += 1;
     console.log(index);
   }
 
@@ -146,6 +145,8 @@ const Cubemap = function(Splide, Components) {
     _navFragment.append(_nav);
 
     target.appendChild(_navFragment);
+
+    common.set_flip_toggles();
   }
 
   function setAudioSrcBySupport(audioPlayer, sources) {

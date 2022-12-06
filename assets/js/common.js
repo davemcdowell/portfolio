@@ -115,4 +115,8 @@ const common = function() {
             }, 4000);
         });
     }
+
+    return {
+        set_flip_toggles : setFlipToggles
+    };
 }();
