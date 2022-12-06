@@ -156,7 +156,7 @@ const Cubemap = function(Splide, Components) {
   }
 
   function disableCubemap() {
-    console.log('Play Cubemap');
+    console.log('Disable Cubemap');
   }
 
   return {
