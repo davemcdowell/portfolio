@@ -7,12 +7,16 @@ const Cubemap = function(Splide, Components) {
     for(var i = 0; i < slides.length; i++) {
       if(slides[i].getAttribute('data-splide-cubemap')) {
         createCubemapBase(slides[i], i);
-        slides[i].addEventListener('inactive', onInactive);
+        
       }
     }
   }
 
-  function onInactive() {
+  function active() {
+    console.log('slide is Active');
+  }
+
+  function inactive() {
     console.log('slide is inactive');
   }
 
@@ -179,5 +183,7 @@ const Cubemap = function(Splide, Components) {
 
   return {
     mount,
+    active,
+    inactive
   };
 }
