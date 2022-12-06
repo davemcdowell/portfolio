@@ -14,6 +14,7 @@ const Cubemap = function(Splide, Components) {
 
   function inactive() {
     console.log('slide: ' + controller.getIndex() + ' is inactive');
+
   }
 
   function createCubemapBase(slide, index) {
@@ -168,7 +169,7 @@ const Cubemap = function(Splide, Components) {
   }
 
   function toggleRootDisplayState() {
-    if(_root.getAttribute('is-enabled')) {
+    if(_root.getAttribute('is-enabled') !== '') {
       _root.removeAttribute('is-enabled');
       _root.style.display = 'none';
     } else {
