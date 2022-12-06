@@ -58,10 +58,10 @@ const Cubemap = function(Splide, Components) {
       _playBtn.style.display = 'none';
       _wrapper.style.display = 'block';
 
-      let audio = _wrapper.querySelector('splide__cubemap__audio');
+      let _audio = _wrapper.querySelector('splide__cubemap__audio');
 
-      if(audio) {
-        audio.play();
+      if(_audio) {
+        _audio.play();
       }
 
       enableCubemap();
