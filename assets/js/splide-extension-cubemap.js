@@ -1,23 +1,16 @@
 const Cubemap = function(Splide, Components) {
   const { slides } = Components.Elements;
 
-  let _root;
-
   function mount() {
     for(var i = 0; i < slides.length; i++) {
       if(slides[i].getAttribute('data-splide-cubemap')) {
         createCubemapBase(slides[i], i);
+        Splide.slides[i].on('inactive', function() {
+          console.log('inactive');
+        });
       }
     }
   }
-
-  function onEnabled() {
-    console.log('slide is enabled');
-  }
-
-  function onDisabled() {
-    console.log('slide is disabled');
-  } 
 
   function createCubemapBase(slide, index) {
     const cubeData = JSON.parse(document.querySelector(slide.getAttribute('data-splide-cubemap')).textContent);
@@ -40,9 +33,6 @@ const Cubemap = function(Splide, Components) {
     _wrapper.style.display = 'none';
     _wrapper.classList.add('splide__cubemap__wrapper');
 
-    //assign wrapper as our 'root'
-    _root = _wrapper;
-
     //create play button
     _playBtn = document.createElement("button");
     _playBtn.id = `slide${index}-cubemap__play-btn`;
@@ -62,16 +52,15 @@ const Cubemap = function(Splide, Components) {
     //append root to the slide
     slide.appendChild(_cubemap);
 
+    //common utils for flip btns
     common.set_flip_toggles();
 
     //play button event listener
     _playBtn.addEventListener('click', function(event) {
       _playBtn.style.display = 'none';
       _wrapper.style.display = 'block';
-      playCubemap();
+      enableCubemap();
     });
-
-    slide.addEventListener('inactive', onDisabled);
   }
 
   function createCubemapControls(target, index, audioData) {
@@ -164,19 +153,9 @@ const Cubemap = function(Splide, Components) {
     audioPlayer.appendChild(_src);
   }
 
-  function playCubemap() {
+  function enableCubemap() {
     console.log('Play Cubemap');
-    toggleRootDisplayState();
-  }
-
-  function toggleRootDisplayState() {
-    if(_root.hasAttribute('is-enabled')) {
-      _root.removeAttribute('is-enabled');
-      _root.style.display = 'none';
-    } else {
-      _root.setAttribute('is-enabled', '');
-      _root.style.display = 'block';
-    }
+    
   }
 
   return {
