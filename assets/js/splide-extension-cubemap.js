@@ -58,6 +58,7 @@ const Cubemap = function(Splide, Components) {
     _playBtn.addEventListener('click', function(event) {
       event.currentTarget.style.display = 'none';
       playCubemap();
+      common.set_flip_toggles();
     });
   }
 
@@ -140,8 +141,6 @@ const Cubemap = function(Splide, Components) {
     _navFragment.append(_nav);
 
     target.appendChild(_navFragment);
-
-    common.set_flip_toggles();
   }
 
   function setAudioSrcBySupport(audioPlayer, sources) {
