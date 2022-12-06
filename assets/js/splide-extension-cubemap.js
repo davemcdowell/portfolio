@@ -178,7 +178,8 @@ const Cubemap = function(Splide, Components) {
         let _audio = _wrapper.querySelector('.splide__cubemap__audio');
 
         if(_audio) {
-          _audio.stop();
+          _audio.pause();
+          _audio.currentTime = 0;
         }
       }
     }
