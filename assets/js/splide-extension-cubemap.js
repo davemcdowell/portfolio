@@ -136,6 +136,15 @@ const Cubemap = function(Splide, Components) {
     _nav.appendChild(_container);
 
     target.appendChild(_nav);
+
+    /* play / pause toggle */
+    _ambienceMuteBtn.addEventListener('click', function() {
+      if(_audioHidden.paused) {
+        _audioHidden.play();
+      } else {
+        _audioHidden.pause();
+      }
+    });
   }
 
   function setAudioSrcBySupport(audioPlayer, sources) {
@@ -156,8 +165,6 @@ const Cubemap = function(Splide, Components) {
   }
 
   function disableCubemap() {
-    console.log('Disable Cubemap');
-
     for(let i = 0; i < slides.length; i++) {
       if(slides[i].hasAttribute('data-splide-cubemap')) {
         let _playBtn = slides[i].querySelector('.splide__cubemap__play');
