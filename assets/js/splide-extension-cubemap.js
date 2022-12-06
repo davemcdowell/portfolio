@@ -1,6 +1,5 @@
 const Cubemap = function(Splide, Components) {
   const { slides } = Components.Elements;
-  const { on, off } = Splide.EventInterface( Splide );
 
   let _root;
 
@@ -10,13 +9,15 @@ const Cubemap = function(Splide, Components) {
         createCubemapBase(slides[i], i);
       }
     }
-
-    // Listens to an internal event
-    on('inactive', () => { console.log('on: inactive'); } );
-
-    // Removes the listener
-    off('inactive');
   }
+
+  function onEnabled() {
+    console.log('slide is enabled');
+  }
+
+  function onDisabled() {
+    console.log('slide is disabled');
+  } 
 
   function createCubemapBase(slide, index) {
     const cubeData = JSON.parse(document.querySelector(slide.getAttribute('data-splide-cubemap')).textContent);
@@ -66,6 +67,7 @@ const Cubemap = function(Splide, Components) {
     //play button event listener
     _playBtn.addEventListener('click', function(event) {
       _playBtn.style.display = 'none';
+      _wrapper.style.display = 'block';
       playCubemap();
     });
   }
