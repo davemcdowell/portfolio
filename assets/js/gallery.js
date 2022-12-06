@@ -17,6 +17,10 @@ const gallery = function() {
                 loop: true,
                 mute: true,
             },
+            dragMinThreshold: {
+                mouse: 0,
+                touch: 10,
+            },
         });
 
         let thumbnailSlide = new Splide('#thumbnail-slide', {
