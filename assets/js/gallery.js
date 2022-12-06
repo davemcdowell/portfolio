@@ -18,7 +18,7 @@ const gallery = function() {
                 mute: true,
             },
             dragMinThreshold: {
-                mouse: 0,
+                mouse: 60,
                 touch: 10,
             },
         });
