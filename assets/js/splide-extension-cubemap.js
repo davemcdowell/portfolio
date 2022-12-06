@@ -1,5 +1,6 @@
 const Cubemap = function(Splide, Components) {
   const { slides } = Components.Elements;
+  const { control } = Components.Controller;
 
   let _root;
 
@@ -9,11 +10,10 @@ const Cubemap = function(Splide, Components) {
         createCubemapBase(slides[i], i);
       }
     }
-    Splide.on('inactive', inactive);
   }
 
   function inactive() {
-    console.log('slide: ' + slides.getAt(Splide.index) + ' is inactive');
+    console.log('slide: ' + controller.getIndex() + ' is inactive');
   }
 
   function createCubemapBase(slide, index) {
