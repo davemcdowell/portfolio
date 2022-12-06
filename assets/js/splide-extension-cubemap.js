@@ -29,7 +29,7 @@ const Cubemap = function(Splide, Components) {
     //create the wrapper for the cubemap display
     _wrapper = document.createElement("div");
     _wrapper.style.display = 'none';
-    _wrapper.classList.add('splide__cubemap__wrapper');
+    _wrapper.classList.add('splide__cubemap__wrapper', 'no-drag');
 
     //create play button
     _playBtn = document.createElement("button");
