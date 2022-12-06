@@ -108,6 +108,13 @@ const Cubemap = function(Splide, Components) {
     _ambienceMuteBtn.setAttribute('data-default-icon', 'bi bi-volume-up');
     _ambienceMuteBtn.setAttribute('data-flip-icon', 'bi bi-volume-mute');
 
+    /* volume slider */
+    let _volumeInput = document.createElement('input');
+    _volumeInput.classList.add('form-range');
+    _volumeInput.setAttribute('type', 'range');
+    _volumeInput.setAttribute('min', 0);
+    _volumeInput.setAttribute('max', 100);
+
     /* fullscreen toggle */ 
     let _fullscreenBtn = document.createElement('button');
     _fullscreenBtn.id = `cubemap${index}__fullscreen-btn`;
@@ -134,6 +141,7 @@ const Cubemap = function(Splide, Components) {
 
     _leftActions.appendChild(_autoRotateBtn);
     _leftActions.appendChild(_ambienceMuteBtn);
+    _leftActions.appendChild(_volumeInput);
     
     _container.appendChild(_leftActions);
     _container.appendChild(_fullscreenBtn);
@@ -146,6 +154,11 @@ const Cubemap = function(Splide, Components) {
     /* mute ambience toggle */
     _ambienceMuteBtn.addEventListener('click', function() {
       _audioHidden.muted = !_audioHidden.muted;
+    });
+
+    /* volume */
+    _volumeInput.addEventListener('change', function() {
+      _audioHidden.volume = _volumeInput.value;
     });
   }
 
