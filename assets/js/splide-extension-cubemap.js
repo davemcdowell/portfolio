@@ -161,7 +161,7 @@ const Cubemap = function(Splide, Components) {
     for(let i = 0; i < slides.length; i++) {
       if(slides[i].hasAttribute('data-splide-cubemap')) {
         let _playBtn = slides[i].querySelector('.splide__cubemap__play');
-        _playBtn.style.display = 'block';
+        _playBtn.style.display = 'flex';
 
         let _wrapper = slides[i].querySelector('.splide__cubemap__wrapper');
         _wrapper.style.display = 'none';
