@@ -1,21 +1,14 @@
 const Cubemap = function(Splide, Components) {
   const { slides } = Components.Elements;
 
-  let _cubeSlidesList;
   let _root;
 
   function mount() {
-    _cubeSlidesList = [].slice.call(slides);
-    _cubeSlidesList.map(function(cubeSlide, index) {
-      createCubemapBase(cubeSlide, index);
-    });
-    /*
     for(var i = 0; i < slides.length; i++) {
       if(slides[i].getAttribute('data-splide-cubemap')) {
         createCubemapBase(slides[i], i);
       }
     }
-    */
   }
 
   function onEnabled() {
