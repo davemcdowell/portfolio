@@ -5,11 +5,9 @@ const Cubemap = function(Splide, Components) {
     for(var i = 0; i < slides.length; i++) {
       if(slides[i].getAttribute('data-splide-cubemap')) {
         createCubemapBase(slides[i], i);
-        Splide.slides[i].on('inactive', function() {
-          console.log('inactive');
-        });
       }
     }
+    Splide.on('inactive', disableCubemap);
   }
 
   function createCubemapBase(slide, index) {
@@ -155,7 +153,10 @@ const Cubemap = function(Splide, Components) {
 
   function enableCubemap() {
     console.log('Play Cubemap');
-    
+  }
+
+  function disableCubemap() {
+    console.log('Play Cubemap');
   }
 
   return {
