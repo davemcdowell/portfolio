@@ -8,7 +8,7 @@ const Cubemap = function(Splide, Components) {
         Splide.slides.getAt(i).on('inactive', disableCubemap);
       }
     }
-    Splide.slides.getAt(i).on('inactive', disableCubemap);
+    Splide.on('inactive', disableCubemap);
   }
 
   function createCubemapBase(slide, index) {
