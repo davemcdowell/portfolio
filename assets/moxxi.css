@@ -675,6 +675,20 @@ pre {
   content: '\F1C8'; 
 }
 
+.splide__cubemap__wrapper .navbar .form-range .range-thumb {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--default-type-color);
+}
+
+.splide__cubemap__wrapper .navbar .form-range .range-track {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--default-type-color);
+}
+
+.splide__cubemap__wrapper .navbar
+
 /* project-card */
 .project-card img:not(.project-avatar) {
   height: 296px;

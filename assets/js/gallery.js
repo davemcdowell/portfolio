@@ -13,13 +13,14 @@ const gallery = function() {
             rewind: true,
             pagination: false,
             arrows: false,
+            noDrag: 'input, textarea, .no-drag',
             video: {
                 loop: true,
                 mute: true,
             },
             dragMinThreshold: {
-                mouse: 60,
-                touch: 10,
+                mouse: 20,
+                touch: 20,
             },
         });
 
