@@ -9,11 +9,11 @@ const Cubemap = function(Splide, Components) {
         createCubemapBase(slides[i], i);
       }
     }
-    Splide.on( 'inactive', inactive);
+    Splide.on('inactive', inactive);
   }
 
   function inactive() {
-    console.log('slide: ' + slides.index + ' is inactive');
+    console.log('slide: ' + slides.getAt(Splide.index) + ' is inactive');
   }
 
   function createCubemapBase(slide, index) {
