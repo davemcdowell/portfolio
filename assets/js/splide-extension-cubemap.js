@@ -7,7 +7,7 @@ const Cubemap = function(Splide, Components) {
     for(var i = 0; i < slides.length; i++) {
       if(slides[i].getAttribute('data-splide-cubemap')) {
         createCubemapBase(slides[i], i);
-        slides[i].on('inactive', cubemapInactive);
+        Splide.on('inactive', cubemapInactive);
       }
     }
   }
@@ -59,11 +59,12 @@ const Cubemap = function(Splide, Components) {
     //append root to the slide
     slide.appendChild(_cubemap);
 
+    common.set_flip_toggles();
+
     //play button event listener
     _playBtn.addEventListener('click', function(event) {
       event.currentTarget.style.display = 'none';
       playCubemap();
-      common.set_flip_toggles();
     });
   }
 
