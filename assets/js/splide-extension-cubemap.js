@@ -57,6 +57,13 @@ const Cubemap = function(Splide, Components) {
     _playBtn.addEventListener('click', function(event) {
       _playBtn.style.display = 'none';
       _wrapper.style.display = 'block';
+
+      let audio = _wrapper.querySelector('splide__cubemap__audio');
+
+      if(audio) {
+        audio.play();
+      }
+
       enableCubemap();
     });
   }
@@ -117,8 +124,7 @@ const Cubemap = function(Splide, Components) {
 
     /* audio player (hidden) */
     let _audioHidden = document.createElement('audio');
-    _audioHidden.id = `cubemap${index}__audio`;
-    _audioHidden.classList.add('d-none');
+    _audioHidden.classList.add('splide__cubemap__audio', 'd-none');
     _audioHidden.setAttribute('loop', '');
     _audioHidden.setAttribute('autoplay', '');
     _audioHidden.setAttribute('muted', '');
@@ -137,7 +143,7 @@ const Cubemap = function(Splide, Components) {
 
     target.appendChild(_nav);
 
-    /* play / pause toggle */
+    /* mute ambience toggle */
     _ambienceMuteBtn.addEventListener('click', function() {
       _audioHidden.muted = !_audioHidden.muted;
     });
