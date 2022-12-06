@@ -70,8 +70,6 @@ const Cubemap = function(Splide, Components) {
   }
 
   function createCubemapControls(target, index, audioData) {
-    const _navFragment = new DocumentFragment;
-
     /* navbar*/ 
     let _nav = document.createElement('nav');
     _nav.classList.add('navbar', 'fixed-bottom', 'bg-blur');
@@ -145,9 +143,7 @@ const Cubemap = function(Splide, Components) {
 
     _nav.appendChild(_container);
 
-    _navFragment.append(_nav);
-
-    target.appendChild(_navFragment);
+    target.appendChild(_nav);
   }
 
   function setAudioSrcBySupport(audioPlayer, sources) {
