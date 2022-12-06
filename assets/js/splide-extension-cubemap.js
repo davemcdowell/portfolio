@@ -7,9 +7,9 @@ const Cubemap = function(Splide, Components) {
     for(var i = 0; i < slides.length; i++) {
       if(slides[i].getAttribute('data-splide-cubemap')) {
         createCubemapBase(slides[i], i);
-        Splide.getIndex(slides[i]).on('inactive', cubemapInactive)
       }
     }
+    Splide.on('move', cubemapInactive);
   }
 
   function cubemapInactive() {
