@@ -55,7 +55,10 @@ const Cubemap = function(Splide, Components) {
     slide.appendChild(_cubemap);
 
     //play button event listener
-    _playBtn.addEventListener('click', playCubemap(event));
+    _playBtn.addEventListener('click', function(event) {
+      event.currentTarget.style.display = 'none';
+      playCubemap();
+    });
   }
 
   function createCubemapControls(target, index, audioData) {
@@ -152,9 +155,8 @@ const Cubemap = function(Splide, Components) {
     audioPlayer.appendChild(_src);
   }
 
-  function playCubemap(event) {
+  function playCubemap() {
     console.log('Play Cubemap');
-    event.currentTarget.style.display = 'none';
     toggleRootDisplayState();
   }
 
