@@ -139,11 +139,7 @@ const Cubemap = function(Splide, Components) {
 
     /* play / pause toggle */
     _ambienceMuteBtn.addEventListener('click', function() {
-      if(_audioHidden.paused) {
-        _audioHidden.play();
-      } else {
-        _audioHidden.pause();
-      }
+      _audioHidden.muted = !_audioHidden.muted;
     });
   }
 
