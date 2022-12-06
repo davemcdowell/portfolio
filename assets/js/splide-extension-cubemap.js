@@ -7,12 +7,12 @@ const Cubemap = function(Splide, Components) {
     for(var i = 0; i < slides.length; i++) {
       if(slides[i].getAttribute('data-splide-cubemap')) {
         createCubemapBase(slides[i], i);
+        slides[i].addEventListener('inactive', onInactive);
       }
     }
-    Splide.on('move', cubemapInactive);
   }
 
-  function cubemapInactive() {
+  function onInactive() {
     console.log('slide is inactive');
   }
 
