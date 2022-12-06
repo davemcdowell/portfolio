@@ -9,10 +9,11 @@ const Cubemap = function(Splide, Components) {
         createCubemapBase(slides[i], i);
       }
     }
+    Splide.on( 'inactive', inactive);
   }
 
   function inactive() {
-    console.log('slide is inactive');
+    console.log('slide: ' + slides.index + ' is inactive');
   }
 
   function createCubemapBase(slide, index) {
@@ -62,7 +63,7 @@ const Cubemap = function(Splide, Components) {
 
     //play button event listener
     _playBtn.addEventListener('click', function(event) {
-      event.currentTarget.style.display = 'none';
+      _playBtn.style.display = 'none';
       playCubemap();
     });
   }
@@ -178,6 +179,5 @@ const Cubemap = function(Splide, Components) {
 
   return {
     mount,
-    inactive,
   };
 }
