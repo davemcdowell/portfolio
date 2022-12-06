@@ -169,7 +169,7 @@ const Cubemap = function(Splide, Components) {
   }
 
   function toggleRootDisplayState() {
-    if(_root.getAttribute('is-enabled') !== '') {
+    if(_root.hasAttribute('is-enabled')) {
       _root.removeAttribute('is-enabled');
       _root.style.display = 'none';
     } else {
