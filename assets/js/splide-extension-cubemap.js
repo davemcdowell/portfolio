@@ -1,6 +1,6 @@
 const Cubemap = function(Splide, Components) {
   const { slides } = Components.Elements;
-  const { on, off } = EventInterface( Splide );
+  const { on, off } = Splide.EventInterface( Splide );
 
   let _root;
 
