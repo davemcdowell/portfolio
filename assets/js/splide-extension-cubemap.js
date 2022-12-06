@@ -179,6 +179,6 @@ const Cubemap = function(Splide, Components) {
 
   return {
     mount,
-    inactive
+    inactive,
   };
 }
