@@ -110,10 +110,10 @@ const Cubemap = function(Splide, Components) {
 
     /* volume slider */
     let _volumeInput = document.createElement('input');
-    _volumeInput.classList.add('form-range');
+    _volumeInput.classList.add('form-range', 'w-25');
     _volumeInput.setAttribute('type', 'range');
     _volumeInput.setAttribute('min', 0);
-    _volumeInput.setAttribute('max', 100);
+    _volumeInput.setAttribute('max', 1);
 
     /* fullscreen toggle */ 
     let _fullscreenBtn = document.createElement('button');
