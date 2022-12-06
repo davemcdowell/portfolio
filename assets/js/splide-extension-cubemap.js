@@ -3,7 +3,7 @@ const Cubemap = function(Splide, Components) {
 
   function mount() {
     for(var i = 0; i < slides.length; i++) {
-      if(slides[i].getAttribute('data-splide-cubemap')) {
+      if(slides[i].hasAttribute('data-splide-cubemap')) {
         createCubemapBase(slides[i], i);
       }
     }
@@ -158,6 +158,15 @@ const Cubemap = function(Splide, Components) {
   function disableCubemap() {
     console.log('Disable Cubemap');
 
+    for(let i = 0; i < slides.length; i++) {
+      if(slides[i].hasAttribute('data-splide-cubemap')) {
+        let _playBtn = slides[i].querySelector('.splide__cubemap__play');
+        _playBtn.style.display = 'block';
+
+        let _wrapper = slides[i].querySelector('.splide__cubemap__wrapper');
+        _wrapper.style.display = 'none';
+      }
+    }
   }
 
   return {
