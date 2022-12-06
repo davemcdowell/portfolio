@@ -1,5 +1,5 @@
 const Cubemap = function(Splide, Components) {
-  const { slides, slide } = Components.Elements;
+  const { slides } = Components.Elements;
 
   let _root;
 
@@ -7,14 +7,10 @@ const Cubemap = function(Splide, Components) {
     for(var i = 0; i < slides.length; i++) {
       if(slides[i].getAttribute('data-splide-cubemap')) {
         createCubemapBase(slides[i], i);
-        slide.on('inactive', inactive);
       }
     }
   }
 
-  function active() {
-    console.log('slide is Active');
-  }
 
   function inactive() {
     console.log('slide is inactive');
@@ -183,5 +179,6 @@ const Cubemap = function(Splide, Components) {
 
   return {
     mount,
+    inactive
   };
 }
