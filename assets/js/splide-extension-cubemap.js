@@ -1,6 +1,6 @@
 const Cubemap = function(Splide, Components) {
   const { slides } = Components.Elements;
-  const { control } = Components.Controller;
+  const { on, off } = EventInterface( Splide );
 
   let _root;
 
@@ -8,14 +8,14 @@ const Cubemap = function(Splide, Components) {
     for(var i = 0; i < slides.length; i++) {
       if(slides[i].getAttribute('data-splide-cubemap')) {
         createCubemapBase(slides[i], i);
-        Splide.on('inactive', inactive);
       }
     }
-  }
 
-  function inactive() {
-    console.log('slide: ' + control.getIndex() + ' is inactive');
+    // Listens to an internal event
+    on('inactive', () => { console.log('on: inactive'); } );
 
+    // Removes the listener
+    off('inactive');
   }
 
   function createCubemapBase(slide, index) {
