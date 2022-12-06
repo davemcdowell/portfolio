@@ -632,6 +632,7 @@ pre {
   font-size: 1.8rem; 
   line-height: 3em; 
   content: '\F4F4'; 
+  margin: 0 auto;
 }
 
 /* cubemap extension */
@@ -671,7 +672,8 @@ pre {
   font-family: "bootstrap-icons";  
   font-size: 1.2rem; 
   line-height: 3em; 
-  content: '\F1C8'; 
+  content: '\F1C8';
+  margin: 0 auto;
 }
 
 .splide__cubemap__wrapper .navbar .form-range::-moz-range-thumb {
@@ -680,10 +682,8 @@ pre {
   background-color: var(--default-type-color);
 }
 
-.splide__cubemap__wrapper .navbar .form-range .range-track {
-  width: 0.75rem;
-  height: 0.75rem;
-  background-color: var(--default-type-color);
+.splide__cubemap__wrapper .navbar .form-range::-moz-range-track {
+  height: 0.25rem;
 }
 
 .splide__cubemap__wrapper .navbar
