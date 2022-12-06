@@ -11,6 +11,7 @@ const Cubemap = function(Splide, Components) {
       }
     }
   }
+  
   function cubemapInactive() {
     console.log('slide is inactive');
   }
