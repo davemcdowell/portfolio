@@ -110,7 +110,7 @@ const Cubemap = function(Splide, Components) {
 
     /* volume slider */
     let _volumeInput = document.createElement('input');
-    _volumeInput.classList.add('form-range', 'w-25');
+    _volumeInput.classList.add('form-range', 'w-25', 'pt-3');
     _volumeInput.setAttribute('type', 'range');
     _volumeInput.setAttribute('min', 0);
     _volumeInput.setAttribute('max', 1);
