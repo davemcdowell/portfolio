@@ -71,7 +71,7 @@ const Cubemap = function(Splide, Components) {
   function createCubemapControls(target, index, audioData) {
     /* navbar*/ 
     let _nav = document.createElement('nav');
-    _nav.classList.add('navbar', 'fixed-bottom', 'rounded-bottom', 'bg-blur');
+    _nav.classList.add('navbar', 'fixed-bottom', 'rounded-bottom', 'no-drag', 'bg-blur');
 
     /* nav container */ 
     let _container = document.createElement('div');
