@@ -162,6 +162,10 @@ const Cubemap = function(Splide, Components) {
     _volumeInput.addEventListener('change', function() {
       _audioHidden.volume = _volumeInput.value;
     });
+
+    _volumeInput.addEventListener('drag', function(event) {
+      event.stopPropagation();
+    });
   }
 
   function setAudioSrcBySupport(audioPlayer, sources) {
