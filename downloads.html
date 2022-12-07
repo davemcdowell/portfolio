@@ -91,7 +91,7 @@ hero:
                           <p class="mt-2 mb-0">---<br>Other Files:</p>
                           <ul class="list-unstyled">
                             {%- for file in item.other-files -%}
-                            <li><a href="{{ file.url }}">{{ file.title | prepend: '- ' }}</a></li>
+                            <li><a class="text-decoration-none" href="{{ file.url }}">{{ file.title | prepend: '- ' }}</a></li>
                             {%- endfor -%}
                           </ul>
                           {%- endif -%}
