@@ -582,10 +582,9 @@ pre {
 }
 
 .gallery-slider .splide__slide.is-active { border: 2px solid var(--default-type-color); opacity: 1.0; }
-.gallery-slider .splide__slide.is-active::after  {
-  content: url('/portfolio/assets/images/image-frame-hl.png');
-  z-index: 40; 
-}
+/*.gallery-slider .splide__slide.is-active::after  {
+
+}*/
 
 .gallery-slider .splide__slide.thumbnail img {
   width: 100%;

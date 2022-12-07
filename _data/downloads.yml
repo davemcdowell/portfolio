@@ -24,6 +24,9 @@ files:
             PCGamer, Best of the Year - <cite title="Source Title">March 2001</cite>
             </figcaption>
           </figure>
+        other-files:
+          - title: pcgamer_32001_transcript.txt
+            url: "http://dcmcdowell.com/downloads/pcgamer1.pdf"
       - title: PCGamer GOTY Edition
         sub-title: Firearms Opinion
         image: /assets/images/downloads/fa-2.png
