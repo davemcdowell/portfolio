@@ -7,7 +7,7 @@ const Cubemap = function(Splide, Components) {
         createCubemapBase(slides[i], i);
       }
     }
-    Splide.on('inactive', disableCubemap);
+    Splide.on('inactive', disableCubemaps);
   }
 
   function createCubemapBase(slide, index) {
@@ -64,7 +64,7 @@ const Cubemap = function(Splide, Components) {
         _audio.play();
       }
 
-      enableCubemap();
+      startCubemap();
     });
   }
 
@@ -177,11 +177,11 @@ const Cubemap = function(Splide, Components) {
     audioPlayer.appendChild(_src);
   }
 
-  function enableCubemap() {
+  function startCubemap() {
     console.log('Play Cubemap');
   }
 
-  function disableCubemap() {
+  function disableCubemaps() {
     for(let i = 0; i < slides.length; i++) {
       if(slides[i].hasAttribute('data-splide-cubemap')) {
         let _playBtn = slides[i].querySelector('.splide__cubemap__play');
