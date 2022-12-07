@@ -120,7 +120,7 @@ const Cubemap = function(Splide, Components) {
     _volumeInput.setAttribute('min', 0);
     _volumeInput.setAttribute('max', 1);
     _volumeInput.setAttribute('step', 0.1);
-    _volumeInput.setAttribute('value', 0.35);
+    _volumeInput.value = 0.35;
 
     /* fullscreen toggle */ 
     let _fullscreenBtn = document.createElement('button');
