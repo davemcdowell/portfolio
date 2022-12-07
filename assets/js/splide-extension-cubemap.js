@@ -12,7 +12,7 @@ const Cubemap = function(Splide, Components) {
 
   function createCubemapBase(slide, index) {
     const cubeData = JSON.parse(document.querySelector(slide.getAttribute('data-splide-cubemap')).textContent);
-    const cubeTextures = [
+    const _cubeTextures = [
       cubeData.front, 
       cubeData.back, 
       cubeData.up, 
