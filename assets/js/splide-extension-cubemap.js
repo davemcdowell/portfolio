@@ -12,6 +12,22 @@ const Cubemap = function(Splide, Components) {
 
   function createCubemapBase(slide, index) {
     const cubeData = JSON.parse(document.querySelector(slide.getAttribute('data-splide-cubemap')).textContent);
+    const cubeTextureObj = { 
+      front: cubeData.front, 
+      back: cubeData.back, 
+      up: cubeData.up, 
+      down: cubeData.down,
+      right: cubeData.right, 
+      left: cubeData.left 
+    };
+
+    let _cubeTextures = [];
+
+    for(let i = 0; i < cubeTextureObj.length; i++) {
+      _cubeTextures.push.apply(_cubeTextures, cubeTextureObj[i]);
+    }
+
+    console.log(_cubeTextures);
 
     let _cubemap;
     let _wrapper;
@@ -204,6 +220,67 @@ const Cubemap = function(Splide, Components) {
       }
     }
   }
+
+  /*
+    Cubemap builder
+    three.js setup
+
+    TODO: define parameters
+  */
+  let _scene;
+  let _camera;
+  let _renderer;
+  let _cubemapGeo;
+  let _cubemap;
+  let _cubemapImage;
+
+  function init() {
+    /* set new scene */
+    _scene = new THREE.Scene();
+
+    /* set camera perpspective roles =) */
+    _camera = new THREE.PerspectiveCamera(55, window.innerWidth  / window.innerHeight, 45, 30000);
+    _camera.position.set(1200, -250, 2000);
+
+    /* set new renderer and options */
+    _renderer = new THREE.WebGLRenderer({ antialias: true });
+    _renderer.setSize(window.innerWidth, window.innerHeight);
+    
+    _renderer.domElement.id = 'canvas';
+
+    document.body.appendChild(_renderer.domElement);
+
+    /* set cubemap geometry and texture */
+    const materialArray = createMaterialArray(_cubemapImage);
+    _cubemapGeo = new THREE.BoxGeometry(10000, 10000, 10000);
+    _cubemap = new THREE.Mesh(_cubemapGeo);
+    _scene.add(_cubemap);
+
+    animate();
+  }
+
+  function animate() {
+    _cubemap.rotation.x += 0.005;
+    _cubemap.rotation.y += 0.005;
+
+    _renderer.render(_scene, _camera);
+    requestAnimationFrame(animate);
+  }
+
+  function createMaterialArrayByPath(filename) {
+
+  }
+
+  function createMaterialArray(pathArray) {
+    const cubemapImagePaths = pathArray;
+    const materialArray = cubemapImagePaths.map(image => {
+      let texture = new THREE.TextureLoader().load(image);
+      return new THREE.MeshBasicMaterial({ map: texture, side: THREE.BackSide });
+    });
+    return materialArray;
+  }
+
+  //init();
 
   return {
     mount,
