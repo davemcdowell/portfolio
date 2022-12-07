@@ -59,9 +59,14 @@ const Cubemap = function(Splide, Components) {
       _wrapper.style.display = 'block';
 
       let _audio = _wrapper.querySelector('.splide__cubemap__audio');
-
-      if(_audio) {
+      let _mute = _wrapper.querySelector('button.cubemap__mute');
+      
+      if(_audio && _audio.hasAttribute('autoplay')) {
         _audio.play();
+
+        if(_audio.hasAttribute('mute')) {
+          _mute.click();
+        }
       }
 
       startCubemap();
@@ -83,7 +88,7 @@ const Cubemap = function(Splide, Components) {
     /* auto-rotate toggle */ 
     let _autoRotateBtn = document.createElement('button');
     _autoRotateBtn.id = `cubemap${index}__rotate-btn`;
-    _autoRotateBtn.classList.add('btn');
+    _autoRotateBtn.classList.add('btn', 'cubemap__rotate');
     _autoRotateBtn.setAttribute('type', 'button');
     _autoRotateBtn.setAttribute('aria-label', 'Auto-rotate');
     /* handle icon and flip */
@@ -97,7 +102,7 @@ const Cubemap = function(Splide, Components) {
     /* mute ambience toggle */ 
     let _ambienceMuteBtn = document.createElement('button');
     _ambienceMuteBtn.id = `cubemap${index}__audio-btn`;
-    _ambienceMuteBtn.classList.add('btn');
+    _ambienceMuteBtn.classList.add('btn', 'cubemap__mute');
     _ambienceMuteBtn.setAttribute('type', 'button');
     _ambienceMuteBtn.setAttribute('aria-label', 'Mute Ambience');
     /* handle icon and flip */
@@ -110,7 +115,7 @@ const Cubemap = function(Splide, Components) {
 
     /* volume slider */
     let _volumeInput = document.createElement('input');
-    _volumeInput.classList.add('form-range', 'w-25', 'ms-2', 'pt-3');
+    _volumeInput.classList.add('form-range', 'cubemap__volume', 'w-25', 'ms-2', 'pt-3');
     _volumeInput.setAttribute('type', 'range');
     _volumeInput.setAttribute('min', 0);
     _volumeInput.setAttribute('max', 1);
@@ -120,7 +125,7 @@ const Cubemap = function(Splide, Components) {
     /* fullscreen toggle */ 
     let _fullscreenBtn = document.createElement('button');
     _fullscreenBtn.id = `cubemap${index}__fullscreen-btn`;
-    _fullscreenBtn.classList.add('btn', 'ms-auto');
+    _fullscreenBtn.classList.add('btn', 'cubemap__fullscreen', 'ms-auto');
     _fullscreenBtn.setAttribute('type', 'button');
     _fullscreenBtn.setAttribute('aria-label', 'Fullscreen');
     /* handle icon and flip */
