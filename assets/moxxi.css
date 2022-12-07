@@ -676,18 +676,30 @@ pre {
   margin: 0 auto;
 }
 
-.splide__cubemap__wrapper .navbar .form-range::-ms-thumb,
-.splide__cubemap__wrapper .navbar .form-range::-webkit-range-thumb,
+.splide__cubemap__wrapper .navbar .form-range::-ms-thumb {  
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--default-type-color);
+}
+.splide__cubemap__wrapper .navbar .form-range::-webkit-range-thumb {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--default-type-color);
+}
 .splide__cubemap__wrapper .navbar .form-range::-moz-range-thumb {
-  width: 0.75rem !important;
-  height: 0.75rem !important;
-  background-color: var(--default-type-color) !important;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--default-type-color);
 }
 
-.splide__cubemap__wrapper .navbar .form-range::-ms-track,
-.splide__cubemap__wrapper .navbar .form-range::-webkit-range-track,
+.splide__cubemap__wrapper .navbar .form-range::-ms-track {
+  height: 0.25rem;
+}
+.splide__cubemap__wrapper .navbar .form-range::-webkit-range-track {
+  height: 0.25rem;
+}
 .splide__cubemap__wrapper .navbar .form-range::-moz-range-track {
-  height: 0.25rem !important;
+  height: 0.25rem;
 }
 
 /* project-card */
