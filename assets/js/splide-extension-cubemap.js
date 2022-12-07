@@ -64,7 +64,7 @@ const Cubemap = function(Splide, Components) {
       if(_audio && _audio.hasAttribute('autoplay')) {
         _audio.play();
 
-        if(_audio.hasAttribute('mute')) {
+        if(_audio.hasAttribute('muted')) {
           _mute.click();
         }
       }
