@@ -87,6 +87,14 @@ hero:
                             {%- endfor -%}
                           </ul>
                           {%- endif -%}
+                          {%- if item.other-files.size > 0 -%}
+                          <p class="mt-2 mb-0">---<br>Other Files:</p>
+                          <ul class="list-unstyled">
+                            {%- for file in item.other-files -%}
+                            <li><a href="{{ file.url }}">{{ file.title | prepend: '- ' }}</a</li>
+                            {%- endfor -%}
+                          </ul>
+                          {%- endif -%}
                         </div>
                       </div>
                     </div>
