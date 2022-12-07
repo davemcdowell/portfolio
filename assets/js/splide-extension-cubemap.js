@@ -114,7 +114,7 @@ const Cubemap = function(Splide, Components) {
     _volumeInput.setAttribute('type', 'range');
     _volumeInput.setAttribute('min', 0);
     _volumeInput.setAttribute('max', 1);
-    _volumeInput.setAttribute('step', 0.01);
+    _volumeInput.setAttribute('step', 0.1);
     _volumeInput.setAttribute('value', 0.5);
 
     /* fullscreen toggle */ 
