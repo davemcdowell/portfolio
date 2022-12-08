@@ -254,6 +254,7 @@ const Cubemap = function(Splide, Components) {
   let _renderer;
   let _cubemapGeo;
   let _cubemap;
+  let _controls;
 
   function buildCubemap(target, imageArray) {
     if(target.querySelector('canvas'))
@@ -262,9 +263,17 @@ const Cubemap = function(Splide, Components) {
     /* set new scene */
     _scene = new THREE.Scene();
 
-    /* set camera perpspective roles =) */
+    /* set camera */
     _camera = new THREE.PerspectiveCamera(55, _frameWidth  / _frameHeight, 45, 30000);
     _camera.position.set(1200, -250, 2000);
+
+    /* set orbit controls */
+    _controls = new THREE.OrbitControls(_camera, _renderer.domElement);
+    _controls.enabled = true;
+    _controls.minDistance = 700;
+    _controls.maxDistance = 1500;
+    _controls.enablePan = false;
+    _controls.autorotate = true;
 
     /* set new renderer and options */
     _renderer = new THREE.WebGLRenderer({ antialias: true });
