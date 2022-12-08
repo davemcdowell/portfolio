@@ -33,6 +33,7 @@ const Cubemap = function(Splide, Components) {
 
     //add an identifier to this slide similar to video extension
     slide.classList.add('splide__slide--has-cubemap');
+    slide.style.overflow = 'hidden';
 
     //create the container for the button and wrapper (in that order)
     _cubemap = document.createElement("div");
