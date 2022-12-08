@@ -267,7 +267,7 @@ const Cubemap = function(Splide, Components) {
     _renderer = new THREE.WebGLRenderer({ antialias: true });
     _renderer.setSize(window.innerWidth, window.innerHeight);
     
-    _renderer.domElement.id = 'canvas';
+    _renderer.domElement.id = '#slide1-cubemap__canvas';
 
     document.body.appendChild(_renderer.domElement);
 
@@ -297,7 +297,7 @@ const Cubemap = function(Splide, Components) {
     return materialArray;
   }
 
-  //init();
+  init();
 
   return {
     mount,
