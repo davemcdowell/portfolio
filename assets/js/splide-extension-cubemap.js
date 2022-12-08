@@ -273,7 +273,8 @@ const Cubemap = function(Splide, Components) {
     _controls.minDistance = 700;
     _controls.maxDistance = 1500;
     _controls.enablePan = false;
-    _controls.autorotate = true;
+    _controls.autoRotate = true;
+    _controls.autoRotateSpeed = 1.0;
 
     /* set new renderer and options */
     _renderer = new THREE.WebGLRenderer({ antialias: true });
