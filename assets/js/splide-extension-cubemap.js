@@ -2,10 +2,7 @@ const Cubemap = function(Splide, Components) {
   const { slides } = Components.Elements;
 
   let _frameWidth;
-  let _framHeight;
-
-  let _windowWidth;
-  let _windowHeight;
+  let _frameHeight;
 
   function mount() {
     for(var i = 0; i < slides.length; i++) {
@@ -91,6 +88,7 @@ const Cubemap = function(Splide, Components) {
           _mute.click();
         }
       }
+
       init(_cubeTextures);
       startCubemap();
     });
@@ -229,13 +227,15 @@ const Cubemap = function(Splide, Components) {
   }
 
   function onResize() {
-
     for(let i = 0; i < slides.length; i++) {
       if(slides[i].hasAttribute('data-splide-cubemap')) {
         let _canvas = slides[i].querySelector('canvas');
 
-        _canvas.setAttribute('width', `${Splide.root.width}`);
-        _canvas.setAttribute('height', `${Splide.root.height}`);
+        _frameWidth = slides[i].offsetWidth;
+        _frameHeight = slides[i].offsetHeight;
+
+        _canvas.setAttribute('width', `${_frameWidth}`);
+        _canvas.setAttribute('height', `${_frameHeight}`);
 
         console.log(`--Window Width: ${_canvas.offsetWidth}\n--Window.Height: ${_canvas.offsetHeight}`);
       }
