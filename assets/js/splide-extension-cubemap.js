@@ -27,7 +27,7 @@ const Cubemap = function(Splide, Components) {
 
     let _cubemap;
     let _wrapper;
-    let _canvas; //three.js target
+    //let _canvas; //three.js target
     let _playBtn;
 
     index += 1;
@@ -52,8 +52,8 @@ const Cubemap = function(Splide, Components) {
     _playBtn.setAttribute('aria-label', 'View Cubemap');
 
     //create canvas
-    _canvas = document.createElement('canvas');
-    _canvas.id = `slide${index}-cubemap__canvas`;
+    //_canvas = document.createElement('canvas');
+    //_canvas.id = `slide${index}-cubemap__canvas`;
 
     //create player controls
     createCubemapControls(_wrapper, index, { mp3: cubeData.mp3, ogg: cubeData.ogg });
@@ -62,7 +62,7 @@ const Cubemap = function(Splide, Components) {
     _cubemap.appendChild(_playBtn);
 
     //append canvas to the wrapper
-    _wrapper.appendChild(_canvas);
+    //_wrapper.appendChild(_canvas);
 
     //append wrapper to cubemap 
     _cubemap.appendChild(_wrapper);
@@ -89,7 +89,7 @@ const Cubemap = function(Splide, Components) {
         }
       }
 
-      init(_cubeTextures);
+      buildCubemap(_canvas, _cubeTextures);
       startCubemap();
     });
   }
@@ -254,7 +254,7 @@ const Cubemap = function(Splide, Components) {
   let _cubemapGeo;
   let _cubemap;
 
-  function init(imageArray) {
+  function buildCubemap(target, imageArray) {
     /* set new scene */
     _scene = new THREE.Scene();
 
@@ -266,9 +266,9 @@ const Cubemap = function(Splide, Components) {
     _renderer = new THREE.WebGLRenderer({ antialias: true });
     _renderer.setSize(_frameWidth, _frameHeight);
     
-    _renderer.domElement.id = '#slide1-cubemap__canvas';
+    _renderer.domElement.id = 'cubemap__canvas';
 
-    document.body.appendChild(_renderer.domElement);
+    target.appendChild(_renderer.domElement);
 
     /* set cubemap geometry and texture */
     const materialArray = createMaterialArray(imageArray);
