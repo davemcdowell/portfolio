@@ -30,7 +30,7 @@ const Cubemap = function(Splide, Components) {
 
     let _cubemap;
     let _wrapper;
-    let _canvas //three.js target
+    let _canvas; //three.js target
     let _playBtn;
 
     index += 1;
