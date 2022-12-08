@@ -13,7 +13,8 @@ const Cubemap = function(Splide, Components) {
         createCubemapBase(slides[i], i);
       }
     }
-    Splide.on('inactive', disableCubemaps);
+    Splide.on('inactive', onInactive);
+    Splide.on('resize', onResize);
   }
 
   function createCubemapBase(slide, index) {
@@ -208,7 +209,7 @@ const Cubemap = function(Splide, Components) {
     console.log('Play Cubemap');
   }
 
-  function disableCubemaps() {
+  function onInactive() {
     for(let i = 0; i < slides.length; i++) {
       if(slides[i].hasAttribute('data-splide-cubemap')) {
         let _playBtn = slides[i].querySelector('.splide__cubemap__play');
@@ -223,6 +224,19 @@ const Cubemap = function(Splide, Components) {
           _audio.pause();
           _audio.currentTime = 0;
         }
+      }
+    }
+  }
+
+  function onResize() {
+    console.log(`--Window Width: ${window.innerWidth} \n --Window.Height: ${window.innerHeight}`);
+
+    for(let i = 0; i < slides.length; i++) {
+      if(slides[i].hasAttribute('data-splide-cubemap')) {
+        let _canvas = slides[i].querySelector('canvas');
+
+        _canvas.style.width = slides[i].width;
+        _canvas.style.height = slides[i].height;
       }
     }
   }
