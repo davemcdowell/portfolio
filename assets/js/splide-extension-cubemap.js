@@ -286,7 +286,7 @@ const Cubemap = function(Splide, Components) {
   }
 
   function animate() {
-    _contols.update();
+    _controls.update();
     _renderer.render(_scene, _camera);
     requestAnimationFrame(animate);
   }
