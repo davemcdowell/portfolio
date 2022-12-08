@@ -306,8 +306,6 @@ const Cubemap = function(Splide, Components) {
     return materialArray;
   }
 
-  //init();
-
   return {
     mount,
   };
