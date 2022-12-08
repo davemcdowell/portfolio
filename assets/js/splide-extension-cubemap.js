@@ -234,9 +234,10 @@ const Cubemap = function(Splide, Components) {
         _frameWidth = slides[i].offsetWidth;
         _frameHeight = slides[i].offsetHeight;
 
-        _canvas.setAttribute('width', `${_frameWidth}`);
-        _canvas.setAttribute('height', `${_frameHeight}`);
-
+        if(_canvas) {
+          _canvas.setAttribute('width', `${_frameWidth}`);
+          _canvas.setAttribute('height', `${_frameHeight}`);
+        }
         console.log(`--Window Width: ${_canvas.offsetWidth}\n--Window.Height: ${_canvas.offsetHeight}`);
       }
     }
