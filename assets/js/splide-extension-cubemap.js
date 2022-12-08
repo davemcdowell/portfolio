@@ -91,7 +91,7 @@ const Cubemap = function(Splide, Components) {
           _mute.click();
         }
       }
-
+      init(_cubeTextures);
       startCubemap();
     });
   }
@@ -253,9 +253,8 @@ const Cubemap = function(Splide, Components) {
   let _renderer;
   let _cubemapGeo;
   let _cubemap;
-  let _cubemapImage;
 
-  function init() {
+  function init(imageArray) {
     /* set new scene */
     _scene = new THREE.Scene();
 
@@ -272,9 +271,9 @@ const Cubemap = function(Splide, Components) {
     document.body.appendChild(_renderer.domElement);
 
     /* set cubemap geometry and texture */
-    const materialArray = createMaterialArray(_cubemapImage);
+    const materialArray = createMaterialArray(imageArray);
     _cubemapGeo = new THREE.BoxGeometry(10000, 10000, 10000);
-    _cubemap = new THREE.Mesh(_cubemapGeo);
+    _cubemap = new THREE.Mesh(_cubemapGeo, materialArray);
     _scene.add(_cubemap);
 
     animate();
@@ -296,7 +295,7 @@ const Cubemap = function(Splide, Components) {
     return materialArray;
   }
 
-  init();
+  //init();
 
   return {
     mount,
