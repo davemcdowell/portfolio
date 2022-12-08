@@ -1,6 +1,12 @@
 const Cubemap = function(Splide, Components) {
   const { slides } = Components.Elements;
 
+  let _frameWidth;
+  let _framHeight;
+
+  let _windowWidth;
+  let _windowHeight;
+
   function mount() {
     for(var i = 0; i < slides.length; i++) {
       if(slides[i].hasAttribute('data-splide-cubemap')) {
@@ -21,10 +27,9 @@ const Cubemap = function(Splide, Components) {
       cubeData.left 
     ];
 
-    console.log(_cubeTextures);
-
     let _cubemap;
     let _wrapper;
+    let _canvas //three.js target
     let _playBtn;
 
     index += 1;
@@ -48,11 +53,18 @@ const Cubemap = function(Splide, Components) {
     _playBtn.setAttribute('type', 'button');
     _playBtn.setAttribute('aria-label', 'View Cubemap');
 
+    //create canvas
+    _canvas = document.createElement('canvas');
+    _canvas.id = `slide${index}-cubemap__canvas`;
+
     //create player controls
     createCubemapControls(_wrapper, index, { mp3: cubeData.mp3, ogg: cubeData.ogg });
 
     //append play button to cubemap 
     _cubemap.appendChild(_playBtn);
+
+    //append canvas to the wrapper
+    _wrapper.appendChild(_canvas);
 
     //append wrapper to cubemap 
     _cubemap.appendChild(_wrapper);
@@ -259,10 +271,6 @@ const Cubemap = function(Splide, Components) {
 
     _renderer.render(_scene, _camera);
     requestAnimationFrame(animate);
-  }
-
-  function createMaterialArrayByPath(filename) {
-
   }
 
   function createMaterialArray(pathArray) {
