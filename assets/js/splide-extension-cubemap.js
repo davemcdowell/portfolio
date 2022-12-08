@@ -229,7 +229,7 @@ const Cubemap = function(Splide, Components) {
   }
 
   function onResize() {
-    console.log(`--Window Width: ${window.innerWidth} \n --Window.Height: ${window.innerHeight}`);
+    console.log(`--Window Width: ${window.innerWidth}\n--Window.Height: ${window.innerHeight}`);
 
     for(let i = 0; i < slides.length; i++) {
       if(slides[i].hasAttribute('data-splide-cubemap')) {
