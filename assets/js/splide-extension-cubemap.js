@@ -256,6 +256,9 @@ const Cubemap = function(Splide, Components) {
   let _cubemap;
 
   function buildCubemap(target, imageArray) {
+    if(target.querySelector('canvas'))
+      return;
+
     /* set new scene */
     _scene = new THREE.Scene();
 
@@ -281,9 +284,7 @@ const Cubemap = function(Splide, Components) {
   }
 
   function animate() {
-    _cubemap.rotation.x += 0.005;
-    _cubemap.rotation.y += 0.005;
-
+    _contols.update();
     _renderer.render(_scene, _camera);
     requestAnimationFrame(animate);
   }
