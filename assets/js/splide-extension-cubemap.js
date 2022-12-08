@@ -234,8 +234,8 @@ const Cubemap = function(Splide, Components) {
       if(slides[i].hasAttribute('data-splide-cubemap')) {
         let _canvas = slides[i].querySelector('canvas');
 
-        _canvas.setAttribute('width', `${Splide.width}`);
-        _canvas.setAttribute('height', `${Splide.height}`);
+        _canvas.setAttribute('width', `${Splide.root.width}`);
+        _canvas.setAttribute('height', `${Splide.root.height}`);
 
         console.log(`--Window Width: ${_canvas.offsetWidth}\n--Window.Height: ${_canvas.offsetHeight}`);
       }
