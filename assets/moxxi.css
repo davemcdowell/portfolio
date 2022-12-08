@@ -708,6 +708,19 @@ pre {
   background-color: gray;
 }
 
+.splide__slide--has-cubemap canvas {
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.splide__slide--has-cubemap canvas:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
 /* project-card */
 .project-card img:not(.project-avatar) {
   height: 296px;
