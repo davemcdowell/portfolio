@@ -289,8 +289,7 @@ const Cubemap = function(Splide, Components) {
   }
 
   function createMaterialArray(pathArray) {
-    const cubemapImagePaths = pathArray;
-    const materialArray = cubemapImagePaths.map(image => {
+    const materialArray = pathArray.map(image => {
       let texture = new THREE.TextureLoader().load(image);
       return new THREE.MeshBasicMaterial({ map: texture, side: THREE.BackSide });
     });
