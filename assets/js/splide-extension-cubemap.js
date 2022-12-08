@@ -229,14 +229,15 @@ const Cubemap = function(Splide, Components) {
   }
 
   function onResize() {
-    console.log(`--Window Width: ${window.innerWidth}\n--Window.Height: ${window.innerHeight}`);
 
     for(let i = 0; i < slides.length; i++) {
       if(slides[i].hasAttribute('data-splide-cubemap')) {
         let _canvas = slides[i].querySelector('canvas');
 
-        _canvas.setAttribute('style', `width: ${slides[i].innerWidth}`);
-        _canvas.setAttribute('style', `height: ${slides[i].innerHeight}`);
+        _canvas.setAttribute('width', `${slides[i].offsetWidth}`);
+        _canvas.setAttribute('height', `${slides[i].offsetHeight}`);
+
+        console.log(`--Window Width: ${_canvas.offsetWidth}\n--Window.Height: ${_canvas.offsetHeight}`);
       }
     }
   }
