@@ -267,16 +267,7 @@ const Cubemap = function(Splide, Components) {
     _camera = new THREE.PerspectiveCamera(55, _frameWidth  / _frameHeight, 45, 30000);
     _camera.position.set(1200, -250, 2000);
 
-    /* set orbit controls */
-    _controls = new THREE.OrbitControls(_camera, _renderer.domElement);
-    _controls.enabled = true;
-    _controls.minDistance = 700;
-    _controls.maxDistance = 1500;
-    _controls.enablePan = false;
-    _controls.autoRotate = true;
-    _controls.autoRotateSpeed = 1.0;
-
-    /* set new renderer and options */
+    /* set new renderer, options and append */
     _renderer = new THREE.WebGLRenderer({ antialias: true });
     _renderer.setSize(_frameWidth, _frameHeight);
     
@@ -285,10 +276,19 @@ const Cubemap = function(Splide, Components) {
     target.appendChild(_renderer.domElement);
 
     /* set cubemap geometry and texture */
-    const materialArray = createMaterialArray(imageArray);
+    const _materialArray = createMaterialArray(imageArray);
     _cubemapGeo = new THREE.BoxGeometry(10000, 10000, 10000);
-    _cubemap = new THREE.Mesh(_cubemapGeo, materialArray);
+    _cubemap = new THREE.Mesh(_cubemapGeo, _materialArray);
     _scene.add(_cubemap);
+
+    /* set orbit controls */
+    _controls = new THREE.OrbitControls(_camera, _renderer.domElement);
+    _controls.enabled = true;
+    _controls.minDistance = 700;
+    _controls.maxDistance = 1500;
+    _controls.enablePan = false;
+    _controls.autoRotate = true;
+    _controls.autoRotateSpeed = 1.0;
 
     animate();
   }
