@@ -65,7 +65,7 @@ media:
     title: Cubemap 1
     # image, video, cubemap, 3d
     type: cubemap
-    thumbnail: /portfolio/assets/images/test/test_ft_.png
+    thumbnail: /portfolio/assets/images/test/test_ft.png
     thumbnail_alt: Cubemap 1
     cubemap:
       mp3: /portfolio/assets/images/test/ambience.mp3
