@@ -89,7 +89,7 @@ const Cubemap = function(Splide, Components) {
         }
       }
 
-      buildCubemap(_canvas, _cubeTextures);
+      buildCubemap(_wrapper, _cubeTextures);
       startCubemap();
     });
   }
