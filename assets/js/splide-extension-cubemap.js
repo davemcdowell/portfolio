@@ -259,12 +259,12 @@ const Cubemap = function(Splide, Components) {
     _scene = new THREE.Scene();
 
     /* set camera perpspective roles =) */
-    _camera = new THREE.PerspectiveCamera(55, window.innerWidth  / window.innerHeight, 45, 30000);
+    _camera = new THREE.PerspectiveCamera(55, _frameWidth  / _frameHeight, 45, 30000);
     _camera.position.set(1200, -250, 2000);
 
     /* set new renderer and options */
     _renderer = new THREE.WebGLRenderer({ antialias: true });
-    _renderer.setSize(window.innerWidth, window.innerHeight);
+    _renderer.setSize(_frameWidth, _frameHeight);
     
     _renderer.domElement.id = '#slide1-cubemap__canvas';
 
