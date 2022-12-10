@@ -156,6 +156,7 @@ const Cubemap = function(Splide, Components) {
     _audioHidden.setAttribute('loop', '');
     _audioHidden.setAttribute('autoplay', '');
     _audioHidden.setAttribute('muted', '');
+    _audioHidden.volume = 0;
     
     /* set source by support */
     setAudioSrcBySupport(_audioHidden, audioData);
@@ -230,17 +231,32 @@ const Cubemap = function(Splide, Components) {
         if(_canvas) {
           _canvas.setAttribute('width', `${_frameWidth}`);
           _canvas.setAttribute('height', `${_frameHeight}`);
-          console.log(`--Window Width: ${_canvas.offsetWidth}\n--Window.Height: ${_canvas.offsetHeight}`);
+          //console.log(`--Window Width: ${_canvas.offsetWidth}\n--Window.Height: ${_canvas.offsetHeight}`);
         }
       }
     }
+  }
+
+  function toggleFullscreen(canvas) {
+    
+  }
+
+  function onFullscreen(canvas) {
+
   }
 
   /*
     Cubemap builder
     three.js setup
 
-    TODO: define parameters
+    TODO: 
+    -define parameters
+    -multi-render target support
+    -index based id
+    -resize / update renderer via resize event
+    -toggle auto-rotate
+    -toggle fullscreen
+    -'disable' renderer / animate on inactive?
   */
   let _scene;
   let _camera;
