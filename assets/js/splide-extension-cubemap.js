@@ -1,4 +1,4 @@
-const Cubemap = function(Splide, Components) {
+const cubemap = function(Splide, Components) {
   const { slides } = Components.Elements;
 
   let _frameWidth;
