@@ -19,10 +19,10 @@ const Cubemap = function(Splide, Components) {
     const _cubeTextures = [
       cubeData.front, 
       cubeData.back, 
-      cubeData.up, 
+      cubeData.up,
       cubeData.down,
       cubeData.right, 
-      cubeData.left 
+      cubeData.left
     ];
 
     let _cubemap;
@@ -66,6 +66,8 @@ const Cubemap = function(Splide, Components) {
     //common utils for flip btns
     common.set_flip_toggles();
 
+    buildCubemap(_wrapper, _cubeTextures);
+
     //play button event listener
     _playBtn.addEventListener('click', function(event) {
       _playBtn.style.display = 'none';
@@ -82,7 +84,7 @@ const Cubemap = function(Splide, Components) {
         }
       }
 
-      buildCubemap(_wrapper, _cubeTextures);
+      //buildCubemap(_wrapper, _cubeTextures);
       startCubemap();
     });
   }
@@ -257,17 +259,18 @@ const Cubemap = function(Splide, Components) {
     -toggle auto-rotate
     -toggle fullscreen
     -'disable' renderer / animate on inactive?
+    -ambient audio in scene
   */
-  let _scene;
-  let _camera;
-  let _renderer;
-  let _cubemapGeo;
-  let _cubemap;
-  let _controls;
-
   function buildCubemap(target, imageArray) {
     if(target.querySelector('canvas'))
       return;
+
+    let _scene;
+    let _camera;
+    let _renderer;
+    let _cubemapGeo;
+    let _cubemap;
+    let _controls;
 
     /* set new scene */
     _scene = new THREE.Scene();
@@ -299,7 +302,11 @@ const Cubemap = function(Splide, Components) {
     _controls.autoRotate = true;
     _controls.autoRotateSpeed = 1.0;
 
-    animate();
+    animate(_controls, _renderer);
+  }
+
+  function resizeRenderFrame() {
+
   }
 
   function animate() {
