@@ -302,16 +302,16 @@ const Cubemap = function(Splide, Components) {
     _controls.autoRotate = true;
     _controls.autoRotateSpeed = 1.0;
 
-    animate(_controls, _renderer);
+    animate(_controls, _renderer, _camera, _scene);
   }
 
   function resizeRenderFrame() {
 
   }
 
-  function animate() {
-    _controls.update();
-    _renderer.render(_scene, _camera);
+  function animate(controls, renderer, camera, scene) {
+    controls.update();
+    renderer.render(scene, camera);
     requestAnimationFrame(animate);
   }
 
