@@ -45,7 +45,7 @@ const gallery = function() {
         });
 
         mainSlide.sync(thumbnailSlide);
-        mainSlide.mount({ ...window.splide.Extensions, Cubemap });
+        mainSlide.mount({ ...window.splide.Extensions, cubemap });
         thumbnailSlide.mount();
     }
 
