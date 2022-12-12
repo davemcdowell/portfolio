@@ -66,7 +66,7 @@ const cubemap = function(Splide, Components) {
     //common utils for flip btns
     common.set_flip_toggles();
 
-    buildCubemap(_wrapper, _cubeTextures);
+    buildCubemap(_wrapper, index, _cubeTextures);
 
     //play button event listener
     _playBtn.addEventListener('click', function(event) {
@@ -201,7 +201,7 @@ const cubemap = function(Splide, Components) {
 
   function startCubemap() {
     console.log('Play Cubemap');
-    this.cubemap.aniamte();
+    this.cubemap.animate();
   }
 
   function onInactive() {
