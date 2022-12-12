@@ -201,6 +201,7 @@ const Cubemap = function(Splide, Components) {
 
   function startCubemap() {
     console.log('Play Cubemap');
+    this.cubemap.aniamte();
   }
 
   function onInactive() {
@@ -254,14 +255,14 @@ const Cubemap = function(Splide, Components) {
     TODO: 
     -define parameters
     -multi-render target support
-    -index based id
+    [x]index based id
     -resize / update renderer via resize event
     -toggle auto-rotate
     -toggle fullscreen
     -'disable' renderer / animate on inactive?
     -ambient audio in scene
   */
-  function buildCubemap(target, imageArray) {
+  function buildCubemap(target, index, imageArray) {
     if(target.querySelector('canvas'))
       return;
 
@@ -283,7 +284,7 @@ const Cubemap = function(Splide, Components) {
     _renderer = new THREE.WebGLRenderer({ antialias: true });
     _renderer.setSize(_frameWidth, _frameHeight);
     
-    _renderer.domElement.id = 'cubemap__canvas';
+    _renderer.domElement.id = `cubemap${index}__canvas`;
 
     target.appendChild(_renderer.domElement);
 
@@ -302,7 +303,8 @@ const Cubemap = function(Splide, Components) {
     _controls.autoRotate = true;
     _controls.autoRotateSpeed = 1.0;
 
-    animate(_controls, _renderer, _camera, _scene);
+    target.cubemap = new Cubemap(_controls, _renderer, _camera, _scene);
+    //animate(_controls, _renderer, _camera, _scene);
   }
 
   function resizeRenderFrame() {
@@ -322,6 +324,18 @@ const Cubemap = function(Splide, Components) {
     });
     return materialArray;
   }
+
+  function Cubemap(controls, renderer, camera, scene) {
+      this.controls = controls;
+      this.renderer = renderer;
+      this.camera = camera;
+      this.scene = scene;
+
+      this.animate = function() {
+      this.controls.update();
+      this.renderer.render(this.scene, this.camera);
+        requestAnimationFrame(this.animate);
+      };
 
   return {
     mount,
