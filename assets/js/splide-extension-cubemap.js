@@ -302,7 +302,8 @@ const Cubemap = function(Splide, Components) {
     _controls.autoRotateSpeed = 1.0;
 
     target.cubemapSlide = new CubemapSlide(_controls, _renderer, _camera, _scene);
-    
+
+    _renderer.render(_scene, _camera);
     //animate(_controls, _renderer, _scene, _camera);
   }
 
@@ -335,9 +336,9 @@ const Cubemap = function(Splide, Components) {
         console.log(`${this} cubemap is animating.`);
         this.controls.update();
         this.renderer.render(this.scene, this.camera);
+        requestAnimationFrame(() => this.animate());
       };
 
-      requestAnimationFrame(() => this.animate());
     }
   }
 
