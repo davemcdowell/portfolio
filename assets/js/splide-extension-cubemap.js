@@ -387,7 +387,7 @@ const SplideCubemap = function(Splide, Components) {
         _useAutoRotate = !_useAutoRotate;
       };
 
-      this.setSpeed(newSpeed) = function() {
+      this.setSpeed = function(newSpeed) {
         _speed = newSpeed;
       };
 
