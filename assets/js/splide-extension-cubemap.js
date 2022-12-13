@@ -111,7 +111,7 @@ const SplideCubemap = function(Splide, Components) {
     /* auto-rotate toggle */
     let _autoRotateBtn = document.createElement('button');
     _autoRotateBtn.id = `cubemap${index}__rotate-btn`;
-    _autoRotateBtn.classList.add('btn', 'cubemap__rotate', 'shadow-none');
+    _autoRotateBtn.classList.add('btn', 'cubemap__rotate', 'border-end', 'shadow-none');
     _autoRotateBtn.setAttribute('type', 'button');
     _autoRotateBtn.ariaLabel = 'Toggle Auto-rotate';
     /* handle icon and flip */
