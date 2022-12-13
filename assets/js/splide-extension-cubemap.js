@@ -134,7 +134,7 @@ const SplideCubemap = function(Splide, Components) {
     _rotSpeedDropup.setAttribute('aria-expanded', 'false');
 
     let _speedUL = document.createElement('ul');
-    _speedUL.classList.add('dropdown-menu');
+    _speedUL.classList.add('dropdown-menu', 'dropdown-menu-dark');
 
     for(let i = 0; i < _speedOptions.length; i++) {
       let li = document.createElement('li');
