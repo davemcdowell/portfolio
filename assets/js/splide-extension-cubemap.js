@@ -137,14 +137,21 @@ const SplideCubemap = function(Splide, Components) {
     let _speedUL = document.createElement('ul');
     _speedUL.classList.add('dropdown-menu', 'bg-blur', 'border', 'mb-2', 'no-mw');
 
-
     for(let i = 0; i < _speedOptions.length; i++) {
       let li = document.createElement('li');
-      let a = document.createElement('a');
-      a.classList.add('dropdown-item');
-      a.href = _speedOptions[i].speed;
-      a.innerText = _speedOptions[i].label;
-      li.appendChild(a);
+      let _speedOptBtn = document.createElement('button');
+      _speedOptBtn.classList.add('dropdown-item');
+      _speedOptBtn.setAttribute('type', 'button');
+
+      //set default
+      if(_speedOptions[i].label === '1x') {
+        _speedOptBtn.classList.add('active');
+        _speedOptBtn.ariaCurrent = 'true';
+      }
+
+      _speedOptBtn.href = _speedOptions[i].speed;
+      _speedOptBtn.innerText = _speedOptions[i].label;
+      li.appendChild(_speedOptBtn);
       _speedUL.appendChild(li);
     }
 
