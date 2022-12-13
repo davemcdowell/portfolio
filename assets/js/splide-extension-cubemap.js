@@ -86,6 +86,8 @@ const SplideCubemap = function(Splide, Components) {
       if(!_wrapper.querySelector('canvas')) {
         buildCubemap(_wrapper, index, _cubeTextures, _cubeData.ogg);
         _wrapper.cubemap.animate();
+      } else {
+        _wrapper.cubemap.enable();
       }
     });
   }
@@ -93,7 +95,7 @@ const SplideCubemap = function(Splide, Components) {
   function createCubemapControls(target, index, audioData) {
     /* navbar*/ 
     let _nav = document.createElement('nav');
-    _nav.classList.add('navbar', 'fixed-bottom', 'rounded-bottom', 'no-drag', 'bg-blur');
+    _nav.classList.add('navbar', 'fixed-bottom', 'rounded-bottom', 'bg-blur');
 
     /* nav container */ 
     let _container = document.createElement('div');
@@ -101,6 +103,10 @@ const SplideCubemap = function(Splide, Components) {
 
     /* left-side controls */
     let _leftActions = document.createElement('div');
+
+    /* auto-rotate & speed btn group */
+    let _rotSpeedBtnGroup = document.createElement('div');
+    _rotSpeedBtnGroup.classList.add('btn-group', 'dropup');
 
     /* auto-rotate toggle */ 
     let _autoRotateBtn = document.createElement('button');
@@ -115,6 +121,27 @@ const SplideCubemap = function(Splide, Components) {
     _autoRotateBtn.setAttribute('data-flip-toggle', '');
     _autoRotateBtn.setAttribute('data-default-icon', 'bi bi-arrow-repeat');
     _autoRotateBtn.setAttribute('data-flip-icon', 'bi bi-arrows-move');
+
+    /* speed menu */
+    let _speedOptions = [
+      { label: '1x', speed: 1.0 }, 
+      { label: '2x', speed: 2.0 }, 
+      { label: '3x', speed: 3.0 }];
+    let _rotSpeedDropup = document.createElement('button');
+    _rotSpeedDropup.classList.add('btn', 'dropdown-toggle', 'dropdown-toggle-split');
+    _rotSpeedDropup.setAttribute('type', 'button');
+    _rotSpeedDropup.setAttribute('data-bs-toggle', 'dropdown');
+    _rotSpeedDropup.setAttribute('aria-expanded', 'false');
+
+    let _speedUL = document.createElement('ul');
+    _speedUL.classList.add('dropdown-menu');
+
+    for(let i = 0; i < _speedOptions.length; i++) {
+      let a = document.createElement('a');
+      a.classList.add('dropdown-item');
+      a.href = _speedOptions[i].speed;
+      a.innerText = _speedOptions[i].label;
+    }
 
     /* mute ambience toggle */ 
     let _ambienceMuteBtn = document.createElement('button');
@@ -153,7 +180,7 @@ const SplideCubemap = function(Splide, Components) {
     _fullscreenBtn.setAttribute('data-default-icon', 'bi bi-fullscreen');
     _fullscreenBtn.setAttribute('data-flip-icon', 'bi bi-fullscreen-exit');
 
-    /* audio player (hidden) */
+    // audio player (hidden) 
     let _audioHidden = document.createElement('audio');
     _audioHidden.classList.add('splide__cubemap__audio', 'd-none');
     _audioHidden.setAttribute('loop', '');
@@ -161,13 +188,19 @@ const SplideCubemap = function(Splide, Components) {
     _audioHidden.setAttribute('muted', '');
     _audioHidden.volume = 0;
     
-    /* set source by support */
+    // set source by support
     setAudioSrcBySupport(_audioHidden, audioData);
 
-    _leftActions.appendChild(_autoRotateBtn);
+    //assemble auto-rotate / speed btn group
+    _rotSpeedBtnGroup.appendChild(_autoRotateBtn);
+    _rotSpeedBtnGroup.appendChild(_rotSpeedDropup);
+
+    //assemble left actions
+    _leftActions.appendChild(_rotSpeedBtnGroup);
     _leftActions.appendChild(_ambienceMuteBtn);
     _leftActions.appendChild(_volumeInput);
-    
+
+    //assemble nav container
     _container.appendChild(_leftActions);
     _container.appendChild(_fullscreenBtn);
     _container.appendChild(_audioHidden);
@@ -240,7 +273,6 @@ const SplideCubemap = function(Splide, Components) {
           _canvas.setAttribute('width', `${_frameWidth}`);
           _canvas.setAttribute('height', `${_frameHeight}`);
           _wrapper.cubemap.resizeRenderFrame();
-          //console.log(`--Window Width: ${_canvas.offsetWidth}\n--Window.Height: ${_canvas.offsetHeight}`);
         }
       }
     }
@@ -249,7 +281,7 @@ const SplideCubemap = function(Splide, Components) {
   /*
     Cubemap builder
 
-    TODO: 
+    TODO:
     []define parameters
     [x]multi-render target support 'Class-based approach'
     [x]index based id
