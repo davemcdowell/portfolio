@@ -84,7 +84,7 @@ const Cubemap = function(Splide, Components) {
         }
       }
 
-      _wrapper.animate;
+      _wrapper.cubemapSlide.animate;
     });
   }
 
@@ -200,9 +200,8 @@ const Cubemap = function(Splide, Components) {
     audioPlayer.appendChild(_src);
   }
 
-  function startCubemap(event) {
+  function startCubemap() {
     console.log('Play Cubemap');
-    event.target.cubemapSlide.animate();
   }
 
   function onInactive() {
