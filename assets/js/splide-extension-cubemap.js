@@ -303,7 +303,7 @@ const Cubemap = function(Splide, Components) {
     _controls.autoRotateSpeed = 1.0;
 
     target.cubemapSlide = new CubemapSlide(_controls, _renderer, _camera, _scene);
-    console.log(target + " " + target.id);
+    console.log(target + " : " + target.id + " : " + target.classList );
     console.log(target.cubemapSlide);
     //animate(_controls, _renderer, _camera, _scene);
   }
