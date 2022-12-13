@@ -1,4 +1,4 @@
-const Cubemap = function(Splide, Components) {
+const SplideCubemap = function(Splide, Components) {
   const { slides } = Components.Elements;
 
   let _frameWidth;
@@ -82,8 +82,11 @@ const Cubemap = function(Splide, Components) {
           _mute.click();
         }
       }
-      buildCubemap(_wrapper, index, _cubeTextures, _cubeData.ogg);
-      _wrapper.cubemapSlide.animate();
+
+      if(!_wrapper.querySelector('canvas')) {
+        buildCubemap(_wrapper, index, _cubeTextures, _cubeData.ogg);
+        _wrapper.cubemap.animate();
+      }
     });
   }
 
@@ -182,7 +185,7 @@ const Cubemap = function(Splide, Components) {
 
     /* auto-rotate toggle */
     _autoRotateBtn.addEventListener('click', function() {
-      target.cubemapSlide.toggleAutoRotate();
+      target.cubemap.toggleAutoRotate();
     });
 
     /* volume */
@@ -248,24 +251,18 @@ const Cubemap = function(Splide, Components) {
     [x]multi-render target support 'Class-based approach'
     [x]index based id
     []loading feedback/spinner
-    []resize / update renderer via resize event
+    []resize/update renderer via resize event
     [x]toggle auto-rotate
     []toggle fullscreen
-    []'disable' renderer & reqAnimation on inactive
+    [x]enable/disable events
+    [x]'disable' renderer & reqAnimation on inactive
     []ambient positional audio in scene
     []hdr RGBE exposure option
-    []fog
+    []fog 
   */
   function buildCubemap(target, index, imageArray, ambience) {
     if(target.querySelector('canvas'))
       return;
-
-    //let _scene;
-    //let _camera;
-    //let _renderer;
-    //let _cubemapGeo;
-    //let _cubemap;
-    //let _controls;
 
     /* set new scene */
     const _scene = new THREE.Scene();
@@ -303,17 +300,12 @@ const Cubemap = function(Splide, Components) {
     _controls.maxDistance = 1500;
     _controls.enablePan = false;
     _controls.autoRotate = true;
-    _controls.autoRotateSpeed = 0.75;
+    _controls.autoRotateSpeed = 1.0;
 
-    //create our new CubemapSlide obj
-    target.cubemapSlide = new CubemapSlide(_controls, _renderer, _camera, _scene);
+    //create our new Cubemap obj
+    target.cubemap = new Cubemap(_controls, _renderer, _camera, _scene);
   }
 
-  function resizeRenderFrame() {
-
-  }
-  
-  /* three js utils */
   function createMaterialArray(pathArray) {
     const materialArray = pathArray.map(image => {
       let texture = new THREE.TextureLoader().load(image);
@@ -322,12 +314,14 @@ const Cubemap = function(Splide, Components) {
     return materialArray;
   }
 
-  class CubemapSlide {
+  class Cubemap {
     constructor(controls, renderer, camera, scene) {
       this.controls = controls;
       this.renderer = renderer;
       this.camera = camera;
       this.scene = scene;
+
+      let _isDisabled = false;
 
       let _useAutoRotate = true;
       let _reqestAnimation;
@@ -337,18 +331,28 @@ const Cubemap = function(Splide, Components) {
       };
 
       this.animate = () => {
-        controls.autoRotate = _useAutoRotate;
+        if(_isDisabled)
+          return;
+
+        this.controls.autoRotate = _useAutoRotate;
+
         this.controls.update();
         this.renderer.render(this.scene, this.camera);
-        _reqestAnimation = requestAnimationFrame(() => this.animate());
+        _reqestAnimation = window.requestAnimationFrame(() => this.animate());
       };
 
       this.resizeRenderFrame = function() {
-
+        this.camera.aspect = _frameWidth / _frameHeight;
+        this.camera.updateProjectionMatrix();
+        this.renderer.setSize(_frameWidth, _frameHeight);
       }
 
-      this.onDisabled = function() {
+      this.enable = function() {
+        _isDisabled = false;
+      }
 
+      this.disable = function() {
+        _isDisabled = true;
       }
     }
   }
