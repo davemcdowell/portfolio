@@ -201,7 +201,7 @@ const Cubemap = function(Splide, Components) {
 
   function startCubemap(event) {
     console.log('Play Cubemap');
-    .cubemapSlide.animate();
+    event.target.cubemapSlide.animate();
   }
 
   function onInactive() {
@@ -332,7 +332,7 @@ const Cubemap = function(Splide, Components) {
       this.camera = camera;
       this.scene = scene;
 
-      this.animate = function () {
+      this.animate = function() {
         this.controls.update();
         this.renderer.render(this.scene, this.camera);
         requestAnimationFrame(this.animate);
