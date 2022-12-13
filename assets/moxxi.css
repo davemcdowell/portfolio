@@ -631,7 +631,7 @@ pre {
   background-color: var(--bg-color-darkest);
   top: calc(50% - 1.5em);
   left: calc(50% - 1.5em);
-  transition: all .6s ease-out;
+  transition: all .35s ease-out;
 }
 
 .splide__video__play::after { 
@@ -674,7 +674,7 @@ pre {
   background-color: var(--bg-color-darkest);
   top: calc(50% - 1.5em);
   left: calc(50% - 1.5em);
-  transition: all .6s ease-out;
+  transition: all .35s ease-out;
 }
 
 .splide__cubemap__play::after { 
@@ -999,7 +999,7 @@ footer textarea { resize: vertical; }
 }
 
 .scale-click {
-  transition: all .6s ease-out;
+  transition: all .35s ease-out;
 }
 
 .scale-click:active {
