@@ -229,7 +229,8 @@ const SplideCubemap = function(Splide, Components) {
   function onResize() {
     for(let i = 0; i < slides.length; i++) {
       if(slides[i].hasAttribute('data-splide-cubemap')) {
-        let _canvas = slides[i].querySelector('canvas');
+        let _wrapper = slides[i].querySelector('.splide__cubemap__wrapper');
+        let _canvas = _wrapper.querySelector('canvas');
 
         _frameWidth = slides[i].offsetWidth;
         _frameHeight = slides[i].offsetHeight;
@@ -237,6 +238,7 @@ const SplideCubemap = function(Splide, Components) {
         if(_canvas) {
           _canvas.setAttribute('width', `${_frameWidth}`);
           _canvas.setAttribute('height', `${_frameHeight}`);
+          _wrapper.cubemap.resizeRenderFrame();
           //console.log(`--Window Width: ${_canvas.offsetWidth}\n--Window.Height: ${_canvas.offsetHeight}`);
         }
       }
@@ -251,7 +253,7 @@ const SplideCubemap = function(Splide, Components) {
     [x]multi-render target support 'Class-based approach'
     [x]index based id
     []loading feedback/spinner
-    []resize/update renderer via resize event
+    [x]resize/update renderer via resize event
     [x]toggle auto-rotate
     []toggle fullscreen
     [x]enable/disable events
