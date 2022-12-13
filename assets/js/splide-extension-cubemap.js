@@ -15,14 +15,14 @@ const Cubemap = function(Splide, Components) {
   }
 
   function createCubemapBase(slide, index) {
-    const cubeData = JSON.parse(document.querySelector(slide.getAttribute('data-splide-cubemap')).textContent);
+    const _cubeData = JSON.parse(document.querySelector(slide.getAttribute('data-splide-cubemap')).textContent);
     const _cubeTextures = [
-      cubeData.front, 
-      cubeData.back, 
-      cubeData.up,
-      cubeData.down,
-      cubeData.right, 
-      cubeData.left
+      _cubeData.front, 
+      _cubeData.back, 
+      _cubeData.up,
+      _cubeData.down,
+      _cubeData.right, 
+      _cubeData.left
     ];
 
     let _cubemap;
@@ -53,7 +53,7 @@ const Cubemap = function(Splide, Components) {
     _playBtn.setAttribute('aria-label', 'View Cubemap');
 
     //create player controls
-    createCubemapControls(_wrapper, index, { mp3: cubeData.mp3, ogg: cubeData.ogg });
+    createCubemapControls(_wrapper, index, { mp3: _cubeData.mp3, ogg: _cubeData.ogg });
 
     //append play button to cubemap 
     _cubemap.appendChild(_playBtn);
@@ -82,7 +82,7 @@ const Cubemap = function(Splide, Components) {
           _mute.click();
         }
       }
-      buildCubemap(_wrapper, index, _cubeTextures);
+      buildCubemap(_wrapper, index, _cubeTextures, _cubeData.ogg);
       _wrapper.cubemapSlide.animate();
     });
   }
