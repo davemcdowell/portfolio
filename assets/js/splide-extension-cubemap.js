@@ -88,6 +88,7 @@ const SplideCubemap = function(Splide, Components) {
         _wrapper.cubemap.animate();
       } else {
         _wrapper.cubemap.enable();
+        _wrapper.cubemap.animate();
       }
     });
   }
