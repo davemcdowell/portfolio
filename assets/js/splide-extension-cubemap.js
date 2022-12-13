@@ -137,10 +137,13 @@ const SplideCubemap = function(Splide, Components) {
     _speedUL.classList.add('dropdown-menu');
 
     for(let i = 0; i < _speedOptions.length; i++) {
+      let li = document.createElement('li');
       let a = document.createElement('a');
       a.classList.add('dropdown-item');
       a.href = _speedOptions[i].speed;
       a.innerText = _speedOptions[i].label;
+      li.append(a);
+      _speedUL.appendChild();
     }
 
     /* mute ambience toggle */ 
@@ -192,6 +195,7 @@ const SplideCubemap = function(Splide, Components) {
     setAudioSrcBySupport(_audioHidden, audioData);
 
     //assemble auto-rotate / speed btn group
+    _rotSpeedDropup.append(_speedUL);
     _rotSpeedBtnGroup.appendChild(_autoRotateBtn);
     _rotSpeedBtnGroup.appendChild(_rotSpeedDropup);
 
