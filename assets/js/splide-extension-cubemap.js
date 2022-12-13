@@ -132,7 +132,7 @@ const SplideCubemap = function(Splide, Components) {
     _rotSpeedDropup.setAttribute('type', 'button');
     _rotSpeedDropup.setAttribute('data-bs-toggle', 'dropdown');
     _rotSpeedDropup.setAttribute('aria-expanded', 'false');
-    _rotSpeedDropup.setAttribute('data-bs-offset', '20, 20');
+    _rotSpeedDropup.setAttribute('data-bs-offset', '50, 20');
 
     let _speedUL = document.createElement('ul');
     _speedUL.classList.add('dropdown-menu', 'bg-blur', 'border', 'mb-2', 'no-mw');
