@@ -157,7 +157,7 @@ const SplideCubemap = function(Splide, Components) {
     /* mute ambience toggle */ 
     let _ambienceMuteBtn = document.createElement('button');
     _ambienceMuteBtn.id = `cubemap${index}__audio-btn`;
-    _ambienceMuteBtn.classList.add('btn', 'cubemap__mute', 'shadow-none');
+    _ambienceMuteBtn.classList.add('btn', 'cubemap__mute', 'scale-click', 'shadow-none');
     _ambienceMuteBtn.setAttribute('type', 'button');
     _ambienceMuteBtn.ariaLabel = 'Mute Ambience';
     /* handle icon and flip */
@@ -180,7 +180,7 @@ const SplideCubemap = function(Splide, Components) {
     /* fullscreen toggle */
     let _fullscreenBtn = document.createElement('button');
     _fullscreenBtn.id = `cubemap${index}__fullscreen-btn`;
-    _fullscreenBtn.classList.add('btn', 'cubemap__fullscreen', 'ms-auto', 'shadow-none');
+    _fullscreenBtn.classList.add('btn', 'cubemap__fullscreen', 'scale-click', 'ms-auto', 'shadow-none');
     _fullscreenBtn.setAttribute('type', 'button');
     _fullscreenBtn.ariaLabel = 'Toggle Fullscreen';
     

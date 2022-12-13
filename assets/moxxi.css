@@ -631,6 +631,7 @@ pre {
   background-color: var(--bg-color-darkest);
   top: calc(50% - 1.5em);
   left: calc(50% - 1.5em);
+  transition: all .6s ease-out;
 }
 
 .splide__video__play::after { 
@@ -639,6 +640,10 @@ pre {
   line-height: 3em; 
   content: '\F4F4'; 
   margin: 0 auto;
+}
+
+.splide__video__play:active {
+  transform: scale(1.1);
 }
 
 /* cubemap extension */
@@ -669,6 +674,7 @@ pre {
   background-color: var(--bg-color-darkest);
   top: calc(50% - 1.5em);
   left: calc(50% - 1.5em);
+  transition: all .6s ease-out;
 }
 
 .splide__cubemap__play::after { 
@@ -677,6 +683,10 @@ pre {
   line-height: 3em; 
   content: '\F1C8';
   margin: 0 auto;
+}
+
+.splide__cubemap__play:active {
+  transform: scale(1.1);
 }
 
 .splide__cubemap__wrapper .navbar .form-range::-ms-thumb {  
