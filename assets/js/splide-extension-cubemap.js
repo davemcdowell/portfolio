@@ -330,7 +330,7 @@ const Cubemap = function(Splide, Components) {
       this.renderer = renderer;
       this.camera = camera;
       this.scene = scene;
-      this.reqestAnim;
+      let reqestAnim;
       
       this.animate = () => {
         console.log(`${this} cubemap is animating.`);
