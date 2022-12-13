@@ -13,7 +13,7 @@ const gallery = function() {
             rewind: true,
             pagination: false,
             arrows: false,
-            noDrag: 'input, textarea, canvas, nav, no-drag',
+            noDrag: 'input, textarea, canvas, nav, .no-drag',
             video: {
                 loop: true,
                 mute: true,
