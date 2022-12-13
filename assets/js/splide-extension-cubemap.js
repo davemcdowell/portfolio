@@ -338,7 +338,7 @@ const Cubemap = function(Splide, Components) {
         requestAnimationFrame(() => this.animate());
       };
 
-      this.animate();
+      //this.animate();
     }
   }
 
