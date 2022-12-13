@@ -149,7 +149,6 @@ const SplideCubemap = function(Splide, Components) {
         _speedOptBtn.ariaCurrent = 'true';
       }
 
-      _speedOptBtn.href = _speedOptions[i].speed;
       _speedOptBtn.innerText = _speedOptions[i].label;
       li.appendChild(_speedOptBtn);
       _speedUL.appendChild(li);

@@ -180,13 +180,16 @@ pre {
 .bg-blur button {
   color: var(--default-type-color);
 }
-.bg-blur button:hover {
+.bg-blur button:hover, 
+.bg-blur button:focus {
   color: var(--white-type-color);
+  background-color: transparent;
 }
 .bg-blur a {
   color: var(--default-type-color);
 }
-.bg-blur a:hover {
+.bg-blur a:hover,
+.bg-blur a:focus {
   color: var(--white-type-color);
 }
 
