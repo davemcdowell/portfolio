@@ -137,11 +137,22 @@ const SplideCubemap = function(Splide, Components) {
     let _speedUL = document.createElement('ul');
     _speedUL.classList.add('dropdown-menu', 'dropdown-menu-end', 'bg-blur', 'border', 'mb-2', 'no-mw');
 
-    for(let i = 0; i < _speedOptions.length; i++) {
+    for(let i = 0; i < _speedOptions.length + 1; i++) {
       let li = document.createElement('li');
       let _speedOptBtn = document.createElement('button');
       _speedOptBtn.classList.add('dropdown-item');
       _speedOptBtn.setAttribute('type', 'button');
+
+      //set first heading
+      if(i === 0) {
+        let label = document.createElement('h6');
+        label.classList.add('dropdown-header', 'user-select-none');
+        label.innerText = 'Rotate Speed'
+        li.appendChild(_speedOptBtn);
+      } else {
+        _speedOptBtn.innerText = _speedOptions[i].label;
+        li.appendChild(_speedOptBtn);
+      }
 
       //set default
       if(_speedOptions[i].label === '1x') {
@@ -149,8 +160,6 @@ const SplideCubemap = function(Splide, Components) {
         _speedOptBtn.ariaCurrent = 'true';
       }
 
-      _speedOptBtn.innerText = _speedOptions[i].label;
-      li.appendChild(_speedOptBtn);
       _speedUL.appendChild(li);
 
       _speedOptBtn.addEventListener('click', function() {
