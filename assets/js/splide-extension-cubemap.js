@@ -132,7 +132,6 @@ const SplideCubemap = function(Splide, Components) {
     _rotSpeedDropup.setAttribute('type', 'button');
     _rotSpeedDropup.setAttribute('data-bs-toggle', 'dropdown');
     _rotSpeedDropup.setAttribute('aria-expanded', 'false');
-    _rotSpeedDropup = new bootstrap.Dropdown();
 
     let _speedUL = document.createElement('ul');
     _speedUL.classList.add('dropdown-menu');
@@ -143,7 +142,7 @@ const SplideCubemap = function(Splide, Components) {
       a.classList.add('dropdown-item');
       a.href = _speedOptions[i].speed;
       a.innerText = _speedOptions[i].label;
-      li.append(a);
+      li.appendChild(a);
       _speedUL.appendChild(li);
     }
 
