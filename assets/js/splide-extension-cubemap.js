@@ -201,7 +201,7 @@ const Cubemap = function(Splide, Components) {
 
   function startCubemap(event) {
     console.log('Play Cubemap');
-    event.target.cubemapSlide.animate();
+    .cubemapSlide.animate();
   }
 
   function onInactive() {
@@ -325,17 +325,19 @@ const Cubemap = function(Splide, Components) {
     return materialArray;
   }
 
-  function CubemapSlide(controls, renderer, camera, scene) {
-      this.controls = controls;
-      this.renderer = renderer;
-      this.camera = camera;
-      this.scene = scene;
+  class CubemapSlide {
+    constructor(controls, renderer, camera, scene) {
+      this.controls = controls;
+      this.renderer = renderer;
+      this.camera = camera;
+      this.scene = scene;
 
-      this.animate = function() {
-      this.controls.update();
-      this.renderer.render(this.scene, this.camera);
+      this.animate = function () {
+        this.controls.update();
+        this.renderer.render(this.scene, this.camera);
         requestAnimationFrame(this.animate);
-      }
+      };
+    }
   }
 
   return {
