@@ -109,10 +109,10 @@ const SplideCubemap = function(Splide, Components) {
     let _rotSpeedBtnGroup = document.createElement('div');
     _rotSpeedBtnGroup.classList.add('btn-group', 'dropup');
 
-    /* auto-rotate toggle */ 
+    /* auto-rotate toggle */
     let _autoRotateBtn = document.createElement('button');
     _autoRotateBtn.id = `cubemap${index}__rotate-btn`;
-    _autoRotateBtn.classList.add('btn', 'cubemap__rotate');
+    _autoRotateBtn.classList.add('btn', 'cubemap__rotate', 'shadow-none');
     _autoRotateBtn.setAttribute('type', 'button');
     _autoRotateBtn.setAttribute('aria-label', 'Auto-rotate');
     /* handle icon and flip */
@@ -129,7 +129,7 @@ const SplideCubemap = function(Splide, Components) {
       { label: '2x', speed: 2.0 }, 
       { label: '3x', speed: 3.0 }];
     let _rotSpeedDropup = document.createElement('button');
-    _rotSpeedDropup.classList.add('btn', 'dropdown-toggle', 'dropdown-toggle-split');
+    _rotSpeedDropup.classList.add('btn', 'dropdown-toggle', 'dropdown-toggle-split', 'shadow-none');
     _rotSpeedDropup.setAttribute('type', 'button');
     _rotSpeedDropup.setAttribute('data-bs-toggle', 'dropdown');
     _rotSpeedDropup.setAttribute('aria-expanded', 'false');
@@ -150,7 +150,7 @@ const SplideCubemap = function(Splide, Components) {
     /* mute ambience toggle */ 
     let _ambienceMuteBtn = document.createElement('button');
     _ambienceMuteBtn.id = `cubemap${index}__audio-btn`;
-    _ambienceMuteBtn.classList.add('btn', 'cubemap__mute');
+    _ambienceMuteBtn.classList.add('btn', 'cubemap__mute', 'shadow-none');
     _ambienceMuteBtn.setAttribute('type', 'button');
     _ambienceMuteBtn.setAttribute('aria-label', 'Mute Ambience');
     /* handle icon and flip */
@@ -163,17 +163,17 @@ const SplideCubemap = function(Splide, Components) {
 
     /* volume slider */
     let _volumeInput = document.createElement('input');
-    _volumeInput.classList.add('form-range', 'cubemap__volume', 'w-25', 'ms-2', 'pt-3');
+    _volumeInput.classList.add('form-range', 'cubemap__volume', 'shadow-none', 'w-25', 'ms-2', 'pt-3');
     _volumeInput.setAttribute('type', 'range');
     _volumeInput.setAttribute('min', 0);
     _volumeInput.setAttribute('max', 1);
     _volumeInput.setAttribute('step', 0.1);
     _volumeInput.value = 0.35;
 
-    /* fullscreen toggle */ 
+    /* fullscreen toggle */
     let _fullscreenBtn = document.createElement('button');
     _fullscreenBtn.id = `cubemap${index}__fullscreen-btn`;
-    _fullscreenBtn.classList.add('btn', 'cubemap__fullscreen', 'ms-auto');
+    _fullscreenBtn.classList.add('btn', 'cubemap__fullscreen', 'ms-auto', 'shadow-none');
     _fullscreenBtn.setAttribute('type', 'button');
     _fullscreenBtn.setAttribute('aria-label', 'Fullscreen');
     /* handle icon and flip */
