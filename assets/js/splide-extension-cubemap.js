@@ -242,7 +242,6 @@ const Cubemap = function(Splide, Components) {
 
   /*
     Cubemap builder
-    three.js setup
 
     TODO: 
     []define parameters
@@ -250,7 +249,7 @@ const Cubemap = function(Splide, Components) {
     [x]index based id
     []loading feedback/spinner
     []resize / update renderer via resize event
-    []toggle auto-rotate
+    [x]toggle auto-rotate
     []toggle fullscreen
     []'disable' renderer & reqAnimation on inactive
     []ambient positional audio in scene
@@ -304,7 +303,7 @@ const Cubemap = function(Splide, Components) {
     _controls.maxDistance = 1500;
     _controls.enablePan = false;
     _controls.autoRotate = true;
-    _controls.autoRotateSpeed = 1.0;
+    _controls.autoRotateSpeed = 0.75;
 
     //create our new CubemapSlide obj
     target.cubemapSlide = new CubemapSlide(_controls, _renderer, _camera, _scene);
