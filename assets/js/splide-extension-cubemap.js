@@ -338,7 +338,8 @@ const Cubemap = function(Splide, Components) {
         this.renderer.render(this.scene, this.camera);
         requestAnimationFrame(() => this.animate());
       };
-
+      
+      this.animate();
     }
   }
 
