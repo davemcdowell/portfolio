@@ -309,13 +309,13 @@ const Cubemap = function(Splide, Components) {
   function resizeRenderFrame() {
 
   }
-
+/*
   function animate(controls, renderer, scene, camera) {
     //controls.update();
     renderer.render(scene, camera);
     requestAnimationFrame(animate);
   }
-
+*/
   function createMaterialArray(pathArray) {
     const materialArray = pathArray.map(image => {
       let texture = new THREE.TextureLoader().load(image);
@@ -331,13 +331,14 @@ const Cubemap = function(Splide, Components) {
       this.camera = camera;
       this.scene = scene;
       
-      animate = () => {
+      this.animate = () => {
         console.log(`${this} cubemap is animating.`);
         this.controls.update();
         this.renderer.render(this.scene, this.camera);
+        requestAnimationFrame(this.animate);
       };
 
-      requestAnimationFrame(this.animate);
+      this.animate();
     }
   }
 
