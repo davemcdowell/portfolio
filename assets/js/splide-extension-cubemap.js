@@ -135,6 +135,7 @@ const SplideCubemap = function(Splide, Components) {
 
     let _speedUL = document.createElement('ul');
     _speedUL.classList.add('dropdown-menu', 'dropdown-menu-end', 'bg-blur', 'border', 'mb-2', 'no-mw');
+    _speedUL.setAttribute('data-bs-offset', '10, 0');
 
     for(let i = 0; i < _speedOptions.length; i++) {
       let li = document.createElement('li');
