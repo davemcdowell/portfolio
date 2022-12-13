@@ -217,11 +217,12 @@ const SplideCubemap = function(Splide, Components) {
         _wrapper.style.display = 'none';
 
         let _audio = _wrapper.querySelector('.splide__cubemap__audio');
-
+        
         if(_audio) {
           _audio.pause();
           _audio.currentTime = 0;
         }
+        _wrapper.cubemap.disable();
       }
     }
   }
