@@ -1003,7 +1003,7 @@ footer textarea { resize: vertical; }
 }
 
 .scale-click:active {
-  transform: scale(.9);
+  transform: scale(.75);
 }
 
 /* hover.css  */
