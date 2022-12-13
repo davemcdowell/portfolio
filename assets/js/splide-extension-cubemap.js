@@ -170,6 +170,8 @@ const Cubemap = function(Splide, Components) {
     _container.appendChild(_fullscreenBtn);
     _container.appendChild(_audioHidden);
 
+    _audioHidden.volume = _volumeInput.value;
+
     _nav.appendChild(_container);
 
     target.appendChild(_nav);
