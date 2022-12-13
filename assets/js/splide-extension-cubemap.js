@@ -29,6 +29,7 @@ const Cubemap = function(Splide, Components) {
     let _wrapper;
     let _playBtn;
 
+    //adjust for zero-indexing
     index += 1;
 
     //add an identifier to this slide similar to video extension
@@ -66,6 +67,8 @@ const Cubemap = function(Splide, Components) {
     //common utils for flip btns
     common.set_flip_toggles();
 
+    buildCubemap(_wrapper, index, _cubeTextures);
+
     //play button event listener
     _playBtn.addEventListener('click', function(event) {
       _playBtn.style.display = 'none';
@@ -76,12 +79,12 @@ const Cubemap = function(Splide, Components) {
       
       if(_audio && _audio.hasAttribute('autoplay')) {
         _audio.play();
-
+        
         if(_audio.hasAttribute('muted')) {
           _mute.click();
         }
       }
-      buildCubemap(_wrapper, index, _cubeTextures);
+      //buildCubemap(_wrapper, index, _cubeTextures);
       _wrapper.cubemapSlide.animate();
     });
   }
@@ -179,6 +182,11 @@ const Cubemap = function(Splide, Components) {
       _audioHidden.muted = !_audioHidden.muted;
     });
 
+    /* auto-rotate toggle */
+    _autoRotateBtn.addEventListener('click', function() {
+      target.cubemapSlide.toggleAutoRotate();
+    });
+
     /* volume */
     _volumeInput.addEventListener('change', function() {
       _audioHidden.volume = _volumeInput.value;
@@ -196,10 +204,6 @@ const Cubemap = function(Splide, Components) {
       _src.src = sources.ogg;
     }
     audioPlayer.appendChild(_src);
-  }
-
-  function startCubemap() {
-    console.log('Play Cubemap');
   }
 
   function onInactive() {
@@ -238,62 +242,64 @@ const Cubemap = function(Splide, Components) {
     }
   }
 
-  function toggleFullscreen(canvas) {
-    
-  }
-
-  function onFullscreen(canvas) {
-
-  }
-
   /*
     Cubemap builder
     three.js setup
 
     TODO: 
-    -define parameters
-    -multi-render target support
+    []define parameters
+    [x]multi-render target support 'Class-based approach'
     [x]index based id
-    -resize / update renderer via resize event
-    -toggle auto-rotate
-    -toggle fullscreen
-    -'disable' renderer / animate on inactive?
-    -ambient audio in scene
+    []resize / update renderer via resize event
+    []toggle auto-rotate
+    []toggle fullscreen
+    []'disable' renderer & reqAnimation on inactive
+    []ambient positional audio in scene
+    []hdr RGBE exposure option
+    []fog
   */
-  function buildCubemap(target, index, imageArray) {
+  function buildCubemap(target, index, imageArray, ambience) {
     if(target.querySelector('canvas'))
       return;
 
-    let _scene;
-    let _camera;
-    let _renderer;
-    let _cubemapGeo;
-    let _cubemap;
-    let _controls;
+    //let _scene;
+    //let _camera;
+    //let _renderer;
+    //let _cubemapGeo;
+    //let _cubemap;
+    //let _controls;
 
     /* set new scene */
-    _scene = new THREE.Scene();
+    const _scene = new THREE.Scene();
 
-    /* set camera */
-    _camera = new THREE.PerspectiveCamera(55, _frameWidth  / _frameHeight, 45, 30000);
+    /* set audio and listener */
+    let _listener = new THREE.AudioListener();
+    let _audio = new THREE.PositionalAudio(_listener);
+    let _audioLoader = new THREE.AudioLoader();
+
+    /* set camera and add listener */
+    const _camera = new THREE.PerspectiveCamera(55, _frameWidth  / _frameHeight, 45, 30000);
     _camera.position.set(1200, -250, 2000);
+    _camera.add(_listener);
 
-    /* set new renderer, options and append */
-    _renderer = new THREE.WebGLRenderer({ antialias: true });
+    /* set new renderer + options */
+    const _renderer = new THREE.WebGLRenderer({ antialias: true });
     _renderer.setSize(_frameWidth, _frameHeight);
     
+    //set our indexed id
     _renderer.domElement.id = `cubemap${index}__canvas`;
 
+    //append renderer/canvas to our target
     target.appendChild(_renderer.domElement);
 
     /* set cubemap geometry and texture */
     const _materialArray = createMaterialArray(imageArray);
-    _cubemapGeo = new THREE.BoxGeometry(10000, 10000, 10000);
-    _cubemap = new THREE.Mesh(_cubemapGeo, _materialArray);
+    const _cubemapGeo = new THREE.BoxGeometry(10000, 10000, 10000);
+    const _cubemap = new THREE.Mesh(_cubemapGeo, _materialArray);
     _scene.add(_cubemap);
 
     /* set orbit controls */
-    _controls = new THREE.OrbitControls(_camera, _renderer.domElement);
+    const _controls = new THREE.OrbitControls(_camera, _renderer.domElement);
     _controls.enabled = true;
     _controls.minDistance = 700;
     _controls.maxDistance = 1500;
@@ -301,21 +307,15 @@ const Cubemap = function(Splide, Components) {
     _controls.autoRotate = true;
     _controls.autoRotateSpeed = 1.0;
 
+    //create our new CubemapSlide obj
     target.cubemapSlide = new CubemapSlide(_controls, _renderer, _camera, _scene);
-
-    //animate(_controls, _renderer, _scene, _camera);
   }
 
   function resizeRenderFrame() {
 
   }
-/*
-  function animate() {
-    //controls.update();
-    renderer.render(scene, camera);
-    requestAnimationFrame(animate);
-  }
-*/
+  
+  /* three js utils */
   function createMaterialArray(pathArray) {
     const materialArray = pathArray.map(image => {
       let texture = new THREE.TextureLoader().load(image);
@@ -330,16 +330,28 @@ const Cubemap = function(Splide, Components) {
       this.renderer = renderer;
       this.camera = camera;
       this.scene = scene;
-      let reqestAnim;
+
+      let _useAutoRotate = true;
+      let _reqestAnimation;
       
-      this.animate = () => {
-        console.log(`${this} cubemap is animating.`);
-        this.controls.update();
-        this.renderer.render(this.scene, this.camera);
-        reqestAnim = requestAnimationFrame(() => this.animate());
+      this.toggleAutoRotate = function () {
+        _useAutoRotate = !_useAutoRotate;
       };
 
-      //this.animate();
+      this.animate = () => {
+        controls.autoRotate = _useAutoRotate;
+        this.controls.update();
+        this.renderer.render(this.scene, this.camera);
+        _reqestAnimation = requestAnimationFrame(() => this.animate());
+      };
+
+      this.resizeRenderFrame = function() {
+
+      }
+
+      this.onDisabled = function() {
+
+      }
     }
   }
 
