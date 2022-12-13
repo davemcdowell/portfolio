@@ -705,7 +705,19 @@ pre {
   height: 0.25rem;
 }
 
-.splide__cubemap__wrapper .navbar .dropdown-menu li button.active {
+.splide__cubemap__wrapper .navbar .dropdown-toggle[aria-expanded="true"]:after {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); 
+}
+
+.splide__cubemap__wrapper .navbar .dropdown-toggle:after { 
+  -webkit-transition: 0.35s; 
+  -o-transition: 0.35s; 
+  transition: 0.35s; 
+}
+
+.splide__cubemap__wrapper .navbar .dropdown-menu .active {
   background-color: rgba(0,0,0,0.25);
 }
 
