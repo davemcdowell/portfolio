@@ -721,7 +721,7 @@ pre {
   background-color: rgba(0,0,0,0.25);
 }
 
-.splide__cubemap__wrapper .navbar .dropdown-item:hover {
+.splide__cubemap__wrapper .navbar .dropdown-menu .dropdown-item:hover {
   background-color: rgba(0,0,0,0.10);
 }
 
@@ -986,6 +986,14 @@ footer textarea { resize: vertical; }
   -o-transition: transform 0.25s linear;
   transition: transform 0.25s linear;
   transition: transform 0.25s linear, -webkit-transform 0.25s linear;
+}
+
+.scale-click {
+  transition: all .6s ease-out;
+}
+
+.scale-click:active {
+  transform: scale(.9);
 }
 
 /* hover.css  */
