@@ -84,8 +84,7 @@ const Cubemap = function(Splide, Components) {
         }
       }
 
-      //buildCubemap(_wrapper, _cubeTextures);
-      startCubemap(event);
+      _wrapper.animate;
     });
   }
 
