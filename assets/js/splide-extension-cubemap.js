@@ -67,8 +67,6 @@ const Cubemap = function(Splide, Components) {
     //common utils for flip btns
     common.set_flip_toggles();
 
-    buildCubemap(_wrapper, index, _cubeTextures);
-
     //play button event listener
     _playBtn.addEventListener('click', function(event) {
       _playBtn.style.display = 'none';
@@ -84,7 +82,7 @@ const Cubemap = function(Splide, Components) {
           _mute.click();
         }
       }
-      //buildCubemap(_wrapper, index, _cubeTextures);
+      buildCubemap(_wrapper, index, _cubeTextures);
       _wrapper.cubemapSlide.animate();
     });
   }
@@ -250,6 +248,7 @@ const Cubemap = function(Splide, Components) {
     []define parameters
     [x]multi-render target support 'Class-based approach'
     [x]index based id
+    []loading feedback/spinner
     []resize / update renderer via resize event
     []toggle auto-rotate
     []toggle fullscreen
