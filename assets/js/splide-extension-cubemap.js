@@ -82,7 +82,7 @@ const Cubemap = function(Splide, Components) {
         }
       }
       buildCubemap(_wrapper, index, _cubeTextures);
-      //_wrapper.cubemapSlide.animate;
+      _wrapper.cubemapSlide.animate;
     });
   }
 
