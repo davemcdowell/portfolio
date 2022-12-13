@@ -82,7 +82,7 @@ const Cubemap = function(Splide, Components) {
         }
       }
       buildCubemap(_wrapper, index, _cubeTextures);
-      _wrapper.cubemapSlide.animate;
+      //_wrapper.cubemapSlide.animate;
     });
   }
 
@@ -303,7 +303,6 @@ const Cubemap = function(Splide, Components) {
 
     target.cubemapSlide = new CubemapSlide(_controls, _renderer, _camera, _scene);
 
-    _renderer.render(_scene, _camera);
     //animate(_controls, _renderer, _scene, _camera);
   }
 
@@ -338,7 +337,7 @@ const Cubemap = function(Splide, Components) {
         this.renderer.render(this.scene, this.camera);
         requestAnimationFrame(() => this.animate());
       };
-      
+
       this.animate();
     }
   }
