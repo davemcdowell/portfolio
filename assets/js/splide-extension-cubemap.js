@@ -330,15 +330,14 @@ const Cubemap = function(Splide, Components) {
       this.renderer = renderer;
       this.camera = camera;
       this.scene = scene;
-
-      this.animate = function() {
+      
+      animate = () => {
         console.log(`${this} cubemap is animating.`);
         this.controls.update();
         this.renderer.render(this.scene, this.camera);
-        requestAnimationFrame(this.animate);
       };
 
-      this.animate();
+      requestAnimationFrame(this.animate);
     }
   }
 
