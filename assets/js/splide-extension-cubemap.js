@@ -132,10 +132,10 @@ const SplideCubemap = function(Splide, Components) {
     _rotSpeedDropup.setAttribute('type', 'button');
     _rotSpeedDropup.setAttribute('data-bs-toggle', 'dropdown');
     _rotSpeedDropup.setAttribute('aria-expanded', 'false');
-    _rotSpeedDropup.setAttribute('data-bs-offset', '50, 20');
+    //_rotSpeedDropup.setAttribute('data-bs-offset', '50, 20');
 
     let _speedUL = document.createElement('ul');
-    _speedUL.classList.add('dropdown-menu', 'bg-blur', 'border', 'mb-2', 'no-mw');
+    _speedUL.classList.add('dropdown-menu', 'dropdown-menu-end', 'bg-blur', 'border', 'mb-2', 'no-mw');
 
     for(let i = 0; i < _speedOptions.length; i++) {
       let li = document.createElement('li');
@@ -152,6 +152,10 @@ const SplideCubemap = function(Splide, Components) {
       _speedOptBtn.innerText = _speedOptions[i].label;
       li.appendChild(_speedOptBtn);
       _speedUL.appendChild(li);
+
+      _speedOptBtn.addEventListener('click', function() {
+        target.cubemap.setSpeed(_speedOptions[i].speed);
+      });
     }
 
     /* mute ambience toggle */ 
@@ -232,6 +236,11 @@ const SplideCubemap = function(Splide, Components) {
     /* auto-rotate toggle */
     _autoRotateBtn.addEventListener('click', function() {
       target.cubemap.toggleAutoRotate();
+    });
+
+    /* speed options */
+    _ambienceMuteBtn.addEventListener('click', function() {
+      _audioHidden.muted = !_audioHidden.muted;
     });
 
     /* volume */
@@ -315,7 +324,7 @@ const SplideCubemap = function(Splide, Components) {
     /* set new scene */
     const _scene = new THREE.Scene();
 
-    /* set audio and listener */
+    /* set audio, listener and load sound */
     let _listener = new THREE.AudioListener();
     let _audio = new THREE.PositionalAudio(_listener);
     let _audioLoader = new THREE.AudioLoader();
@@ -350,7 +359,7 @@ const SplideCubemap = function(Splide, Components) {
     _controls.autoRotate = true;
     _controls.autoRotateSpeed = 1.0;
 
-    //create our new Cubemap obj
+    //create our new Cubemap
     target.cubemap = new Cubemap(_controls, _renderer, _camera, _scene);
   }
 
@@ -370,7 +379,7 @@ const SplideCubemap = function(Splide, Components) {
       this.scene = scene;
 
       let _isDisabled = false;
-
+      let _speed = 1.0;
       let _useAutoRotate = true;
       let _reqestAnimation;
       
@@ -378,11 +387,16 @@ const SplideCubemap = function(Splide, Components) {
         _useAutoRotate = !_useAutoRotate;
       };
 
+      this.setSpeed(newSpeed) = function() {
+        _speed = newSpeed;
+      };
+
       this.animate = () => {
         if(_isDisabled)
           return;
 
         this.controls.autoRotate = _useAutoRotate;
+        this.controls.autoRotateSpeed = _speed;
 
         this.controls.update();
         this.renderer.render(this.scene, this.camera);
@@ -393,16 +407,16 @@ const SplideCubemap = function(Splide, Components) {
         this.camera.aspect = _frameWidth / _frameHeight;
         this.camera.updateProjectionMatrix();
         this.renderer.setSize(_frameWidth, _frameHeight);
-      }
+      };
 
       this.enable = function() {
         _isDisabled = false;
         this.animate();
-      }
+      };
 
       this.disable = function() {
         _isDisabled = true;
-      }
+      };
     }
   }
 
