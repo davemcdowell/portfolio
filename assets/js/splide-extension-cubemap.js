@@ -143,7 +143,7 @@ const SplideCubemap = function(Splide, Components) {
       a.href = _speedOptions[i].speed;
       a.innerText = _speedOptions[i].label;
       li.append(a);
-      _speedUL.appendChild();
+      _speedUL.appendChild(li);
     }
 
     /* mute ambience toggle */ 
