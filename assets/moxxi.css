@@ -721,7 +721,7 @@ pre {
   background-color: rgba(0,0,0,0.25);
 }
 
-.splide__cubemap__wrapper .navbar .dropdown-menu .dropdown-item:hover {
+.splide__cubemap__wrapper .navbar .dropdown-menu .dropdown-item:hover:not(.active) {
   background-color: rgba(0,0,0,0.10);
 }
 
