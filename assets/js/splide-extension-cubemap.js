@@ -303,7 +303,7 @@ const Cubemap = function(Splide, Components) {
 
     target.cubemapSlide = new CubemapSlide(_controls, _renderer, _camera, _scene);
     
-    animate();
+    //animate();
   }
 
   function resizeRenderFrame() {
