@@ -50,7 +50,7 @@ const SplideCubemap = function(Splide, Components) {
     _playBtn.id = `slide${index}-cubemap__play-btn`;
     _playBtn.classList.add('splide__cubemap__play');
     _playBtn.setAttribute('type', 'button');
-    _playBtn.setAttribute('aria-label', 'View Cubemap');
+    _playBtn.ariaLabel = 'View Cubemap';
 
     //create player controls
     createCubemapControls(_wrapper, index, { mp3: _cubeData.mp3, ogg: _cubeData.ogg });
@@ -88,7 +88,6 @@ const SplideCubemap = function(Splide, Components) {
         _wrapper.cubemap.animate();
       } else {
         _wrapper.cubemap.enable();
-        _wrapper.cubemap.animate();
       }
     });
   }
@@ -114,7 +113,7 @@ const SplideCubemap = function(Splide, Components) {
     _autoRotateBtn.id = `cubemap${index}__rotate-btn`;
     _autoRotateBtn.classList.add('btn', 'cubemap__rotate', 'shadow-none');
     _autoRotateBtn.setAttribute('type', 'button');
-    _autoRotateBtn.setAttribute('aria-label', 'Auto-rotate');
+    _autoRotateBtn.ariaLabel = 'Toggle Auto-rotate';
     /* handle icon and flip */
     let _rotIcon = document.createElement('i');
     _rotIcon.classList.add('bi', 'bi-arrow-repeat');
@@ -152,7 +151,7 @@ const SplideCubemap = function(Splide, Components) {
     _ambienceMuteBtn.id = `cubemap${index}__audio-btn`;
     _ambienceMuteBtn.classList.add('btn', 'cubemap__mute', 'shadow-none');
     _ambienceMuteBtn.setAttribute('type', 'button');
-    _ambienceMuteBtn.setAttribute('aria-label', 'Mute Ambience');
+    _ambienceMuteBtn.ariaLabel = 'Mute Ambience';
     /* handle icon and flip */
     let _ambIcon = document.createElement('i');
     _ambIcon.classList.add('bi', 'bi-volume-up');
@@ -175,7 +174,8 @@ const SplideCubemap = function(Splide, Components) {
     _fullscreenBtn.id = `cubemap${index}__fullscreen-btn`;
     _fullscreenBtn.classList.add('btn', 'cubemap__fullscreen', 'ms-auto', 'shadow-none');
     _fullscreenBtn.setAttribute('type', 'button');
-    _fullscreenBtn.setAttribute('aria-label', 'Fullscreen');
+    _fullscreenBtn.ariaLabel = 'Toggle Fullscreen';
+    
     /* handle icon and flip */
     let _fsIcon = document.createElement('i');
     _fsIcon.classList.add('bi', 'bi-fullscreen');
@@ -389,6 +389,7 @@ const SplideCubemap = function(Splide, Components) {
 
       this.enable = function() {
         _isDisabled = false;
+        this.animate();
       }
 
       this.disable = function() {
