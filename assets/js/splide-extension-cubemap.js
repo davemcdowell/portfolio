@@ -147,7 +147,7 @@ const SplideCubemap = function(Splide, Components) {
       if(i === 0) {
         let label = document.createElement('h6');
         label.classList.add('dropdown-header', 'user-select-none');
-        label.innerText = 'Rotate Speed'
+        label.innerText = 'Rotate Speed';
         li.appendChild(_speedOptBtn);
       } else {
         _speedOptBtn.innerText = _speedOptions[i].label;
