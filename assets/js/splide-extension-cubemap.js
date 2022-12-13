@@ -1,4 +1,4 @@
-const cubemap = function(Splide, Components) {
+const Cubemap = function(Splide, Components) {
   const { slides } = Components.Elements;
 
   let _frameWidth;
@@ -85,7 +85,7 @@ const cubemap = function(Splide, Components) {
       }
 
       //buildCubemap(_wrapper, _cubeTextures);
-      startCubemap();
+      startCubemap(event);
     });
   }
 
@@ -199,9 +199,9 @@ const cubemap = function(Splide, Components) {
     audioPlayer.appendChild(_src);
   }
 
-  function startCubemap() {
+  function startCubemap(event) {
     console.log('Play Cubemap');
-    this.cubemap.animate();
+    event.target.cubemapSlide.animate();
   }
 
   function onInactive() {
@@ -303,7 +303,7 @@ const cubemap = function(Splide, Components) {
     _controls.autoRotate = true;
     _controls.autoRotateSpeed = 1.0;
 
-    target.cubemap = new Cubemap(_controls, _renderer, _camera, _scene);
+    target = new CubemapSlide(_controls, _renderer, _camera, _scene);
     //animate(_controls, _renderer, _camera, _scene);
   }
 
@@ -325,7 +325,7 @@ const cubemap = function(Splide, Components) {
     return materialArray;
   }
 
-  function Cubemap(controls, renderer, camera, scene) {
+  function CubemapSlide(controls, renderer, camera, scene) {
       this.controls = controls;
       this.renderer = renderer;
       this.camera = camera;
