@@ -195,7 +195,7 @@ const SplideCubemap = function(Splide, Components) {
     setAudioSrcBySupport(_audioHidden, audioData);
 
     //assemble auto-rotate / speed btn group
-    _rotSpeedDropup.append(_speedUL);
+    _rotSpeedDropup.appendChild(_speedUL);
     _rotSpeedBtnGroup.appendChild(_autoRotateBtn);
     _rotSpeedBtnGroup.appendChild(_rotSpeedDropup);
 
@@ -216,7 +216,7 @@ const SplideCubemap = function(Splide, Components) {
     target.appendChild(_nav);
 
     /* bs dropup */
-    _rotSpeedDropup = new bootstrap.Dropdown(_rotSpeedDropup);
+    _rotSpeedDropup = new bootstrap.Dropdown();
 
     /* mute ambience toggle */
     _ambienceMuteBtn.addEventListener('click', function() {
