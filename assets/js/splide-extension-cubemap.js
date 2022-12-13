@@ -216,7 +216,7 @@ const SplideCubemap = function(Splide, Components) {
     target.appendChild(_nav);
 
     /* bs dropup */
-    _rotSpeedDropup = new bootstrap.Dropdown();
+    let _navDrop = new bootstrap.Dropdown(_rotSpeedDropup);
 
     /* mute ambience toggle */
     _ambienceMuteBtn.addEventListener('click', function() {
