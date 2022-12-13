@@ -135,7 +135,7 @@ const SplideCubemap = function(Splide, Components) {
     _rotSpeedDropup.setAttribute('data-bs-offset', '20, 20');
 
     let _speedUL = document.createElement('ul');
-    _speedUL.classList.add('dropdown-menu', 'dropdown-menu-end', 'bg-blur', 'border', 'mb-2', 'no-mw');
+    _speedUL.classList.add('dropdown-menu', 'bg-blur', 'border', 'mb-2', 'no-mw');
 
 
     for(let i = 0; i < _speedOptions.length; i++) {
