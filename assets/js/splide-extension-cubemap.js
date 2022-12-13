@@ -66,8 +66,6 @@ const Cubemap = function(Splide, Components) {
     //common utils for flip btns
     common.set_flip_toggles();
 
-    buildCubemap(_wrapper, index, _cubeTextures);
-
     //play button event listener
     _playBtn.addEventListener('click', function(event) {
       _playBtn.style.display = 'none';
@@ -83,7 +81,7 @@ const Cubemap = function(Splide, Components) {
           _mute.click();
         }
       }
-
+      buildCubemap(_wrapper, index, _cubeTextures);
       _wrapper.cubemapSlide.animate;
     });
   }
