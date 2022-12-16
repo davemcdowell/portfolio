@@ -116,7 +116,13 @@ const common = function() {
         });
     }
 
+    /* return element type */
+    function whichTag(el) {
+        return el && el.tagName && el.tagName.toLowerCase();
+    }
+
     return {
-        set_flip_toggles : setFlipToggles
+        setFlipToggles,
+        whichTag,
     };
 }();

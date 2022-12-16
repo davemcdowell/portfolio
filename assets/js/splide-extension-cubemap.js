@@ -11,6 +11,7 @@ const SplideCubemap = function(Splide, Components) {
     muteBtnClass: 'cubemap__mute',
     volInputClass: 'cubemap__volume',
     fullscreenBtnClass: 'cubemap__fullscreen',
+    speedOptionBtnClass: 'cubemap__option',
     audioClass: 'splide__cubemap__audio', //temp, replacing with three.js audio: maybe use as fallback?
     cubemapGeometrySize: { x: 10000, y: 10000, z: 10000 }
   };
@@ -19,6 +20,8 @@ const SplideCubemap = function(Splide, Components) {
     { label: '1x', speed: 1.0 }, 
     { label: '2x', speed: 2.0 }, 
     { label: '3x', speed: 3.0 }];
+
+  let _speedOptionBtns = [];
 
   let _frameWidth;
   let _frameHeight;
@@ -90,7 +93,7 @@ const SplideCubemap = function(Splide, Components) {
 
     //common utils for flip btns
     if(common)
-      common.set_flip_toggles();
+      common.setFlipToggles();
 
     //play button event listener
     _playBtn.addEventListener('click', function() {
@@ -160,9 +163,11 @@ const SplideCubemap = function(Splide, Components) {
 
     for(let i = 0; i < _speedOptions.length; i++) {
       let li = document.createElement('li');
+      
       let _speedOptBtn = document.createElement('button');
-      _speedOptBtn.classList.add('dropdown-item');
+      _speedOptBtn.classList.add('dropdown-item', _config.speedOptionBtnClass);
       _speedOptBtn.setAttribute('type', 'button');
+      _speedOptionBtns.push(_speedOptBtn);
 
       //set default
       if(_speedOptions[i].label === '1x') {
@@ -262,7 +267,14 @@ const SplideCubemap = function(Splide, Components) {
     });
 
     /* speed options */
-
+    for(let i = 0; i < _speedOptionBtns.length; i++) {
+      _speedOptionBtns[i].addEventListener('click', function() {
+        for(let j = 0; j < _speedOptionBtns.length; j++) {
+          _speedOptionBtns[j].classList.remove('active');
+        }
+        _speedOptionBtns[i].classList.add('active');
+      });
+    }
 
     /* volume */
     _volumeInput.addEventListener('change', function() {
