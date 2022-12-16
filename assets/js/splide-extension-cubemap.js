@@ -98,7 +98,7 @@ const SplideCubemap = function(Splide, Components) {
       _wrapper.style.display = 'block';
 
       let _audio = _wrapper.querySelector(`.${_config.audioClass}`);
-      let _mute = _wrapper.querySelector(`button.${_config.muteBtnClass}`);
+      let _mute = _wrapper.querySelector(`.${_config.muteBtnClass}`);
       
       if(_audio && _audio.hasAttribute('autoplay')) {
         _audio.play();
@@ -300,7 +300,7 @@ const SplideCubemap = function(Splide, Components) {
           _audio.pause();
           _audio.currentTime = 0;
         }
-        
+
         if(_wrapper.cubemap)
           _wrapper.cubemap.disable();
       }
