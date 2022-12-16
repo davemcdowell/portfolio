@@ -262,9 +262,7 @@ const SplideCubemap = function(Splide, Components) {
     });
 
     /* speed options */
-    _ambienceMuteBtn.addEventListener('click', function() {
-      _audioHidden.muted = !_audioHidden.muted;
-    });
+
 
     /* volume */
     _volumeInput.addEventListener('change', function() {
