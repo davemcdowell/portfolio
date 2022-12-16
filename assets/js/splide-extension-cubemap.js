@@ -1,21 +1,45 @@
 const SplideCubemap = function(Splide, Components) {
   const { slides } = Components.Elements;
 
+  const _config = {
+    dataSelector: 'data-splide-cubemap',
+    rootClass: 'splide__slide--has-cubemap',
+    containerClass: 'splide__cubemap',
+    wrapperClass: 'splide__cubemap__wrapper',
+    playBtnClass: 'splide__cubemap__play',
+    autoRotBtnClass: 'cubemap__rotate',
+    muteBtnClass: 'cubemap__mute',
+    volInputClass: 'cubemap__volume',
+    fullscreenBtnClass: 'cubemap__fullscreen',
+    audioClass: 'splide__cubemap__audio', //temp, replacing with three.js audio: maybe use as fallback?
+    cubemapGeometrySize: { x: 10000, y: 10000, z: 10000 }
+  };
+
+  const _speedOptions = [
+    { label: '1x', speed: 1.0 }, 
+    { label: '2x', speed: 2.0 }, 
+    { label: '3x', speed: 3.0 }];
+
   let _frameWidth;
   let _frameHeight;
 
+  let _viewWidth;
+  let _viewHeight;
+
   function mount() {
     for(var i = 0; i < slides.length; i++) {
-      if(slides[i].hasAttribute('data-splide-cubemap')) {
+      if(slides[i].hasAttribute(_config.dataSelector)) {
         createCubemapBase(slides[i], i);
       }
     }
+    //TODO: slide, drag and other events for triggering inactive state
     Splide.on('inactive', onInactive);
     Splide.on('resize', onResize);
   }
 
   function createCubemapBase(slide, index) {
-    const _cubeData = JSON.parse(document.querySelector(slide.getAttribute('data-splide-cubemap')).textContent);
+    //TODO: safety check for this script, possibly check if extension was fed json data instead; then fallback to this
+    const _cubeData = JSON.parse(document.querySelector(slide.getAttribute(_config.dataSelector)).textContent);
     const _cubeTextures = [
       _cubeData.front, 
       _cubeData.back, 
@@ -32,23 +56,23 @@ const SplideCubemap = function(Splide, Components) {
     //adjust for zero-indexing
     index += 1;
 
-    //add an identifier to this slide similar to video extension
-    slide.classList.add('splide__slide--has-cubemap');
+    //add an identifier to this slide
+    slide.classList.add(_config.rootClass);
     slide.style.overflow = 'hidden';
 
     //create the container for the button and wrapper (in that order)
     _cubemap = document.createElement("div");
-    _cubemap.classList.add('splide__cubemap');
+    _cubemap.classList.add(_config.containerClass);
 
     //create the wrapper for the cubemap display
     _wrapper = document.createElement("div");
     _wrapper.style.display = 'none';
-    _wrapper.classList.add('splide__cubemap__wrapper');
+    _wrapper.classList.add(_config.wrapperClass);
 
     //create play button
     _playBtn = document.createElement("button");
     _playBtn.id = `slide${index}-cubemap__play-btn`;
-    _playBtn.classList.add('splide__cubemap__play');
+    _playBtn.classList.add(_config.playBtnClass);
     _playBtn.setAttribute('type', 'button');
     _playBtn.ariaLabel = 'View Cubemap';
 
@@ -65,15 +89,16 @@ const SplideCubemap = function(Splide, Components) {
     slide.appendChild(_cubemap);
 
     //common utils for flip btns
-    common.set_flip_toggles();
+    if(common)
+      common.set_flip_toggles();
 
     //play button event listener
-    _playBtn.addEventListener('click', function(event) {
+    _playBtn.addEventListener('click', function() {
       _playBtn.style.display = 'none';
       _wrapper.style.display = 'block';
 
-      let _audio = _wrapper.querySelector('.splide__cubemap__audio');
-      let _mute = _wrapper.querySelector('button.cubemap__mute');
+      let _audio = _wrapper.querySelector(`.${_config.audioClass}`);
+      let _mute = _wrapper.querySelector(`button.${_config.muteBtnClass}`);
       
       if(_audio && _audio.hasAttribute('autoplay')) {
         _audio.play();
@@ -85,7 +110,7 @@ const SplideCubemap = function(Splide, Components) {
 
       if(!_wrapper.querySelector('canvas')) {
         buildCubemap(_wrapper, index, _cubeTextures, _cubeData.ogg);
-        _wrapper.cubemap.animate();
+        _wrapper.cubemap.enable();
       } else {
         _wrapper.cubemap.enable();
       }
@@ -111,7 +136,7 @@ const SplideCubemap = function(Splide, Components) {
     /* auto-rotate toggle */
     let _autoRotateBtn = document.createElement('button');
     _autoRotateBtn.id = `cubemap${index}__rotate-btn`;
-    _autoRotateBtn.classList.add('btn', 'cubemap__rotate', 'border-end', 'shadow-none');
+    _autoRotateBtn.classList.add('btn', _config.autoRotBtnClass, 'border-end', 'shadow-none');
     _autoRotateBtn.setAttribute('type', 'button');
     _autoRotateBtn.ariaLabel = 'Toggle Auto-rotate';
     /* handle icon and flip */
@@ -123,10 +148,6 @@ const SplideCubemap = function(Splide, Components) {
     _autoRotateBtn.setAttribute('data-flip-icon', 'bi bi-arrows-move');
 
     /* speed menu */
-    let _speedOptions = [
-      { label: '1x', speed: 1.0 }, 
-      { label: '2x', speed: 2.0 }, 
-      { label: '3x', speed: 3.0 }];
     let _rotSpeedDropup = document.createElement('button');
     _rotSpeedDropup.classList.add('btn', 'dropdown-toggle', 'dropdown-toggle-split', 'shadow-none');
     _rotSpeedDropup.setAttribute('type', 'button');
@@ -154,14 +175,15 @@ const SplideCubemap = function(Splide, Components) {
       _speedUL.appendChild(li);
 
       _speedOptBtn.addEventListener('click', function() {
-        target.cubemap.setSpeed(_speedOptions[i].speed);
+        if(target.cubemap)
+          target.cubemap.setSpeed(_speedOptions[i].speed);
       });
     }
 
     /* mute ambience toggle */ 
     let _ambienceMuteBtn = document.createElement('button');
     _ambienceMuteBtn.id = `cubemap${index}__audio-btn`;
-    _ambienceMuteBtn.classList.add('btn', 'cubemap__mute', 'scale-click', 'shadow-none');
+    _ambienceMuteBtn.classList.add('btn', _config.muteBtnClass, 'scale-click', 'shadow-none');
     _ambienceMuteBtn.setAttribute('type', 'button');
     _ambienceMuteBtn.ariaLabel = 'Mute Ambience';
     /* handle icon and flip */
@@ -174,7 +196,7 @@ const SplideCubemap = function(Splide, Components) {
 
     /* volume slider */
     let _volumeInput = document.createElement('input');
-    _volumeInput.classList.add('form-range', 'cubemap__volume', 'shadow-none', 'w-25', 'ms-2', 'pt-3');
+    _volumeInput.classList.add('form-range', _config.volInputClass, 'shadow-none', 'w-25', 'ms-2', 'pt-3');
     _volumeInput.setAttribute('type', 'range');
     _volumeInput.setAttribute('min', 0);
     _volumeInput.setAttribute('max', 1);
@@ -184,7 +206,7 @@ const SplideCubemap = function(Splide, Components) {
     /* fullscreen toggle */
     let _fullscreenBtn = document.createElement('button');
     _fullscreenBtn.id = `cubemap${index}__fullscreen-btn`;
-    _fullscreenBtn.classList.add('btn', 'cubemap__fullscreen', 'scale-click', 'ms-auto', 'shadow-none');
+    _fullscreenBtn.classList.add('btn', _config.fullscreenBtnClass, 'scale-click', 'ms-auto', 'shadow-none');
     _fullscreenBtn.setAttribute('type', 'button');
     _fullscreenBtn.ariaLabel = 'Toggle Fullscreen';
     
@@ -198,7 +220,7 @@ const SplideCubemap = function(Splide, Components) {
 
     // audio player (hidden) 
     let _audioHidden = document.createElement('audio');
-    _audioHidden.classList.add('splide__cubemap__audio', 'd-none');
+    _audioHidden.classList.add(_config.audioClass, 'd-none');
     _audioHidden.setAttribute('loop', '');
     _audioHidden.setAttribute('autoplay', '');
     _audioHidden.setAttribute('muted', '');
@@ -235,7 +257,8 @@ const SplideCubemap = function(Splide, Components) {
 
     /* auto-rotate toggle */
     _autoRotateBtn.addEventListener('click', function() {
-      target.cubemap.toggleAutoRotate();
+      if(target.cubemap)
+        target.cubemap.toggleAutoRotate();
     });
 
     /* speed options */
@@ -264,14 +287,14 @@ const SplideCubemap = function(Splide, Components) {
 
   function onInactive() {
     for(let i = 0; i < slides.length; i++) {
-      if(slides[i].hasAttribute('data-splide-cubemap')) {
-        let _playBtn = slides[i].querySelector('.splide__cubemap__play');
+      if(slides[i].hasAttribute(_config.dataSelector)) {
+        let _playBtn = slides[i].querySelector(`.${_config.playBtnClass}`);
         _playBtn.style.display = 'flex';
 
-        let _wrapper = slides[i].querySelector('.splide__cubemap__wrapper');
+        let _wrapper = slides[i].querySelector(`.${_config.wrapperClass}`);
         _wrapper.style.display = 'none';
 
-        let _audio = _wrapper.querySelector('.splide__cubemap__audio');
+        let _audio = _wrapper.querySelector(`.${_config.audioClass}`);
         
         if(_audio) {
           _audio.pause();
@@ -284,8 +307,8 @@ const SplideCubemap = function(Splide, Components) {
 
   function onResize() {
     for(let i = 0; i < slides.length; i++) {
-      if(slides[i].hasAttribute('data-splide-cubemap')) {
-        let _wrapper = slides[i].querySelector('.splide__cubemap__wrapper');
+      if(slides[i].hasAttribute(_config.dataSelector)) {
+        let _wrapper = slides[i].querySelector(`.${_config.wrapperClass}`);
         let _canvas = _wrapper.querySelector('canvas');
 
         _frameWidth = slides[i].offsetWidth;
@@ -294,8 +317,10 @@ const SplideCubemap = function(Splide, Components) {
         if(_canvas) {
           _canvas.setAttribute('width', `${_frameWidth}`);
           _canvas.setAttribute('height', `${_frameHeight}`);
-          _wrapper.cubemap.resizeRenderFrame();
         }
+
+        if(_wrapper.cubemap)
+          _wrapper.cubemap.resizeRenderFrame();
       }
     }
   }
@@ -304,12 +329,12 @@ const SplideCubemap = function(Splide, Components) {
     Cubemap builder
 
     TODO:
-    []define parameters
     [x]multi-render target support 'Class-based approach'
     [x]index based id
     []loading feedback/spinner
     [x]resize/update renderer via resize event
     [x]toggle auto-rotate
+    [x]rotate speed selector
     []toggle fullscreen
     [x]enable/disable events
     [x]'disable' renderer & reqAnimation on inactive
@@ -346,7 +371,7 @@ const SplideCubemap = function(Splide, Components) {
 
     /* set cubemap geometry and texture */
     const _materialArray = createMaterialArray(imageArray);
-    const _cubemapGeo = new THREE.BoxGeometry(10000, 10000, 10000);
+    const _cubemapGeo = new THREE.BoxGeometry(_config.cubemapGeometrySize.x, _config.cubemapGeometrySize.y, _config.cubemapGeometrySize.z);
     const _cubemap = new THREE.Mesh(_cubemapGeo, _materialArray);
     _scene.add(_cubemap);
 
@@ -383,13 +408,8 @@ const SplideCubemap = function(Splide, Components) {
       let _useAutoRotate = true;
       let _reqestAnimation;
       
-      this.toggleAutoRotate = function () {
-        _useAutoRotate = !_useAutoRotate;
-      };
-
-      this.setSpeed = function(newSpeed) {
-        _speed = newSpeed;
-      };
+      this.toggleAutoRotate = function () { _useAutoRotate = !_useAutoRotate; };
+      this.setSpeed = function(newSpeed) { _speed = newSpeed; };
 
       this.animate = () => {
         if(_isDisabled)
