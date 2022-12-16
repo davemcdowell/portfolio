@@ -300,7 +300,9 @@ const SplideCubemap = function(Splide, Components) {
           _audio.pause();
           _audio.currentTime = 0;
         }
-        _wrapper.cubemap.disable();
+        
+        if(_wrapper.cubemap)
+          _wrapper.cubemap.disable();
       }
     }
   }
