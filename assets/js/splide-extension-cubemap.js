@@ -423,6 +423,8 @@ const SplideCubemap = function(Splide, Components) {
       this.camera = camera;
       this.scene = scene;
 
+      this._isDisabled = false;
+
       /*
       let _isDisabled = false;
       let _isFullscreen = false;
@@ -474,7 +476,6 @@ const SplideCubemap = function(Splide, Components) {
       */
     }
 
-    static _isDisabled = false;
     _isFullscreen = false;
 
     _speed = 1.0;
@@ -482,7 +483,7 @@ const SplideCubemap = function(Splide, Components) {
     _reqestAnimation;
 
     animate() {
-      if(_isDisabled)
+      if(this._isDisabled)
         return;
 
       this.controls.autoRotate = this._useAutoRotate;
