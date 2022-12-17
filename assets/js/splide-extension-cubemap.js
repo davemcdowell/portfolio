@@ -21,6 +21,7 @@ const SplideCubemap = function(Splide, Components) {
     { label: '2x', speed: 2.0 }, 
     { label: '3x', speed: 3.0 }];
 
+  //TODO: move to local scope
   let _speedOptionBtns = [];
 
   let _frameWidth;
