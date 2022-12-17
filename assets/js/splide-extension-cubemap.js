@@ -26,8 +26,8 @@ const SplideCubemap = function(Splide, Components) {
   let _frameWidth;
   let _frameHeight;
 
-  let _viewWidth;
-  let _viewHeight;
+  let _viewWidth = window.innerWidth;
+  let _viewHeight = window.innerHeight;
 
   function mount() {
     for(var i = 0; i < slides.length; i++) {
@@ -325,6 +325,8 @@ const SplideCubemap = function(Splide, Components) {
 
         _frameWidth = slides[i].offsetWidth;
         _frameHeight = slides[i].offsetHeight;
+
+        console.log(`VW: ${_viewWidth} || VH: ${_viewHeight}`);
 
         if(_canvas) {
           _canvas.setAttribute('width', `${_frameWidth}`);
