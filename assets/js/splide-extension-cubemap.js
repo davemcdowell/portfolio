@@ -439,7 +439,7 @@ const SplideCubemap = function(Splide, Components) {
         (_isFullscreen) ? renderer.setAttribute('is-fullscreen', '') : renderer.removeAttribute('is-fullscreen');
       };
 
-      this.setSpeed = function(newSpeed) { _speed = newSpeed; };
+      //this.setSpeed = function(newSpeed) { _speed = newSpeed; };
 
       this.animate = () => {
         if(_isDisabled)
@@ -470,9 +470,10 @@ const SplideCubemap = function(Splide, Components) {
         _isFullscreen = false;
       };
     }
-
+    
     setNewSpeed(newSpeed)  {
       this._speed = newSpeed;
+      console.log('set speed: ' + _speed + " or? " + this._speed);
     }
 
     testMethod(msg) {
