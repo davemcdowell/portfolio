@@ -13,16 +13,16 @@ const SplideCubemap = function(Splide, Components) {
     fullscreenBtnClass: 'cubemap__fullscreen',
     speedOptionBtnClass: 'cubemap__option',
     audioClass: 'splide__cubemap__audio', //temp, replacing with three.js audio: maybe use as fallback?
-    cubemapGeometrySize: { x: 10000, y: 10000, z: 10000 }
+    cubemapGeometrySize: { x: 10000, y: 10000, z: 10000 },
+    cubemapCameraPos: { x: 1200, y: -250, z: 2000 },
+    cubemapCameraView: { fov: 55, near: 45, far: 30000 },
+    cubemapControlsZoom: { min: 700, max: 1500 }
   };
 
   const _speedOptions = [
     { label: '1x', speed: 1.0 }, 
     { label: '2x', speed: 2.0 }, 
     { label: '3x', speed: 3.0 }];
-
-  //TODO: move to local scope
-  let _speedOptionBtns = [];
 
   let _frameWidth;
   let _frameHeight;
@@ -122,29 +122,31 @@ const SplideCubemap = function(Splide, Components) {
   }
 
   function createCubemapControls(target, index, audioData) {
+    let _speedOptionBtns = [];
+
     /* navbar*/ 
-    let _nav = document.createElement('nav');
+    const _nav = document.createElement('nav');
     _nav.classList.add('navbar', 'fixed-bottom', 'rounded-bottom', 'bg-blur');
 
     /* nav container */ 
-    let _container = document.createElement('div');
+    const _container = document.createElement('div');
     _container.classList.add('container-fluid', 'px-2');
 
     /* left-side controls */
-    let _leftActions = document.createElement('div');
+    const _leftActions = document.createElement('div');
 
     /* auto-rotate & speed btn group */
-    let _rotSpeedBtnGroup = document.createElement('div');
+    const _rotSpeedBtnGroup = document.createElement('div');
     _rotSpeedBtnGroup.classList.add('btn-group', 'dropup');
 
     /* auto-rotate toggle */
-    let _autoRotateBtn = document.createElement('button');
+    const _autoRotateBtn = document.createElement('button');
     _autoRotateBtn.id = `cubemap${index}__rotate-btn`;
     _autoRotateBtn.classList.add('btn', _config.autoRotBtnClass, 'border-end', 'shadow-none');
     _autoRotateBtn.setAttribute('type', 'button');
     _autoRotateBtn.ariaLabel = 'Toggle Auto-rotate';
     /* handle icon and flip */
-    let _rotIcon = document.createElement('i');
+    const _rotIcon = document.createElement('i');
     _rotIcon.classList.add('bi', 'bi-arrow-repeat');
     _autoRotateBtn.appendChild(_rotIcon);
     _autoRotateBtn.setAttribute('data-flip-toggle', '');
@@ -152,20 +154,19 @@ const SplideCubemap = function(Splide, Components) {
     _autoRotateBtn.setAttribute('data-flip-icon', 'bi bi-arrows-move');
 
     /* speed menu */
-    let _rotSpeedDropup = document.createElement('button');
+    const _rotSpeedDropup = document.createElement('button');
     _rotSpeedDropup.classList.add('btn', 'dropdown-toggle', 'dropdown-toggle-split', 'shadow-none');
     _rotSpeedDropup.setAttribute('type', 'button');
     _rotSpeedDropup.setAttribute('data-bs-toggle', 'dropdown');
     _rotSpeedDropup.setAttribute('aria-expanded', 'false');
     //_rotSpeedDropup.setAttribute('data-bs-offset', '50, 20');
 
-    let _speedUL = document.createElement('ul');
+    const _speedUL = document.createElement('ul');
     _speedUL.classList.add('dropdown-menu', 'dropdown-menu-end', 'bg-blur', 'border', 'mb-2', 'no-mw');
 
     for(let i = 0; i < _speedOptions.length; i++) {
-      let li = document.createElement('li');
-      
-      let _speedOptBtn = document.createElement('button');
+      const li = document.createElement('li');
+      const _speedOptBtn = document.createElement('button');
       _speedOptBtn.classList.add('dropdown-item', _config.speedOptionBtnClass);
       _speedOptBtn.setAttribute('type', 'button');
       _speedOptionBtns.push(_speedOptBtn);
@@ -187,13 +188,13 @@ const SplideCubemap = function(Splide, Components) {
     }
 
     /* mute ambience toggle */ 
-    let _ambienceMuteBtn = document.createElement('button');
+    const _ambienceMuteBtn = document.createElement('button');
     _ambienceMuteBtn.id = `cubemap${index}__audio-btn`;
     _ambienceMuteBtn.classList.add('btn', _config.muteBtnClass, 'scale-click', 'shadow-none');
     _ambienceMuteBtn.setAttribute('type', 'button');
     _ambienceMuteBtn.ariaLabel = 'Mute Ambience';
     /* handle icon and flip */
-    let _ambIcon = document.createElement('i');
+    const _ambIcon = document.createElement('i');
     _ambIcon.classList.add('bi', 'bi-volume-up');
     _ambienceMuteBtn.appendChild(_ambIcon);
     _ambienceMuteBtn.setAttribute('data-flip-toggle', '');
@@ -201,7 +202,7 @@ const SplideCubemap = function(Splide, Components) {
     _ambienceMuteBtn.setAttribute('data-flip-icon', 'bi bi-volume-mute');
 
     /* volume slider */
-    let _volumeInput = document.createElement('input');
+    const _volumeInput = document.createElement('input');
     _volumeInput.classList.add('form-range', _config.volInputClass, 'shadow-none', 'w-25', 'ms-2', 'pt-3');
     _volumeInput.setAttribute('type', 'range');
     _volumeInput.setAttribute('min', 0);
@@ -210,14 +211,14 @@ const SplideCubemap = function(Splide, Components) {
     _volumeInput.value = 0.35;
 
     /* fullscreen toggle */
-    let _fullscreenBtn = document.createElement('button');
+    const _fullscreenBtn = document.createElement('button');
     _fullscreenBtn.id = `cubemap${index}__fullscreen-btn`;
     _fullscreenBtn.classList.add('btn', _config.fullscreenBtnClass, 'scale-click', 'ms-auto', 'shadow-none');
     _fullscreenBtn.setAttribute('type', 'button');
     _fullscreenBtn.ariaLabel = 'Toggle Fullscreen';
     
     /* handle icon and flip */
-    let _fsIcon = document.createElement('i');
+    const _fsIcon = document.createElement('i');
     _fsIcon.classList.add('bi', 'bi-fullscreen');
     _fullscreenBtn.appendChild(_fsIcon);
     _fullscreenBtn.setAttribute('data-flip-toggle', '');
@@ -225,7 +226,7 @@ const SplideCubemap = function(Splide, Components) {
     _fullscreenBtn.setAttribute('data-flip-icon', 'bi bi-fullscreen-exit');
 
     // audio player (hidden) 
-    let _audioHidden = document.createElement('audio');
+    const _audioHidden = document.createElement('audio');
     _audioHidden.classList.add(_config.audioClass, 'd-none');
     _audioHidden.setAttribute('loop', '');
     _audioHidden.setAttribute('autoplay', '');
@@ -342,7 +343,6 @@ const SplideCubemap = function(Splide, Components) {
 
   /*
     Cubemap builder
-
     TODO:
     [x]multi-render target support 'Class-based approach'
     [x]index based id
@@ -370,8 +370,8 @@ const SplideCubemap = function(Splide, Components) {
     const _audioLoader = new THREE.AudioLoader();
 
     /* set camera and add listener */
-    const _camera = new THREE.PerspectiveCamera(55, _frameWidth  / _frameHeight, 45, 30000);
-    _camera.position.set(1200, -250, 2000);
+    const _camera = new THREE.PerspectiveCamera(_config.cubemapCameraView.fov, _frameWidth  / _frameHeight, _config.cubemapCameraView.near, _config.cubemapCameraView.far);
+    _camera.position.set(_config.cubemapCameraPos.x, _config.cubemapCameraPos.y, _config.cubemapCameraPos.z);
     _camera.add(_listener);
 
     /* set new renderer + options */
@@ -393,8 +393,8 @@ const SplideCubemap = function(Splide, Components) {
     /* set orbit controls */
     const _controls = new THREE.OrbitControls(_camera, _renderer.domElement);
     _controls.enabled = true;
-    _controls.minDistance = 700;
-    _controls.maxDistance = 1500;
+    _controls.minDistance = _config.cubemapControlsZoom.min;
+    _controls.maxDistance = _config.cubemapControlsZoom.max;
     _controls.enablePan = false;
     _controls.autoRotate = true;
     _controls.autoRotateSpeed = 1.0;
@@ -426,6 +426,11 @@ const SplideCubemap = function(Splide, Components) {
       let _reqestAnimation;
       
       this.toggleAutoRotate = function () { _useAutoRotate = !_useAutoRotate; };
+      this.toggleFullscreen = function () { 
+        _isFullscreen = !_isFullscreen;
+        (_isFullscreen) ? this.removeAttribute('is-fullscreen', '') : this.setAttribute('is-fullscreen', '');
+      };
+
       this.setSpeed = function(newSpeed) { _speed = newSpeed; };
 
       this.animate = () => {
