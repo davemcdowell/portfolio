@@ -423,27 +423,23 @@ const SplideCubemap = function(Splide, Components) {
       this.camera = camera;
       this.scene = scene;
 
-      this._isDisabled = false;
-
-      /*
       let _isDisabled = false;
       let _isFullscreen = false;
 
       let _speed = 1.0;
       let _useAutoRotate = true;
       let _reqestAnimation;
-      */
 
-      //this.toggleAutoRotate = function () { _useAutoRotate = !_useAutoRotate; };
-      /*
+      this.toggleAutoRotate = function () { _useAutoRotate = !_useAutoRotate; };
+
       this.toggleFullscreen = function () { 
         _isFullscreen = !_isFullscreen;
         console.log(`IsFullscreen: ${_isFullscreen}`);
         (_isFullscreen) ? renderer.setAttribute('is-fullscreen', '') : renderer.removeAttribute('is-fullscreen');
       };
-      */
-      //this.setSpeed = function(newSpeed) { _speed = newSpeed; };
-      /*
+
+      this.setSpeed = function(newSpeed) { _speed = newSpeed; };
+
       this.animate = () => {
         if(_isDisabled)
           return;
@@ -461,8 +457,7 @@ const SplideCubemap = function(Splide, Components) {
         this.camera.updateProjectionMatrix();
         this.renderer.setSize(_frameWidth, _frameHeight);
       };
-      */
-      /*
+
       this.enable = function() {
         _isDisabled = false;
         _isFullscreen = false;
@@ -473,46 +468,6 @@ const SplideCubemap = function(Splide, Components) {
         _isDisabled = true;
         _isFullscreen = false;
       };
-      */
-    }
-
-    _isFullscreen = false;
-
-    _speed = 1.0;
-    _useAutoRotate = true;
-    _reqestAnimation;
-
-    animate() {
-      if(_isDisabled)
-        return;
-
-      this.controls.autoRotate = this._useAutoRotate;
-      this.controls.autoRotateSpeed = this._speed;
-
-      this.controls.update();
-      this.renderer.render(this.scene, this.camera);
-      this._reqestAnimation = window.requestAnimationFrame(this.animate);
-    }
-    
-    resizeRenderFrame() {
-      this.camera.aspect = _frameWidth / _frameHeight;
-      this.camera.updateProjectionMatrix();
-      this.renderer.setSize(_frameWidth, _frameHeight);
-    }
-
-    setSpeed(newSpeed)  {
-      this._speed = newSpeed;
-    }
-
-    enable() {
-      this._isDisabled = false;
-      this._isFullscreen = false;
-      this.animate();
-    }
-
-    disable() {
-      this._isDisabled = true;
-      this._isFullscreen = false;
     }
   }
 
