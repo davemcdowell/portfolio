@@ -432,7 +432,7 @@ const SplideCubemap = function(Splide, Components) {
       let _useAutoRotate = true;
       let _reqestAnimation;
       */
-     
+
       //this.toggleAutoRotate = function () { _useAutoRotate = !_useAutoRotate; };
       /*
       this.toggleFullscreen = function () { 
@@ -483,7 +483,7 @@ const SplideCubemap = function(Splide, Components) {
     _reqestAnimation;
 
     animate() {
-      if(this._isDisabled)
+      if(_isDisabled)
         return;
 
       this.controls.autoRotate = this._useAutoRotate;
