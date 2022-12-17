@@ -184,8 +184,7 @@ const SplideCubemap = function(Splide, Components) {
 
       _speedOptBtn.addEventListener('click', function() {
         if(target.cubemap)
-          target.cubemap.setNewSpeed(_speedOptions[i].speed);
-          target.cubemap.testMethod('test');
+          target.cubemap.setSpeed(_speedOptions[i].speed);
       });
     }
 
@@ -475,7 +474,7 @@ const SplideCubemap = function(Splide, Components) {
       */
     }
 
-    _isDisabled = false;
+    static _isDisabled = false;
     _isFullscreen = false;
 
     _speed = 1.0;
