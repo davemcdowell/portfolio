@@ -364,9 +364,9 @@ const SplideCubemap = function(Splide, Components) {
     const _scene = new THREE.Scene();
 
     /* set audio, listener and load sound */
-    let _listener = new THREE.AudioListener();
-    let _audio = new THREE.PositionalAudio(_listener);
-    let _audioLoader = new THREE.AudioLoader();
+    const _listener = new THREE.AudioListener();
+    const _audio = new THREE.PositionalAudio(_listener);
+    const _audioLoader = new THREE.AudioLoader();
 
     /* set camera and add listener */
     const _camera = new THREE.PerspectiveCamera(55, _frameWidth  / _frameHeight, 45, 30000);
@@ -418,6 +418,8 @@ const SplideCubemap = function(Splide, Components) {
       this.scene = scene;
 
       let _isDisabled = false;
+      let _isFullscreen = false;
+
       let _speed = 1.0;
       let _useAutoRotate = true;
       let _reqestAnimation;
@@ -445,11 +447,13 @@ const SplideCubemap = function(Splide, Components) {
 
       this.enable = function() {
         _isDisabled = false;
+        _isFullscreen = false;
         this.animate();
       };
 
       this.disable = function() {
         _isDisabled = true;
+        _isFullscreen = false;
       };
     }
   }
