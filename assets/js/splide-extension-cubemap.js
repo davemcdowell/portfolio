@@ -434,7 +434,8 @@ const SplideCubemap = function(Splide, Components) {
       this.toggleAutoRotate = function () { _useAutoRotate = !_useAutoRotate; };
       this.toggleFullscreen = function () { 
         _isFullscreen = !_isFullscreen;
-        (_isFullscreen) ? this.removeAttribute('is-fullscreen', '') : this.setAttribute('is-fullscreen', '');
+        console.log(`IsFullscreen: ${_isFullscreen}`);
+        (_isFullscreen) ? this.setAttribute('is-fullscreen', '') : this.removeAttribute('is-fullscreen', '');
       };
 
       this.setSpeed = function(newSpeed) { _speed = newSpeed; };
