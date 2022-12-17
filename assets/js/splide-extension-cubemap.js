@@ -282,6 +282,12 @@ const SplideCubemap = function(Splide, Components) {
     _volumeInput.addEventListener('change', function() {
       _audioHidden.volume = _volumeInput.value;
     });
+
+    /* fullscreen toggle */
+    _fullscreenBtn.addEventListener('click', function() {
+      if(target.cubemap)
+        target.cubemap.toggleFullscreen();
+    });
   }
 
   function setAudioSrcBySupport(audioPlayer, sources) {
