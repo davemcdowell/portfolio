@@ -122,8 +122,6 @@ const SplideCubemap = function(Splide, Components) {
   }
 
   function createCubemapControls(target, index, audioData) {
-    let _speedOptionBtns = [];
-
     /* navbar*/ 
     const _nav = document.createElement('nav');
     _nav.classList.add('navbar', 'fixed-bottom', 'rounded-bottom', 'bg-blur');
@@ -164,6 +162,8 @@ const SplideCubemap = function(Splide, Components) {
     const _speedUL = document.createElement('ul');
     _speedUL.classList.add('dropdown-menu', 'dropdown-menu-end', 'bg-blur', 'border', 'mb-2', 'no-mw');
 
+    let _speedOptionBtns = [];
+
     for(let i = 0; i < _speedOptions.length; i++) {
       const li = document.createElement('li');
       const _speedOptBtn = document.createElement('button');
@@ -178,6 +178,7 @@ const SplideCubemap = function(Splide, Components) {
       }
 
       _speedOptBtn.innerText = _speedOptions[i].label;
+
       li.appendChild(_speedOptBtn);
       _speedUL.appendChild(li);
 
@@ -335,8 +336,6 @@ const SplideCubemap = function(Splide, Components) {
         _frameWidth = slides[i].offsetWidth;
         _frameHeight = slides[i].offsetHeight;
 
-        console.log(`VW: ${_viewWidth} || VH: ${_viewHeight}`);
-
         if(_canvas) {
           _canvas.setAttribute('width', `${_frameWidth}`);
           _canvas.setAttribute('height', `${_frameHeight}`);
@@ -425,22 +424,25 @@ const SplideCubemap = function(Splide, Components) {
       this.camera = camera;
       this.scene = scene;
 
+      /*
       let _isDisabled = false;
       let _isFullscreen = false;
 
       let _speed = 1.0;
       let _useAutoRotate = true;
       let _reqestAnimation;
-      
-      this.toggleAutoRotate = function () { _useAutoRotate = !_useAutoRotate; };
+      */
+     
+      //this.toggleAutoRotate = function () { _useAutoRotate = !_useAutoRotate; };
+      /*
       this.toggleFullscreen = function () { 
         _isFullscreen = !_isFullscreen;
         console.log(`IsFullscreen: ${_isFullscreen}`);
         (_isFullscreen) ? renderer.setAttribute('is-fullscreen', '') : renderer.removeAttribute('is-fullscreen');
       };
-
+      */
       //this.setSpeed = function(newSpeed) { _speed = newSpeed; };
-
+      /*
       this.animate = () => {
         if(_isDisabled)
           return;
@@ -458,7 +460,8 @@ const SplideCubemap = function(Splide, Components) {
         this.camera.updateProjectionMatrix();
         this.renderer.setSize(_frameWidth, _frameHeight);
       };
-
+      */
+      /*
       this.enable = function() {
         _isDisabled = false;
         _isFullscreen = false;
@@ -469,15 +472,47 @@ const SplideCubemap = function(Splide, Components) {
         _isDisabled = true;
         _isFullscreen = false;
       };
-    }
-    
-    setNewSpeed(newSpeed)  {
-      this._speed = newSpeed;
-      console.log('set speed:' + this._speed);
+      */
     }
 
-    testMethod(msg) {
-      console.log(msg);
+    _isDisabled = false;
+    _isFullscreen = false;
+
+    _speed = 1.0;
+    _useAutoRotate = true;
+    _reqestAnimation;
+
+    animate() {
+      if(this._isDisabled)
+        return;
+
+      this.controls.autoRotate = this._useAutoRotate;
+      this.controls.autoRotateSpeed = this._speed;
+
+      this.controls.update();
+      this.renderer.render(this.scene, this.camera);
+      this._reqestAnimation = window.requestAnimationFrame(this.animate);
+    }
+    
+    resizeRenderFrame() {
+      this.camera.aspect = _frameWidth / _frameHeight;
+      this.camera.updateProjectionMatrix();
+      this.renderer.setSize(_frameWidth, _frameHeight);
+    }
+
+    setSpeed(newSpeed)  {
+      this._speed = newSpeed;
+    }
+
+    enable() {
+      this._isDisabled = false;
+      this._isFullscreen = false;
+      this.animate();
+    }
+
+    disable() {
+      this._isDisabled = true;
+      this._isFullscreen = false;
     }
   }
 
