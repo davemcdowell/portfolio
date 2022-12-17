@@ -435,7 +435,7 @@ const SplideCubemap = function(Splide, Components) {
       this.toggleFullscreen = function () { 
         _isFullscreen = !_isFullscreen;
         console.log(`IsFullscreen: ${_isFullscreen}`);
-        (_isFullscreen) ? this.setAttribute('is-fullscreen', '') : this.removeAttribute('is-fullscreen', '');
+        (_isFullscreen) ? renderer.setAttribute('is-fullscreen', '') : renderer.removeAttribute('is-fullscreen');
       };
 
       this.setSpeed = function(newSpeed) { _speed = newSpeed; };
