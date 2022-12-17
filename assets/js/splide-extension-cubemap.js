@@ -473,7 +473,7 @@ const SplideCubemap = function(Splide, Components) {
     
     setNewSpeed(newSpeed)  {
       this._speed = newSpeed;
-      console.log('set speed: ' + _speed + " or? " + this._speed);
+      console.log('set speed:' + this._speed);
     }
 
     testMethod(msg) {
