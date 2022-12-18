@@ -113,7 +113,7 @@ const SplideCubemap = function(Splide, Components) {
       }
 
       if(!_wrapper.querySelector('canvas')) {
-        buildCubemap(_wrapper, index, _cubeTextures, _cubeData.ogg);
+        buildCubemap(_wrapper, index, _cubeTextures, _cubeData.ogg, slide);
         _wrapper.cubemap.enable();
       } else {
         _wrapper.cubemap.enable();
