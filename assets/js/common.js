@@ -59,6 +59,7 @@ const common = function() {
         let flipToggleCalls = [].slice.call(document.querySelectorAll('[data-flip-toggle]'));
         flipToggleCalls.map(function(flipToggleEl) {
             flipToggleEl.flipToggle = new FlipToggle(flipToggleEl);
+            /*
             flipToggleEl.addEventListener('click', debounceLeading(function(event) {
                 let icon = event.currentTarget.querySelector('i');
                 if(event.currentTarget.getAttribute('is-flipped') == '') {
@@ -71,6 +72,7 @@ const common = function() {
                     icon.classList = event.currentTarget.dataset.flipIcon;
                 }
             }));
+            */
         });  
     }
 
