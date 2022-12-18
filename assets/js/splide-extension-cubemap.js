@@ -445,10 +445,12 @@ const SplideCubemap = function(Splide, Components) {
       this.setSpeed = function(newSpeed) { _speed = newSpeed; };
       this.toggleAutoRotate = function () { _useAutoRotate = !_useAutoRotate; };
       this.EscapeFullscreen = function() { _isFullscreen = false; this.resizeRenderFrame(); };
-      this.toggleFullscreen = common.debounceLeading(function () { 
+      this.toggleFullscreen = common.debounceLeading(() => this.debounceFullscreen);
+
+      this.debounceFullscreen = function() {
         _isFullscreen = !_isFullscreen;
         (_isFullscreen) ? this.openFullscreen() : this.closeFullscreen();
-      });
+      };
 
       this.animate = () => {
         if(_isDisabled)
