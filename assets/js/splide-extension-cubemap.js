@@ -420,7 +420,7 @@ const SplideCubemap = function(Splide, Components) {
 
   function createMaterialArray(pathArray) {
     const materialArray = pathArray.map(image => {
-      //loader here
+      //TODO: loader here
       let texture = new THREE.TextureLoader().load(image);
       return new THREE.MeshBasicMaterial({ map: texture, side: THREE.BackSide });
     });
