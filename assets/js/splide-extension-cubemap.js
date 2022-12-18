@@ -98,8 +98,8 @@ const SplideCubemap = function(Splide, Components) {
 
     slide.addEventListener('fullscreenchange', function() {
       if(!document.fullscreenElement) {
-        let _fsBtn = _wrapper.querySelector(`.${_config.fullscreenBtnClass}`);
-        _fsBtn.click();
+        _wrapper.querySelector(`.${_config.fullscreenBtnClass} i`).classList = _wrapper.querySelector(`.${_config.fullscreenBtnClass}`).getAttribute('data-flip-icon');
+        _wrapper.querySelector(`.${_config.fullscreenBtnClass}`).removeAttribute('is-flipped');
       }
     });
 
