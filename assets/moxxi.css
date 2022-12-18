@@ -742,9 +742,9 @@ pre {
   background-color: gray;
 }
 
-.splide__slide--has-cubemap canvas:-ms-fullscreen,
-.splide__slide--has-cubemap canvas:-webkit-full-screen,
-.splide__slide--has-cubemap canvas:fullscreen {
+.splide__cubemap__wrapper:-ms-fullscreen canvas,
+.splide__cubemap__wrapper:-webkit-full-screen canvas,
+.splide__cubemap__wrapper:fullscreen canvas {
   max-height: none;
 }
 
