@@ -96,6 +96,7 @@ const SplideCubemap = function(Splide, Components) {
     if(common)
       common.setFlipToggles();
 
+    //handle 'esc' exit fullscreen event
     slide.addEventListener('fullscreenchange', function() {
       if(!document.fullscreenElement) {
         _wrapper.querySelector(`.${_config.fullscreenBtnClass} i`).classList = _wrapper.querySelector(`.${_config.fullscreenBtnClass}`).getAttribute('data-flip-icon');
