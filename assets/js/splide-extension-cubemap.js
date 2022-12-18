@@ -455,13 +455,13 @@ const SplideCubemap = function(Splide, Components) {
 
       this.resizeRenderFrame = function() {
         if(_isFullscreen) {
-          this.camera.aspect = _frameWidth / _frameHeight;
-          this.camera.updateProjectionMatrix();
-          this.renderer.setSize(_frameWidth, _frameHeight);
-        } else {
           this.camera.aspect = _screenWidth / _screenHeight;
           this.camera.updateProjectionMatrix();
           this.renderer.setSize(_screenWidth, _screenHeight);
+        } else {
+          this.camera.aspect = _frameWidth / _frameHeight;
+          this.camera.updateProjectionMatrix();
+          this.renderer.setSize(_frameWidth, _frameHeight);
         }
       };
 
