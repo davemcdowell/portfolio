@@ -358,15 +358,17 @@ const SplideCubemap = function(Splide, Components) {
   /*
     Cubemap builder
     TODO:
-    [x]multi-render target support 'Class-based approach'
+    [x]multi-render target support
     [x]index based id
     []loading feedback/spinner via THREE.js LoadManager
     [x]resize/update renderer via resize event
     [x]toggle auto-rotate
     [x]rotate speed selector
     [x]toggle fullscreen
+    []debounce click for fullscreen mode
     [x]enable/disable events
     [x]'disable' renderer & reqAnimation on inactive
+    []
     []ambient positional audio in scene
     []hdr RGBE exposure option
     []fog 
@@ -441,15 +443,13 @@ const SplideCubemap = function(Splide, Components) {
       let _useAutoRotate = true;
       let _reqestAnimation;
 
+      this.setSpeed = function(newSpeed) { _speed = newSpeed; };
       this.toggleAutoRotate = function () { _useAutoRotate = !_useAutoRotate; };
-
       this.EscapeFullscreen = function() { _isFullscreen = false; this.resizeRenderFrame(); };
-      this.toggleFullscreen = function () { 
+      this.toggleFullscreen = common.debounceLeading(function () { 
         _isFullscreen = !_isFullscreen;
         (_isFullscreen) ? this.openFullscreen() : this.closeFullscreen();
-      };
-
-      this.setSpeed = function(newSpeed) { _speed = newSpeed; };
+      });
 
       this.animate = () => {
         if(_isDisabled)
