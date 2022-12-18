@@ -368,7 +368,6 @@ const SplideCubemap = function(Splide, Components) {
     []debounce click for fullscreen mode
     [x]enable/disable events
     [x]'disable' renderer & reqAnimation on inactive
-    []
     []ambient positional audio in scene
     []hdr RGBE exposure option
     []fog 
