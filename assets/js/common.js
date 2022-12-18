@@ -77,7 +77,9 @@ const common = function() {
     class FlipToggle {
         constructor(element) {
             this.element = element;
-            console.log(this.element);
+            this.icon = element.querySelector('i');
+
+            console.log(this.element + ' | ' + this.icon);
         }
 
         flipIcon() {
