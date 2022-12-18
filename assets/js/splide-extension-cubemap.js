@@ -351,11 +351,11 @@ const SplideCubemap = function(Splide, Components) {
     TODO:
     [x]multi-render target support 'Class-based approach'
     [x]index based id
-    []loading feedback/spinner
+    []loading feedback/spinner via THREE.js LoadManager
     [x]resize/update renderer via resize event
     [x]toggle auto-rotate
     [x]rotate speed selector
-    []toggle fullscreen
+    [x]toggle fullscreen
     [x]enable/disable events
     [x]'disable' renderer & reqAnimation on inactive
     []ambient positional audio in scene
@@ -484,6 +484,8 @@ const SplideCubemap = function(Splide, Components) {
         } else if(document.msExitFullscreen) { /* IE11 */
           document.msExitFullscreen();
         }
+        let fsBtn = this.slide.querySelector(_config.fullscreenBtnClass);
+        fsBtn.click();
         this.resizeRenderFrame();
       };
 
