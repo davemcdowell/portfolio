@@ -97,12 +97,10 @@ const SplideCubemap = function(Splide, Components) {
       common.setFlipToggles();
 
     slide.addEventListener('fullscreenchange', function() {
-      if (!document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement)
-      {
+      if(document.fullscreenElement) {
         let _fsBtn = _wrapper.querySelector(`.${_config.fullscreenBtnClass}`);
         _fsBtn.click();
       }
-      console.log(`slide fullscreen`);
     });
 
     //play button event listener
