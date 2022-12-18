@@ -289,6 +289,10 @@ const SplideCubemap = function(Splide, Components) {
       if(target.cubemap)
         target.cubemap.toggleFullscreen();
     });
+
+    _fullscreenBtn.addEventListener('fullscreenchange', function() {
+      console.log('exit fs');
+    });
   }
 
   function setAudioSrcBySupport(audioPlayer, sources) {
@@ -473,7 +477,7 @@ const SplideCubemap = function(Splide, Components) {
         } else if(this.slide.msRequestFullscreen) { /* IE11 */
         this.slide.msRequestFullscreen();
         }
-        
+
         this.resizeRenderFrame();
       };
   
