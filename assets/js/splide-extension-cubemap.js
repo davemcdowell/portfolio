@@ -410,6 +410,7 @@ const SplideCubemap = function(Splide, Components) {
 
   function createMaterialArray(pathArray) {
     const materialArray = pathArray.map(image => {
+      //loader here
       let texture = new THREE.TextureLoader().load(image);
       return new THREE.MeshBasicMaterial({ map: texture, side: THREE.BackSide });
     });
@@ -434,8 +435,7 @@ const SplideCubemap = function(Splide, Components) {
 
       this.toggleFullscreen = function () { 
         _isFullscreen = !_isFullscreen;
-        console.log(`IsFullscreen: ${_isFullscreen}`);
-        (_isFullscreen) ? rootObj.setAttribute('is-fullscreen', '') : rootObj.removeAttribute('is-fullscreen');
+        (_isFullscreen) ? this.openFullscreen() : closeFullscreen();
       };
 
       this.setSpeed = function(newSpeed) { _speed = newSpeed; };
@@ -468,6 +468,26 @@ const SplideCubemap = function(Splide, Components) {
         _isDisabled = true;
         _isFullscreen = false;
       };
+    }
+
+    openFullscreen() {
+      if(rootObj.requestFullscreen) {
+        rootObj.requestFullscreen();
+      } else if(rootObj.webkitRequestFullscreen) { /* Safari */
+        rootObj.webkitRequestFullscreen();
+      } else if(rootObj.msRequestFullscreen) { /* IE11 */
+        rootObj.msRequestFullscreen();
+      }
+    }
+
+    closeFullscreen() {
+      if(document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if(document.webkitExitFullscreen) { /* Safari */
+        document.webkitExitFullscreen();
+      } else if(document.msExitFullscreen) { /* IE11 */
+        document.msExitFullscreen();
+      }
     }
   }
 
