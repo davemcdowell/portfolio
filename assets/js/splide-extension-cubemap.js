@@ -424,7 +424,7 @@ const SplideCubemap = function(Splide, Components) {
       this.camera = camera;
       this.scene = scene;
       this.rootObj = rootObj;
-      
+
       let _isDisabled = false;
       let _isFullscreen = false;
 
@@ -472,12 +472,12 @@ const SplideCubemap = function(Splide, Components) {
     }
 
     openFullscreen() {
-      if(rootObj.requestFullscreen) {
-        rootObj.requestFullscreen();
-      } else if(rootObj.webkitRequestFullscreen) { /* Safari */
-        rootObj.webkitRequestFullscreen();
-      } else if(rootObj.msRequestFullscreen) { /* IE11 */
-        rootObj.msRequestFullscreen();
+      if(this.rootObj.requestFullscreen) {
+        this.rootObj.requestFullscreen();
+      } else if(this.rootObj.webkitRequestFullscreen) { /* Safari */
+        this.rootObj.webkitRequestFullscreen();
+      } else if(this.rootObj.msRequestFullscreen) { /* IE11 */
+        this.rootObj.msRequestFullscreen();
       }
     }
 
