@@ -59,7 +59,7 @@ const common = function() {
         let flipToggleCalls = [].slice.call(document.querySelectorAll('[data-flip-toggle]'));
         flipToggleCalls.map(function(flipToggleEl) {
             flipToggleEl.flipToggle = new FlipToggle(flipToggleEl);
-            flipToggleEl.addEventListener('click', function(event) {
+            flipToggleEl.addEventListener('click', debounceLeading(function(event) {
                 let icon = event.currentTarget.querySelector('i');
                 if(event.currentTarget.getAttribute('is-flipped') == '') {
                     event.currentTarget.removeAttribute('is-flipped');
@@ -70,7 +70,7 @@ const common = function() {
                     event.currentTarget.setAttribute('aria-label', event.currentTarget.dataset.flipLabel);
                     icon.classList = event.currentTarget.dataset.flipIcon;
                 }
-            });
+            }));
         });  
     }
 
