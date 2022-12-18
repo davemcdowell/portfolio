@@ -27,8 +27,8 @@ const SplideCubemap = function(Splide, Components) {
   let _frameWidth;
   let _frameHeight;
 
-  let _viewWidth = window.innerWidth;
-  let _viewHeight = window.innerHeight;
+  let _screenWidth = screen.width;
+  let _screenHeight = screen.height;
 
   function mount() {
     for(var i = 0; i < slides.length; i++) {
@@ -292,7 +292,7 @@ const SplideCubemap = function(Splide, Components) {
   }
 
   function setAudioSrcBySupport(audioPlayer, sources) {
-    let _src = document.createElement('source');
+    const _src = document.createElement('source');
 
     if(audioPlayer.canPlayType('audio/mpeg;')) {
       _src.type = 'audio/mpeg';
@@ -454,10 +454,36 @@ const SplideCubemap = function(Splide, Components) {
       };
 
       this.resizeRenderFrame = function() {
-        this.camera.aspect = _frameWidth / _frameHeight;
-        this.camera.updateProjectionMatrix();
-        this.renderer.setSize(_frameWidth, _frameHeight);
+        if(_isFullscreen) {
+          this.camera.aspect = _frameWidth / _frameHeight;
+          this.camera.updateProjectionMatrix();
+          this.renderer.setSize(_frameWidth, _frameHeight);
+        } else {
+          this.camera.aspect = _screenWidth / _screenHeight;
+          this.camera.updateProjectionMatrix();
+          this.renderer.setSize(_screenWidth, _screenHeight);
+        }
       };
+
+      this.openFullscreen = function() {
+        if(rootObj.requestFullscreen) {
+          rootObj.requestFullscreen();
+        } else if(rootObj.webkitRequestFullscreen) { /* Safari */
+          rootObj.webkitRequestFullscreen();
+        } else if(rootObj.msRequestFullscreen) { /* IE11 */
+          rootObj.msRequestFullscreen();
+        }
+      }
+  
+      this.closeFullscreen = function() {
+        if(document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if(document.webkitExitFullscreen) { /* Safari */
+          document.webkitExitFullscreen();
+        } else if(document.msExitFullscreen) { /* IE11 */
+          document.msExitFullscreen();
+        }
+      }
 
       this.enable = function() {
         _isDisabled = false;
@@ -468,27 +494,8 @@ const SplideCubemap = function(Splide, Components) {
       this.disable = function() {
         _isDisabled = true;
         _isFullscreen = false;
+        this.closeFullscreen();
       };
-    }
-
-    openFullscreen() {
-      if(this.rootObj.requestFullscreen) {
-        this.rootObj.requestFullscreen();
-      } else if(this.rootObj.webkitRequestFullscreen) { /* Safari */
-        this.rootObj.webkitRequestFullscreen();
-      } else if(this.rootObj.msRequestFullscreen) { /* IE11 */
-        this.rootObj.msRequestFullscreen();
-      }
-    }
-
-    closeFullscreen() {
-      if(document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if(document.webkitExitFullscreen) { /* Safari */
-        document.webkitExitFullscreen();
-      } else if(document.msExitFullscreen) { /* IE11 */
-        document.msExitFullscreen();
-      }
     }
   }
 
