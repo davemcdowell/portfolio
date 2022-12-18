@@ -296,7 +296,7 @@ const SplideCubemap = function(Splide, Components) {
     /* fullscreen toggle */
     _fullscreenBtn.addEventListener('click', function() {
       if(target.cubemap)
-        target.cubemap.toggleFullscreen();
+        common.debounceLeading(target.cubemap.toggleFullscreen());
     });
   }
 
@@ -445,9 +445,7 @@ const SplideCubemap = function(Splide, Components) {
       this.setSpeed = function(newSpeed) { _speed = newSpeed; };
       this.toggleAutoRotate = function () { _useAutoRotate = !_useAutoRotate; };
       this.EscapeFullscreen = function() { _isFullscreen = false; this.resizeRenderFrame(); };
-      this.toggleFullscreen = common.debounceLeading(() => this.debounceFullscreen);
-
-      this.debounceFullscreen = function() {
+      this.toggleFullscreen = function() {
         _isFullscreen = !_isFullscreen;
         (_isFullscreen) ? this.openFullscreen() : this.closeFullscreen();
       };
