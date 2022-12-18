@@ -78,20 +78,44 @@ const common = function() {
         constructor(element) {
             this.element = element;
             this.icon = element.querySelector('i');
+            this.defaultIcon = element.getAttribute('data-default-icon');
+            this.altIcon = element.getAttribute('data-flip-icon');
+            this.defaultLabel = element.getAttribute('data-default-label');
+            this.altLabel = element.getAttribute('data-flip-label');
+            this.isFlipped = false;
 
-            console.log(this.element + ' | ' + this.icon);
+            this.element.addEventListener('click', () => {
+                this.flipIcon();
+            });
         }
 
         flipIcon() {
-
+            this.isFlipped = !this.isFlipped;
+            (this.isFlipped) ? 
+                function() { 
+                    this.icon.classList = this.altIcon;
+                    this.element.setAttribute('is-flipped', '');
+                    this.element.setAttribute('aria-label', this.altLabel);
+                } : 
+                function() {
+                    this.icon.classList = this.defaultIcon;
+                    this.element.removeAttribute('is-flipped');
+                    this.element.setAttribute('aria-label', this.defaultLabel);
+                }
         }
 
         toDefaultIcon() {
-
+            this.icon.classList = this.defaultIcon;
+            this.element.removeAttribute('is-flipped');
+            this.element.setAttribute('aria-label', this.defaultLabel);
+            this.isFlipped = false;
         }
 
         toAltIcon() {
-
+            this.icon.classList = this.altIcon;
+            this.element.setAttribute('is-flipped', '');
+            this.element.setAttribute('aria-label', this.altLabel);
+            this.isFlipped = true;
         }
     }
 
