@@ -58,8 +58,7 @@ const common = function() {
     function setFlipToggles() {
         let flipToggleCalls = [].slice.call(document.querySelectorAll('[data-flip-toggle]'));
         flipToggleCalls.map(function(flipToggleEl) {
-            flipToggleEl = new FlipToggle(flipToggleEl);
-
+            flipToggleEl.flipToggle = new FlipToggle(flipToggleEl);
             flipToggleEl.addEventListener('click', function(event) {
                 let icon = event.currentTarget.querySelector('i');
                 if(event.currentTarget.getAttribute('is-flipped') == '') {
@@ -82,7 +81,7 @@ const common = function() {
         }
 
         flipIcon() {
-            
+
         }
 
         toDefaultIcon() {
