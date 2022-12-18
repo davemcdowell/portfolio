@@ -473,7 +473,7 @@ const SplideCubemap = function(Splide, Components) {
         } else if(rootObj.msRequestFullscreen) { /* IE11 */
           rootObj.msRequestFullscreen();
         }
-      }
+      };
   
       this.closeFullscreen = function() {
         if(document.exitFullscreen) {
@@ -483,7 +483,7 @@ const SplideCubemap = function(Splide, Components) {
         } else if(document.msExitFullscreen) { /* IE11 */
           document.msExitFullscreen();
         }
-      }
+      };
 
       this.enable = function() {
         _isDisabled = false;
