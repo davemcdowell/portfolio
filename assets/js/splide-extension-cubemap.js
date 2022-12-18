@@ -332,9 +332,6 @@ const SplideCubemap = function(Splide, Components) {
         let _wrapper = slides[i].querySelector(`.${_config.wrapperClass}`);
         let _canvas = _wrapper.querySelector('canvas');
 
-        if(_wrapper.cubemap._isFullscreen) {
-          console.log('this wrapper is fullscreen');
-        }
         _frameWidth = slides[i].offsetWidth;
         _frameHeight = slides[i].offsetHeight;
 
@@ -421,12 +418,12 @@ const SplideCubemap = function(Splide, Components) {
   }
 
   class Cubemap {
-    constructor(controls, renderer, camera, scene, rootSlide) {
+    constructor(controls, renderer, camera, scene, slide) {
       this.controls = controls;
       this.renderer = renderer;
       this.camera = camera;
       this.scene = scene;
-      this.rootSlide = rootSlide;
+      this.slide = slide;
 
       let _isDisabled = false;
       let _isFullscreen = false;
@@ -469,12 +466,12 @@ const SplideCubemap = function(Splide, Components) {
       };
 
       this.openFullscreen = function() {
-        if(rootSlide.requestFullscreen) {
-          rootSlide.requestFullscreen();
-        } else if(rootSlide.webkitRequestFullscreen) { /* Safari */
-          rootSlide.webkitRequestFullscreen();
-        } else if(rootSlide.msRequestFullscreen) { /* IE11 */
-          rootSlide.msRequestFullscreen();
+        if(slide.requestFullscreen) {
+          slide.requestFullscreen();
+        } else if(slide.webkitRequestFullscreen) { /* Safari */
+          slide.webkitRequestFullscreen();
+        } else if(slide.msRequestFullscreen) { /* IE11 */
+          slide.msRequestFullscreen();
         }
         this.resizeRenderFrame();
       };
