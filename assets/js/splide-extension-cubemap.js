@@ -99,7 +99,7 @@ const SplideCubemap = function(Splide, Components) {
     //handle 'esc' exit fullscreen event
     slide.addEventListener('fullscreenchange', function() {
       if(!document.fullscreenElement) {
-        _wrapper.querySelector(`.${_config.fullscreenBtnClass} i`).classList = _wrapper.querySelector(`.${_config.fullscreenBtnClass}`).getAttribute('data-flip-icon');
+        _wrapper.querySelector(`.${_config.fullscreenBtnClass} i`).classList = _wrapper.querySelector(`.${_config.fullscreenBtnClass}`).getAttribute('data-default-icon');
         _wrapper.querySelector(`.${_config.fullscreenBtnClass}`).removeAttribute('is-flipped');
       }
     });
