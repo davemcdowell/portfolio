@@ -742,6 +742,12 @@ pre {
   background-color: gray;
 }
 
+.splide__slide--has-cubemap canvas:-ms-fullscreen,
+.splide__slide--has-cubemap canvas:-webkit-full-screen,
+.splide__slide--has-cubemap canvas:fullscreen {
+  max-height: none;
+}
+
 .splide__slide--has-cubemap canvas {
   cursor: move;
   cursor: grab;
