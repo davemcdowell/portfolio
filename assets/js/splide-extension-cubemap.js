@@ -64,6 +64,10 @@ const SplideCubemap = function(Splide, Components) {
     slide.classList.add(_config.rootClass);
     slide.style.overflow = 'hidden';
 
+    slide.addEventListener('fullscreenchange', function(){
+      console.log(`slide fullscreen`);
+    });
+
     //create the container for the button and wrapper (in that order)
     _cubemap = document.createElement("div");
     _cubemap.classList.add(_config.containerClass);
@@ -288,10 +292,6 @@ const SplideCubemap = function(Splide, Components) {
     _fullscreenBtn.addEventListener('click', function() {
       if(target.cubemap)
         target.cubemap.toggleFullscreen();
-    });
-
-    _fullscreenBtn.addEventListener('fullscreenchange', function() {
-      console.log('exit fs');
     });
   }
 
