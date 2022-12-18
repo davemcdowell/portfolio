@@ -98,7 +98,7 @@ const SplideCubemap = function(Splide, Components) {
 
     slide.addEventListener('fullscreenchange', function(event) {
       event.preventDefault();
-      let _fsBtn = _wrapper.querySelector(`.${_config.muteBtnClass}`);
+      let _fsBtn = _wrapper.querySelector(`.${_config.fullscreenBtnClass}`);
       _fsBtn.click();
       console.log(`slide fullscreen`);
     });
