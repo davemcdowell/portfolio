@@ -101,7 +101,7 @@ const SplideCubemap = function(Splide, Components) {
       if(!document.fullscreenElement) {
         _wrapper.querySelector(`.${_config.fullscreenBtnClass} i`).classList = _wrapper.querySelector(`.${_config.fullscreenBtnClass}`).getAttribute('data-default-icon');
         _wrapper.querySelector(`.${_config.fullscreenBtnClass}`).removeAttribute('is-flipped');
-        _wrapper.cubemap.toggleFullscreen();
+        _wrapper.cubemap.EscapeFullscreen();
       }
     });
 
@@ -443,6 +443,7 @@ const SplideCubemap = function(Splide, Components) {
 
       this.toggleAutoRotate = function () { _useAutoRotate = !_useAutoRotate; };
 
+      this.EscapeFullscreen = function() { _isFullscreen = false; this.resizeRenderFrame(); };
       this.toggleFullscreen = function () { 
         _isFullscreen = !_isFullscreen;
         (_isFullscreen) ? this.openFullscreen() : this.closeFullscreen();
