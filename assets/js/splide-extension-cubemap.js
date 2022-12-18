@@ -484,7 +484,7 @@ const SplideCubemap = function(Splide, Components) {
         } else if(document.msExitFullscreen) { /* IE11 */
           document.msExitFullscreen();
         }
-        let fsBtn = this.slide.querySelector(_config.fullscreenBtnClass);
+        let fsBtn = this.slide.querySelector(`.${_config.fullscreenBtnClass}`);
         fsBtn.click();
         this.resizeRenderFrame();
       };
