@@ -423,7 +423,8 @@ const SplideCubemap = function(Splide, Components) {
       this.renderer = renderer;
       this.camera = camera;
       this.scene = scene;
-
+      this.rootObj = rootObj;
+      
       let _isDisabled = false;
       let _isFullscreen = false;
 
@@ -435,7 +436,7 @@ const SplideCubemap = function(Splide, Components) {
 
       this.toggleFullscreen = function () { 
         _isFullscreen = !_isFullscreen;
-        (_isFullscreen) ? this.openFullscreen() : closeFullscreen();
+        (_isFullscreen) ? this.openFullscreen() : this.closeFullscreen();
       };
 
       this.setSpeed = function(newSpeed) { _speed = newSpeed; };
