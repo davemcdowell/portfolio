@@ -405,7 +405,7 @@ const SplideCubemap = function(Splide, Components) {
     _controls.autoRotateSpeed = 1.0;
 
     //create our new Cubemap
-    target.cubemap = new Cubemap(_controls, _renderer, _camera, _scene);
+    target.cubemap = new Cubemap(_controls, _renderer, _camera, _scene, target);
   }
 
   function createMaterialArray(pathArray) {
@@ -417,7 +417,7 @@ const SplideCubemap = function(Splide, Components) {
   }
 
   class Cubemap {
-    constructor(controls, renderer, camera, scene) {
+    constructor(controls, renderer, camera, scene, rootObj) {
       this.controls = controls;
       this.renderer = renderer;
       this.camera = camera;
@@ -435,7 +435,7 @@ const SplideCubemap = function(Splide, Components) {
       this.toggleFullscreen = function () { 
         _isFullscreen = !_isFullscreen;
         console.log(`IsFullscreen: ${_isFullscreen}`);
-        (_isFullscreen) ? renderer.setAttribute('is-fullscreen', '') : renderer.removeAttribute('is-fullscreen');
+        (_isFullscreen) ? rootObj.setAttribute('is-fullscreen', '') : rootObj.removeAttribute('is-fullscreen');
       };
 
       this.setSpeed = function(newSpeed) { _speed = newSpeed; };
