@@ -742,9 +742,8 @@ pre {
   background-color: gray;
 }
 
-
-.splide__cubemap__wrapper:fullscreen canvas {
-  background-color: red;
+.splide__slide--has-cubemap:fullscreen canvas {
+  max-height: none;
 }
 
 .splide__slide--has-cubemap canvas {

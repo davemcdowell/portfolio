@@ -269,7 +269,7 @@ const SplideCubemap = function(Splide, Components) {
         target.cubemap.toggleAutoRotate();
     });
 
-    /* speed options */
+    /* speed active option */
     for(let i = 0; i < _speedOptionBtns.length; i++) {
       _speedOptionBtns[i].addEventListener('click', function() {
         for(let j = 0; j < _speedOptionBtns.length; j++) {
@@ -332,6 +332,9 @@ const SplideCubemap = function(Splide, Components) {
         let _wrapper = slides[i].querySelector(`.${_config.wrapperClass}`);
         let _canvas = _wrapper.querySelector('canvas');
 
+        if(_wrapper.cubemap._isFullscreen) {
+          console.log('this wrapper is fullscreen');
+        }
         _frameWidth = slides[i].offsetWidth;
         _frameHeight = slides[i].offsetHeight;
 
@@ -362,7 +365,7 @@ const SplideCubemap = function(Splide, Components) {
     []hdr RGBE exposure option
     []fog 
   */
-  function buildCubemap(target, index, imageArray, ambience) {
+  function buildCubemap(target, index, imageArray, ambience, slide) {
     if(target.querySelector('canvas'))
       return;
 
@@ -405,7 +408,7 @@ const SplideCubemap = function(Splide, Components) {
     _controls.autoRotateSpeed = 1.0;
 
     //create our new Cubemap
-    target.cubemap = new Cubemap(_controls, _renderer, _camera, _scene, target);
+    target.cubemap = new Cubemap(_controls, _renderer, _camera, _scene, slide);
   }
 
   function createMaterialArray(pathArray) {
@@ -418,12 +421,12 @@ const SplideCubemap = function(Splide, Components) {
   }
 
   class Cubemap {
-    constructor(controls, renderer, camera, scene, rootObj) {
+    constructor(controls, renderer, camera, scene, rootSlide) {
       this.controls = controls;
       this.renderer = renderer;
       this.camera = camera;
       this.scene = scene;
-      this.rootObj = rootObj;
+      this.rootSlide = rootSlide;
 
       let _isDisabled = false;
       let _isFullscreen = false;
@@ -466,12 +469,12 @@ const SplideCubemap = function(Splide, Components) {
       };
 
       this.openFullscreen = function() {
-        if(rootObj.requestFullscreen) {
-          rootObj.requestFullscreen();
-        } else if(rootObj.webkitRequestFullscreen) { /* Safari */
-          rootObj.webkitRequestFullscreen();
-        } else if(rootObj.msRequestFullscreen) { /* IE11 */
-          rootObj.msRequestFullscreen();
+        if(rootSlide.requestFullscreen) {
+          rootSlide.requestFullscreen();
+        } else if(rootSlide.webkitRequestFullscreen) { /* Safari */
+          rootSlide.webkitRequestFullscreen();
+        } else if(rootSlide.msRequestFullscreen) { /* IE11 */
+          rootSlide.msRequestFullscreen();
         }
         this.resizeRenderFrame();
       };
