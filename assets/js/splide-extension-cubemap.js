@@ -466,12 +466,12 @@ const SplideCubemap = function(Splide, Components) {
       };
 
       this.openFullscreen = function() {
-        if(slide.requestFullscreen) {
-          slide.requestFullscreen();
-        } else if(slide.webkitRequestFullscreen) { /* Safari */
-          slide.webkitRequestFullscreen();
-        } else if(slide.msRequestFullscreen) { /* IE11 */
-          slide.msRequestFullscreen();
+        if(this.slide.requestFullscreen) {
+          this.slide.requestFullscreen();
+        } else if(this.slide.webkitRequestFullscreen) { /* Safari */
+        this.slide.webkitRequestFullscreen();
+        } else if(this.slide.msRequestFullscreen) { /* IE11 */
+        this.slide.msRequestFullscreen();
         }
         this.resizeRenderFrame();
       };
