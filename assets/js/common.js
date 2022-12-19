@@ -98,13 +98,15 @@ const common = function() {
                     this.icon.classList = this.defaultIcon;
                     this.element.removeAttribute('is-flipped');
                     this.element.setAttribute('aria-label', this.defaultLabel);
+                    console.log(`went to default: ${this.isFlipped}`);
                 } : 
                 function() {
                     this.icon.classList = this.altIcon;
                     this.element.setAttribute('is-flipped', '');
                     this.element.setAttribute('aria-label', this.altLabel);
+                    console.log(`went to alt: ${this.isFlipped}`);
                 };
-            console.log(`flipped: ${this.isFlipped}`);
+            console.log(`flipIcon just finished: ${this.isFlipped}`);
         }
 
         toDefaultIcon() {
