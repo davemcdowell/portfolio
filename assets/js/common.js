@@ -95,7 +95,7 @@ const common = function() {
 
         flipIcon(event) {
             this.isFlipped = !this.isFlipped;
-            if(this.isFlipped && !event.currentTarget.hasAttribute('is-flipped')) {
+            if(this.isFlipped && !event.currentTarget.hasAttribute('is-flipped') && event.currentTarget.getAttribute('aria-expanded') === 'false') {
                 this.icon.classList = this.altIcon;
                 this.element.setAttribute('is-flipped', '');
                 this.element.setAttribute('aria-label', this.altLabel);
@@ -106,19 +106,6 @@ const common = function() {
                 this.element.setAttribute('aria-label', this.defaultLabel);
                 console.log(`flipped to default`);
             }
-            /*(this.isFlipped) ? 
-                function() { 
-                    this.icon.classList = this.defaultIcon;
-                    this.element.removeAttribute('is-flipped');
-                    this.element.setAttribute('aria-label', this.defaultLabel);
-                    console.log(`went to default: ${this.isFlipped}`);
-                } : 
-                function() {
-                    this.icon.classList = this.altIcon;
-                    this.element.setAttribute('is-flipped', '');
-                    this.element.setAttribute('aria-label', this.altLabel);
-                    console.log(`went to alt: ${this.isFlipped}`);
-                };*/
             console.log(`flipIcon just finished: ${this.isFlipped}`);
         }
 
