@@ -103,7 +103,8 @@ const common = function() {
                     this.icon.classList = this.defaultIcon;
                     this.element.removeAttribute('is-flipped');
                     this.element.setAttribute('aria-label', this.defaultLabel);
-                }
+                };
+            console.log(`flipped: ${this.isFlipped}`);
         }
 
         toDefaultIcon() {
