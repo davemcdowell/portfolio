@@ -79,11 +79,11 @@ const common = function() {
     class FlipToggle {
         constructor(element) {
             this.element = element;
-            this.icon = element.querySelector('i');
-            this.defaultIcon = element.getAttribute('data-default-icon');
-            this.altIcon = element.getAttribute('data-flip-icon');
-            this.defaultLabel = element.getAttribute('data-default-label');
-            this.altLabel = element.getAttribute('data-flip-label');
+            this.icon = this.element.querySelector('i');
+            this.defaultIcon = this.element.getAttribute('data-default-icon');
+            this.altIcon = this.element.getAttribute('data-flip-icon');
+            this.defaultLabel = this.element.getAttribute('data-default-label');
+            this.altLabel = this.element.getAttribute('data-flip-label');
             this.isFlipped = false;
 
             this.element.addEventListener('click', () => {
