@@ -112,6 +112,8 @@ const common = function() {
             this.element.removeAttribute('is-flipped');
             this.element.setAttribute('aria-label', this.defaultLabel);
             this.isFlipped = false;
+            console.log(`defaulted: ${this.isFlipped}`);
+
         }
 
         toAltIcon() {
@@ -119,6 +121,7 @@ const common = function() {
             this.element.setAttribute('is-flipped', '');
             this.element.setAttribute('aria-label', this.altLabel);
             this.isFlipped = true;
+            console.log(`alted: ${this.isFlipped}`);
         }
     }
 
