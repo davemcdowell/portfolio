@@ -86,6 +86,8 @@ const common = function() {
             this.altLabel = this.element.getAttribute('data-flip-label');
             this.isFlipped = false;
 
+            console.log(`--Created new FlipToggle: ${this.element} with an icon: ${this.icon}.\nThe default icon is ${this.defaultIcon}`);
+
             this.element.addEventListener('click', () => {
                 this.flipIcon();
             });
