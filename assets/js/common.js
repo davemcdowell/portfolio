@@ -95,7 +95,7 @@ const common = function() {
 
         flipIcon(event) {
             this.isFlipped = !this.isFlipped;
-            if(this.isFlipped && event.currentTarget.hasAttribute('is-flipped')) {
+            if(this.isFlipped && !event.currentTarget.hasAttribute('is-flipped')) {
                 this.icon.classList = this.altIcon;
                 this.element.setAttribute('is-flipped', '');
                 this.element.setAttribute('aria-label', this.altLabel);
