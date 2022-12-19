@@ -89,13 +89,13 @@ const common = function() {
             console.log(`--Created new FlipToggle: ${this.element} with an icon: ${this.icon}.\nThe default icon is ${this.defaultIcon}`);
 
             this.element.addEventListener('click', (event) => {
-                debounceLeading(this.flipIcon(event));
+                debounceLeading(this.flipIcon(event), 400);
             });
         }
 
         flipIcon(event) {
             this.isFlipped = !this.isFlipped;
-            if(this.isFlipped && !event.currentTarget.hasAttribute('is-flipped') && event.currentTarget.getAttribute('aria-expanded') === 'true') {
+            if(this.isFlipped && !event.currentTarget.hasAttribute('is-flipped')) {
                 this.icon.classList = this.altIcon;
                 this.element.setAttribute('is-flipped', '');
                 this.element.setAttribute('aria-label', this.altLabel);
