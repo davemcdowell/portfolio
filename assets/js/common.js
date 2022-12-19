@@ -89,7 +89,7 @@ const common = function() {
             console.log(`--Created new FlipToggle: ${this.element} with an icon: ${this.icon}.\nThe default icon is ${this.defaultIcon}`);
 
             this.element.addEventListener('click', (event) => {
-                this.flipIcon(event);
+                debounceLeading(this.flipIcon(event));
             });
         }
 
