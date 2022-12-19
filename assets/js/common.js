@@ -95,14 +95,14 @@ const common = function() {
             this.isFlipped = !this.isFlipped;
             (this.isFlipped) ? 
                 function() { 
-                    this.icon.classList = this.altIcon;
-                    this.element.setAttribute('is-flipped', '');
-                    this.element.setAttribute('aria-label', this.altLabel);
-                } : 
-                function() {
                     this.icon.classList = this.defaultIcon;
                     this.element.removeAttribute('is-flipped');
                     this.element.setAttribute('aria-label', this.defaultLabel);
+                } : 
+                function() {
+                    this.icon.classList = this.altIcon;
+                    this.element.setAttribute('is-flipped', '');
+                    this.element.setAttribute('aria-label', this.altLabel);
                 };
             console.log(`flipped: ${this.isFlipped}`);
         }
@@ -113,7 +113,6 @@ const common = function() {
             this.element.setAttribute('aria-label', this.defaultLabel);
             this.isFlipped = false;
             console.log(`defaulted: ${this.isFlipped}`);
-
         }
 
         toAltIcon() {
