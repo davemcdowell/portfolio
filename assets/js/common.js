@@ -58,7 +58,7 @@ const common = function() {
     function setFlipToggles() {
         let flipToggleCalls = [].slice.call(document.querySelectorAll('[data-flip-toggle]'));
         flipToggleCalls.map(function(flipToggleEl) {
-            flipToggleEl.flipToggle = new FlipToggle(flipToggleEl);
+            flipToggleEl = new FlipToggle(flipToggleEl);
             /*
             flipToggleEl.addEventListener('click', debounceLeading(function(event) {
                 let icon = event.currentTarget.querySelector('i');
