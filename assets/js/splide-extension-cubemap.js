@@ -101,7 +101,7 @@ const SplideCubemap = function(Splide, Components) {
       if(!document.fullscreenElement) {
         if(_wrapper.querySelector(`.${_config.fullscreenBtnClass}`)) {
           let fsBtn = _wrapper.querySelector(`.${_config.fullscreenBtnClass}`);
-          fsBtn.toDefaultIcon();
+          fsBtn.flip.toDefaultIcon();
         }
 
         if(_wrapper.cubemap)  
