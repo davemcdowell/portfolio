@@ -77,7 +77,7 @@ const common = function() {
     }
 
     class FlipToggle {
-        constructor(element, watchElement, watchClass) {
+        constructor(element) {
             this.element = element;
             this.icon = this.element.querySelector('i');
             this.defaultIcon = this.element.getAttribute('data-default-icon');

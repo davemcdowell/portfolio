@@ -369,7 +369,7 @@ const SplideCubemap = function(Splide, Components) {
     [x]toggle auto-rotate
     [x]rotate speed selector
     [x]toggle fullscreen
-    []debounce click for fullscreen mode
+    [x]debounce click for fullscreen mode
     [x]enable/disable events
     [x]'disable' renderer & reqAnimation on inactive
     []ambient positional audio in scene
@@ -448,7 +448,7 @@ const SplideCubemap = function(Splide, Components) {
 
       this.setSpeed = function(newSpeed) { _speed = newSpeed; };
       this.toggleAutoRotate = function () { _useAutoRotate = !_useAutoRotate; };
-      this.EscapeFullscreen = function() { _isFullscreen = false; this.resizeRenderFrame(); };
+      this.EscapeFullscreen = function() { _isFullscreen = false; this.closeFullscreen(); };
       this.toggleFullscreen = function() {
         _isFullscreen = !_isFullscreen;
         (_isFullscreen) ? this.openFullscreen() : this.closeFullscreen();
