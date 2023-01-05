@@ -101,8 +101,10 @@ const SplideCubemap = function(Splide, Components) {
       if(!document.fullscreenElement) {
         //_wrapper.querySelector(`.${_config.fullscreenBtnClass} i`).classList = _wrapper.querySelector(`.${_config.fullscreenBtnClass}`).getAttribute('data-default-icon');
         //_wrapper.querySelector(`.${_config.fullscreenBtnClass}`).removeAttribute('is-flipped');
-        if(_wrapper.querySelector(`.${_config.fullscreenBtnClass}`))
-          _wrapper.querySelector(`.${_config.fullscreenBtnClass}`).toDefaultIcon();
+        if(_wrapper.querySelector(`.${_config.fullscreenBtnClass}`)) {
+          let fsBtn = _wrapper.querySelector(`.${_config.fullscreenBtnClass}`);
+          fsBtn.toDefaultIcon();
+        }
 
         if(_wrapper.cubemap)  
           _wrapper.cubemap.EscapeFullscreen();

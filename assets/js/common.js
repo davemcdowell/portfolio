@@ -59,20 +59,6 @@ const common = function() {
         let flipToggleCalls = [].slice.call(document.querySelectorAll('[data-flip-toggle]'));
         flipToggleCalls.map(function(flipToggleEl) {
             flipToggleEl = new FlipToggle(flipToggleEl);
-            /*
-            flipToggleEl.addEventListener('click', debounceLeading(function(event) {
-                let icon = event.currentTarget.querySelector('i');
-                if(event.currentTarget.getAttribute('is-flipped') == '') {
-                    event.currentTarget.removeAttribute('is-flipped');
-                    event.currentTarget.setAttribute('aria-label', event.currentTarget.dataset.defaultLabel);
-                    icon.classList = event.currentTarget.dataset.defaultIcon;
-                } else {
-                    event.currentTarget.setAttribute('is-flipped', '');
-                    event.currentTarget.setAttribute('aria-label', event.currentTarget.dataset.flipLabel);
-                    icon.classList = event.currentTarget.dataset.flipIcon;
-                }
-            }));
-            */
         });  
     }
 
