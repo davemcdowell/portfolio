@@ -58,7 +58,7 @@ const common = function() {
     function setFlipToggles() {
         let flipToggleCalls = [].slice.call(document.querySelectorAll('[data-flip-toggle]'));
         flipToggleCalls.map(function(flipToggleEl) {
-            flipToggleEl = new FlipToggle(flipToggleEl);
+            flipToggleEl.flip = new FlipToggle(flipToggleEl);
         });  
     }
 
