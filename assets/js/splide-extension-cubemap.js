@@ -423,11 +423,33 @@ const SplideCubemap = function(Splide, Components) {
   }
 
   function createMaterialArray(pathArray) {
+    //create oour load manager
+    const loadManager = new THREE.LoadingManger();
+
+    loadManager.onStart = function(url, itemsLoaded, itemsTotal) {
+      console.log( 'Started loading file: ' + url + '.\nLoaded '
+      + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+    };
+
+    loadManager.onLoad = function() {
+      console.log( 'Loading complete!');
+    };
+
+    loadManager.onProgress = function(url, itemsLoaded, itemsTotal) {
+      console.log( 'Loading file: ' + url + '.\nLoaded '
+      + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+    };
+
+    loadManager.onError = function(url) {
+      console.log( 'There was an error loading ' + url );
+    };
+
     const materialArray = pathArray.map(image => {
-      //TODO: loader here
-      let texture = new THREE.TextureLoader().load(image);
+      //pass our load manager in
+      let texture = new THREE.TextureLoader(loadManager).load(image);
       return new THREE.MeshBasicMaterial({ map: texture, side: THREE.BackSide });
     });
+
     return materialArray;
   }
 
