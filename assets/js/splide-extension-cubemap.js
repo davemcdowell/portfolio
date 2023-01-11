@@ -423,8 +423,8 @@ const SplideCubemap = function(Splide, Components) {
   }
 
   function createMaterialArray(pathArray) {
-    //create oour load manager
-    const loadManager = new THREE.LoadingManger();
+    //create our load manager
+    const loadManager = new THREE.LoadingManager();
 
     loadManager.onStart = function(url, itemsLoaded, itemsTotal) {
       console.log( 'Started loading file: ' + url + '.\nLoaded '
